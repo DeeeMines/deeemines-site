@@ -5,7 +5,7 @@
         "photo": "/assets/kristell-riou-nivert.jpg",
         "nom": "Kristell Riou-Nivert",
         "role": "Cofondatrice & CEO",
-        "texte": "Ingénieure environnement et innovation. Structuration industrielle, partenariats de collecte et financement du projet.",
+        "texte": "Ingénieure formée à Mines Paris - PSL, spécialisée en environnement et en innovation. Elle conduit la structuration industrielle de DeeeMines, les partenariats de collecte avec les recycleurs et les éco-organismes, et le financement du projet.",
         "logos": [
           {
             "image": "/assets/mines-paris-psl.png",
@@ -17,7 +17,7 @@
         "photo": "/assets/morvan-gaudin.jpg",
         "nom": "Morvan Gaudin",
         "role": "Cofondateur & CTO",
-        "texte": "Docteur et ingénieur. Auteur de la thèse à l'origine du procédé, lauréat du prix i-PhD de Bpifrance.",
+        "texte": "Docteur et ingénieur, formé à Chimie ParisTech - PSL et à AgroParisTech. Il est l'auteur de la thèse dont est issu le procédé, menée au sein de la Chaire Mines Urbaines. Lauréat du prix i-PhD de Bpifrance, il pilote le développement technologique et le passage à l'échelle.",
         "logos": [
           {
             "image": "/assets/chimie-paristech-psl.png",
@@ -80,7 +80,7 @@
         "photo": "/assets/kristell-riou-nivert.jpg",
         "nom": "Kristell Riou-Nivert",
         "role": "Co-founder & CEO",
-        "texte": "Engineer in environment and innovation. Industrial structuring, collection partnerships and project funding.",
+        "texte": "An engineer trained at Mines Paris - PSL, specialising in environment and innovation. She leads the industrial structuring of DeeeMines, the collection partnerships with recyclers and producer responsibility organisations, and the funding of the project.",
         "logos": [
           {
             "image": "/assets/mines-paris-psl.png",
@@ -92,7 +92,7 @@
         "photo": "/assets/morvan-gaudin.jpg",
         "nom": "Morvan Gaudin",
         "role": "Co-founder & CTO",
-        "texte": "Doctor and engineer. Author of the thesis behind the process, winner of the Bpifrance i-PhD award.",
+        "texte": "A doctor and engineer trained at Chimie ParisTech - PSL and AgroParisTech. He is the author of the thesis behind the process, carried out within the Urban Mining Chair. Winner of the Bpifrance i-PhD award, he leads the technical development and the scale-up.",
         "logos": [
           {
             "image": "/assets/chimie-paristech-psl.png",

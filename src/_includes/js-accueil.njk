@@ -55,7 +55,7 @@
     e.preventDefault();
     var v=function(id){return (document.getElementById(id)||{}).value||'';};
     var corps='Nom : '+v('a1')+'\nE-mail : '+v('a2')+'\nProfil : '+v('a3')+'\n\n'+v('a4');
-    document.getElementById('mailto').href='mailto:contact@deeemines.com'
+    document.getElementById('mailto').href='mailto:kristell.riounivert@deeemines.com'
       +'?subject='+encodeURIComponent('Contact site DeeeMines')+'&body='+encodeURIComponent(corps);
     cerr.hidden=true; envoi.disabled=true;
     fetch('/',{method:'POST',

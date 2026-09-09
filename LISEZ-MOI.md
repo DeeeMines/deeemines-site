@@ -76,7 +76,7 @@ dans « Forms » dans le tableau de bord du site.
 
 Pour les recevoir par courriel, allez dans les réglages du site,
 « Forms », « Form notifications », « Add notification », « Email
-notification », et indiquez contact@deeemines.com. Gratuit jusqu'à cent
+notification », et indiquez kristell.riounivert@deeemines.com. Gratuit jusqu'à cent
 messages par mois.
 
 Le formulaire ne fonctionne que sur le site publié. En local il affichera
