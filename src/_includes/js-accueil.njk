@@ -1,9 +1,9 @@
 <script>
 (function(){
   var ANCRES={'#antimoine':'antimoine','#equipe':'equipe','#actualites':'actus',
-              '#mentions':'mentions','#confidentialite':'privacy'};
+              '#procede':'procede','#mentions':'mentions','#confidentialite':'privacy'};
   var current='home';
-  var PAGES={home:'page-home',equipe:'page-equipe',antimoine:'page-antimoine',actus:'page-actus',mentions:'page-mentions',privacy:'page-privacy'};
+  var PAGES={home:'page-home',equipe:'page-equipe',antimoine:'page-antimoine',procede:'page-procede',actus:'page-actus',mentions:'page-mentions',privacy:'page-privacy'};
   function show(key,hash){
     for(var k in PAGES){document.getElementById(PAGES[k]).classList.toggle('active',k===key);}
     document.querySelectorAll('.links a').forEach(function(a){

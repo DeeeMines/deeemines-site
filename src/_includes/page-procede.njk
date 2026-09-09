@@ -1,0 +1,168 @@
+<!-- ===================== LE PROCÉDÉ =====================
+     Page profonde, atteinte depuis « Notre technologie » dans le bandeau du
+     haut et depuis le bouton de la section technologie de l'accueil.
+     Le lien de la vidéo se saisit depuis /admin, rubrique « Page d'accueil ». -->
+<main class="page" id="page-procede">
+  <div class="phead">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--mint)">Le procédé</div>
+      <h1>La chimie derrière DeeeMines.</h1>
+      <p class="lead">
+        Quatre ans de recherche à l'Institut de Recherche de Chimie Paris, une thèse,
+        un brevet et une publication scientifique. Voici ce que le procédé fait, et
+        ce qui prouve qu'il fonctionne.
+      </p>
+    </div>
+  </div>
+  <hr class="grad-rule">
+
+  {%- set video = contenu.fr.procede.video | default("") %}
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">En quatre minutes</div>
+      <div class="video">
+        {%- set embed = video | lecteur %}
+        {%- if embed %}
+        <div class="cadre">
+          <iframe src="{{ embed }}" title="Présentation de la thèse de Morvan Gaudin"
+                  loading="lazy" allowfullscreen
+                  allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"></iframe>
+        </div>
+        {%- elif video %}
+        <div class="cadre vide">
+          <a class="btn btn-ink" href="{{ video }}" target="_blank" rel="noopener">
+            Voir la présentation <span class="a">&#8594;</span></a>
+        </div>
+        {%- else %}
+        <div class="cadre vide">
+          <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.3" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><path d="M10 8.6l6 3.4-6 3.4z" stroke-linejoin="round"/>
+          </svg>
+          <p>La présentation de la thèse de Morvan Gaudin sera disponible ici.</p>
+        </div>
+        {%- endif %}
+        <div class="lead vlegende">
+          <p>Morvan Gaudin présente les travaux dont est issu le procédé, menés à
+             l'Institut de Recherche de Chimie Paris dans le cadre de la Chaire Mines
+             Urbaines, avec le soutien de l'éco-organisme ecosystem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tint">
+    <div class="wrap">
+      <div class="eyebrow">Le verrou</div>
+      <div class="stmt">
+        <h2>Des additifs prisonniers<br>de la matière.</h2>
+        <div class="lead">
+          <p>Les plastiques des équipements électriques et électroniques contiennent des
+             retardateurs de flamme bromés, associés à du trioxyde d'antimoine qui en
+             démultiplie l'effet. Les deux sont dispersés dans la matrice polymère,
+             et non déposés en surface.</p>
+          <p>Aucune filière ne sait aujourd'hui les en séparer. Ces plastiques partent
+             donc en incinération, avec l'antimoine et le brome qu'ils contiennent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Le principe</div>
+      <div class="stmt">
+        <h2>Deux phases,<br>deux récupérations.</h2>
+        <div class="lead">
+          <p>Le procédé repose sur un mélange biphasique : un solvant organique qui met
+             le polymère en solution, et une solution aqueuse complexante qui capte
+             l'antimoine.</p>
+          <p>Libéré de sa matrice, l'oxyde d'antimoine passe sélectivement dans la phase
+             aqueuse. Le tétrabromobisphénol A, principal retardateur de flamme bromé,
+             est ensuite extrait par un traitement au non-solvant. Le polymère dépollué
+             est récupéré solide.</p>
+          <p>Le choix des couples solvant et complexant a été établi par simulation
+             thermodynamique, puis affiné par criblage expérimental.</p>
+        </div>
+      </div>
+
+      <div class="mesures">
+        <div>
+          <div class="q">Sur des plastiques réels</div>
+          <p>Les 98&#8239;% d'extraction ne sont pas mesurés sur un plastique modèle, mais sur
+             des broyats issus de véritables déchets d'équipements électriques et électroniques.</p>
+        </div>
+        <div>
+          <div class="q">Retardateur de flamme retiré</div>
+          <p>Le tétrabromobisphénol A est extrait à son tour. Ce n'est pas seulement
+             l'antimoine qui sort du plastique, c'est aussi le composé bromé.</p>
+        </div>
+        <div>
+          <div class="q">Sous le seuil réglementaire</div>
+          <p>Le polymère récupéré présente une teneur en polluants inférieure à la limite
+             réglementaire. Il peut donc réintégrer la filière plastique.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="wrap">
+      <div class="eyebrow">Ce qui l'atteste</div>
+      <div class="stmt">
+        <h2 style="color:#fff">Publié,<br>et relu par des pairs.</h2>
+        <div class="lead">
+          <p>Le procédé n'est pas une promesse de laboratoire : il a été soumis
+             à l'examen de la communauté scientifique, et protégé.</p>
+        </div>
+      </div>
+
+      <ul class="preuves">
+        <li>
+          <div class="q">Thèse</div>
+          <h3>Recyclage de l'antimoine dans les plastiques des équipements électroniques</h3>
+          <p>Travaux de Morvan Gaudin, menés à l'Institut de Recherche de Chimie Paris
+             dans le cadre de la Chaire Mines Urbaines, réunissant Chimie ParisTech - PSL,
+             Mines Paris - PSL et Arts et Métiers ParisTech, avec le soutien de l'éco-organisme ecosystem.</p>
+          <a class="nlien" href="https://theses.fr/s298986" target="_blank" rel="noopener">Consulter la thèse <span class="a">&#8594;</span></a>
+        </li>
+        <li>
+          <div class="q">Publication</div>
+          <h3>Antimony Trioxide Extraction from E-Waste Brominated Flame Retardant Laden Plastics</h3>
+          <p>Morvan Gaudin, Vincent Semetey, Frédéric Rousseau et Grégory Lefèvre,
+             dans ACS Sustainable Resource Management, 2025. La partie du procédé
+             consacrée à l'extraction de l'antimoine y est décrite et validée.</p>
+          <a class="nlien" href="https://pubs.acs.org/doi/10.1021/acssusresmgt.4c00466" target="_blank" rel="noopener">Lire la publication <span class="a">&#8594;</span></a>
+        </li>
+        <li>
+          <div class="q">Brevet</div>
+          <h3>Procédé breveté, publié en 2025</h3>
+          <p>DeeeMines exploite le brevet sous licence et porte son passage à l'échelle
+             industrielle, avec les trois chercheurs co&#8209;inventeurs.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="tint">
+    <div class="wrap">
+      <div class="eyebrow">La suite</div>
+      <div class="stmt">
+        <h2>Du laboratoire<br>au pilote.</h2>
+        <div class="lead">
+          <p>Deux chantiers sont ouverts. Élargir le procédé aux autres polymères et aux
+             autres molécules bromées que l'on rencontre dans les gisements réels.</p>
+          <p>Et construire un pilote industriel, seule façon de vérifier que ce qui tient
+             en laboratoire tient aussi à l'échelle d'une tonne.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" style="text-align:center">
+    <div class="wrap">
+      <h2 style="color:#fff;font-size:clamp(24px,3vw,34px);margin-bottom:22px">Un gisement, un besoin, une question ?</h2>
+      <a href="#contact" data-go="home" class="btn btn-mint">Écrivez-nous <span class="a">&#8594;</span></a>
+    </div>
+  </section>
+</main>

@@ -13,12 +13,30 @@ function adresse(texte) {
     .slice(0, 70);
 }
 
+/* Transforme un lien de vidéo, tel qu'on le copie depuis la barre d'adresse,
+   en adresse d'intégration utilisable dans un cadre. Accepte YouTube, Vimeo
+   et Dailymotion. Renvoie une chaîne vide si le lien n'est pas reconnu :
+   le gabarit affiche alors un simple bouton vers la vidéo. */
+function lecteur(lien) {
+  const u = String(lien || '').trim();
+  if (!u) return '';
+  let m;
+  if ((m = u.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|live\/)|youtu\.be\/)([\w-]{6,})/)))
+    return 'https://www.youtube-nocookie.com/embed/' + m[1];
+  if ((m = u.match(/vimeo\.com\/(?:video\/)?(\d+)/)))
+    return 'https://player.vimeo.com/video/' + m[1];
+  if ((m = u.match(/dailymotion\.com\/video\/([\w]+)/)))
+    return 'https://www.dailymotion.com/embed/video/' + m[1];
+  return '';
+}
+
 module.exports = function (eleventyConfig) {
   // L'administration est recopiée telle quelle, jamais interprétée
   eleventyConfig.ignores.add('src/admin/**');
 
   eleventyConfig.addFilter('markdown', (t) => (t ? md.render(String(t)) : ''));
   eleventyConfig.addFilter('adresse', adresse);
+  eleventyConfig.addFilter('lecteur', lecteur);
 
   // Fichiers recopiés tels quels dans le site construit
   eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' });

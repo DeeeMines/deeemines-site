@@ -122,6 +122,19 @@ collections:
               - { label: Texte, name: texte, widget: text, i18n: true }
               - { label: Destinataires (après « Pour »), name: pour, widget: string, i18n: true }
 
+          - label: Page « Le procédé »
+            name: procede
+            widget: object
+            i18n: true
+            fields:
+              - label: Lien de la vidéo de présentation
+                name: video
+                widget: string
+                required: false
+                default: ""
+                i18n: duplicate
+                hint: "Collez l'adresse de la vidéo telle qu'elle apparaît dans la barre du navigateur (YouTube, Vimeo ou Dailymotion). Laissez vide tant que vous ne l'avez pas : un visuel d'attente occupe la place."
+
           - label: Coordonnées
             name: contact
             widget: object

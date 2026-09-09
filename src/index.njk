@@ -60,7 +60,7 @@ ogTitre: "DeeeMines"
       <div class="fig" style="--c:var(--cyan-d)">
         <div class="n">0</div>
         <div class="k">Voie de recyclage pour les plastiques ignifugés</div>
-        <p>Celui des batteries se recycle déjà. Celui des plastiques part en incinération.</p>
+        <p>L'antimoine des batteries se recycle déjà. Celui des plastiques non, et part en incinération.</p>
       </div>
     </div>
   </div>
@@ -205,6 +205,10 @@ ogTitre: "DeeeMines"
       <div class="chip"><b>Conditions douces</b><span>température ambiante et pression atmosphérique</span></div>
       <div class="chip"><b>Boucle fermée</b><span>les solvants sont régénérés et réutilisés</span></div>
       <div class="chip"><b>Procédé breveté</b><span>publié en 2025, issu de quatre ans de thèse</span></div>
+    </div>
+
+    <div style="margin-top:clamp(30px,3.4vw,44px)">
+      <a href="#procede" data-go="procede" class="btn btn-mint">Le procédé en détail <span class="a">&#8594;</span></a>
     </div>
   </div>
 </section>
@@ -500,6 +504,8 @@ ogTitre: "DeeeMines"
     </div>
   </section>
 </main>
+
+{% include "page-procede.njk" %}
 
 <!-- ===================== ACTUALITÉS ===================== -->
 <!-- Les actualités se modifient depuis /admin, rubrique « Actualités ».
