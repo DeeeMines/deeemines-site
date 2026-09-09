@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeeeMines · L'Europe consomme l'antimoine, elle ne le produit pas</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232B2BE8'/%3E%3Cstop offset='.55' stop-color='%23297EE1'/%3E%3Cstop offset='1' stop-color='%2352FCC3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%23040440'/%3E%3Ctext x='32' y='45' font-family='Helvetica,Arial,sans-serif' font-size='34' font-weight='600' text-anchor='middle' fill='url(%23g)'%3ED%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DeeeMines">
+<meta property="og:title" content="DeeeMines">
+<meta property="og:description" content="L'Europe importe tout son antimoine. Nous le produisons ici, à partir des plastiques des équipements électroniques.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description content="L'Europe importe la totalité de son antimoine. DeeeMines le produit ici, à partir des plastiques des équipements électroniques, grâce à un procédé breveté issu de l'Institut de Recherche de Chimie Paris.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ===== Charte : couleurs relevées sur le logo DeeeMines ===== */
+:root{
+  --ink:#06065B; --ink-deep:#040440;
+  --blue:#2B2BE8; --azure:#297EE1; --cyan:#3EBDD2; --mint:#52FCC3;
+  /* variantes lisibles sur fond clair */
+  --cyan-d:#1793AB; --mint-d:#0E9A72;
+  --paper:#FFFAF6; --paper-2:#F5EFE9;
+  --text:#06065B; --soft:#5A5E8C; --soft-dark:#B9C6E6;
+  --grad:linear-gradient(90deg,#040440,#2B2BE8 34%,#297EE1 58%,#3EBDD2 78%,#52FCC3);
+  --line:rgba(6,6,91,.12); --line-d:rgba(255,255,255,.15);
+  --disp:"Inter Tight",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --pad:clamp(22px,5vw,80px); --maxw:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+h1,h2,h3,h4{margin:0;font-family:var(--disp);font-weight:500;letter-spacing:-.035em;line-height:1}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+section{padding:clamp(44px,4.6vw,68px) 0}
+.dark{background:var(--ink-deep);color:#fff}
+.dark+.dark{padding-top:clamp(48px,5.5vw,80px)}
+.dark p{color:var(--soft-dark)}
+.tint{background:var(--paper-2)}
+
+h1{font-size:clamp(38px,6.6vw,88px);line-height:.98}
+h2{font-size:clamp(30px,4.4vw,52px);line-height:1.06}
+h3{font-size:clamp(20px,2vw,25px);letter-spacing:-.028em;line-height:1.14}
+
+.eyebrow,.rowtxt .tag,.na .when,.na .cat,.bul .nom{font-size:12px;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;line-height:1.35}
+.eyebrow{color:var(--soft);margin-bottom:26px}
+.dark .eyebrow{color:var(--mint)}
+.lead{font-size:clamp(16.5px,1.45vw,19px);line-height:1.62;color:var(--soft);max-width:62ch}
+.lead p+p{margin-top:15px}
+.dark .lead{color:#C6D0EE}
+
+.btn{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:500;
+  padding:15px 28px;border-radius:100px;border:1px solid transparent;transition:.22s;cursor:pointer}
+.btn-mint{background:var(--mint);color:var(--ink-deep)}
+.btn-mint:hover{background:#fff}
+.btn-line{border-color:rgba(255,255,255,.42);color:#fff}
+.btn-line:hover{border-color:#fff;background:rgba(255,255,255,.12)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:var(--blue)}
+.btn .a{transition:transform .22s}
+.btn:hover .a{transform:translateX(3px)}
+.grad-rule{height:3px;background:var(--grad);border:0;margin:0}
+
+/* ===== En-tête ===== */
+header{position:sticky;top:0;z-index:50;background:rgba(255,250,246,.92);
+  backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.nav img{height:31px;width:auto}
+.links{display:flex;gap:32px}
+.links a{font-size:14.5px;color:var(--soft);transition:.2s;position:relative}
+.links a:hover,.links a.on{color:var(--text)}
+.links a:focus{outline:none}
+.links a:focus-visible{outline:2px solid var(--azure);outline-offset:4px;border-radius:2px}
+.links a.on::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:var(--grad)}
+.right{display:flex;align-items:center;gap:18px}
+.lang{font-size:12.5px;color:var(--soft);letter-spacing:.06em}
+.lang b{font-weight:500;cursor:pointer;color:var(--soft);transition:.18s}
+.lang b:hover{color:var(--text)}
+.lang b.on{color:var(--text)}
+.burger{display:none;background:none;border:0;color:var(--text);padding:8px;cursor:pointer}
+@media(max-width:960px){
+  .links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--paper);
+    flex-direction:column;gap:0;padding:4px var(--pad) 18px;border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{padding:14px 0;border-bottom:1px solid var(--line);font-size:17px}
+  .links a.on::after{display:none}
+  .burger{display:block}
+  .right .btn{display:none}
+}
+
+/* ===== 1. HERO vidéo ===== */
+.hero{position:relative;min-height:min(84vh,740px);display:flex;align-items:flex-end;
+  color:#fff;overflow:hidden;
+  background:radial-gradient(900px 560px at 82% 4%,rgba(82,252,195,.16),transparent 62%),
+             radial-gradient(760px 520px at 0% 100%,rgba(43,43,232,.38),transparent 66%),
+             var(--ink-deep);
+  padding:clamp(90px,13vw,150px) 0 clamp(64px,8vw,100px)}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero .veil{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(4,4,64,.48) 0%,rgba(4,4,64,.24) 45%,rgba(4,4,64,.70) 100%),
+             linear-gradient(90deg,rgba(4,4,64,.54) 0%,rgba(4,4,64,.05) 62%,rgba(4,4,64,.22) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero h1{max-width:17ch;text-shadow:0 2px 30px rgba(4,4,64,.85),0 1px 3px rgba(4,4,64,.4)}
+.hero h1 span{color:var(--mint)}
+.hero .lead{max-width:58ch;color:#EAEFFB;font-size:clamp(16.5px,1.5vw,19.5px);margin-top:28px;
+  text-shadow:0 1px 18px rgba(4,4,64,.9),0 1px 2px rgba(4,4,64,.5)}
+.acts{margin-top:38px;display:flex;flex-wrap:wrap;gap:12px}
+
+/* ===== 2. SOUVERAINETÉ · chiffres en bandeau plein ===== */
+.stmt{display:grid;grid-template-columns:1.34fr 1fr;gap:clamp(26px,3.6vw,52px);align-items:center}
+@media(max-width:880px){.stmt{grid-template-columns:1fr}}
+.stmt h2{max-width:22ch}
+.fig .n-mot{font-size:clamp(34px,4.4vw,58px);letter-spacing:-.03em}
+.figs{margin-top:clamp(28px,3.2vw,44px);border-top:1px solid var(--line);
+  display:grid;grid-template-columns:repeat(3,1fr)}
+.fig{padding:38px 44px 4px;border-right:1px solid var(--line)}
+.fig:first-child{padding-left:0}
+.fig:last-child{border-right:0}
+.fig .n{font-family:var(--disp);font-weight:500;letter-spacing:-.05em;line-height:.92;
+  font-size:clamp(60px,8vw,112px);color:var(--c)}
+.fig .k{margin-top:14px;font-family:var(--disp);font-size:clamp(19px,1.9vw,23px);
+  font-weight:500;letter-spacing:-.03em}
+.fig p{margin-top:14px;font-size:15.2px;line-height:1.6;color:var(--soft);max-width:36ch}
+@media(max-width:880px){
+  .figs{grid-template-columns:1fr}
+  .fig{border-right:0;border-bottom:1px solid var(--line);padding:30px 0 26px}
+}
+
+/* ===== 3. NOTRE SOLUTION · lignes alternées ===== */
+.row{display:grid;grid-template-columns:.62fr 1.38fr;gap:clamp(30px,5vw,74px);align-items:center;
+  padding:clamp(32px,3.4vw,46px) 0;border-top:1px solid var(--line)}
+.row:first-of-type,.stmt+.row{border-top:0;padding-top:clamp(30px,3.4vw,46px)}
+.row.flip{grid-template-columns:1.38fr .62fr}
+.row.flip .panel{order:2}
+.panel{aspect-ratio:5/4;border-radius:10px;position:relative;overflow:hidden;
+  background:linear-gradient(150deg,#06065B,#040440 62%);
+  display:flex;align-items:center;justify-content:center}
+.panel::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(70% 70% at 30% 22%,color-mix(in srgb,var(--c) 26%,transparent),transparent 68%)}
+.el{position:relative;z-index:2;text-align:center;color:#fff;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  height:clamp(104px,12vw,140px)}
+.el .z{font-size:11px;letter-spacing:.16em;color:var(--c);height:18px;line-height:18px}
+.el .s{font-family:var(--disp);font-weight:400;font-size:clamp(50px,6.2vw,84px);
+  line-height:1;letter-spacing:-.05em;flex:1;display:flex;align-items:center;justify-content:center}
+.el .m{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--soft-dark);
+  height:18px;line-height:18px}
+.rowtxt .tag{color:var(--ct,var(--c));margin-bottom:14px}
+.rowtxt h3{font-size:clamp(25px,3vw,36px);margin-bottom:14px}
+.rowtxt p{font-size:16.4px;line-height:1.62;color:var(--soft)}
+.rowtxt .who{margin-top:20px;font-size:14.6px;color:var(--soft)}
+.rowtxt .who b{color:var(--text);font-weight:500}
+@media(max-width:880px){
+  .row,.row.flip{grid-template-columns:1fr;gap:26px}
+  .row.flip .panel{order:0}
+  .panel{aspect-ratio:16/9}
+}
+
+/* ===== 4. NOTRE TECHNOLOGIE · chaîne de procédé ===== */
+.flow{margin-top:clamp(46px,5.2vw,70px);position:relative;--g:clamp(20px,3vw,40px)}
+.flow .track{position:absolute;left:calc(12.5% - var(--g) * .375);width:calc(75% + var(--g) * .75);top:-75px;height:170px;opacity:.9}
+.flow .track svg{width:100%;height:100%;display:block}
+.flow .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--g);position:relative}
+.st{text-align:center}
+.st p{margin-left:auto;margin-right:auto;max-width:30ch}
+.st .dot{width:20px;height:20px;border-radius:50%;background:var(--ink-deep);margin:0 auto;
+  border:2px solid var(--c);display:flex;align-items:center;justify-content:center;position:relative;z-index:2}
+.st .dot i{width:8px;height:8px;border-radius:50%;background:var(--c);display:block}
+.st .num{margin-top:96px;font-size:12px;letter-spacing:.16em;color:var(--soft-dark)}
+.st h3{margin:8px 0 10px;color:#fff}
+.st p{font-size:14.6px;line-height:1.58}
+@media(max-width:880px){
+  .flow .track{left:9px;width:2px;top:6px;bottom:6px;height:auto;
+    background:var(--grad);opacity:.5}
+  .flow .track svg{display:none}
+  .chips{margin-top:40px}
+  .flow .steps{grid-template-columns:1fr;gap:30px}
+  .st{padding-left:38px;position:relative;text-align:left}
+  .st p{margin-left:0;max-width:none}
+  .st .dot{position:absolute;left:0;top:2px;margin:0}
+  .st .num{margin-top:0}
+}
+.chips{margin-top:clamp(28px,3.2vw,46px);display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:880px){.chips{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.chips{grid-template-columns:1fr}}
+.chip{border:1px solid var(--line-d);border-radius:14px;padding:22px 20px 20px;text-align:center;
+  background:rgba(255,255,255,.03)}
+.chip b{display:block;font-family:var(--disp);font-weight:500;letter-spacing:-.035em;
+  font-size:clamp(30px,3.4vw,44px);line-height:1;color:var(--mint);margin-bottom:10px}
+.chip span{display:block;font-size:13.6px;line-height:1.45;color:var(--soft-dark)}
+
+.dist{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3.4vw,54px);margin-top:22px}
+.di{display:grid;grid-template-columns:132px 1fr;gap:24px;align-items:center}
+.di img{max-height:40px;max-width:100%;width:auto;height:auto;object-fit:contain;justify-self:center}
+.di h3{font-size:18px;margin-bottom:5px}
+.di p{font-size:14.6px;color:var(--soft);line-height:1.5}
+@media(max-width:820px){.dist{grid-template-columns:1fr;gap:22px}}
+
+/* ===== 5. Bandeau partenaires ===== */
+.band{padding:clamp(42px,4.6vw,66px) 0;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
+  gap:clamp(18px,2vw,30px) clamp(14px,1.6vw,26px);margin-top:34px}
+.logos div{display:flex;align-items:center;justify-content:center;height:56px;flex:0 0 148px}
+.logos img{max-height:44px;max-width:150px;width:auto;opacity:.82;transition:.2s}
+.logos img:hover{opacity:1}
+.logos .todo{font-size:12px;color:var(--soft);opacity:.55;font-style:italic;text-align:center;line-height:1.3}
+@media(max-width:900px){.logos{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:600px){.logos{grid-template-columns:repeat(3,1fr);gap:20px}.logos div{height:44px}}
+
+/* ===== 6. Feuille de route · échelle de traitement ===== */
+
+.sc .per{font-size:12px;letter-spacing:.17em;text-transform:uppercase;color:var(--cd,var(--c));padding-top:14px;font-weight:500}
+.sc .q{font-family:var(--disp);font-weight:500;letter-spacing:-.045em;line-height:1;color:var(--text);
+  font-size:clamp(32px,4.4vw,54px)}
+.sc .bar{margin-top:20px;height:7px;border-radius:4px;background:rgba(6,6,91,.07);overflow:hidden}
+.sc .bar i{display:block;height:100%;border-radius:4px;background:var(--cd,var(--c));width:var(--w)}
+.sc p{margin-top:20px;font-size:15.4px;line-height:1.62;color:var(--soft)}
+@media(max-width:820px){.sc{grid-template-columns:1fr;gap:10px}.sc .per{padding-top:0}}
+
+/* ===== 7. Contact ===== */
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,84px);align-items:end}
+.f{margin-bottom:18px}
+.f label{display:block;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--soft-dark);margin-bottom:8px}
+.f input,.f select,.f textarea{width:100%;background:rgba(255,255,255,.06);border:1px solid var(--line-d);
+  color:#fff;padding:14px 15px;font-family:var(--sans);font-size:15px;border-radius:6px;outline:none;transition:.2s}
+.f textarea{min-height:114px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--mint);background:rgba(255,255,255,.1)}
+.f select option{background:var(--ink)}
+.co{margin-top:34px}
+.co li{padding:12px 0;border-top:1px solid var(--line-d);display:flex;gap:20px;align-items:baseline}
+.co .k{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mint);
+  flex:none;width:78px;padding-top:2px}
+.co .v{font-size:16.5px;color:#fff}
+@media(max-width:880px){.cgrid{grid-template-columns:1fr;align-items:start}}
+
+.sent{border:1px solid var(--line-d);border-radius:10px;padding:38px 30px;text-align:center;
+  background:rgba(82,252,195,.06)}
+.sent .tick{width:48px;height:48px;border-radius:50%;background:var(--mint);color:var(--ink-deep);
+  display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 20px}
+.sent h3{color:#fff;margin-bottom:10px}
+.sent p{color:var(--soft-dark);font-size:15.4px}
+.cerr{margin-top:16px;font-size:14.6px;color:#FFB4A8}
+.sent .alt{display:inline-block;margin-top:18px;font-size:14px;color:var(--mint);
+  border-bottom:1px solid rgba(82,252,195,.4);padding-bottom:2px}
+
+/* ===== Apparitions au défilement =====
+   Les états initiaux ne s'appliquent que si le script les active (classe .anim),
+   pour que la page reste lisible sans JavaScript. */
+html.anim .reveal{opacity:0;transform:translateY(16px);
+  transition:opacity .75s cubic-bezier(.22,.61,.36,1),transform .75s cubic-bezier(.22,.61,.36,1);
+  transition-delay:calc(var(--i,0) * 70ms);will-change:opacity,transform}
+html.anim .reveal.in{opacity:1;transform:none}
+
+/* les barres de la feuille de route se remplissent */
+html.anim .sc .bar i{width:0;transition:width 1.15s cubic-bezier(.22,.61,.36,1) .2s}
+html.anim .sc.in .bar i{width:var(--w)}
+
+/* la sinusoïde se dévoile de gauche à droite */
+html.anim .flow .track{clip-path:inset(0 100% 0 0);
+  transition:clip-path 1.5s cubic-bezier(.33,.1,.2,1) .15s}
+html.anim .flow.in .track{clip-path:inset(0 0 0 0)}
+
+@media(prefers-reduced-motion:reduce){
+  html.anim .reveal,html.anim .reveal.in{opacity:1;transform:none;transition:none}
+  html.anim .sc .bar i{width:var(--w);transition:none}
+  html.anim .flow .track{clip-path:none;transition:none}
+}
+
+/* ===== Pages internes ===== */
+.page{display:none}
+.page.active{display:block;animation:fade .32s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.phead{background:var(--ink-deep);color:#fff;position:relative;overflow:hidden;
+  padding:clamp(74px,10vw,128px) 0 clamp(54px,7vw,88px)}
+.phead::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(820px 460px at 86% 0%,rgba(82,252,195,.14),transparent 64%),
+             radial-gradient(700px 460px at 0% 100%,rgba(43,43,232,.3),transparent 66%)}
+.phead .wrap{position:relative}
+.phead h1{max-width:16ch}
+.phead .lead{color:#C6D0EE;margin-top:26px;max-width:68ch}
+.people{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,44px);margin-top:30px}
+.mem{display:flex;gap:24px;align-items:flex-start}
+.mem .av{width:104px;height:104px;border-radius:50%;flex:none;object-fit:cover;
+  box-shadow:0 0 0 1px var(--line)}
+.mem h3{font-size:22px;margin-bottom:4px}
+.mem .r{font-size:14.5px;color:var(--azure);font-weight:500;margin-bottom:9px}
+.mem p{font-size:15px;color:var(--soft);line-height:1.55}
+.mem .aff{margin-top:16px;display:flex;align-items:center;gap:10px}
+.mem .aff{gap:16px}
+.mem .aff img{height:44px;width:auto;opacity:.85}
+.pc .ph{width:78px;height:78px;border-radius:50%;object-fit:cover;margin-bottom:18px;
+  box-shadow:0 0 0 1px var(--line)}
+.pc{border-top:2px solid var(--c);padding-top:22px}
+.pc .aff{margin-top:14px;display:flex;align-items:center;gap:8px}
+.pc .aff{gap:14px}
+.pc .aff img{height:38px;width:auto;opacity:.8}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3vw,40px);margin-top:30px}
+.news{margin-top:0}
+.na{display:grid;grid-template-columns:170px 1fr;gap:clamp(24px,4vw,54px);
+  padding:clamp(24px,2.6vw,34px) 0;border-top:1px solid var(--line);align-items:start}
+.na:first-child{border-top:0;padding-top:0}
+.na .when{color:var(--soft);padding-top:7px}
+.na .cat{color:var(--ct,var(--azure));margin-bottom:9px}
+.na h3{font-size:clamp(21px,2.2vw,27px);margin-bottom:12px;max-width:34ch}
+.na p{font-size:15.6px;line-height:1.62;color:var(--soft);max-width:76ch}
+.nc.illustree{display:grid;grid-template-columns:1fr 290px;gap:clamp(24px,3vw,44px);align-items:start}
+.nimg{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;display:block;
+  box-shadow:0 0 0 1px var(--line)}
+@media(max-width:880px){.nc.illustree{grid-template-columns:1fr}}
+.na .nlien{display:inline-block;margin-top:15px;font-size:14.6px;color:var(--azure);
+  border-bottom:1px solid rgba(41,126,225,.35);padding-bottom:2px}
+.na .nlien .a{transition:transform .2s}
+.na .nlien:hover .a{display:inline-block;transform:translateX(3px)}
+@media(max-width:820px){.na{grid-template-columns:1fr;gap:10px}.na .when{padding-top:0}}
+.pc{border-top:2px solid var(--c);padding-top:20px}
+.pc h3{font-size:20px;margin-bottom:6px}
+.pc p{font-size:14.8px;color:var(--soft);line-height:1.55}
+.dark .pc p{color:var(--soft-dark)}
+.dark .pc h3{color:#fff}
+@media(max-width:820px){.people{grid-template-columns:1fr;gap:32px}.cards3{grid-template-columns:1fr;gap:26px}}
+
+/* ===== Pages L'antimoine et mentions ===== */
+.concl{display:grid;grid-template-columns:1fr auto;gap:clamp(28px,4vw,56px);align-items:center}
+@media(max-width:820px){.concl{grid-template-columns:1fr;justify-items:start}}
+.bulles{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,2.6vw,38px);
+  margin-top:clamp(28px,3.2vw,46px)}
+.bul{text-align:center}
+.bul .rond{width:100%;max-width:124px;aspect-ratio:1;margin:0 auto 16px;border-radius:50%;
+  display:grid;place-items:center;background:var(--paper-2);border:1px solid var(--line);color:var(--c)}
+.bul svg{width:52%;height:52%}
+.bul .nom{color:var(--text)}
+.bul .det{font-size:13.4px;line-height:1.5;color:var(--soft);margin-top:8px}
+@media(max-width:880px){.bulles{grid-template-columns:repeat(2,1fr)}}
+.uses{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,52px);margin-top:clamp(28px,3.2vw,46px)}
+.use{border-top:2px solid var(--c);padding-top:22px}
+.use .pct{font-family:var(--disp);font-weight:500;letter-spacing:-.045em;line-height:1;
+  font-size:clamp(46px,5.6vw,72px);color:var(--c);margin-bottom:14px}
+.use h3{font-size:19px;margin-bottom:10px}
+.use p{font-size:15px;color:var(--soft);line-height:1.6}
+.dark .use p{color:var(--soft-dark)}
+@media(max-width:820px){.uses{grid-template-columns:1fr;gap:32px}}
+
+.steps-n{margin-top:clamp(26px,3vw,42px)}
+.sn{display:grid;grid-template-columns:74px 1fr;gap:24px;padding:28px 0;border-top:1px solid var(--line);align-items:baseline}
+.sn:last-child{border-bottom:1px solid var(--line)}
+.sn .i{font-family:var(--disp);font-size:clamp(28px,3vw,38px);font-weight:500;color:var(--azure);letter-spacing:-.03em;line-height:1}
+.sn h3{font-size:21px;margin-bottom:8px}
+.sn p{font-size:15.4px;color:var(--soft);line-height:1.6}
+
+.legal{max-width:74ch}
+.legal h3{font-size:21px;margin:38px 0 12px}
+.legal h3:first-child{margin-top:0}
+.legal p,.legal li{font-size:15.6px;line-height:1.7;color:var(--soft)}
+.legal p+p{margin-top:12px}
+.legal ul{margin:12px 0 0;padding-left:20px;list-style:disc}
+.legal li{margin-bottom:6px}
+.legal b{color:var(--text);font-weight:500}
+.legal .todo{background:rgba(82,252,195,.12);border-left:2px solid var(--mint);
+  padding:14px 18px;margin:16px 0;font-size:14.6px;color:var(--soft)}
+
+/* ===== Pied de page ===== */
+footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0 28px}
+.fg{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start}
+.fg img{height:23px;width:auto}
+.fl{display:flex;gap:30px;flex-wrap:wrap}
+.fl a{font-size:14.5px;color:var(--soft)}
+.fl a:hover{color:var(--text)}
+.fb a:hover{color:var(--text);text-decoration:underline}
+.fb{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--soft)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" data-go="home"><img src="assets/logo.png" alt="DeeeMines"></a>
+    <nav class="links" id="links">
+      <a href="#solution" data-go="home">Notre solution</a>
+      <a href="#technologie" data-go="home">Notre technologie</a>
+      <a href="#" data-go="antimoine">L'antimoine</a>
+      <a href="#" data-go="equipe">Équipe</a>
+      <a href="#" data-go="actus">Actualités</a>
+    </nav>
+    <div class="right">
+      <span class="lang"><b data-lang="fr" class="on">FR</b> / <b data-lang="en">EN</b></span>
+      <a href="#contact" data-go="home" class="btn btn-ink">Nous contacter</a>
+      <button class="burger" id="burger" aria-label="Menu">
+        <svg width="22" height="14" viewBox="0 0 22 14" fill="none"><path d="M0 1h22M0 7h22M0 13h22" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="page active" id="page-home">
+
+<!-- 1 · HERO -->
+<div class="hero" id="top">
+  <!-- Vidéo de fond : hero.mp4 dans le même dossier que cette page.
+       Image d'attente facultative : hero-poster.jpg, affichée avant que la vidéo ne démarre. -->
+  <video autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg">
+    <source src="hero.mp4" type="video/mp4">
+  </video>
+  <div class="veil"></div>
+  <div class="wrap">
+    <h1>{{ contenu.fr.hero.titre1 }}<br><span>{{ contenu.fr.hero.titre2 }}</span></h1>
+    <div class="lead">
+      <p>{{ contenu.fr.hero.para1 }}</p>
+      <p>{{ contenu.fr.hero.para2 }}</p>
+    </div>
+  </div>
+</div>
+<hr class="grad-rule">
+
+<!-- 2 · SOUVERAINETÉ -->
+<section id="souverainete">
+  <div class="wrap">
+    <div class="eyebrow">Le problème</div>
+    <div class="stmt">
+      <h2>L'Europe incinère une ressource stratégique dont elle a besoin.<br><span style="color:var(--azure)">DeeeMines la récupère.</span></h2>
+      <div class="lead">
+        <p>Ce métal critique entre dans les batteries, les câbles, les écrans tactiles, les panneaux solaires et les munitions.</p>
+        <p>En fin de vie, faute de solution de recyclage, ces produits partent à l'incinérateur avec l'antimoine qu'ils contiennent.</p>
+      </div>
+    </div>
+
+    <div class="figs">
+      <div class="fig" style="--c:var(--blue)">
+        <div class="n">100&#8239;%</div>
+        <div class="k">Importé</div>
+        <p>La totalité de l'antimoine consommé dans l'Union européenne vient de l'extérieur.</p>
+      </div>
+      <div class="fig" style="--c:var(--azure)">
+        <div class="n">3</div>
+        <div class="k">Producteurs miniers majoritaires</div>
+        <p>La Chine, la Russie et le Tadjikistan tiennent l'essentiel des mines. Depuis les contrôles chinois à l'exportation, le prix a été multiplié par six en quatre ans.</p>
+      </div>
+      <div class="fig" style="--c:var(--cyan-d)">
+        <div class="n n-mot">Aucune</div>
+        <div class="k">Voie de recyclage</div>
+        <p>L'antimoine sert d'abord à ignifuger des plastiques. Celui des batteries se recycle déjà, celui des plastiques non : ces flux partent en incinération, l'antimoine avec eux.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · NOTRE SOLUTION -->
+<section class="tint" id="solution">
+  <div class="wrap">
+    <div class="eyebrow">Notre solution</div>
+    <div class="stmt">
+      <h2>Nous redonnons vie à trois matières premières à partir de déchets.</h2>
+      <p class="lead">
+        Nous reprenons aux centres de tri la fraction contenant de l'antimoine qu'ils incinèrent
+        faute de pouvoir la revaloriser, et nous en extrayons trois ressources.
+      </p>
+    </div>
+
+    <div class="row" style="--c:var(--mint);--ct:var(--mint-d)">
+      <div class="panel">
+        <div class="el">
+          <div class="z">51</div>
+          <div class="s">Sb</div>
+          <div class="m">Antimoine</div>
+        </div>
+      </div>
+      <div class="rowtxt">
+        <div class="tag">{{ contenu.fr.produits[0].etiquette }}</div>
+        <h3>{{ contenu.fr.produits[0].titre }}</h3>
+        <p>{{ contenu.fr.produits[0].texte }}</p>
+        <div class="who">Pour <b>{{ contenu.fr.produits[0].pour }}</b></div>
+      </div>
+    </div>
+
+    <div class="row flip" style="--c:var(--cyan);--ct:var(--cyan-d)">
+      <div class="panel">
+        <div class="el">
+          <div class="z">35</div>
+          <div class="s">Br</div>
+          <div class="m">Brome</div>
+        </div>
+      </div>
+      <div class="rowtxt">
+        <div class="tag">{{ contenu.fr.produits[1].etiquette }}</div>
+        <h3>{{ contenu.fr.produits[1].titre }}</h3>
+        <p>{{ contenu.fr.produits[1].texte }}</p>
+        <div class="who">Pour <b>{{ contenu.fr.produits[1].pour }}</b></div>
+      </div>
+    </div>
+
+    <div class="row" style="--c:var(--azure)">
+      <div class="panel">
+        <div class="el">
+          <div class="z">ABS · HIPS</div>
+          <div class="s">
+            <svg viewBox="0 0 230 130" fill="none" aria-hidden="true" style="width:clamp(120px,14vw,160px);height:auto">
+              <!-- crochets du motif répétitif -->
+              <path d="M30 20 H16 V110 H30" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".75"/>
+              <path d="M186 20 H200 V110 H186" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".75"/>
+              <!-- squelette carboné -->
+              <path d="M44 82 L72 50 L100 82 L128 50 L156 82" stroke="var(--c)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M28 66 L44 82 M156 82 L172 66" stroke="var(--c)" stroke-width="3.6" stroke-linecap="round" opacity=".4"/>
+              <!-- groupes pendants -->
+              <path d="M72 50 V26 M128 50 V26" stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity=".55"/>
+              <circle cx="72" cy="50" r="7" fill="var(--c)"/>
+              <circle cx="128" cy="50" r="7" fill="var(--c)"/>
+              <circle cx="100" cy="82" r="5.5" fill="#fff" opacity=".9"/>
+              <circle cx="44" cy="82" r="5.5" fill="#fff" opacity=".9"/>
+              <circle cx="156" cy="82" r="5.5" fill="#fff" opacity=".9"/>
+              <circle cx="72" cy="24" r="5" fill="#fff" opacity=".55"/>
+              <circle cx="128" cy="24" r="5" fill="#fff" opacity=".55"/>
+              <text x="208" y="116" font-family="Inter Tight, sans-serif" font-size="26" font-style="italic" fill="#fff" opacity=".75">n</text>
+            </svg>
+          </div>
+          <div class="m">Polymère</div>
+        </div>
+      </div>
+      <div class="rowtxt">
+        <div class="tag">{{ contenu.fr.produits[2].etiquette }}</div>
+        <h3>{{ contenu.fr.produits[2].titre }}</h3>
+        <p>{{ contenu.fr.produits[2].texte }}</p>
+        <div class="who">Pour <b>{{ contenu.fr.produits[2].pour }}</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · NOTRE TECHNOLOGIE -->
+<section class="dark" id="technologie">
+  <div class="wrap">
+    <div class="eyebrow">Notre technologie</div>
+    <div class="stmt">
+      <h2 style="color:#fff">Séparer,<br>sans détruire.</h2>
+      <div class="lead">
+        <p>Quatre ans de recherche à l'Institut de Recherche de Chimie Paris, un brevet publié en 2025, et une chimie en conditions douces.</p>
+        <p>Aucune autre technologie ne sait aujourd'hui récupérer l'antimoine contenu dans les plastiques.</p>
+      </div>
+    </div>
+
+    <div class="flow">
+      <div class="track">
+        <svg viewBox="0 0 300 170" preserveAspectRatio="none" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#2B2BE8"/><stop offset=".38" stop-color="#297EE1"/>
+              <stop offset=".7" stop-color="#3EBDD2"/><stop offset="1" stop-color="#52FCC3"/>
+            </linearGradient>
+          </defs>
+          <path pathLength="1" d="M0 85 C 25 2, 75 2, 100 85 C 125 168, 175 168, 200 85 C 225 2, 275 2, 300 85"
+                stroke="url(#wave)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="steps">
+        <div class="st" style="--c:var(--blue)">
+          <div class="dot"><i></i></div>
+          <div class="num">01</div>
+          <h3>Broyage</h3>
+          <p>Les plastiques bromés et antimoniés issus des équipements électroniques sont réduits en fraction homogène.</p>
+        </div>
+        <div class="st" style="--c:var(--azure)">
+          <div class="dot"><i></i></div>
+          <div class="num">02</div>
+          <h3>Solvatation</h3>
+          <p>Le polymère est mis en solution, ce qui libère l'accès aux additifs prisonniers de la matrice.</p>
+        </div>
+        <div class="st" style="--c:var(--cyan)">
+          <div class="dot"><i></i></div>
+          <div class="num">03</div>
+          <h3>Extraction sélective</h3>
+          <p>L'antimoine est extrait, puis les molécules bromées. Chaque famille est isolée dans sa propre phase.</p>
+        </div>
+        <div class="st" style="--c:var(--mint)">
+          <div class="dot"><i></i></div>
+          <div class="num">04</div>
+          <h3>Insolubilisation</h3>
+          <p>Le polymère dépollué est récupéré solide, et les solvants repartent dans le cycle suivant.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="chips">
+      <div class="chip"><b>98&#8239;%</b><span>de rendement d'extraction en laboratoire</span></div>
+      <div class="chip"><b>Ambiante</b><span>température de procédé, sans chauffage</span></div>
+      <div class="chip"><b>Fermée</b><span>boucle de régénération des solvants</span></div>
+      <div class="chip"><b>2025</b><span>brevet publié, exploité sous licence</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · PARTENAIRES -->
+<div class="band">
+  <div class="wrap">
+    <div class="eyebrow" style="margin-bottom:4px">Ils nous soutiennent et travaillent avec nous</div>
+    <div class="logos">
+      {%- for p in partenaires.logos %}
+      <div><img src="{{ p.image }}" alt="{{ p.nom }}"></div>
+      {%- endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- 6 bis · DISTINCTIONS -->
+<section class="tint" style="padding:clamp(38px,4vw,58px) 0">
+  <div class="wrap">
+    <div class="eyebrow">Concours et distinctions</div>
+    <div class="dist">
+      <div class="di">
+        <img src="assets/i-phd.png" alt="i-PhD, concours d'innovation">
+        <div>
+          <h3>Lauréat du concours i-PhD</h3>
+          <p>Morvan Gaudin, distingué par Bpifrance pour la thèse à l'origine du procédé.</p>
+        </div>
+      </div>
+      <div class="di">
+        <img src="assets/cnrs.png" alt="CNRS Innovation">
+        <div>
+          <h3>Programme RISE, promotion d'été 2026</h3>
+          <p>Douze projets issus des laboratoires du CNRS retenus par CNRS Innovation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · CONTACT -->
+<section id="contact" style="background:var(--ink);color:#fff" class="dark">
+  <div class="wrap cgrid">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2 style="color:#fff">Un gisement,<br>un besoin,<br>une question.</h2>
+      <p class="lead" style="margin-top:24px">
+        Centres de tri, éco-organismes, industriels, laboratoires, investisseurs :
+        dites-nous d'où vous venez, nous répondons sous quelques jours.
+      </p>
+      <ul class="co">
+        <li><div class="k">Écrire</div><div class="v">{{ contenu.fr.contact.email }}</div></li>
+        <li><div class="k">Adresse</div><div class="v">{{ contenu.fr.contact.adresse }}</div></li>
+        <li><div class="k">Suivre</div><div class="v"><a href="{{ contenu.fr.contact.linkedin }}" target="_blank" rel="noopener" style="border-bottom:1px solid rgba(255,255,255,.3)">LinkedIn</a></div></li>
+      </ul>
+    </div>
+    <div>
+      <form id="cform" name="contact" method="POST" data-netlify="true" netlify-honeypot="piege">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Laissez ce champ vide <input name="piege" tabindex="-1" autocomplete="off"></label></p>
+        <div class="f"><label for="a1">Nom</label><input id="a1" name="nom" type="text" placeholder="Votre nom" required></div>
+        <div class="f"><label for="a2">E-mail</label><input id="a2" name="email" type="email" placeholder="vous@organisation.fr" required></div>
+        <div class="f"><label for="a3">Vous êtes</label>
+          <select id="a3" name="profil">
+            <option>Centre de tri, recycleur ou éco-organisme</option>
+            <option>Industriel utilisateur d'antimoine</option>
+            <option>Laboratoire ou partenaire de recherche</option>
+            <option>Institution ou financeur public</option>
+            <option>Investisseur</option>
+            <option>Presse</option>
+            <option>Candidature</option>
+          </select>
+        </div>
+        <div class="f"><label for="a4">Message</label><textarea id="a4" name="message" placeholder="Quelques lignes suffisent." required></textarea></div>
+        <button class="btn btn-mint" type="submit">Envoyer <span class="a">→</span></button>
+        <p class="cerr" id="cerr" hidden>L'envoi n'a pas abouti. Écrivez-nous directement à contact@deeemines.com</p>
+      </form>
+      <div class="sent" id="sent" hidden>
+        <div class="tick">✓</div>
+        <h3>Message envoyé.</h3>
+        <p>Merci, nous revenons vers vous sous quelques jours.</p>
+        <a class="alt" id="mailto" href="mailto:contact@deeemines.com">Ou écrivez-nous directement</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===================== PAGE ÉQUIPE ===================== -->
+<main class="page" id="page-equipe">
+  <div class="phead">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--mint)">L'équipe</div>
+      <h1>Des chimistes et des ingénieurs.</h1>
+      <p class="lead">
+        DeeeMines est fondée par deux ingénieurs issus de l'université Paris Sciences &amp; Lettres,
+        entourés des trois chercheurs co-inventeurs du brevet, à l'Institut de Recherche de Chimie
+        Paris.
+      </p>
+    </div>
+  </div>
+  <hr class="grad-rule">
+
+  <section style="padding:clamp(44px,4.6vw,68px) 0">
+    <div class="wrap">
+      <div class="eyebrow">Cofondateurs</div>
+      <div class="people">
+        {%- for m in equipe.fr.cofondateurs %}
+        <div class="mem">
+          <img class="av" src="{{ m.photo }}" alt="{{ m.nom }}">
+          <div>
+            <h3>{{ m.nom }}</h3>
+            <div class="r">{{ m.role }}</div>
+            <p>{{ m.texte }}</p>
+            <div class="aff">{% for l in m.logos %}<img src="{{ l.image }}" alt="{{ l.nom }}">{% endfor %}</div>
+          </div>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="tint" style="padding:clamp(44px,4.6vw,68px) 0">
+    <div class="wrap">
+      <div class="eyebrow">Équipe scientifique</div>
+      <h2 style="font-size:clamp(27px,3.4vw,40px)">Les co-inventeurs du brevet.</h2>
+      <div class="cards3">
+        {%- set cs = ["var(--mint)","var(--cyan)","var(--azure)"] %}
+        {%- for m in equipe.fr.scientifiques %}
+        <div class="pc" style="--c:{{ cs[loop.index0] }}">
+          <img class="ph" src="{{ m.photo }}" alt="{{ m.nom }}">
+          <h3>{{ m.nom }}</h3>
+          <p>{{ m.texte }}</p>
+          <div class="aff">{% for l in m.logos %}<img src="{{ l.image }}" alt="{{ l.nom }}">{% endfor %}</div>
+        </div>
+        {%- endfor %}
+      </div>
+      <p style="margin-top:40px;font-size:15.4px;color:var(--soft)">
+        L'équipe de recherche est complétée par <b style="font-weight:500;color:var(--text)">Rachida Benmammar</b>, post-doctorante.
+      </p>
+    </div>
+  </section>
+
+  <section style="padding:clamp(42px,4.4vw,64px) 0;text-align:center">
+    <div class="wrap">
+      <h2 style="font-size:clamp(26px,3.2vw,38px);margin-bottom:24px">Vous voulez nous rejoindre ?</h2>
+      <a href="#contact" data-go="home" class="btn btn-ink">Écrivez-nous <span class="a">→</span></a>
+    </div>
+  </section>
+</main>
+
+
+<!-- ===================== PAGE L'ANTIMOINE ===================== -->
+<main class="page" id="page-antimoine">
+  <div class="phead">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--mint);text-transform:none;letter-spacing:.13em">Sb · 51 · Matière première critique</div>
+      <h1>Le métal que personne ne voit.</h1>
+      <p class="lead">
+        Un métalloïde discret, présent dans presque tous les objets électriques du quotidien,
+        extrait à l'autre bout du monde, que l'Europe utilise puis incinère.
+      </p>
+    </div>
+  </div>
+  <hr class="grad-rule">
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Ses usages</div>
+      <div class="stmt">
+        <h2>Où se cache l'antimoine.</h2>
+        <p class="lead">
+          Sa demande est portée par des secteurs qui ne peuvent pas s'en passer :
+          la sécurité, le numérique, l'énergie et la défense.
+        </p>
+      </div>
+      <div class="bulles">
+        <div class="bul" style="--c:var(--blue)">
+          <div class="rond"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="13" width="46" height="34" rx="4"/><path d="M25 47v5h14v-5"/><path d="M18 52h28"/></svg></div>
+          <div class="nom">Plastiques électroniques</div>
+          <p class="det">Boîtiers, écrans et composants, ignifugés au trioxyde d'antimoine.</p>
+        </div>
+        <div class="bul" style="--c:var(--azure)">
+          <div class="rond"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="20" width="40" height="24" rx="4"/><path d="M50 28h5v8h-5"/><path d="M19 32h12M25 26v12"/></svg></div>
+          <div class="nom">Batteries au plomb</div>
+          <p class="det">L'antimoine durcit le plomb des plaques et prolonge leur tenue.</p>
+        </div>
+        <div class="bul" style="--c:var(--cyan-d)">
+          <div class="rond"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 46c0-12 10-12 10-22a8 8 0 0 1 16 0c0 12 12 10 12 22"/><rect x="40" y="44" width="16" height="10" rx="3"/><path d="M44 44v-4M52 44v-4"/></svg></div>
+          <div class="nom">Câbles</div>
+          <p class="det">Gaines et isolants qui doivent résister au feu.</p>
+        </div>
+        <div class="bul" style="--c:var(--mint-d)">
+          <div class="rond"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="12" width="48" height="30" rx="3"/><path d="M8 22h48M8 32h48M24 12v30M40 12v30"/><path d="M32 42v10M22 52h20"/></svg></div>
+          <div class="nom">Panneaux solaires</div>
+          <p class="det">Affine le verre photovoltaïque et limite son jaunissement.</p>
+        </div>
+        <div class="bul" style="--c:var(--blue)">
+          <div class="rond"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18c8-6 16 6 24 0s16-6 24 0"/><path d="M8 18v28c8-6 16 6 24 0s16-6 24 0V18"/><path d="M8 32c8-6 16 6 24 0s16-6 24 0"/></svg></div>
+          <div class="nom">Bâches et textiles techniques</div>
+          <p class="det">Toiles industrielles, tentes et protections ignifugées.</p>
+        </div>
+        <div class="bul" style="--c:var(--azure)">
+          <div class="rond"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 8l20 8v14c0 14-9 22-20 26-11-4-20-12-20-26V16z"/></svg></div>
+          <div class="nom">Défense</div>
+          <p class="det">Alliages et munitions, à la base du classement stratégique du métal.</p>
+        </div>
+        <div class="bul" style="--c:var(--cyan-d)">
+          <div class="rond"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="12" width="40" height="40" rx="4"/><path d="M20 44 44 20"/><path d="M32 44l12-12"/></svg></div>
+          <div class="nom">Verres techniques</div>
+          <p class="det">Agent d'affinage, et optique infrarouge.</p>
+        </div>
+        <div class="bul" style="--c:var(--mint-d)">
+          <div class="rond"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="32" height="32" rx="4"/><rect x="26" y="26" width="12" height="12" rx="2"/><path d="M26 8v8M38 8v8M26 48v8M38 48v8M8 26h8M8 38h8M48 26h8M48 38h8"/></svg></div>
+          <div class="nom">Semi-conducteurs</div>
+          <p class="det">Dopant des composants, un usage en croissance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="wrap">
+      <div class="eyebrow">Criticité</div>
+      <div class="stmt">
+        <h2 style="color:#fff">Trente-quatre matières critiques.<br>L'antimoine en fait partie.</h2>
+        <div class="lead">
+          <p>L'Union européenne a identifié trente-quatre matières premières indispensables à son économie et exposées à un risque élevé de rupture d'approvisionnement.</p>
+          <p>Sa production est concentrée sur quelques pays, et son prix a été multiplié par six entre 2021 et 2025.</p>
+        </div>
+      </div>
+      <div class="uses">
+        <div class="use" style="--c:var(--mint-d)">
+          <div class="pct">10&#8239;%</div>
+          <h3>Extraction</h3>
+          <p>De la consommation annuelle européenne de matières critiques devra être extraite dans l'Union d'ici 2030.</p>
+        </div>
+        <div class="use" style="--c:var(--cyan-d)">
+          <div class="pct">40&#8239;%</div>
+          <h3>Raffinage</h3>
+          <p>Devra être traitée ou raffinée sur le territoire européen.</p>
+        </div>
+        <div class="use" style="--c:var(--azure)">
+          <div class="pct">25&#8239;%</div>
+          <h3>Recyclage</h3>
+          <p>Devra provenir du recyclage. C'est l'objectif auquel DeeeMines contribue directement.</p>
+        </div>
+      </div>
+      <p class="lead" style="margin-top:clamp(26px,3vw,42px);max-width:74ch">
+        Ces trois objectifs sont fixés par le Critical Raw Materials Act, le règlement européen sur
+        les matières premières critiques adopté en 2024, qui s'inscrit dans la stratégie
+        industrielle du pacte vert pour l'Europe.
+      </p>
+    </div>
+  </section>
+
+  <section class="tint">
+    <div class="wrap">
+      <div class="eyebrow">En synthèse</div>
+      <div class="stmt">
+        <h2>Le paradoxe européen.</h2>
+        <p class="lead">
+          Trois faits qui, mis bout à bout, décrivent exactement le problème que DeeeMines résout.
+        </p>
+      </div>
+      <div class="steps-n">
+        <div class="sn"><div class="i">01</div><div>
+          <h3>L'antimoine sert d'abord à ignifuger des plastiques</h3>
+          <p>La moitié de la consommation mondiale part dans la plasturgie, en association avec des retardateurs de flamme bromés.</p>
+        </div></div>
+        <div class="sn"><div class="i">02</div><div>
+          <h3>Ces plastiques finissent incinérés</h3>
+          <p>Les réglementations européennes sur les polluants organiques persistants et sur les substances chimiques imposent de les écarter du recyclage. Faute de solution, la filière paie pour les détruire.</p>
+        </div></div>
+        <div class="sn"><div class="i">03</div><div>
+          <h3>Le métal critique disparaît avec eux</h3>
+          <p>L'Union européenne importe la totalité de son antimoine, et brûle chaque année celui qu'elle a déjà sur son territoire.</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" style="padding:clamp(42px,4.4vw,64px) 0">
+    <div class="wrap concl">
+      <div>
+        <h2 style="color:#fff;font-size:clamp(27px,3.4vw,42px);max-width:18ch">C'est là que DeeeMines intervient.</h2>
+        <div class="lead" style="margin-top:20px">
+          <p>Nous récupérons cet antimoine avant l'incinérateur, et nous le remettons sur le marché européen.</p>
+          <p>Un procédé breveté, en conditions douces, qui ne détruit pas le plastique.</p>
+        </div>
+      </div>
+      <a href="#technologie" data-go="home" class="btn btn-mint">Notre technologie <span class="a">→</span></a>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== ACTUALITÉS ===================== -->
+<!-- Les actualités se modifient depuis /admin, rubrique « Actualités ».
+     Elles vivent dans src/_data/actualites.json. -->
+<main class="page" id="page-actus">
+  <div class="phead">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--mint)">Actualités</div>
+      <h1>Ce qui avance chez DeeeMines.</h1>
+      <p class="lead">Les étapes franchies, les soutiens obtenus et les partenariats signés, au fil de la montée en échelle du procédé.</p>
+    </div>
+  </div>
+  <hr class="grad-rule">
+
+  <section>
+    <div class="wrap">
+      <div class="news">
+        {%- set ct = ["var(--mint-d)","var(--cyan-d)","var(--azure)"] %}
+        {%- for a in actualites.fr.articles %}
+        <article class="na" style="--ct:{{ ct[loop.index0 % 3] }}">
+          <div class="when">{{ a.date }}</div>
+          <div class="nc{% if a.image %} illustree{% endif %}">
+            <div>
+              <div class="cat">{{ a.categorie }}</div>
+              <h3>{{ a.titre }}</h3>
+              <p>{{ a.texte }}</p>
+              {%- if a.lien %}
+              <a class="nlien" href="{{ a.lien }}" target="_blank" rel="noopener">{{ a.lien_texte or "En savoir plus" }} <span class="a">&#8594;</span></a>
+              {%- endif %}
+            </div>
+            {%- if a.image %}
+            <img class="nimg" src="{{ a.image }}" alt="">
+            {%- endif %}
+          </div>
+        </article>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" style="padding:clamp(42px,4.4vw,64px) 0;text-align:center">
+    <div class="wrap">
+      <h2 style="font-size:clamp(26px,3.4vw,40px)">Vous voulez suivre la suite ?</h2>
+      <div style="margin-top:26px">
+        <a href="#contact" data-go="home" class="btn btn-mint">Écrivez-nous <span class="a">&#8594;</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== MENTIONS LÉGALES ===================== -->
+<main class="page" id="page-mentions">
+  <div class="phead">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--mint)">Informations légales</div>
+      <h1>Mentions légales</h1>
+    </div>
+  </div>
+  <hr class="grad-rule">
+  <section>
+    <div class="wrap"><div class="legal">
+      <h3>Éditeur du site</h3>
+      <p><b>DeeeMines</b>, société par actions simplifiée au capital de 10 000 euros.<br>
+      Siège social : 11 rue Pierre et Marie Curie, 75005 Paris, France.<br>
+      Immatriculée au registre du commerce et des sociétés de Paris sous le numéro 102 418 902 (numéro d'établissement du siège : 102 418 902 00015).<br>
+      Numéro de taxe sur la valeur ajoutée intracommunautaire : FR03102418902.<br>
+      Adresse électronique : contact@deeemines.com</p>
+      <h3>Directeur de la publication</h3>
+      <p>Kristell Riou-Nivert, en qualité de présidente de la société.</p>
+      <h3>Hébergeur</h3>
+      <p>Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, États-Unis. Contact : support@netlify.com</p>
+      <h3>Propriété intellectuelle</h3>
+      <p>L'ensemble des contenus de ce site, textes, images, schémas, logotypes et éléments graphiques, est protégé par le droit de la propriété intellectuelle. Toute reproduction, représentation ou diffusion, totale ou partielle, sans autorisation écrite préalable, est interdite.</p>
+      <p>Les marques et logotypes des partenaires figurant sur ce site restent la propriété de leurs titulaires respectifs et sont reproduits avec leur accord.</p>
+      <h3>Procédé breveté</h3>
+      <p>Le procédé d'extraction sélective exploité par DeeeMines fait l'objet d'un brevet déposé en 2025, exploité sous licence.</p>
+      <h3>Responsabilité</h3>
+      <p>Les informations publiées sur ce site sont fournies à titre indicatif. DeeeMines s'efforce d'en assurer l'exactitude et la mise à jour, sans pouvoir garantir qu'elles soient exemptes d'erreur ou d'omission. Les liens vers des sites tiers n'engagent pas la responsabilité de DeeeMines quant à leur contenu.</p>
+      <h3>Droit applicable</h3>
+      <p>Le présent site est soumis au droit français. Tout litige relatif à son utilisation relève de la compétence des tribunaux français.</p>
+    </div></div>
+  </section>
+</main>
+
+<!-- ===================== CONFIDENTIALITÉ ===================== -->
+<main class="page" id="page-privacy">
+  <div class="phead">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--mint)">Données personnelles</div>
+      <h1>Politique de confidentialité</h1>
+    </div>
+  </div>
+  <hr class="grad-rule">
+  <section>
+    <div class="wrap"><div class="legal">
+      <h3>Responsable du traitement</h3>
+      <p>DeeeMines, 11 rue Pierre et Marie Curie, 75005 Paris. Pour toute question relative à vos données : contact@deeemines.com</p>
+      <h3>Données collectées</h3>
+      <p>Ce site ne collecte que les données que vous nous transmettez volontairement par le formulaire de contact : nom, adresse électronique, organisation, qualité et contenu du message.</p>
+      <h3>Finalité et base légale</h3>
+      <p>Ces données servent uniquement à répondre à votre demande et, le cas échéant, à assurer le suivi de nos échanges. Le traitement repose sur votre consentement et sur l'intérêt légitime de DeeeMines à répondre aux sollicitations qui lui sont adressées.</p>
+      <h3>Destinataires</h3>
+      <p>Vos données sont traitées par les seules personnes habilitées au sein de DeeeMines. Elles ne sont ni vendues, ni cédées, ni transmises à des tiers à des fins commerciales.</p>
+      <h3>Durée de conservation</h3>
+      <p>Les messages reçus sont conservés trois ans à compter du dernier échange, puis supprimés.</p>
+      <h3>Vos droits</h3>
+      <p>Conformément au règlement général sur la protection des données et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition, ainsi que d'un droit à la portabilité de vos données.</p>
+      <ul>
+        <li>Pour les exercer, écrivez à contact@deeemines.com</li>
+        <li>Vous pouvez également introduire une réclamation auprès de la Commission nationale de l'informatique et des libertés</li>
+      </ul>
+      <h3>Cookies</h3>
+      <p>Ce site ne dépose aucun cookie de mesure d'audience ni de publicité. Seuls les cookies strictement nécessaires à son fonctionnement peuvent être utilisés, et ils ne requièrent pas de consentement.</p>
+      <h3>Sécurité</h3>
+      <p>DeeeMines met en œuvre les mesures techniques et organisationnelles appropriées pour préserver la confidentialité et l'intégrité des données qui lui sont confiées.</p>
+    </div></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <a href="#top" data-go="home"><img src="assets/logo.png" alt="DeeeMines"></a>
+      <div class="fl">
+        <a href="#souverainete" data-go="home">Souveraineté</a>
+        <a href="#solution" data-go="home">Notre solution</a>
+        <a href="#technologie" data-go="home">Notre technologie</a>
+        <a href="#" data-go="antimoine">L'antimoine</a>
+        <a href="#" data-go="equipe">Équipe</a>
+        <a href="#" data-go="actus">Actualités</a>
+        <a href="#contact" data-go="home">Contact</a>
+        <a href="https://www.linkedin.com/in/kristell-r-4ab4b9bb/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="fb">
+      <span>© 2026 DeeeMines</span>
+      <span><a href="#" data-go="mentions">Mentions légales</a> · <a href="#" data-go="privacy">Politique de confidentialité</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var current='home';
+  var PAGES={home:'page-home',equipe:'page-equipe',antimoine:'page-antimoine',actus:'page-actus',mentions:'page-mentions',privacy:'page-privacy'};
+  function show(key,hash){
+    for(var k in PAGES){document.getElementById(PAGES[k]).classList.toggle('active',k===key);}
+    document.querySelectorAll('.links a').forEach(function(a){
+      var g=a.getAttribute('data-go');
+      a.classList.toggle('on', g===key && g!=='home');
+      a.blur();
+    });
+    current=key;
+    document.getElementById('links').classList.remove('open');
+    if(hash){var el=document.querySelector(hash);
+      if(el){setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'});},40);return;}}
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-go]'); if(!a) return;
+    e.preventDefault();
+    var href=a.getAttribute('href')||'';
+    show(a.getAttribute('data-go'),(href.indexOf('#')===0&&href.length>1&&href!=='#top')?href:null);
+  });
+  document.getElementById('burger').addEventListener('click',function(){
+    document.getElementById('links').classList.toggle('open');
+  });
+
+  /* --- Apparitions au défilement --- */
+  (function(){
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.documentElement.classList.add('anim');
+    var SEL = ['.hero .wrap > *','.phead .wrap > *','.eyebrow','.stmt','.fig','.row',
+               '.flow','.st','.chip','.sc','.logos > div','.mem','.pc','.use','.sn',
+               '.cgrid > div','.team','.legal > *','.scale','.na'];
+    var els = [];
+    SEL.forEach(function(s){
+      document.querySelectorAll(s).forEach(function(el){
+        if (el.closest('header')) return;
+        if (el.parentElement && el.parentElement.closest('.reveal')) return;
+        if (els.indexOf(el) === -1) els.push(el);
+      });
+    });
+    els.forEach(function(el){
+      el.classList.add('reveal');
+      var sib = Array.prototype.filter.call(el.parentElement.children, function(c){
+        return c.classList.contains('reveal');
+      });
+      var i = sib.indexOf(el);
+      el.style.setProperty('--i', i > 6 ? 6 : i);
+    });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    els.forEach(function(el){ io.observe(el); });
+  })();
+
+  /* --- Repérage de la section visible sur la page d'accueil --- */
+  var spy = ['solution','technologie'];
+  var obs = new IntersectionObserver(function(entries){
+    if (current !== 'home') return;
+    entries.forEach(function(e){
+      var l = document.querySelector('.links a[href="#'+e.target.id+'"]');
+      if (l) l.classList.toggle('on', e.isIntersecting);
+    });
+  }, { rootMargin:'-45% 0px -45% 0px' });
+  spy.forEach(function(id){ var el=document.getElementById(id); if(el) obs.observe(el); });
+
+
+  /* --- Bascule français / anglais --- */
+  var I18N = {{ i18n | dump | safe }};
+  var ATTRS = {"Votre nom": "Your name", "vous@organisation.fr": "you@organisation.com", "Quelques lignes suffisent.": "A few lines are enough."};
+  var TITLE_EN = "DeeeMines · Europe imports all of its antimony. We produce it here.", TITLE_FR = document.title;
+  var nodes = [];
+  (function walk(el){
+    for (var i=0;i<el.childNodes.length;i++){
+      var n = el.childNodes[i];
+      if (n.nodeType === 3){
+        var m = n.nodeValue.match(/^(\s*)([\s\S]*?)(\s*)$/);
+        var key = m[2].replace(/\s+/g,' ');
+        if (key && I18N[key]) nodes.push([n, n.nodeValue, m[1] + I18N[key] + m[3]]);
+      } else if (n.nodeType === 1 && n.tagName !== 'SCRIPT' && n.tagName !== 'STYLE'){
+        walk(n);
+      }
+    }
+  })(document.body);
+  var fields = [];
+  document.querySelectorAll('[placeholder]').forEach(function(el){
+    var p = el.getAttribute('placeholder');
+    if (ATTRS[p]) fields.push([el, p, ATTRS[p]]);
+  });
+  function setLang(l){
+    var k = (l === 'en') ? 2 : 1;
+    nodes.forEach(function(t){ t[0].nodeValue = t[k]; });
+    fields.forEach(function(f){ f[0].setAttribute('placeholder', f[k]); });
+    document.documentElement.lang = l;
+    document.title = (l === 'en') ? TITLE_EN : TITLE_FR;
+    document.querySelectorAll('.lang b').forEach(function(b){
+      b.classList.toggle('on', b.getAttribute('data-lang') === l);
+    });
+  }
+  document.querySelectorAll('.lang b').forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.getAttribute('data-lang')); });
+  });
+
+  /* --- Formulaire de contact --- */
+  var form=document.getElementById('cform'), sent=document.getElementById('sent'),
+      cerr=document.getElementById('cerr'), envoi=form.querySelector('button[type=submit]');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(id){return (document.getElementById(id)||{}).value||'';};
+    var corps='Nom : '+v('a1')+'\nE-mail : '+v('a2')+'\nProfil : '+v('a3')+'\n\n'+v('a4');
+    document.getElementById('mailto').href='mailto:contact@deeemines.com'
+      +'?subject='+encodeURIComponent('Contact site DeeeMines')+'&body='+encodeURIComponent(corps);
+    cerr.hidden=true; envoi.disabled=true;
+    fetch('/',{method:'POST',
+               headers:{'Content-Type':'application/x-www-form-urlencoded'},
+               body:new URLSearchParams(new FormData(form)).toString()})
+      .then(function(r){
+        if(!r.ok) throw new Error(r.status);
+        form.hidden=true; sent.hidden=false;
+        sent.scrollIntoView({behavior:'smooth',block:'center'});
+      })
+      .catch(function(){ envoi.disabled=false; cerr.hidden=false; });
+  });
+})();
+</script>
+</body>
+</html>

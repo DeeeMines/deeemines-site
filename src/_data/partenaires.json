@@ -1,0 +1,48 @@
+{
+  "logos": [
+    {
+      "image": "assets/bpifrance.png",
+      "nom": "Bpifrance"
+    },
+    {
+      "image": "assets/cnrs.png",
+      "nom": "CNRS"
+    },
+    {
+      "image": "assets/chimie-paristech-psl.png",
+      "nom": "Chimie ParisTech - PSL"
+    },
+    {
+      "image": "assets/mines-paris-psl.png",
+      "nom": "Mines Paris - PSL"
+    },
+    {
+      "image": "assets/chaire-mines-urbaines.png",
+      "nom": "Chaire Mines Urbaines"
+    },
+    {
+      "image": "assets/pcup-espci.png",
+      "nom": "PC'up, ESPCI Paris"
+    },
+    {
+      "image": "assets/pepite-france.png",
+      "nom": "Pépite France"
+    },
+    {
+      "image": "assets/ecosystem.png",
+      "nom": "ecosystem"
+    },
+    {
+      "image": "assets/environnement-recycling.png",
+      "nom": "Environnement Recycling"
+    },
+    {
+      "image": "assets/amg-antimony.png",
+      "nom": "AMG Antimony"
+    },
+    {
+      "image": "assets/campine.png",
+      "nom": "Campine"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "fr": {
+    "articles": [
+      {
+        "date": "Juin 2026",
+        "categorie": "Accompagnement",
+        "titre": "DeeeMines rejoint la promotion d'été du programme RISE",
+        "texte": "CNRS Innovation retient douze projets issus des laboratoires du CNRS pour sa promotion d'été 2026. DeeeMines y présente son procédé breveté de recyclage des plastiques ignifugés et de récupération de l'antimoine.",
+        "image": "",
+        "lien": "https://www.cnrsinnovation.com/actualite/programme-rise-12-projets-innovants-integrent-la-promotion-dete-2026/",
+        "lien_texte": "Lire l'annonce de CNRS Innovation"
+      },
+      {
+        "date": "Mars 2026",
+        "categorie": "Société",
+        "titre": "Création de DeeeMines",
+        "texte": "La société est immatriculée à Paris le 18 mars 2026, au terme de quatre années de recherche menées à l'Institut de Recherche de Chimie Paris. Elle est incubée à l'ESPCI Paris.",
+        "image": "",
+        "lien": "",
+        "lien_texte": ""
+      },
+      {
+        "date": "Octobre 2025",
+        "categorie": "Distinction",
+        "titre": "Morvan Gaudin, lauréat du prix i-PhD de Bpifrance",
+        "texte": "Le prix i-PhD distingue chaque année des projets scientifiques à fort potentiel d'innovation. Il récompense ici les travaux de thèse de Morvan Gaudin sur la récupération de l'antimoine contenu dans les plastiques bromés des équipements électriques et électroniques, menés à la Chaire Mines Urbaines de Chimie ParisTech - PSL avec le soutien de l'éco-organisme ecosystem, et poursuivis avec Grégory Lefèvre, Vincent Semetey et Frédéric Rousseau. La distinction ouvre une année d'accompagnement par Bpifrance.",
+        "image": "assets/iphd-ceremonie.jpg",
+        "lien": "https://www.linkedin.com/feed/update/urn:li:activity:7383962136890478593/",
+        "lien_texte": "Voir la publication"
+      },
+      {
+        "date": "Octobre 2025",
+        "categorie": "Partenariat",
+        "titre": "Visite d'Environnement Recycling, vers une filière des plastiques bromés",
+        "texte": "Sur son site de Montluçon, dix-sept mille mètres carrés et plus de deux cents salariés, Environnement Recycling dépollue, broie et trie les équipements électriques et électroniques jusqu'à une pureté de séparation des plastiques bromés rarement atteinte à l'échelle industrielle. Ces plastiques, chargés de retardateurs de flamme bromés et de trioxyde d'antimoine, partent aujourd'hui à l'incinération faute d'alternative. La visite a permis d'identifier plusieurs pistes de travail communes, avec l'objectif de premiers essais sur prototype.",
+        "image": "assets/visite-environnement-recycling.jpg",
+        "lien": "",
+        "lien_texte": ""
+      },
+      {
+        "date": "2025",
+        "categorie": "Technologie",
+        "titre": "Le procédé est breveté",
+        "texte": "Le procédé d'extraction sélective de l'antimoine et des molécules bromées fait l'objet d'un brevet publié en 2025, exploité par DeeeMines sous licence.",
+        "image": "",
+        "lien": "",
+        "lien_texte": ""
+      }
+    ]
+  },
+  "en": {
+    "articles": [
+      {
+        "date": "June 2026",
+        "categorie": "Support",
+        "titre": "DeeeMines joins the RISE summer cohort",
+        "texte": "CNRS Innovation selected twelve projects from CNRS laboratories for its 2026 summer cohort. DeeeMines presented its patented process for recycling flame-retardant plastics and recovering antimony.",
+        "image": "",
+        "lien": "https://www.cnrsinnovation.com/actualite/programme-rise-12-projets-innovants-integrent-la-promotion-dete-2026/",
+        "lien_texte": "Read the CNRS Innovation announcement"
+      },
+      {
+        "date": "March 2026",
+        "categorie": "Company",
+        "titre": "DeeeMines is founded",
+        "texte": "The company was registered in Paris on 18 March 2026, after four years of research at the Institut de Recherche de Chimie Paris. It is incubated at ESPCI Paris.",
+        "image": "",
+        "lien": "",
+        "lien_texte": ""
+      },
+      {
+        "date": "October 2025",
+        "categorie": "Award",
+        "titre": "Morvan Gaudin wins the Bpifrance i-PhD award",
+        "texte": "The i-PhD award recognises, every year, scientific projects with strong innovation potential. It rewards here the doctoral work of Morvan Gaudin on recovering the antimony contained in the brominated plastics of electrical and electronic equipment, carried out at the Urban Mining Chair of Chimie ParisTech - PSL with the support of the producer responsibility organisation ecosystem, and continued with Grégory Lefèvre, Vincent Semetey and Frédéric Rousseau. The award opens a year of support from Bpifrance.",
+        "image": "assets/iphd-ceremonie.jpg",
+        "lien": "https://www.linkedin.com/feed/update/urn:li:activity:7383962136890478593/",
+        "lien_texte": "See the post"
+      },
+      {
+        "date": "October 2025",
+        "categorie": "Partnership",
+        "titre": "A visit to Environnement Recycling, towards a brominated plastics industry",
+        "texte": "At its site in Montluçon, seventeen thousand square metres and more than two hundred staff, Environnement Recycling decontaminates, shreds and sorts electrical and electronic equipment, reaching a purity in the separation of brominated plastics that is rarely seen at industrial scale. Those plastics, loaded with brominated flame retardants and antimony trioxide, are incinerated today for lack of any alternative. The visit identified several areas to work on together, with the aim of running first prototype trials.",
+        "image": "assets/visite-environnement-recycling.jpg",
+        "lien": "",
+        "lien_texte": ""
+      },
+      {
+        "date": "2025",
+        "categorie": "Technology",
+        "titre": "The process is patented",
+        "texte": "The selective extraction of antimony and brominated molecules is covered by a patent published in 2025, used by DeeeMines under licence.",
+        "image": "",
+        "lien": "",
+        "lien_texte": ""
+      }
+    ]
+  }
+}

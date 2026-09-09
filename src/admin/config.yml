@@ -1,0 +1,161 @@
+# Configuration de l'administration du site DeeeMines.
+#
+# UNE SEULE LIGNE EST À COMPLÉTER avant la première mise en ligne :
+# celle qui commence par « repo: », juste en dessous. Remplacez
+# VOTRE-COMPTE par le nom du compte GitHub qui héberge le dépôt.
+
+backend:
+  name: github
+  repo: VOTRE-COMPTE/deeemines-site
+  branch: main
+
+# Où sont rangées les images, et sous quel chemin la page les appelle
+media_folder: src/assets
+public_folder: assets
+
+# Le site est bilingue : chaque texte existe en français et en anglais,
+# affichés côte à côte dans le formulaire. Le français fait référence.
+i18n:
+  structure: single_file
+  locales: [fr, en]
+  default_locale: fr
+
+collections:
+  # ------------------------------------------------------------------ ACTUALITÉS
+  - name: actualites
+    label: Actualités
+    files:
+      - name: liste
+        label: Liste des actualités
+        file: src/_data/actualites.json
+        format: json
+        i18n: true
+        fields:
+          - label: Actualités
+            label_singular: Actualité
+            name: articles
+            widget: list
+            i18n: true
+            summary: '{{fields.date}} — {{fields.titre}}'
+            fields:
+              - { label: Date affichée, name: date, widget: string, hint: "Par exemple : Juillet 2026", i18n: true }
+              - { label: Catégorie, name: categorie, widget: string, hint: "Financement, Société, Technologie, Partenariat…", i18n: true }
+              - { label: Titre, name: titre, widget: string, i18n: true }
+              - { label: Texte, name: texte, widget: text, i18n: true }
+              - { label: Image (facultative), name: image, widget: image, required: false, default: "", i18n: duplicate }
+              - { label: Lien (facultatif), name: lien, widget: string, required: false, default: "", hint: "Adresse complète, par exemple https://…", i18n: duplicate }
+              - { label: Texte du lien (facultatif), name: lien_texte, widget: string, required: false, default: "", hint: "Par défaut : « En savoir plus »", i18n: true }
+
+  # ------------------------------------------------------------------ ACCUEIL
+  - name: accueil
+    label: Page d'accueil
+    files:
+      - name: contenu
+        label: Textes de la page d'accueil
+        file: src/_data/contenu.json
+        format: json
+        i18n: true
+        fields:
+          - label: Bandeau d'accueil
+            name: hero
+            widget: object
+            i18n: true
+            fields:
+              - { label: Titre, première ligne, name: titre1, widget: string, i18n: true }
+              - { label: Titre, seconde ligne (en vert), name: titre2, widget: string, i18n: true }
+              - { label: Premier paragraphe, name: para1, widget: text, i18n: true }
+              - { label: Second paragraphe, name: para2, widget: text, i18n: true }
+
+          - label: Les trois matières valorisées
+            label_singular: Matière
+            name: produits
+            widget: list
+            i18n: true
+            max: 3
+            min: 3
+            summary: '{{fields.titre}}'
+            hint: "L'ordre et les illustrations (Sb, Br, polymère) sont fixes : seuls les textes se modifient."
+            fields:
+              - { label: Sur-titre, name: etiquette, widget: string, i18n: true }
+              - { label: Titre, name: titre, widget: string, i18n: true }
+              - { label: Texte, name: texte, widget: text, i18n: true }
+              - { label: Destinataires (après « Pour »), name: pour, widget: string, i18n: true }
+
+          - label: Coordonnées
+            name: contact
+            widget: object
+            i18n: true
+            fields:
+              - { label: Adresse électronique, name: email, widget: string, i18n: duplicate }
+              - { label: Adresse postale, name: adresse, widget: string, i18n: duplicate }
+              - { label: Lien LinkedIn, name: linkedin, widget: string, i18n: duplicate }
+
+  # ------------------------------------------------------------------ ÉQUIPE
+  - name: equipe
+    label: Équipe
+    files:
+      - name: membres
+        label: Membres de l'équipe
+        file: src/_data/equipe.json
+        format: json
+        i18n: true
+        fields:
+          - label: Cofondateurs
+            label_singular: Cofondateur
+            name: cofondateurs
+            widget: list
+            i18n: true
+            summary: '{{fields.nom}}'
+            fields:
+              - { label: Photo, name: photo, widget: image, i18n: duplicate }
+              - { label: Nom, name: nom, widget: string, i18n: duplicate }
+              - { label: Fonction, name: role, widget: string, i18n: true }
+              - { label: Texte, name: texte, widget: text, i18n: true }
+              - label: Logos d'affiliation
+                label_singular: Logo
+                name: logos
+                widget: list
+                i18n: duplicate
+                summary: '{{fields.nom}}'
+                fields:
+                  - { label: Image, name: image, widget: image }
+                  - { label: Texte de remplacement, name: nom, widget: string }
+
+          - label: Équipe scientifique
+            label_singular: Chercheur
+            name: scientifiques
+            widget: list
+            i18n: true
+            summary: '{{fields.nom}}'
+            fields:
+              - { label: Photo, name: photo, widget: image, i18n: duplicate }
+              - { label: Nom, name: nom, widget: string, i18n: duplicate }
+              - { label: Texte, name: texte, widget: text, i18n: true }
+              - label: Logos d'affiliation
+                label_singular: Logo
+                name: logos
+                widget: list
+                i18n: duplicate
+                summary: '{{fields.nom}}'
+                fields:
+                  - { label: Image, name: image, widget: image }
+                  - { label: Texte de remplacement, name: nom, widget: string }
+
+  # ------------------------------------------------------------------ PARTENAIRES
+  - name: partenaires
+    label: Partenaires
+    files:
+      - name: logos
+        label: Bandeau des logos
+        file: src/_data/partenaires.json
+        format: json
+        fields:
+          - label: Logos
+            label_singular: Logo
+            name: logos
+            widget: list
+            summary: '{{fields.nom}}'
+            hint: "Format PNG à fond transparent, hauteur d'environ 100 pixels."
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Nom affiché aux lecteurs d'écran, name: nom, widget: string }

@@ -1,0 +1,68 @@
+{
+  "fr": {
+    "hero": {
+      "titre1": "L'Europe importe tout son antimoine.",
+      "titre2": "Nous le produisons à partir de déchets.",
+      "para1": "Un métal critique, indispensable à la sécurité, à la défense et à notre transition numérique et énergétique.",
+      "para2": "Nous extrayons l'antimoine de déchets plastiques de notre quotidien, aujourd'hui incinérés, comme ceux des équipements électroniques."
+    },
+    "produits": [
+      {
+        "etiquette": "Métal critique",
+        "titre": "De l'antimoine européen",
+        "texte": "Récupéré sous forme de trioxyde ou de métal, selon les spécifications de l'acheteur. Une matière tracée, à prix stable, produite sur le continent depuis nos mines urbaines.",
+        "pour": "la plasturgie, la métallurgie, le verre et la défense"
+      },
+      {
+        "etiquette": "Additif chimique",
+        "titre": "Des retardateurs de flamme isolés, au lieu d'être incinérés",
+        "texte": "Les molécules bromées sortent du procédé intactes et séparées du polymère. Une partie relève des polluants organiques persistants et ne peut être réemployée telle quelle, mais elles peuvent être transformées pour ouvrir de nouvelles voies de valorisation.",
+        "pour": "les formulateurs et la filière chimique"
+      },
+      {
+        "etiquette": "Matière recyclée",
+        "titre": "Un plastique libéré de ses métaux qui redevient recyclable",
+        "texte": "Débarrassée de ses additifs, la matrice polymère redevient une matière exploitable. Un flux qui n'avait qu'une destination, le four, retrouve une valeur.",
+        "pour": "les régénérateurs et les plasturgistes"
+      }
+    ],
+    "contact": {
+      "email": "contact@deeemines.com",
+      "adresse": "11 rue Pierre et Marie Curie, 75005 Paris",
+      "linkedin": "https://www.linkedin.com/in/kristell-r-4ab4b9bb/"
+    }
+  },
+  "en": {
+    "hero": {
+      "titre1": "Europe imports all of its antimony.",
+      "titre2": "We produce it from waste.",
+      "para1": "A critical raw material, essential to safety, to defence and to our digital and energy transition.",
+      "para2": "We extract antimony from everyday plastic waste that is burned today, such as the plastics of electronic equipment."
+    },
+    "produits": [
+      {
+        "etiquette": "Critical metal",
+        "titre": "European antimony",
+        "texte": "Recovered as trioxide or as metal, to the buyer's specification. A traceable material at a stable price, produced on the continent from our urban mines.",
+        "pour": "plastics, metallurgy, glass and defence"
+      },
+      {
+        "etiquette": "Chemical additive",
+        "titre": "Flame retardants isolated instead of burned",
+        "texte": "The brominated molecules leave the process intact and separated from the polymer. Some are persistent organic pollutants and cannot be reused as they are, but they can be transformed to open new recovery routes.",
+        "pour": "formulators and the chemical industry"
+      },
+      {
+        "etiquette": "Recycled material",
+        "titre": "A plastic freed of its metals, recyclable again",
+        "texte": "Once its additives are removed, the polymer matrix becomes a usable material again. A stream that had only one destination, the furnace, regains a value.",
+        "pour": "recyclers and plastics processors"
+      }
+    ],
+    "contact": {
+      "email": "contact@deeemines.com",
+      "adresse": "11 rue Pierre et Marie Curie, 75005 Paris",
+      "linkedin": "https://www.linkedin.com/in/kristell-r-4ab4b9bb/"
+    }
+  }
+}
