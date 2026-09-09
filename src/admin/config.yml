@@ -6,7 +6,7 @@
 
 backend:
   name: github
-  repo: VOTRE-COMPTE/deeemines-site
+  repo: deeemines/deeemines-site
   branch: main
 
 # Où sont rangées les images, et sous quel chemin la page les appelle
