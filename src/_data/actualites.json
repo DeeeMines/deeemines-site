@@ -11,7 +11,8 @@
         "image": "",
         "photos": [],
         "lien": "https://www.cnrsinnovation.com/actualite/programme-rise-12-projets-innovants-integrent-la-promotion-dete-2026/",
-        "lien_texte": "Lire l'annonce de CNRS Innovation"
+        "lien_texte": "Lire l'annonce de CNRS Innovation",
+        "cadrage": "50%"
       },
       {
         "date": "Mars 2026",
@@ -23,7 +24,8 @@
         "image": "",
         "photos": [],
         "lien": "",
-        "lien_texte": ""
+        "lien_texte": "",
+        "cadrage": "50%"
       },
       {
         "date": "Octobre 2025",
@@ -36,11 +38,13 @@
         "photos": [
           {
             "image": "/assets/iphd-equipe.jpg",
-            "legende": "L'équipe lors de la cérémonie du Concours d'innovation de l'État"
+            "legende": "L'équipe lors de la cérémonie du Concours d'innovation de l'État",
+            "cadrage": "50%"
           }
         ],
         "lien": "https://www.linkedin.com/feed/update/urn:li:activity:7383962136890478593/",
-        "lien_texte": "Voir la publication LinkedIn"
+        "lien_texte": "Voir la publication LinkedIn",
+        "cadrage": "50%"
       },
       {
         "date": "Octobre 2025",
@@ -53,19 +57,23 @@
         "photos": [
           {
             "image": "/assets/gisement-deee.jpg",
-            "legende": "Déchets d'équipements électriques et électroniques en attente de traitement"
+            "legende": "Déchets d'équipements électriques et électroniques en attente de traitement",
+            "cadrage": "50%"
           },
           {
             "image": "/assets/broyat-tas.jpg",
-            "legende": "Le broyat après dépollution, broyage et tri"
+            "legende": "Le broyat après dépollution, broyage et tri",
+            "cadrage": "35%"
           },
           {
             "image": "/assets/broyat-main.jpg",
-            "legende": "La fraction plastique dont DeeeMines extrait l'antimoine"
+            "legende": "La fraction plastique dont DeeeMines extrait l'antimoine",
+            "cadrage": "50%"
           }
         ],
         "lien": "",
-        "lien_texte": ""
+        "lien_texte": "",
+        "cadrage": "78%"
       },
       {
         "date": "2025",
@@ -77,7 +85,8 @@
         "image": "",
         "photos": [],
         "lien": "",
-        "lien_texte": ""
+        "lien_texte": "",
+        "cadrage": "50%"
       }
     ]
   },
@@ -93,7 +102,8 @@
         "image": "",
         "photos": [],
         "lien": "https://www.cnrsinnovation.com/actualite/programme-rise-12-projets-innovants-integrent-la-promotion-dete-2026/",
-        "lien_texte": "Read the CNRS Innovation announcement"
+        "lien_texte": "Read the CNRS Innovation announcement",
+        "cadrage": "50%"
       },
       {
         "date": "March 2026",
@@ -105,7 +115,8 @@
         "image": "",
         "photos": [],
         "lien": "",
-        "lien_texte": ""
+        "lien_texte": "",
+        "cadrage": "50%"
       },
       {
         "date": "October 2025",
@@ -118,11 +129,13 @@
         "photos": [
           {
             "image": "/assets/iphd-equipe.jpg",
-            "legende": "The team at the State Innovation Competition ceremony"
+            "legende": "The team at the State Innovation Competition ceremony",
+            "cadrage": "50%"
           }
         ],
         "lien": "https://www.linkedin.com/feed/update/urn:li:activity:7383962136890478593/",
-        "lien_texte": "See the LinkedIn post"
+        "lien_texte": "See the LinkedIn post",
+        "cadrage": "50%"
       },
       {
         "date": "October 2025",
@@ -135,19 +148,23 @@
         "photos": [
           {
             "image": "/assets/gisement-deee.jpg",
-            "legende": "Waste electrical and electronic equipment awaiting treatment"
+            "legende": "Waste electrical and electronic equipment awaiting treatment",
+            "cadrage": "50%"
           },
           {
             "image": "/assets/broyat-tas.jpg",
-            "legende": "The shredded material after decontamination and sorting"
+            "legende": "The shredded material after decontamination and sorting",
+            "cadrage": "35%"
           },
           {
             "image": "/assets/broyat-main.jpg",
-            "legende": "The plastic fraction from which DeeeMines extracts antimony"
+            "legende": "The plastic fraction from which DeeeMines extracts antimony",
+            "cadrage": "50%"
           }
         ],
         "lien": "",
-        "lien_texte": ""
+        "lien_texte": "",
+        "cadrage": "78%"
       },
       {
         "date": "2025",
@@ -159,7 +176,8 @@
         "image": "",
         "photos": [],
         "lien": "",
-        "lien_texte": ""
+        "lien_texte": "",
+        "cadrage": "50%"
       }
     ]
   }

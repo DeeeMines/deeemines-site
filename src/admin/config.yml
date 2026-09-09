@@ -49,6 +49,19 @@ collections:
                 hint: "Si vous remplissez ce champ, l'actualité obtient sa propre page et un lien « Lire la suite ». Sinon, seul le résumé est affiché."
               - { label: Adresse de la page, name: slug, widget: string, required: false, default: "", i18n: duplicate, hint: "Par exemple prix-i-phd. Ne la changez plus une fois l'article partagé : les liens existants cesseraient de fonctionner." }
               - { label: Image principale (facultative), name: image, widget: image, required: false, default: "", i18n: duplicate, hint: "Affichée en haut de la page de l'article." }
+              - label: Cadrage de l'image
+                name: cadrage
+                widget: select
+                required: false
+                default: "50%"
+                i18n: duplicate
+                hint: "L'image est recadrée au format du bandeau. Choisissez la partie à conserver si le sujet n'est pas au centre."
+                options:
+                  - { label: "Haut", value: "0%" }
+                  - { label: "Plutôt vers le haut", value: "25%" }
+                  - { label: "Centre", value: "50%" }
+                  - { label: "Plutôt vers le bas", value: "78%" }
+                  - { label: "Bas", value: "100%" }
               - label: Photos supplémentaires
                 name: photos
                 widget: list
@@ -59,6 +72,17 @@ collections:
                 fields:
                   - { label: Image, name: image, widget: image }
                   - { label: Légende, name: legende, widget: string, required: false, default: "" }
+                  - label: Cadrage
+                    name: cadrage
+                    widget: select
+                    required: false
+                    default: "50%"
+                    options:
+                      - { label: "Haut", value: "0%" }
+                      - { label: "Plutôt vers le haut", value: "25%" }
+                      - { label: "Centre", value: "50%" }
+                      - { label: "Plutôt vers le bas", value: "78%" }
+                      - { label: "Bas", value: "100%" }
               - { label: Lien externe (facultatif), name: lien, widget: string, required: false, default: "", hint: "Adresse complète, par exemple https://…", i18n: duplicate }
               - { label: Texte du lien (facultatif), name: lien_texte, widget: string, required: false, default: "", hint: "Par défaut : « En savoir plus »", i18n: true }
 

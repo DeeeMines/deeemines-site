@@ -36,7 +36,8 @@ eleventyComputed:
     <div class="wrap">
       <div class="art">
         {%- if art.fr.image %}
-        <img class="art-img" src="{{ art.fr.image }}" alt="">
+        <img class="art-img" src="{{ art.fr.image }}" alt=""
+             style="object-position:center {{ art.fr.cadrage or '50%' }}">
         {%- endif %}
 
         <div class="art-corps" data-l="fr">
@@ -48,7 +49,8 @@ eleventyComputed:
           {%- if art.fr.photos and art.fr.photos.length %}
           <div class="art-photos">
             {%- for ph in art.fr.photos %}
-            <figure><img src="{{ ph.image }}" alt="{{ ph.legende or '' }}">
+            <figure><img src="{{ ph.image }}" alt="{{ ph.legende or '' }}"
+                        style="object-position:center {{ ph.cadrage or '50%' }}">
               {%- if ph.legende %}<figcaption>{{ ph.legende }}</figcaption>{% endif %}
             </figure>
             {%- endfor %}
@@ -64,7 +66,8 @@ eleventyComputed:
           {%- if art.en.photos and art.en.photos.length %}
           <div class="art-photos">
             {%- for ph in art.en.photos %}
-            <figure><img src="{{ ph.image }}" alt="{{ ph.legende or '' }}">
+            <figure><img src="{{ ph.image }}" alt="{{ ph.legende or '' }}"
+                        style="object-position:center {{ ph.cadrage or '50%' }}">
               {%- if ph.legende %}<figcaption>{{ ph.legende }}</figcaption>{% endif %}
             </figure>
             {%- endfor %}
