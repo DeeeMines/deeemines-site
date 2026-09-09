@@ -1,12 +1,9 @@
 # Configuration de l'administration du site DeeeMines.
-#
-# UNE SEULE LIGNE EST À COMPLÉTER avant la première mise en ligne :
-# celle qui commence par « repo: », juste en dessous. Remplacez
-# VOTRE-COMPTE par le nom du compte GitHub qui héberge le dépôt.
+# Rien à modifier ici pour l'usage courant.
 
 backend:
   name: github
-  repo: deeemines/deeemines-site
+  repo: DeeeMines/deeemines-site
   branch: main
 
 # Où sont rangées les images, et sous quel chemin la page les appelle
@@ -24,6 +21,7 @@ collections:
   # ------------------------------------------------------------------ ACTUALITÉS
   - name: actualites
     label: Actualités
+    i18n: true
     files:
       - name: liste
         label: Liste des actualités
@@ -49,6 +47,7 @@ collections:
   # ------------------------------------------------------------------ ACCUEIL
   - name: accueil
     label: Page d'accueil
+    i18n: true
     files:
       - name: contenu
         label: Textes de la page d'accueil
@@ -93,6 +92,7 @@ collections:
   # ------------------------------------------------------------------ ÉQUIPE
   - name: equipe
     label: Équipe
+    i18n: true
     files:
       - name: membres
         label: Membres de l'équipe
