@@ -66,7 +66,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,250,246,.92);
 .links a:focus-visible{outline:2px solid var(--azure);outline-offset:4px;border-radius:2px}
 .links a.on::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:var(--grad)}
 .right{display:flex;align-items:center;gap:18px}
-.lang{font-size:12.5px;color:var(--soft);letter-spacing:.06em}
+.lang{font-size:12.5px;color:var(--soft);letter-spacing:.06em;white-space:nowrap}
 .lang b{font-weight:500;cursor:pointer;color:var(--soft);transition:.18s}
 .lang b:hover{color:var(--text)}
 .lang b.on{color:var(--text)}
@@ -131,7 +131,6 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,250,246,.92);
   .figs-4 .fig:nth-child(2n){border-right:0}
   .figs-4 .fig:nth-child(-n+2){border-bottom:1px solid var(--line)}
   .figs-4 .fig:nth-child(n+3){padding-top:34px}
-  .figs-4 .fig:nth-child(3){padding-left:0}
 }
 @media(max-width:620px){
   .figs-4{grid-template-columns:1fr}
@@ -335,15 +334,21 @@ html.anim .flow.in .track{clip-path:inset(0 0 0 0)}
 .mem .r{font-size:14.5px;color:var(--azure);font-weight:500;margin-bottom:9px}
 .mem p{font-size:15px;color:var(--soft);line-height:1.55}
 .mem .aff{margin-top:16px;display:flex;align-items:center;gap:10px}
-.mem .aff{gap:16px}
+.mem .aff{gap:16px;flex-wrap:wrap}
 .mem .aff img{height:44px;width:auto;opacity:.85}
 .mem .aff img[src*="chimie-paristech"]{height:54px}
 .pc .aff img[src*="chimie-paristech"]{height:46px}
+@media(max-width:520px){
+  .mem .aff img{height:36px}
+  .mem .aff img[src*="chimie-paristech"]{height:44px}
+  .pc .aff img{height:32px}
+  .pc .aff img[src*="chimie-paristech"]{height:38px}
+}
 .pc .ph{width:78px;height:78px;border-radius:50%;object-fit:cover;margin-bottom:18px;
   box-shadow:0 0 0 1px var(--line)}
 .pc{border-top:2px solid var(--c);padding-top:22px}
 .pc .aff{margin-top:14px;display:flex;align-items:center;gap:8px}
-.pc .aff{gap:14px}
+.pc .aff{gap:14px;flex-wrap:wrap}
 .pc .aff img{height:38px;width:auto;opacity:.8}
 .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3vw,40px);margin-top:30px}
 .news{margin-top:0}
