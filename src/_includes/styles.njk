@@ -104,7 +104,6 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,250,246,.92);
 .stmt .lead,.stmt p.lead{max-width:none}
 @media(max-width:880px){.stmt{grid-template-columns:1fr}}
 .stmt h2{max-width:22ch}
-.fig .n-mot{font-size:clamp(38px,4.6vw,62px);letter-spacing:-.045em;padding-bottom:.06em}
 .figs{margin-top:clamp(28px,3.2vw,44px);border-top:1px solid var(--line);
   display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
 .fig{padding:38px 44px 4px;border-right:1px solid var(--line);display:flex;flex-direction:column}
@@ -115,7 +114,31 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,250,246,.92);
 .fig .k{margin-top:16px;font-family:var(--disp);font-size:clamp(18px,1.75vw,21px);
   font-weight:500;letter-spacing:-.03em;line-height:1.25;min-height:2.5em;
   display:flex;align-items:flex-start}
-.fig p{margin-top:14px;font-size:15.2px;line-height:1.6;color:var(--soft);max-width:36ch}
+.fig p{margin-top:14px;font-size:15.2px;line-height:1.6;color:var(--soft);max-width:36ch;min-height:4.8em}
+/* Quatre colonnes : chacune perd un quart de sa largeur. Les chiffres, les
+   marges intérieures et les libellés se resserrent en conséquence. */
+.figs-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.figs-4 .fig{padding:34px 26px 4px;text-align:center;align-items:center}
+.figs-4 .fig:first-child{padding-left:26px}
+.figs-4 .fig .n{justify-content:center}
+.figs-4 .fig .k{justify-content:center;text-align:center}
+.figs-4 .fig p{margin-left:auto;margin-right:auto}
+.figs-4 .fig .n{font-size:clamp(48px,5.4vw,78px)}
+.figs-4 .fig .k{font-size:clamp(16px,1.5vw,18.5px);min-height:2.5em}
+.figs-4 .fig p{font-size:14.4px;min-height:4.8em}
+@media(max-width:1080px){
+  .figs-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .figs-4 .fig:nth-child(2n){border-right:0}
+  .figs-4 .fig:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .figs-4 .fig:nth-child(n+3){padding-top:34px}
+  .figs-4 .fig:nth-child(3){padding-left:0}
+}
+@media(max-width:620px){
+  .figs-4{grid-template-columns:1fr}
+  .figs-4 .fig{border-right:0;border-bottom:1px solid var(--line);padding:30px 0 26px}
+  .figs-4 .fig .k,.figs-4 .fig p{min-height:0}
+}
+
 @media(max-width:880px){
   .figs{grid-template-columns:1fr}
   .fig{border-right:0;border-bottom:1px solid var(--line);padding:30px 0 26px}
@@ -179,10 +202,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,250,246,.92);
 @media(max-width:880px){.chips{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.chips{grid-template-columns:1fr}}
 .chip{border:1px solid var(--line-d);border-radius:14px;padding:22px 20px 20px;text-align:center;
-  background:rgba(255,255,255,.03)}
+  background:rgba(255,255,255,.03);display:flex;flex-direction:column}
 .chip b{display:block;font-family:var(--disp);font-weight:500;letter-spacing:-.03em;
   font-size:clamp(21px,2.2vw,27px);line-height:1.14;color:var(--mint);margin-bottom:10px;
-  min-height:2.28em;display:flex;align-items:center;justify-content:center;text-align:center}
+  min-height:1.14em;display:flex;align-items:center;justify-content:center;text-align:center}
 .chip span{display:block;font-size:13.6px;line-height:1.45;color:var(--soft-dark)}
 
 .dist{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3.4vw,54px);margin-top:22px}
