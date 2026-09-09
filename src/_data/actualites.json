@@ -4,45 +4,78 @@
       {
         "date": "Juin 2026",
         "categorie": "Accompagnement",
+        "slug": "programme-rise-2026",
         "titre": "DeeeMines rejoint la promotion d'été du programme RISE",
-        "texte": "CNRS Innovation retient douze projets issus des laboratoires du CNRS pour sa promotion d'été 2026. DeeeMines y présente son procédé breveté de recyclage des plastiques ignifugés et de récupération de l'antimoine.",
+        "resume": "CNRS Innovation retient douze projets issus des laboratoires du CNRS pour sa promotion d'été 2026. DeeeMines y présente son procédé de recyclage des plastiques ignifugés.",
+        "corps": "",
         "image": "",
+        "photos": [],
         "lien": "https://www.cnrsinnovation.com/actualite/programme-rise-12-projets-innovants-integrent-la-promotion-dete-2026/",
         "lien_texte": "Lire l'annonce de CNRS Innovation"
       },
       {
         "date": "Mars 2026",
         "categorie": "Société",
+        "slug": "creation-de-deeemines",
         "titre": "Création de DeeeMines",
-        "texte": "La société est immatriculée à Paris le 18 mars 2026, au terme de quatre années de recherche menées à l'Institut de Recherche de Chimie Paris. Elle est incubée à l'ESPCI Paris.",
+        "resume": "La société est immatriculée à Paris le 18 mars 2026, au terme de quatre années de recherche menées à l'Institut de Recherche de Chimie Paris. Elle est incubée à l'ESPCI Paris.",
+        "corps": "",
         "image": "",
+        "photos": [],
         "lien": "",
         "lien_texte": ""
       },
       {
         "date": "Octobre 2025",
         "categorie": "Distinction",
+        "slug": "prix-i-phd-morvan-gaudin",
         "titre": "Morvan Gaudin, lauréat du prix i-PhD de Bpifrance",
-        "texte": "Le prix i-PhD distingue chaque année des projets scientifiques à fort potentiel d'innovation. Il récompense ici les travaux de thèse de Morvan Gaudin sur la récupération de l'antimoine contenu dans les plastiques bromés des équipements électriques et électroniques, menés à la Chaire Mines Urbaines de Chimie ParisTech - PSL avec le soutien de l'éco-organisme ecosystem, et poursuivis avec Grégory Lefèvre, Vincent Semetey et Frédéric Rousseau. La distinction ouvre une année d'accompagnement par Bpifrance.",
-        "image": "assets/iphd-ceremonie.jpg",
+        "resume": "Le prix i-PhD récompense les travaux de thèse à l'origine du procédé DeeeMines, et ouvre une année d'accompagnement par Bpifrance.",
+        "corps": "Nous sommes heureux d'annoncer que Morvan Gaudin a reçu le prix i-PhD de Bpifrance. Cette distinction annuelle récompense des projets scientifiques à fort potentiel d'innovation.\n\nLe prix salue les travaux de thèse de Morvan sur la récupération de l'antimoine, un métal classé critique par l'Union européenne, contenu dans les plastiques bromés des équipements électriques et électroniques en fin de vie. Ces déchets sont aujourd'hui très majoritairement incinérés en France et en Europe, alors qu'ils représentent une ressource stratégique inexploitée.\n\n### La recherche à l'origine de DeeeMines\n\nLes résultats de cette thèse, menée au sein de la Chaire Mines Urbaines à Chimie ParisTech - PSL avec le soutien de l'éco-organisme ecosystem, ont fondé le projet DeeeMines, développé avec Grégory Lefèvre, Vincent Semetey et Frédéric Rousseau.\n\n### Un appui pour structurer la filière européenne de l'antimoine\n\nGrâce à ce prix, les cofondateurs bénéficient d'une année d'accompagnement par Bpifrance : mentorat, expertise deeptech et structuration stratégique. Un appui déterminant vers l'industrialisation du procédé et la construction d'une filière européenne de recyclage de l'antimoine et des plastiques bromés.\n\nNous remercions chaleureusement Bpifrance pour son soutien.",
+        "image": "/assets/iphd-ceremonie.jpg",
+        "photos": [
+          {
+            "image": "/assets/iphd-equipe.jpg",
+            "legende": "L'équipe lors de la cérémonie du Concours d'innovation de l'État"
+          }
+        ],
         "lien": "https://www.linkedin.com/feed/update/urn:li:activity:7383962136890478593/",
-        "lien_texte": "Voir la publication"
+        "lien_texte": "Voir la publication LinkedIn"
       },
       {
         "date": "Octobre 2025",
         "categorie": "Partenariat",
+        "slug": "visite-environnement-recycling",
         "titre": "Visite d'Environnement Recycling, vers une filière des plastiques bromés",
-        "texte": "Sur son site de Montluçon, dix-sept mille mètres carrés et plus de deux cents salariés, Environnement Recycling dépollue, broie et trie les équipements électriques et électroniques jusqu'à une pureté de séparation des plastiques bromés rarement atteinte à l'échelle industrielle. Ces plastiques, chargés de retardateurs de flamme bromés et de trioxyde d'antimoine, partent aujourd'hui à l'incinération faute d'alternative. La visite a permis d'identifier plusieurs pistes de travail communes, avec l'objectif de premiers essais sur prototype.",
-        "image": "assets/visite-environnement-recycling.jpg",
+        "resume": "Sur son site de Montluçon, Environnement Recycling atteint une pureté de séparation des plastiques bromés rarement observée à l'échelle industrielle. Une matière qui part aujourd'hui à l'incinération.",
+        "corps": "En octobre 2025, nous avons visité le site d'Environnement Recycling à Montluçon, entreprise française de premier plan spécialisée dans le traitement des déchets d'équipements électriques et électroniques.\n\nSur ce site industriel de dix-sept mille mètres carrés, une équipe de plus de deux cents salariés met en œuvre des technologies européennes de pointe pour dépolluer, broyer et trier les équipements. Le procédé atteint, dans la séparation des plastiques bromés, des niveaux de pureté rarement observés à l'échelle industrielle.\n\n### Une ressource qui part aujourd'hui à l'incinérateur\n\nCes plastiques contiennent des retardateurs de flamme bromés et du trioxyde d'antimoine. Faute d'alternative, ils sont aujourd'hui majoritairement incinérés, alors qu'ils constituent une source stratégique de métaux et de molécules critiques. Leur valorisation est un enjeu environnemental et économique, à l'heure où l'Europe cherche à sécuriser son approvisionnement en matières premières critiques.\n\nLe projet DeeeMines s'inscrit dans une démarche d'économie circulaire. Il vise à transformer des flux de déchets complexes en ressources secondaires, par un procédé de recyclage chimique sélectif qui extrait et purifie le brome et l'antimoine sans dégrader la matrice polymère.\n\n### Des pistes de travail communes\n\nCette visite nous a permis d'identifier plusieurs axes de collaboration technique et scientifique, avec l'objectif de mener des essais sur prototype.\n\nNous remercions Farida et l'équipe d'Environnement Recycling pour leur accueil et la qualité de nos échanges. Ensemble, nous contribuons à faire émerger la filière française de valorisation des plastiques bromés.",
+        "image": "/assets/visite-environnement-recycling.jpg",
+        "photos": [
+          {
+            "image": "/assets/gisement-deee.jpg",
+            "legende": "Déchets d'équipements électriques et électroniques en attente de traitement"
+          },
+          {
+            "image": "/assets/broyat-tas.jpg",
+            "legende": "Le broyat après dépollution, broyage et tri"
+          },
+          {
+            "image": "/assets/broyat-main.jpg",
+            "legende": "La fraction plastique dont DeeeMines extrait l'antimoine"
+          }
+        ],
         "lien": "",
         "lien_texte": ""
       },
       {
         "date": "2025",
         "categorie": "Technologie",
+        "slug": "procede-brevete",
         "titre": "Le procédé est breveté",
-        "texte": "Le procédé d'extraction sélective de l'antimoine et des molécules bromées fait l'objet d'un brevet publié en 2025, exploité par DeeeMines sous licence.",
+        "resume": "Le procédé d'extraction sélective de l'antimoine et des molécules bromées fait l'objet d'un brevet publié en 2025, exploité par DeeeMines sous licence.",
+        "corps": "",
         "image": "",
+        "photos": [],
         "lien": "",
         "lien_texte": ""
       }
@@ -53,45 +86,78 @@
       {
         "date": "June 2026",
         "categorie": "Support",
+        "slug": "programme-rise-2026",
         "titre": "DeeeMines joins the RISE summer cohort",
-        "texte": "CNRS Innovation selected twelve projects from CNRS laboratories for its 2026 summer cohort. DeeeMines presented its patented process for recycling flame-retardant plastics and recovering antimony.",
+        "resume": "CNRS Innovation selected twelve projects from CNRS laboratories for its 2026 summer cohort. DeeeMines presented its process for recycling flame-retardant plastics.",
+        "corps": "",
         "image": "",
+        "photos": [],
         "lien": "https://www.cnrsinnovation.com/actualite/programme-rise-12-projets-innovants-integrent-la-promotion-dete-2026/",
         "lien_texte": "Read the CNRS Innovation announcement"
       },
       {
         "date": "March 2026",
         "categorie": "Company",
+        "slug": "creation-de-deeemines",
         "titre": "DeeeMines is founded",
-        "texte": "The company was registered in Paris on 18 March 2026, after four years of research at the Institut de Recherche de Chimie Paris. It is incubated at ESPCI Paris.",
+        "resume": "The company was registered in Paris on 18 March 2026, after four years of research at the Institut de Recherche de Chimie Paris. It is incubated at ESPCI Paris.",
+        "corps": "",
         "image": "",
+        "photos": [],
         "lien": "",
         "lien_texte": ""
       },
       {
         "date": "October 2025",
         "categorie": "Award",
+        "slug": "prix-i-phd-morvan-gaudin",
         "titre": "Morvan Gaudin wins the Bpifrance i-PhD award",
-        "texte": "The i-PhD award recognises, every year, scientific projects with strong innovation potential. It rewards here the doctoral work of Morvan Gaudin on recovering the antimony contained in the brominated plastics of electrical and electronic equipment, carried out at the Urban Mining Chair of Chimie ParisTech - PSL with the support of the producer responsibility organisation ecosystem, and continued with Grégory Lefèvre, Vincent Semetey and Frédéric Rousseau. The award opens a year of support from Bpifrance.",
-        "image": "assets/iphd-ceremonie.jpg",
+        "resume": "The i-PhD award recognises the doctoral work behind the DeeeMines process, and opens a year of support from Bpifrance.",
+        "corps": "We are proud to announce that Morvan Gaudin has received the i-PhD award from Bpifrance. This annual distinction recognises scientific projects with high innovation potential.\n\nThe award recognises Morvan's doctoral research into the recovery of antimony, a metal classified as critical by the European Union, from the brominated plastics of end-of-life electrical and electronic equipment. This waste is largely incinerated in France and in Europe today, although it is an untapped strategic resource.\n\n### The research behind DeeeMines\n\nThe results of this thesis, carried out within the Urban Mining Chair at Chimie ParisTech - PSL with the support of the producer responsibility organisation ecosystem, formed the basis of the DeeeMines project, developed with Grégory Lefèvre, Vincent Semetey and Frédéric Rousseau.\n\n### Support for building a European antimony industry\n\nThanks to this award, the founders benefit from a year of support from Bpifrance: mentoring, deeptech expertise and strategic structuring. A decisive step towards industrialising the process and building a European recycling industry for antimony and brominated plastics.\n\nWe would like to thank Bpifrance warmly for its support.",
+        "image": "/assets/iphd-ceremonie.jpg",
+        "photos": [
+          {
+            "image": "/assets/iphd-equipe.jpg",
+            "legende": "The team at the State Innovation Competition ceremony"
+          }
+        ],
         "lien": "https://www.linkedin.com/feed/update/urn:li:activity:7383962136890478593/",
-        "lien_texte": "See the post"
+        "lien_texte": "See the LinkedIn post"
       },
       {
         "date": "October 2025",
         "categorie": "Partnership",
+        "slug": "visite-environnement-recycling",
         "titre": "A visit to Environnement Recycling, towards a brominated plastics industry",
-        "texte": "At its site in Montluçon, seventeen thousand square metres and more than two hundred staff, Environnement Recycling decontaminates, shreds and sorts electrical and electronic equipment, reaching a purity in the separation of brominated plastics that is rarely seen at industrial scale. Those plastics, loaded with brominated flame retardants and antimony trioxide, are incinerated today for lack of any alternative. The visit identified several areas to work on together, with the aim of running first prototype trials.",
-        "image": "assets/visite-environnement-recycling.jpg",
+        "resume": "At its site in Montluçon, Environnement Recycling reaches a purity in separating brominated plastics that is rarely seen at industrial scale. A material that goes to the incinerator today.",
+        "corps": "In October 2025 we visited the site of Environnement Recycling in Montluçon, a leading French company specialising in the treatment of waste electrical and electronic equipment.\n\nAt this seventeen-thousand-square-metre industrial site, a team of more than two hundred people uses advanced European technologies to decontaminate, shred and sort equipment. In separating brominated plastics, the process reaches levels of purity rarely seen at industrial scale.\n\n### A resource that goes to the incinerator today\n\nThese plastics contain brominated flame retardants and antimony trioxide. For lack of any alternative they are mostly incinerated today, although they are a strategic source of critical metals and molecules. Recovering them is an environmental and economic challenge, at a time when Europe is seeking to secure its supply of critical raw materials.\n\nThe DeeeMines project is part of a circular economy approach. It aims to turn complex waste streams into secondary resources, through a selective chemical recycling process that extracts and purifies bromine and antimony without degrading the polymer matrix.\n\n### Areas to work on together\n\nThe visit allowed us to identify several areas for technical and scientific collaboration, with the aim of running prototype trials.\n\nWe would like to thank Farida and the team at Environnement Recycling for their welcome and the quality of our discussions. Together we are helping the French brominated plastics recovery industry to emerge.",
+        "image": "/assets/visite-environnement-recycling.jpg",
+        "photos": [
+          {
+            "image": "/assets/gisement-deee.jpg",
+            "legende": "Waste electrical and electronic equipment awaiting treatment"
+          },
+          {
+            "image": "/assets/broyat-tas.jpg",
+            "legende": "The shredded material after decontamination and sorting"
+          },
+          {
+            "image": "/assets/broyat-main.jpg",
+            "legende": "The plastic fraction from which DeeeMines extracts antimony"
+          }
+        ],
         "lien": "",
         "lien_texte": ""
       },
       {
         "date": "2025",
         "categorie": "Technology",
+        "slug": "procede-brevete",
         "titre": "The process is patented",
-        "texte": "The selective extraction of antimony and brominated molecules is covered by a patent published in 2025, used by DeeeMines under licence.",
+        "resume": "The selective extraction of antimony and brominated molecules is covered by a patent published in 2025, used by DeeeMines under licence.",
+        "corps": "",
         "image": "",
+        "photos": [],
         "lien": "",
         "lien_texte": ""
       }

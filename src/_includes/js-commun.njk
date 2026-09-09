@@ -1,0 +1,83 @@
+<script>
+(function(){
+  /* --- Menu repliable --- */
+  var burger = document.getElementById('burger'), liens = document.getElementById('links');
+  if (burger && liens) burger.addEventListener('click', function(){ liens.classList.toggle('open'); });
+
+  /* --- Apparitions au défilement --- */
+  (function(){
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.documentElement.classList.add('anim');
+    var SEL = ['.hero .wrap > *','.phead .wrap > *','.eyebrow','.stmt','.fig','.row',
+               '.flow','.st','.chip','.sc','.logos > div','.mem','.pc','.use','.sn',
+               '.cgrid > div','.team','.legal > *','.scale','.na','.art > *'];
+    var els = [];
+    SEL.forEach(function(s){
+      document.querySelectorAll(s).forEach(function(el){
+        if (el.closest('header')) return;
+        if (el.closest('[data-l]')) return;
+        if (el.parentElement && el.parentElement.closest('.reveal')) return;
+        if (els.indexOf(el) === -1) els.push(el);
+      });
+    });
+    els.forEach(function(el){
+      el.classList.add('reveal');
+      var sib = Array.prototype.filter.call(el.parentElement.children, function(c){
+        return c.classList.contains('reveal');
+      });
+      var i = sib.indexOf(el);
+      el.style.setProperty('--i', i > 6 ? 6 : i);
+    });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    els.forEach(function(el){ io.observe(el); });
+  })();
+
+  /* --- Bascule français / anglais --- */
+  var I18N = {{ i18n | dump | safe }};
+  var ATTRS = {"Votre nom": "Your name", "vous@organisation.fr": "you@organisation.com", "Quelques lignes suffisent.": "A few lines are enough."};
+  var TITRE_EN = document.documentElement.getAttribute('data-titre-en') || document.title;
+  var TITRE_FR = document.title;
+  var nodes = [];
+  (function walk(el){
+    for (var i=0;i<el.childNodes.length;i++){
+      var n = el.childNodes[i];
+      if (n.nodeType === 3){
+        var m = n.nodeValue.match(/^(\s*)([\s\S]*?)(\s*)$/);
+        var key = m[2].replace(/\s+/g,' ');
+        if (key && I18N[key]) nodes.push([n, n.nodeValue, m[1] + I18N[key] + m[3]]);
+      } else if (n.nodeType === 1 && n.tagName !== 'SCRIPT' && n.tagName !== 'STYLE'
+                 && !n.hasAttribute('data-l')){
+        walk(n);
+      }
+    }
+  })(document.body);
+  var fields = [];
+  document.querySelectorAll('[placeholder]').forEach(function(el){
+    var p = el.getAttribute('placeholder');
+    if (ATTRS[p]) fields.push([el, p, ATTRS[p]]);
+  });
+  /* blocs rédigés en deux versions complètes (corps des actualités) */
+  var blocs = [].slice.call(document.querySelectorAll('[data-l]'));
+
+  window.setLang = function(l){
+    var k = (l === 'en') ? 2 : 1;
+    nodes.forEach(function(t){ t[0].nodeValue = t[k]; });
+    fields.forEach(function(f){ f[0].setAttribute('placeholder', f[k]); });
+    blocs.forEach(function(b){ b.hidden = (b.getAttribute('data-l') !== l); });
+    document.documentElement.lang = l;
+    document.title = (l === 'en') ? TITRE_EN : TITRE_FR;
+    document.querySelectorAll('.lang b').forEach(function(b){
+      b.classList.toggle('on', b.getAttribute('data-lang') === l);
+    });
+    try { localStorage.setItem('langue', l); } catch(e){}
+  };
+  document.querySelectorAll('.lang b').forEach(function(b){
+    b.addEventListener('click', function(){ window.setLang(b.getAttribute('data-lang')); });
+  });
+  try { if (localStorage.getItem('langue') === 'en') window.setLang('en'); } catch(e){}
+})();
+</script>

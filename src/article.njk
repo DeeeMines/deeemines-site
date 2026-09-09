@@ -1,0 +1,91 @@
+---
+pagination:
+  data: articles
+  size: 1
+  alias: art
+permalink: "/actualites/{{ art.slug }}/index.html"
+eleventyComputed:
+  titre: "{{ art.fr.titre }} · DeeeMines"
+  titreEn: "{{ art.en.titre }} · DeeeMines"
+  description: "{{ art.fr.resume }}"
+  ogTitre: "{{ art.fr.titre }}"
+  ogImage: "{{ art.fr.image or '/og.jpg' }}"
+---
+{% include "tete.njk" %}
+<body>
+
+{% include "entete.njk" %}
+
+<main>
+  <div class="phead phead-art">
+    <div class="wrap">
+      <a class="retour" href="/#actualites" data-go="actus">&#8592; <span>Toutes les actualités</span></a>
+      <div data-l="fr">
+        <div class="eyebrow" style="color:var(--mint)">{{ art.fr.categorie }} &#183; {{ art.fr.date }}</div>
+        <h1>{{ art.fr.titre }}</h1>
+      </div>
+      <div data-l="en" hidden>
+        <div class="eyebrow" style="color:var(--mint)">{{ art.en.categorie }} &#183; {{ art.en.date }}</div>
+        <h1>{{ art.en.titre }}</h1>
+      </div>
+    </div>
+  </div>
+  <hr class="grad-rule">
+
+  <section>
+    <div class="wrap">
+      <div class="art">
+        {%- if art.fr.image %}
+        <img class="art-img" src="{{ art.fr.image }}" alt="">
+        {%- endif %}
+
+        <div class="art-corps" data-l="fr">
+          <p class="chapo">{{ art.fr.resume }}</p>
+          {{ art.fr.corps | markdown | safe }}
+          {%- if art.fr.lien %}
+          <p><a class="nlien" href="{{ art.fr.lien }}" target="_blank" rel="noopener">{{ art.fr.lien_texte or "En savoir plus" }} <span class="a">&#8594;</span></a></p>
+          {%- endif %}
+          {%- if art.fr.photos and art.fr.photos.length %}
+          <div class="art-photos">
+            {%- for ph in art.fr.photos %}
+            <figure><img src="{{ ph.image }}" alt="{{ ph.legende or '' }}">
+              {%- if ph.legende %}<figcaption>{{ ph.legende }}</figcaption>{% endif %}
+            </figure>
+            {%- endfor %}
+          </div>
+          {%- endif %}
+        </div>
+        <div class="art-corps" data-l="en" hidden>
+          <p class="chapo">{{ art.en.resume }}</p>
+          {{ art.en.corps | markdown | safe }}
+          {%- if art.en.lien %}
+          <p><a class="nlien" href="{{ art.en.lien }}" target="_blank" rel="noopener">{{ art.en.lien_texte or "Read more" }} <span class="a">&#8594;</span></a></p>
+          {%- endif %}
+          {%- if art.en.photos and art.en.photos.length %}
+          <div class="art-photos">
+            {%- for ph in art.en.photos %}
+            <figure><img src="{{ ph.image }}" alt="{{ ph.legende or '' }}">
+              {%- if ph.legende %}<figcaption>{{ ph.legende }}</figcaption>{% endif %}
+            </figure>
+            {%- endfor %}
+          </div>
+          {%- endif %}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="tint" style="padding:clamp(42px,4.4vw,64px) 0;text-align:center">
+    <div class="wrap">
+      <h2 style="font-size:clamp(24px,3vw,34px);margin-bottom:22px">Un gisement, un besoin, une question ?</h2>
+      <a href="/#contact" data-go="home" class="btn btn-ink">Écrivez-nous <span class="a">&#8594;</span></a>
+    </div>
+  </section>
+</main>
+
+{% include "pied.njk" %}
+
+{% include "js-commun.njk" %}
+</body>
+</html>

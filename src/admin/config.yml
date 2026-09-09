@@ -8,7 +8,7 @@ backend:
 
 # Où sont rangées les images, et sous quel chemin la page les appelle
 media_folder: src/assets
-public_folder: assets
+public_folder: /assets
 
 # Le site est bilingue : chaque texte existe en français et en anglais,
 # affichés côte à côte dans le formulaire. Le français fait référence.
@@ -39,9 +39,27 @@ collections:
               - { label: Date affichée, name: date, widget: string, hint: "Par exemple : Juillet 2026", i18n: true }
               - { label: Catégorie, name: categorie, widget: string, hint: "Financement, Société, Technologie, Partenariat…", i18n: true }
               - { label: Titre, name: titre, widget: string, i18n: true }
-              - { label: Texte, name: texte, widget: text, i18n: true }
-              - { label: Image (facultative), name: image, widget: image, required: false, default: "", i18n: duplicate }
-              - { label: Lien (facultatif), name: lien, widget: string, required: false, default: "", hint: "Adresse complète, par exemple https://…", i18n: duplicate }
+              - { label: Résumé, name: resume, widget: text, i18n: true, hint: "Deux ou trois lignes. C'est ce qui s'affiche dans la liste des actualités." }
+              - label: Article complet (facultatif)
+                name: corps
+                widget: markdown
+                required: false
+                default: ""
+                i18n: true
+                hint: "Si vous remplissez ce champ, l'actualité obtient sa propre page et un lien « Lire la suite ». Sinon, seul le résumé est affiché."
+              - { label: Adresse de la page, name: slug, widget: string, required: false, default: "", i18n: duplicate, hint: "Par exemple prix-i-phd. Ne la changez plus une fois l'article partagé : les liens existants cesseraient de fonctionner." }
+              - { label: Image principale (facultative), name: image, widget: image, required: false, default: "", i18n: duplicate, hint: "Affichée en haut de la page de l'article." }
+              - label: Photos supplémentaires
+                name: photos
+                widget: list
+                required: false
+                i18n: true
+                label_singular: Photo
+                summary: '{{fields.legende}}'
+                fields:
+                  - { label: Image, name: image, widget: image }
+                  - { label: Légende, name: legende, widget: string, required: false, default: "" }
+              - { label: Lien externe (facultatif), name: lien, widget: string, required: false, default: "", hint: "Adresse complète, par exemple https://…", i18n: duplicate }
               - { label: Texte du lien (facultatif), name: lien_texte, widget: string, required: false, default: "", hint: "Par défaut : « En savoir plus »", i18n: true }
 
   # ------------------------------------------------------------------ ACCUEIL

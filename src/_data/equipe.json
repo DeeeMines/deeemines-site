@@ -2,29 +2,29 @@
   "fr": {
     "cofondateurs": [
       {
-        "photo": "assets/kristell-riou-nivert.jpg",
+        "photo": "/assets/kristell-riou-nivert.jpg",
         "nom": "Kristell Riou-Nivert",
         "role": "Cofondatrice & CEO",
         "texte": "Ingénieure environnement et innovation. Structuration industrielle, partenariats de collecte et financement du projet.",
         "logos": [
           {
-            "image": "assets/mines-paris-psl.png",
+            "image": "/assets/mines-paris-psl.png",
             "nom": "Mines Paris - PSL"
           }
         ]
       },
       {
-        "photo": "assets/morvan-gaudin.jpg",
+        "photo": "/assets/morvan-gaudin.jpg",
         "nom": "Morvan Gaudin",
         "role": "Cofondateur & CTO",
         "texte": "Docteur et ingénieur. Auteur de la thèse à l'origine du procédé, lauréat du prix i-PhD de Bpifrance.",
         "logos": [
           {
-            "image": "assets/chimie-paristech-psl.png",
+            "image": "/assets/chimie-paristech-psl.png",
             "nom": "Chimie ParisTech - PSL"
           },
           {
-            "image": "assets/agroparistech.png",
+            "image": "/assets/agroparistech.png",
             "nom": "AgroParisTech"
           }
         ]
@@ -32,42 +32,42 @@
     ],
     "scientifiques": [
       {
-        "photo": "assets/gregory-lefevre.jpg",
+        "photo": "/assets/gregory-lefevre.jpg",
         "nom": "Grégory Lefèvre",
         "texte": "Chercheur au Centre national de la recherche scientifique, Institut de Recherche de Chimie Paris. Hydrométallurgie et optimisation du procédé d'extraction.",
         "logos": [
           {
-            "image": "assets/cnrs.png",
+            "image": "/assets/cnrs.png",
             "nom": "CNRS"
           },
           {
-            "image": "assets/chimie-paristech-psl.png",
+            "image": "/assets/chimie-paristech-psl.png",
             "nom": "Chimie ParisTech - PSL"
           }
         ]
       },
       {
-        "photo": "assets/frederic-rousseau.jpg",
+        "photo": "/assets/frederic-rousseau.jpg",
         "nom": "Frédéric Rousseau",
         "texte": "Enseignant-chercheur à Chimie ParisTech - PSL, Institut de Recherche de Chimie Paris. Génie des procédés et passage à l'échelle industrielle.",
         "logos": [
           {
-            "image": "assets/chimie-paristech-psl.png",
+            "image": "/assets/chimie-paristech-psl.png",
             "nom": "Chimie ParisTech - PSL"
           }
         ]
       },
       {
-        "photo": "assets/vincent-semetey.jpg",
+        "photo": "/assets/vincent-semetey.jpg",
         "nom": "Vincent Semetey",
         "texte": "Chercheur au Centre national de la recherche scientifique, Institut de Recherche de Chimie Paris. Chimie des polymères, directeur de la Chaire Mines Urbaines.",
         "logos": [
           {
-            "image": "assets/cnrs.png",
+            "image": "/assets/cnrs.png",
             "nom": "CNRS"
           },
           {
-            "image": "assets/chimie-paristech-psl.png",
+            "image": "/assets/chimie-paristech-psl.png",
             "nom": "Chimie ParisTech - PSL"
           }
         ]
@@ -77,29 +77,29 @@
   "en": {
     "cofondateurs": [
       {
-        "photo": "assets/kristell-riou-nivert.jpg",
+        "photo": "/assets/kristell-riou-nivert.jpg",
         "nom": "Kristell Riou-Nivert",
         "role": "Co-founder & CEO",
         "texte": "Engineer in environment and innovation. Industrial structuring, collection partnerships and project funding.",
         "logos": [
           {
-            "image": "assets/mines-paris-psl.png",
+            "image": "/assets/mines-paris-psl.png",
             "nom": "Mines Paris - PSL"
           }
         ]
       },
       {
-        "photo": "assets/morvan-gaudin.jpg",
+        "photo": "/assets/morvan-gaudin.jpg",
         "nom": "Morvan Gaudin",
         "role": "Co-founder & CTO",
         "texte": "Doctor and engineer. Author of the thesis behind the process, winner of the Bpifrance i-PhD award.",
         "logos": [
           {
-            "image": "assets/chimie-paristech-psl.png",
+            "image": "/assets/chimie-paristech-psl.png",
             "nom": "Chimie ParisTech - PSL"
           },
           {
-            "image": "assets/agroparistech.png",
+            "image": "/assets/agroparistech.png",
             "nom": "AgroParisTech"
           }
         ]
@@ -107,42 +107,42 @@
     ],
     "scientifiques": [
       {
-        "photo": "assets/gregory-lefevre.jpg",
+        "photo": "/assets/gregory-lefevre.jpg",
         "nom": "Grégory Lefèvre",
         "texte": "Researcher at the French National Centre for Scientific Research, Institut de Recherche de Chimie Paris. Hydrometallurgy and optimisation of the extraction process.",
         "logos": [
           {
-            "image": "assets/cnrs.png",
+            "image": "/assets/cnrs.png",
             "nom": "CNRS"
           },
           {
-            "image": "assets/chimie-paristech-psl.png",
+            "image": "/assets/chimie-paristech-psl.png",
             "nom": "Chimie ParisTech - PSL"
           }
         ]
       },
       {
-        "photo": "assets/frederic-rousseau.jpg",
+        "photo": "/assets/frederic-rousseau.jpg",
         "nom": "Frédéric Rousseau",
         "texte": "Lecturer and researcher at Chimie ParisTech - PSL, Institut de Recherche de Chimie Paris. Process engineering and industrial scale-up.",
         "logos": [
           {
-            "image": "assets/chimie-paristech-psl.png",
+            "image": "/assets/chimie-paristech-psl.png",
             "nom": "Chimie ParisTech - PSL"
           }
         ]
       },
       {
-        "photo": "assets/vincent-semetey.jpg",
+        "photo": "/assets/vincent-semetey.jpg",
         "nom": "Vincent Semetey",
         "texte": "Researcher at the French National Centre for Scientific Research, Institut de Recherche de Chimie Paris. Polymer chemistry, head of the Urban Mines Chair.",
         "logos": [
           {
-            "image": "assets/cnrs.png",
+            "image": "/assets/cnrs.png",
             "nom": "CNRS"
           },
           {
-            "image": "assets/chimie-paristech-psl.png",
+            "image": "/assets/chimie-paristech-psl.png",
             "nom": "Chimie ParisTech - PSL"
           }
         ]

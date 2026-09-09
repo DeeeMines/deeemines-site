@@ -1,0 +1,72 @@
+<script>
+(function(){
+  var ANCRES={'#antimoine':'antimoine','#equipe':'equipe','#actualites':'actus',
+              '#mentions':'mentions','#confidentialite':'privacy'};
+  var current='home';
+  var PAGES={home:'page-home',equipe:'page-equipe',antimoine:'page-antimoine',actus:'page-actus',mentions:'page-mentions',privacy:'page-privacy'};
+  function show(key,hash){
+    for(var k in PAGES){document.getElementById(PAGES[k]).classList.toggle('active',k===key);}
+    document.querySelectorAll('.links a').forEach(function(a){
+      var g=a.getAttribute('data-go');
+      a.classList.toggle('on', g===key && g!=='home');
+      a.blur();
+    });
+    current=key;
+    document.getElementById('links').classList.remove('open');
+    if(hash){var el=document.querySelector(hash);
+      if(el){setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'});},40);return;}}
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[data-go]'); if(!a) return;
+    e.preventDefault();
+    var href=a.getAttribute('href')||'', i=href.indexOf('#');
+    var ancre=(i>=0 && href.length>i+1) ? href.slice(i) : null;
+    if (ancre==='#top' || ANCRES[ancre]) ancre=null;
+    show(a.getAttribute('data-go'), ancre);
+  });
+
+  /* --- Arrivée depuis une page d'actualité --- */
+  if (ANCRES[location.hash]) {
+    var depart=ANCRES[location.hash];
+    for (var p in PAGES){document.getElementById(PAGES[p]).classList.toggle('active',p===depart);}
+    document.querySelectorAll('.links a').forEach(function(a){
+      a.classList.toggle('on', a.getAttribute('data-go')===depart);
+    });
+    current=depart;
+  }
+
+  /* --- Repérage de la section visible sur la page d'accueil --- */
+  var spy = ['solution','technologie'];
+  var obs = new IntersectionObserver(function(entries){
+    if (current !== 'home') return;
+    entries.forEach(function(e){
+      var l = document.querySelector('.links a[href="#'+e.target.id+'"]');
+      if (l) l.classList.toggle('on', e.isIntersecting);
+    });
+  }, { rootMargin:'-45% 0px -45% 0px' });
+  spy.forEach(function(id){ var el=document.getElementById(id); if(el) obs.observe(el); });
+
+
+  /* --- Formulaire de contact --- */
+  var form=document.getElementById('cform'), sent=document.getElementById('sent'),
+      cerr=document.getElementById('cerr'), envoi=form.querySelector('button[type=submit]');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(id){return (document.getElementById(id)||{}).value||'';};
+    var corps='Nom : '+v('a1')+'\nE-mail : '+v('a2')+'\nProfil : '+v('a3')+'\n\n'+v('a4');
+    document.getElementById('mailto').href='mailto:contact@deeemines.com'
+      +'?subject='+encodeURIComponent('Contact site DeeeMines')+'&body='+encodeURIComponent(corps);
+    cerr.hidden=true; envoi.disabled=true;
+    fetch('/',{method:'POST',
+               headers:{'Content-Type':'application/x-www-form-urlencoded'},
+               body:new URLSearchParams(new FormData(form)).toString()})
+      .then(function(r){
+        if(!r.ok) throw new Error(r.status);
+        form.hidden=true; sent.hidden=false;
+        sent.scrollIntoView({behavior:'smooth',block:'center'});
+      })
+      .catch(function(){ envoi.disabled=false; cerr.hidden=false; });
+  });
+})();
+</script>

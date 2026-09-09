@@ -7,7 +7,9 @@ les images et les actualités sans toucher au code.
 
 ## Ce qu'il y a dans ce dossier
 
-    src/index.njk           la page du site (mise en page, styles, scripts)
+    src/index.njk           la page du site (accueil, antimoine, équipe, actualités, mentions)
+    src/article.njk         le gabarit des pages d'actualité
+    src/_includes/          les morceaux communs : tête, en-tête, styles, pied, scripts
     src/_data/              le contenu modifiable depuis l'administration
       contenu.json            bandeau d'accueil, trois matières, feuille de route, coordonnées
       actualites.json         la liste des actualités
@@ -15,6 +17,7 @@ les images et les actualités sans toucher au code.
       partenaires.json        le bandeau de logos
       statique.json           les traductions des textes qui restent dans le gabarit
       i18n.js                 assemble le dictionnaire français / anglais
+      articles.js             la liste des actualités qui ont une page dédiée
     src/assets/             les 25 logos et photos
     src/admin/              l'administration (Sveltia CMS)
     eleventy.config.js      la configuration du générateur
@@ -98,6 +101,18 @@ Le site s'ouvre sur `http://localhost:8080` et se recharge à chaque
 modification. `npm run build` produit le dossier `_site` sans le serveur.
 
 ---
+
+## Les actualités
+
+Chaque actualité a un **résumé**, affiché dans la liste, et un **article
+complet** facultatif. Si le champ « Article complet » est rempli, l'actualité
+obtient sa propre page à une adresse du type
+`deeemines.com/actualites/prix-i-phd`, et un lien « Lire la suite » apparaît
+dans la liste. S'il est vide, seul le résumé s'affiche, sans lien.
+
+L'adresse de la page se déduit du titre, sauf si vous renseignez le champ
+« Adresse de la page ». Une fois un article partagé, ne changez plus cette
+adresse : les liens déjà envoyés cesseraient de fonctionner.
 
 ## Ce qui se modifie depuis l'administration
 
