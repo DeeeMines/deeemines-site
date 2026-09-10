@@ -1,0 +1,81 @@
+<!-- Schéma animé du procédé : le gisement entre par le haut, les trois matières
+     sortent à droite, les solvants reviennent par-dessous en boucle fermée.
+     Tout est en SVG et en CSS, sans aucune bibliothèque ni fichier à charger.
+     L'animation s'arrête pour qui a demandé à son système de la réduire. -->
+<div class="schema" role="img"
+     aria-label="Schéma animé du procédé : des plastiques broyés entrent par une trémie dans le réacteur, où deux phases liquides séparent les composants. Il en sort de l'antimoine, des composés bromés et du polymère purifié, tandis que les solvants sont régénérés et repartent dans le réacteur en boucle fermée.">
+  <svg viewBox="0 0 1000 396" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <linearGradient id="sgOrg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#297EE1" stop-opacity=".62"/>
+        <stop offset="1" stop-color="#2B2BE8" stop-opacity=".38"/>
+      </linearGradient>
+      <linearGradient id="sgAq" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#3EBDD2" stop-opacity=".5"/>
+        <stop offset="1" stop-color="#1793AB" stop-opacity=".72"/>
+      </linearGradient>
+      <clipPath id="sgCuve"><rect x="330" y="132" width="210" height="168" rx="24"/></clipPath>
+      <marker id="sgFleche" viewBox="0 0 10 10" refX="9" refY="5"
+              markerWidth="5" markerHeight="5" orient="auto">
+        <path d="M0 0 L10 5 L0 10 z" fill="#52FCC3"/>
+      </marker>
+    </defs>
+
+    <!-- les trois repères, sur une seule ligne au-dessus du schéma -->
+    <text class="lbl" x="58"  y="22">01 · Le gisement</text>
+    <text class="lbl" x="330" y="22">02 · Le réacteur</text>
+    <text class="lbl" x="636" y="22">03 · Ce qui en sort</text>
+
+    <!-- ══════════ 01 · le gisement avance et tombe dans la trémie ══════════ -->
+    <g class="copeaux">
+      <rect class="cp cp1" width="18" height="11" rx="2.5"/>
+      <rect class="cp cp2" width="13" height="13" rx="2.5"/>
+      <rect class="cp cp3" width="21" height="9"  rx="2.5"/>
+      <rect class="cp cp4" width="12" height="14" rx="2.5"/>
+      <rect class="cp cp5" width="16" height="10" rx="2.5"/>
+    </g>
+    <path class="tremie" d="M396 72 L474 72 L442 118 L428 118 z"/>
+    <path class="tremie" d="M428 118 L442 118 L442 132 L428 132 z"/>
+
+    <!-- ══════════ 02 · le réacteur, deux phases ══════════ -->
+    <g clip-path="url(#sgCuve)">
+      <rect x="330" y="132" width="210" height="168" fill="#080848"/>
+      <path class="phase org"
+            d="M312 186 C 364 172, 420 200, 476 186 C 512 177, 540 182, 558 186 L558 320 L312 320 z"/>
+      <path class="phase aq"
+            d="M312 240 C 364 228, 420 254, 476 240 C 512 231, 540 236, 558 240 L558 320 L312 320 z"/>
+      <circle class="bul b1" cx="372" cy="286" r="4"/>
+      <circle class="bul b2" cx="420" cy="292" r="3"/>
+      <circle class="bul b3" cx="470" cy="284" r="5"/>
+      <circle class="bul b4" cx="506" cy="294" r="3.4"/>
+    </g>
+    <rect class="cuve" x="330" y="132" width="210" height="168" rx="24"/>
+
+    <!-- ══════════ la boucle des solvants, sous le réacteur ══════════ -->
+    <path class="boucle" marker-end="url(#sgFleche)"
+          d="M528 294 L528 330 Q528 340 518 340 L352 340 Q342 340 342 330 L342 298"/>
+    <text class="lbl mint" x="435" y="374">Solvants régénérés, en boucle fermée</text>
+
+    <!-- ══════════ 03 · les trois sorties ══════════ -->
+    <g class="sorties">
+      <g class="so so1">
+        <line class="fil" x1="546" y1="166" x2="630" y2="166"/>
+        <rect class="pastille" x="630" y="144" width="46" height="44" rx="12"/>
+        <text class="sym" x="653" y="173">Sb</text>
+        <text class="nom" x="690" y="172">Antimoine</text>
+      </g>
+      <g class="so so2">
+        <line class="fil" x1="546" y1="216" x2="630" y2="216"/>
+        <rect class="pastille" x="630" y="194" width="46" height="44" rx="12"/>
+        <text class="sym" x="653" y="223">Br</text>
+        <text class="nom" x="690" y="222">Composés bromés</text>
+      </g>
+      <g class="so so3">
+        <line class="fil" x1="546" y1="266" x2="630" y2="266"/>
+        <rect class="pastille" x="630" y="244" width="46" height="44" rx="12"/>
+        <text class="sym petit" x="653" y="273">Cn</text>
+        <text class="nom" x="690" y="272">Polymère purifié</text>
+      </g>
+    </g>
+  </svg>
+</div>

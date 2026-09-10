@@ -442,12 +442,12 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 /* --- Page « Le procédé » : colonne de titre plus étroite, texte justifié ---
    Le titre tient alors sur trois lignes et le paragraphe gagne en largeur.
    La césure automatique évite les trous que la justification creuse. */
-#page-procede .stmt{grid-template-columns:.82fr 1.18fr;align-items:start}
+#page-procede .stmt{grid-template-columns:.82fr 1.18fr;align-items:center}
 #page-procede .stmt h2{max-width:15ch}
 #page-procede .stmt .lead{max-width:none}
-#page-procede .stmt .lead p{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+#page-procede .stmt .lead p{hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 #page-procede .stmt .lead p+p{margin-top:15px}
-#page-procede .mesures p{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+#page-procede .mesures p{hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 @media(max-width:880px){
   #page-procede .stmt{grid-template-columns:1fr}
   #page-procede .stmt h2{max-width:none}
@@ -496,7 +496,84 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 .sorties .sym sub{font-size:.6em;line-height:0;vertical-align:baseline;position:relative;top:.18em}
 .sorties h3{margin-bottom:9px}
 .sorties p{font-size:15.2px;line-height:1.6;color:var(--soft);
-  text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
+
+/* ===== Schéma animé du procédé =====
+   Entièrement en SVG et en CSS : aucune bibliothèque, aucun fichier à charger.
+   Le gisement entre par le haut, les matières sortent à droite, les solvants
+   reviennent par-dessous. Mouvements lents : illustrer, pas distraire. */
+.schema{margin-top:clamp(30px,3.6vw,48px);background:var(--ink-deep);border-radius:18px;
+  padding:clamp(14px,1.8vw,24px) clamp(8px,1.4vw,18px)}
+.schema svg{width:100%;height:auto;display:block}
+.schema .lbl{font-family:var(--sans);font-size:13px;letter-spacing:.14em;
+  text-transform:uppercase;fill:#8FA0CE}
+.schema .lbl.mint{fill:var(--mint);text-anchor:middle;letter-spacing:.11em}
+
+/* 01 · les copeaux avancent puis tombent dans la trémie */
+.copeaux .cp{fill:#7C88B8}
+.cp1{animation:sg-chute 5s linear infinite}
+.cp2{animation:sg-chute 5s linear 1s infinite}
+.cp3{animation:sg-chute 5s linear 2s infinite}
+.cp4{animation:sg-chute 5s linear 3s infinite}
+.cp5{animation:sg-chute 5s linear 4s infinite}
+@keyframes sg-chute{
+  0%  {transform:translate(58px,56px) rotate(-12deg);opacity:0}
+  9%  {opacity:1}
+  54% {transform:translate(410px,56px) rotate(16deg);opacity:1}
+  78% {transform:translate(428px,104px) rotate(44deg);opacity:1}
+  90%,100%{transform:translate(430px,128px) rotate(52deg);opacity:0}
+}
+.tremie{fill:none;stroke:#5A6BA8;stroke-width:2;stroke-linejoin:round}
+
+/* 02 · deux phases qui ondulent, des bulles qui montent */
+.schema .cuve{fill:none;stroke:#6E7DB6;stroke-width:2.4}
+.schema .phase.org{fill:url(#sgOrg);animation:sg-houle 7s ease-in-out infinite}
+.schema .phase.aq{fill:url(#sgAq);animation:sg-houle 9s ease-in-out .8s infinite reverse}
+@keyframes sg-houle{0%,100%{transform:translateX(-13px)}50%{transform:translateX(13px)}}
+.schema .bul{fill:#52FCC3;opacity:0}
+.b1{animation:sg-bulle 4s ease-in infinite}
+.b2{animation:sg-bulle 4s ease-in .9s infinite}
+.b3{animation:sg-bulle 4s ease-in 1.8s infinite}
+.b4{animation:sg-bulle 4s ease-in 2.7s infinite}
+@keyframes sg-bulle{
+  0%{transform:translateY(0) scale(.5);opacity:0}
+  22%{opacity:.9}
+  100%{transform:translateY(-92px) scale(1);opacity:0}
+}
+
+/* la boucle des solvants : un trait qui défile sans jamais s'interrompre */
+.boucle{fill:none;stroke:#52FCC3;stroke-width:2.2;stroke-linecap:round;
+  stroke-dasharray:9 13;animation:sg-defile 2.4s linear infinite}
+@keyframes sg-defile{to{stroke-dashoffset:-44}}
+
+/* 03 · chaque sortie s'allume à son tour */
+.schema .fil{stroke:#6E7DB6;stroke-width:2;stroke-dasharray:6 8;
+  animation:sg-defile 3.4s linear infinite}
+.sorties .pastille{fill:rgba(255,255,255,.05);stroke:var(--mint);stroke-width:1.6}
+.sorties .sym{font-family:var(--disp);font-size:20px;font-weight:500;fill:var(--mint);text-anchor:middle}
+.sorties .sym.petit{font-size:17px}
+.sorties .nom{font-family:var(--sans);font-size:15px;fill:#C6D0EE}
+.so{opacity:.55}
+.so1{animation:sg-allume 6s ease-in-out infinite}
+.so2{animation:sg-allume 6s ease-in-out 1.2s infinite}
+.so3{animation:sg-allume 6s ease-in-out 2.4s infinite}
+@keyframes sg-allume{0%,58%,100%{opacity:.55}16%,40%{opacity:1}}
+
+@media(max-width:760px){
+  .schema{padding:12px 6px}
+  .schema .lbl{font-size:16px}
+  .sorties .nom{font-size:17px}
+  .sorties .sym{font-size:23px}
+}
+@media(prefers-reduced-motion:reduce){
+  .schema *{animation:none !important}
+  .so{opacity:1}
+  .copeaux .cp{opacity:1}
+  .cp1{transform:translate(58px,56px)}  .cp2{transform:translate(148px,56px)}
+  .cp3{transform:translate(238px,56px)} .cp4{transform:translate(328px,56px)}
+  .cp5{transform:translate(416px,84px) rotate(30deg)}
+  .schema .bul{opacity:.7}
+}
 
 .mesures{margin-top:clamp(30px,3.6vw,48px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
   gap:clamp(22px,3vw,44px);border-top:1px solid var(--line);padding-top:clamp(24px,2.6vw,34px)}
@@ -520,7 +597,7 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
   .preuves h3,.preuves p,.preuves .nlien{grid-column:1}}
 .preuves h3{color:#fff;max-width:60ch}
 .preuves p{margin-top:9px;font-size:15.4px;line-height:1.6;color:var(--soft-dark);
-  max-width:none;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  max-width:none;hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 .preuves .pv .nlien{margin-top:11px}
 .preuves b{color:#fff;font-weight:600}
 .preuves .nlien{display:inline-flex;align-items:center;gap:8px;margin-top:13px;font-size:14.6px;
