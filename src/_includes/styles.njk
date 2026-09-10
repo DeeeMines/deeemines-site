@@ -503,11 +503,15 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
    droite. Entièrement en SVG et en CSS, sans bibliothèque ni fichier chargé. */
 .schema{margin-top:clamp(30px,3.6vw,48px);background:var(--ink-deep);border-radius:18px;
   padding:clamp(20px,2.4vw,34px) clamp(16px,2.2vw,32px);
-  display:grid;grid-template-columns:1.18fr 1fr;gap:clamp(20px,3vw,46px);align-items:stretch}
+  display:grid;grid-template-columns:1.16fr 1fr;gap:clamp(16px,2.2vw,34px);align-items:stretch}
 .schema svg{display:block}
+/* la scène est centrée verticalement : même respiration au-dessus des
+   morceaux qui tombent et sous la phrase des solvants */
+.scene{display:flex;align-items:center}
 .scene svg{width:100%;height:auto}
 .schema .lbl{font-family:var(--sans);font-size:13px;letter-spacing:.13em;
   text-transform:uppercase;fill:#8FA0CE}
+.schema .sous{font-family:var(--sans);font-size:13.5px;fill:#6E7DB6}
 .schema .lbl.mint{fill:var(--mint);text-anchor:middle;letter-spacing:.1em}
 
 /* ── les gros morceaux tombent vers le broyeur ── */
@@ -527,27 +531,40 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 .rouleau{transform-box:fill-box;transform-origin:center}
 .r1{animation:sg-tourne 3.2s linear infinite}
 .r2{animation:sg-tourne 3.2s linear infinite reverse}
+.r2 .dents{transform:rotate(22.5deg);transform-box:fill-box;transform-origin:center}
 @keyframes sg-tourne{to{transform:rotate(360deg)}}
 
-/* ── les copeaux sortent du broyeur et tombent dans la cuve ── */
+/* ── les copeaux tombent jusqu'à la surface du bain, où ils disparaissent ── */
 .copeaux .cp{fill:#7C88B8}
-.c1{animation:sg-copeau 3.4s ease-in infinite}
-.c2{animation:sg-copeau 3.4s ease-in .85s infinite}
-.c3{animation:sg-copeau 3.4s ease-in 1.7s infinite}
-.c4{animation:sg-copeau 3.4s ease-in 2.55s infinite}
+.c1{animation:sg-copeau 3.8s ease-in infinite}
+.c2{animation:sg-copeau 3.8s ease-in .95s infinite}
+.c3{animation:sg-copeau 3.8s ease-in 1.9s infinite}
+.c4{animation:sg-copeau 3.8s ease-in 2.85s infinite}
 @keyframes sg-copeau{
   0%  {transform:translate(152px,150px) rotate(0deg);opacity:0}
-  16% {opacity:1}
-  76% {transform:translate(158px,216px) rotate(58deg);opacity:1}
-  92%,100%{transform:translate(160px,240px) rotate(76deg);opacity:0}
+  12% {opacity:1}
+  82% {transform:translate(162px,282px) rotate(74deg);opacity:1}
+  96%,100%{transform:translate(164px,302px) rotate(88deg);opacity:0}
 }
 
-/* ── le réacteur : deux phases, un agitateur, des bulles ── */
+/* ── le réacteur : deux phases, de la matière en suspension, un agitateur ── */
 .schema .cuve{fill:none;stroke:#6E7DB6;stroke-width:2.4}
 .moteur{fill:#141466;stroke:#6E7DB6;stroke-width:2}
 .schema .phase.org{fill:url(#sgOrg);animation:sg-houle 7s ease-in-out infinite}
 .schema .phase.aq{fill:url(#sgAq);animation:sg-houle 9s ease-in-out .8s infinite reverse}
 @keyframes sg-houle{0%,100%{transform:translateX(-13px)}50%{transform:translateX(13px)}}
+/* les grains dérivent lentement, chacun à son rythme, ce qui donne au bain
+   l'aspect d'un milieu vivant plutôt que d'un aplat de couleur */
+.grains circle{animation-name:sg-derive;animation-timing-function:ease-in-out;
+  animation-iteration-count:infinite}
+.grains.org circle{fill:#8E9BD0;opacity:.55}
+.grains.aq circle{fill:#52FCC3;opacity:.5}
+@keyframes sg-derive{
+  0%,100%{transform:translate(0,0)}
+  25%{transform:translate(9px,-7px)}
+  50%{transform:translate(-7px,6px)}
+  75%{transform:translate(6px,5px)}
+}
 .arbre{stroke:#9AA6D2;stroke-width:3;stroke-linecap:round}
 /* La pale tourne autour de l'arbre : on l'aplatit puis on la rouvre, ce qui
    donne l'illusion d'une rotation vue de face. */
@@ -573,7 +590,7 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 /* ── les trois sorties ── */
 .schema .fil{stroke:#6E7DB6;stroke-width:2;stroke-dasharray:6 8;
   animation:sg-defile 3.4s linear infinite}
-.sorties .pastille{fill:rgba(255,255,255,.05);stroke:var(--mint);stroke-width:1.6}
+.sorties .pastille{fill:rgba(4,4,64,.72);stroke:var(--mint);stroke-width:1.6}
 .sorties .sym{font-family:var(--disp);font-size:19px;font-weight:500;fill:var(--mint);text-anchor:middle}
 .sorties .sym.petit{font-size:16px}
 .sorties .nom{font-family:var(--sans);font-size:15px;fill:#C6D0EE}
@@ -583,19 +600,21 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 .so3{animation:sg-allume 6s ease-in-out 2.4s infinite}
 @keyframes sg-allume{0%,58%,100%{opacity:.55}16%,40%{opacity:1}}
 
-/* ── la colonne des étapes : quatre rangées égales, la sinusoïde derrière ── */
+/* ── la colonne des étapes ──
+   Quatre rangées de hauteur égale, contenu calé en haut : le numéro se
+   trouve donc toujours au même endroit de sa rangée, et l'onde peut le
+   rejoindre exactement. L'onde est descendue de la demi-hauteur du numéro. */
 .etapes{position:relative;display:grid;grid-template-rows:repeat(4,1fr);
-  padding-left:clamp(46px,5vw,72px)}
-.etapes .onde{position:absolute;left:0;top:0;width:clamp(46px,5vw,72px);height:100%}
-.et{display:flex;flex-direction:column;justify-content:center;position:relative;
-  padding:6px 0}
-/* la pastille se pose sur la courbe, au milieu de sa rangée */
-.et .pt{position:absolute;left:calc(clamp(46px,5vw,72px) * -.5 - 9px);top:50%;
-  width:18px;height:18px;margin-top:-9px;border-radius:50%;
+  padding-left:clamp(66px,7.2vw,108px)}
+.etapes .onde{position:absolute;left:0;top:9px;width:clamp(66px,7.2vw,108px);height:100%}
+.et{position:relative}
+.et .num{font-size:12px;letter-spacing:.16em;color:var(--soft-dark);opacity:.75;
+  position:relative;line-height:18px}
+.et .num .pt{position:absolute;top:0;left:calc(clamp(66px,7.2vw,108px) * -.5 - 9px);
+  width:18px;height:18px;border-radius:50%;
   background:var(--ink-deep);border:2px solid var(--c)}
-.et .pt::after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--c)}
-.et .num{font-size:12px;letter-spacing:.16em;color:var(--soft-dark);opacity:.75}
-.et h3{color:#fff;margin:5px 0 8px}
+.et .num .pt::after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--c)}
+.et h3{color:#fff;margin:6px 0 8px}
 .et p{font-size:14.6px;line-height:1.58;color:var(--soft-dark);max-width:40ch;
   hyphens:auto;-webkit-hyphens:auto}
 
@@ -603,12 +622,12 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
   .schema{grid-template-columns:1fr;gap:clamp(26px,4vw,40px)}
   .etapes{grid-template-rows:none;gap:26px;padding-left:38px}
   .etapes .onde{display:none}
-  .etapes::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;
+  .etapes::before{content:"";position:absolute;left:9px;top:9px;bottom:8px;width:2px;
     background:var(--grad);opacity:.55}
-  .et{justify-content:flex-start}
-  .et .pt{left:-38px;top:9px;margin-top:0}
+  .et .num .pt{left:-38px}
   .et p{max-width:none}
   .schema .lbl{font-size:15px}
+  .schema .sous{font-size:15px}
   .sorties .nom{font-size:17px}
   .sorties .sym{font-size:22px}
 }
@@ -619,8 +638,8 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
   .g1{transform:translate(104px,8px) rotate(-14deg)}
   .g2{transform:translate(168px,-6px) rotate(9deg)}
   .g3{transform:translate(212px,16px) rotate(20deg)}
-  .c1{transform:translate(140px,176px)}  .c2{transform:translate(166px,192px)}
-  .c3{transform:translate(148px,208px)}  .c4{transform:translate(174px,216px)}
+  .c1{transform:translate(140px,176px)}  .c2{transform:translate(166px,204px)}
+  .c3{transform:translate(148px,236px)}  .c4{transform:translate(172px,264px)}
   .schema .bul{opacity:.7}
 }
 
@@ -630,6 +649,9 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 .mesures .q{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
   color:var(--mint-d);margin-bottom:11px}
 .mesures p{font-size:15.4px;line-height:1.6;color:var(--soft)}
+.dark .mesures{border-top-color:var(--line-d)}
+.dark .mesures .q{color:var(--mint)}
+.dark .mesures p{color:var(--soft-dark)}
 
 .preuves{margin-top:clamp(28px,3.4vw,44px);display:grid;gap:0;
   border-top:1px solid var(--line-d)}

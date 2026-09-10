@@ -1,15 +1,16 @@
 <!-- ═══════════ Schéma animé du procédé ═══════════
-     À gauche, la scène : les plastiques arrivent en morceaux, passent au
-     broyeur, tombent dans le réacteur agité, et il en sort trois matières
-     pendant que les solvants repartent en boucle fermée.
-     À droite, la sinusoïde descend en regard des quatre étapes.
+     À gauche, la scène : les plastiques ignifugés arrivent en morceaux,
+     passent au broyeur, tombent dans le réacteur agité où deux phases
+     séparent la matière, et il en sort trois produits pendant que les
+     solvants repartent en boucle fermée.
+     À droite, la sinusoïde descend, ses points en regard des quatre étapes.
      Tout est en SVG et en CSS, sans bibliothèque ni fichier à charger.
      Les mouvements s'arrêtent pour qui a demandé à son système de les réduire. -->
 <div class="schema">
 
   <!-- ───────────── la scène ───────────── -->
   <div class="scene" role="img"
-       aria-label="Schéma animé : de gros morceaux de plastique passent dans un broyeur, tombent dans un réacteur agité contenant deux phases liquides, et il en sort de l'antimoine, des composés bromés et du polymère purifié ; les solvants sont régénérés et repartent dans le réacteur.">
+       aria-label="Schéma animé : des plastiques ignifugés issus de déchets électroniques, de bâches et de câbles passent dans un broyeur, tombent dans un réacteur agité contenant deux phases liquides, et il en sort de l'antimoine, des composés bromés et du polymère purifié ; les solvants sont régénérés et repartent dans le réacteur.">
     <svg viewBox="0 0 560 664" preserveAspectRatio="xMidYMid meet">
       <defs>
         <linearGradient id="sgOrg" x1="0" y1="0" x2="0" y2="1">
@@ -27,7 +28,9 @@
         </marker>
       </defs>
 
-      <!-- ── les gros morceaux qui arrivent ── -->
+      <!-- ── ce qui entre ── -->
+      <text class="lbl" x="248" y="40">Plastiques ignifugés</text>
+      <text class="sous" x="248" y="62">déchets électroniques, bâches, câbles, etc.</text>
       <g class="gros">
         <rect class="gr g1" width="46" height="30" rx="5"/>
         <rect class="gr g2" width="34" height="38" rx="5"/>
@@ -38,23 +41,15 @@
       <path class="carter" d="M102 80 L226 80 L226 128 L200 156 L128 156 L102 128 z"/>
       <g class="rouleau r1"><circle cx="141" cy="114" r="19"/>
         <g class="dents">
-          <path d="M141 95 v-8"/><path d="M154 101 l6-6"/><path d="M160 114 h8"/><path d="M154 127 l6 6"/>
-          <path d="M141 133 v8"/><path d="M128 127 l-6 6"/><path d="M122 114 h-8"/><path d="M128 101 l-6-6"/>
+          <path d="M141 95 v-6"/><path d="M154 101 l4.5-4.5"/><path d="M160 114 h6"/><path d="M154 127 l4.5 4.5"/>
+          <path d="M141 133 v6"/><path d="M128 127 l-4.5 4.5"/><path d="M122 114 h-6"/><path d="M128 101 l-4.5-4.5"/>
         </g>
       </g>
       <g class="rouleau r2"><circle cx="187" cy="114" r="19"/>
         <g class="dents">
-          <path d="M187 95 v-8"/><path d="M200 101 l6-6"/><path d="M206 114 h8"/><path d="M200 127 l6 6"/>
-          <path d="M187 133 v8"/><path d="M174 127 l-6 6"/><path d="M168 114 h-8"/><path d="M174 101 l-6-6"/>
+          <path d="M187 95 v-6"/><path d="M200 101 l4.5-4.5"/><path d="M206 114 h6"/><path d="M200 127 l4.5 4.5"/>
+          <path d="M187 133 v6"/><path d="M174 127 l-4.5 4.5"/><path d="M168 114 h-6"/><path d="M174 101 l-4.5-4.5"/>
         </g>
-      </g>
-
-      <!-- ── les copeaux qui tombent dans le réacteur ── -->
-      <g class="copeaux">
-        <rect class="cp c1" width="15" height="9"  rx="2"/>
-        <rect class="cp c2" width="11" height="11" rx="2"/>
-        <rect class="cp c3" width="17" height="8"  rx="2"/>
-        <rect class="cp c4" width="10" height="12" rx="2"/>
       </g>
 
       <!-- ── le réacteur ── -->
@@ -65,10 +60,31 @@
               d="M82 304 C 136 290, 194 318, 250 304 C 288 295, 316 300, 338 304 L338 570 L82 570 z"/>
         <path class="phase aq"
               d="M82 392 C 136 380, 194 406, 250 392 C 288 383, 316 388, 338 392 L338 570 L82 570 z"/>
+
+        <!-- matière en suspension dans la phase organique -->
+        <g class="grains org">
+          <circle cx="134" cy="332" r="4"   style="animation-duration:9s"/>
+          <circle cx="178" cy="356" r="2.6" style="animation-duration:11s;animation-delay:-3s"/>
+          <circle cx="246" cy="326" r="5"   style="animation-duration:8s;animation-delay:-5s"/>
+          <circle cx="282" cy="364" r="3.2" style="animation-duration:12s;animation-delay:-1.5s"/>
+          <circle cx="160" cy="374" r="2.2" style="animation-duration:10s;animation-delay:-6s"/>
+          <circle cx="300" cy="336" r="3.8" style="animation-duration:9.5s;animation-delay:-4s"/>
+        </g>
+        <!-- antimoine capté dans la phase aqueuse -->
+        <g class="grains aq">
+          <circle cx="140" cy="428" r="3.4" style="animation-duration:10s;animation-delay:-2s"/>
+          <circle cx="192" cy="466" r="5"   style="animation-duration:8.5s;animation-delay:-6s"/>
+          <circle cx="256" cy="436" r="2.6" style="animation-duration:12s;animation-delay:-3.5s"/>
+          <circle cx="296" cy="492" r="4.2" style="animation-duration:9s;animation-delay:-7s"/>
+          <circle cx="150" cy="508" r="2.4" style="animation-duration:11s;animation-delay:-1s"/>
+          <circle cx="232" cy="518" r="3.6" style="animation-duration:9.8s;animation-delay:-4.5s"/>
+        </g>
+
         <circle class="bul b1" cx="176" cy="470" r="4"/>
         <circle class="bul b2" cx="212" cy="480" r="3"/>
         <circle class="bul b3" cx="252" cy="466" r="5"/>
         <circle class="bul b4" cx="284" cy="478" r="3.2"/>
+
         <!-- l'agitateur -->
         <line class="arbre" x1="210" y1="218" x2="210" y2="492"/>
         <g class="pale">
@@ -77,6 +93,15 @@
           <rect x="247" y="488" width="10" height="24" rx="5"/>
         </g>
       </g>
+
+      <!-- les copeaux tombent jusqu'à la surface du liquide, où ils disparaissent.
+           Dessinés après la cuve pour rester visibles au-dessus du bain. -->
+      <g class="copeaux">
+        <rect class="cp c1" width="15" height="9"  rx="2"/>
+        <rect class="cp c2" width="11" height="11" rx="2"/>
+        <rect class="cp c3" width="17" height="8"  rx="2"/>
+        <rect class="cp c4" width="10" height="12" rx="2"/>
+      </g>
       <rect class="cuve" x="100" y="220" width="220" height="325" rx="28"/>
 
       <!-- ── la boucle des solvants ── -->
@@ -84,25 +109,25 @@
             d="M300 538 L300 592 Q300 602 290 602 L140 602 Q130 602 130 592 L130 542"/>
       <text class="lbl mint" x="215" y="638">Solvants régénérés, en boucle fermée</text>
 
-      <!-- ── les trois sorties ── -->
+      <!-- ── les trois sorties, prises dans les phases ── -->
       <g class="sorties">
         <g class="so so1">
-          <line class="fil" x1="326" y1="284" x2="372" y2="284"/>
-          <rect class="pastille" x="372" y="263" width="42" height="42" rx="11"/>
-          <text class="sym" x="393" y="291">Sb</text>
-          <text class="nom" x="424" y="290">Antimoine</text>
+          <line class="fil" x1="326" y1="352" x2="372" y2="352"/>
+          <rect class="pastille" x="372" y="331" width="42" height="42" rx="11"/>
+          <text class="sym" x="393" y="359">Sb</text>
+          <text class="nom" x="424" y="358">Antimoine</text>
         </g>
         <g class="so so2">
-          <line class="fil" x1="326" y1="354" x2="372" y2="354"/>
-          <rect class="pastille" x="372" y="333" width="42" height="42" rx="11"/>
-          <text class="sym" x="393" y="361">Br</text>
-          <text class="nom" x="424" y="360">Composés bromés</text>
+          <line class="fil" x1="326" y1="428" x2="372" y2="428"/>
+          <rect class="pastille" x="372" y="407" width="42" height="42" rx="11"/>
+          <text class="sym" x="393" y="435">Br</text>
+          <text class="nom" x="424" y="434">Composés bromés</text>
         </g>
         <g class="so so3">
-          <line class="fil" x1="326" y1="424" x2="372" y2="424"/>
-          <rect class="pastille" x="372" y="403" width="42" height="42" rx="11"/>
-          <text class="sym petit" x="393" y="431">Cn</text>
-          <text class="nom" x="424" y="430">Polymère purifié</text>
+          <line class="fil" x1="326" y1="504" x2="372" y2="504"/>
+          <rect class="pastille" x="372" y="483" width="42" height="42" rx="11"/>
+          <text class="sym petit" x="393" y="511">Cn</text>
+          <text class="nom" x="424" y="510">Polymère purifié</text>
         </g>
       </g>
     </svg>
@@ -113,19 +138,23 @@
     <svg class="onde" viewBox="0 0 100 800" preserveAspectRatio="none" fill="none" aria-hidden="true">
       <defs>
         <linearGradient id="sgOnde" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#2B2BE8"/><stop offset=".36" stop-color="#297EE1"/>
-          <stop offset=".68" stop-color="#3EBDD2"/><stop offset="1" stop-color="#52FCC3"/>
+          <!-- les teintes tombent sur les quatre points, et l'onde se dissout
+               après le dernier plutôt que de courir jusqu'en bas -->
+          <stop offset="0" stop-color="#2B2BE8"/><stop offset=".25" stop-color="#297EE1"/>
+          <stop offset=".5" stop-color="#3EBDD2"/><stop offset=".75" stop-color="#52FCC3"/>
+          <stop offset="1" stop-color="#52FCC3" stop-opacity="0"/>
         </linearGradient>
       </defs>
-      <path d="M50 26 L50 100 C 96 160, 96 240, 50 300 C 4 360, 4 440, 50 500
-               C 96 560, 96 640, 50 700 L50 774"
+      <!-- une onde continue, sans amorce ni sortie droites : elle traverse
+           l'axe à 0, 200, 400, 600 et 800, exactement où se posent les points -->
+      <path d="M50 0 C 96 60, 96 140, 50 200 C 4 260, 4 340, 50 400
+               C 96 460, 96 540, 50 600 C 4 660, 4 740, 50 800"
             stroke="url(#sgOnde)" stroke-width="2" vector-effect="non-scaling-stroke"
             stroke-linecap="round"/>
     </svg>
 
     <div class="et" style="--c:var(--blue)">
-      <span class="pt"></span>
-      <div class="num">01</div>
+      <div class="num"><span class="pt"></span>01</div>
       <h3>Broyage</h3>
       <div data-l="fr"><p>Le gisement arrive en pièces de tailles très diverses. Le broyage
         donne une fraction homogène, sans laquelle les rendements varieraient d'un lot à l'autre.</p></div>
@@ -133,8 +162,7 @@
         gives an even fraction, without which yields would vary from one batch to the next.</p></div>
     </div>
     <div class="et" style="--c:var(--azure)">
-      <span class="pt"></span>
-      <div class="num">02</div>
+      <div class="num"><span class="pt"></span>02</div>
       <h3>Solvatation</h3>
       <div data-l="fr"><p>Le solvant organique met le polymère en solution. Les additifs,
         jusque-là prisonniers de la matrice, deviennent accessibles.</p></div>
@@ -142,8 +170,7 @@
         until then trapped in the matrix, become reachable.</p></div>
     </div>
     <div class="et" style="--c:var(--cyan)">
-      <span class="pt"></span>
-      <div class="num">03</div>
+      <div class="num"><span class="pt"></span>03</div>
       <h3>Extraction sélective</h3>
       <div data-l="fr"><p>La solution aqueuse complexante capte l'oxyde d'antimoine. Le
         tétrabromobisphénol A est extrait ensuite, par traitement au non-solvant.</p></div>
@@ -151,8 +178,7 @@
         Tetrabromobisphenol A is extracted next, by a non-solvent treatment.</p></div>
     </div>
     <div class="et" style="--c:var(--mint)">
-      <span class="pt"></span>
-      <div class="num">04</div>
+      <div class="num"><span class="pt"></span>04</div>
       <h3>Insolubilisation</h3>
       <div data-l="fr"><p>Le polymère dépollué est reprécipité, récupéré solide et séché.
         Les solvants sont régénérés et repartent dans le cycle suivant.</p></div>
