@@ -597,7 +597,8 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 .b4{animation:sg-bulle 4s ease-in 2.7s infinite}
 @keyframes sg-bulle{
   0%{transform:translateY(0) scale(.5);opacity:0}
-  22%{opacity:.9}
+  20%{opacity:.9}
+  62%{opacity:0}
   100%{transform:translateY(-74px) scale(1);opacity:0}
 }
 
@@ -624,19 +625,21 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
    trouve donc toujours au même endroit de sa rangée, et l'onde peut le
    rejoindre exactement. L'onde est descendue de la demi-hauteur du numéro. */
 .etapes{position:relative;display:grid;grid-template-rows:repeat(4,1fr);
-  padding-left:clamp(88px,9.4vw,140px)}
-/* L'onde déborde volontairement du cadre, en haut comme en bas : elle le
-   traverse au lieu de commencer et finir sur un point. Le décalage vertical
-   la fait croiser l'axe exactement à la hauteur des titres. */
-.etapes .onde{position:absolute;left:0;top:15px;width:clamp(88px,9.4vw,140px);
+  --couloir:clamp(92px,9.8vw,148px); --onde:clamp(58px,6vw,92px);
+  padding-left:var(--couloir)}
+/* L'onde déborde volontairement du cadre, en haut comme en bas : la carte la
+   coupe à ses propres bords. Le décalage vertical la fait croiser l'axe
+   exactement à la hauteur des titres. */
+.etapes .onde{position:absolute;left:0;top:15px;width:var(--onde);
   height:100%;overflow:visible}
 .et{position:relative}
 .et h3{color:#fff;margin:0 0 9px;position:relative}
 .et h3 .pt{position:absolute;top:50%;margin-top:-9px;
-  left:calc(clamp(88px,9.4vw,140px) * -.5 - 9px);
+  left:calc(var(--onde) * .5 - var(--couloir) - 9px);
   width:18px;height:18px;border-radius:50%;
   background:var(--ink-deep);border:2px solid var(--c)}
 .et h3 .pt::after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--c)}
+
 .et p{font-size:14.6px;line-height:1.58;color:var(--soft-dark);max-width:40ch;
   hyphens:auto;-webkit-hyphens:auto}
 
