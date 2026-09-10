@@ -276,9 +276,12 @@ ogTitre: "DeeeMines"
       </ul>
     </div>
     <div>
-      <form id="cform" name="contact" method="POST" data-netlify="true" netlify-honeypot="piege">
-        <input type="hidden" name="form-name" value="contact">
-        <p hidden><label>Laissez ce champ vide <input name="piege" tabindex="-1" autocomplete="off"></label></p>
+      <form id="cform" name="contact" method="POST">
+        <input type="hidden" name="access_key" value="{{ reglages.formulaire_cle }}">
+        <input type="hidden" name="subject" value="Message depuis le site DeeeMines">
+        <input type="hidden" name="from_name" value="Site DeeeMines">
+        <!-- champ piège : rempli seulement par les robots, le message est alors ignoré -->
+        <p hidden><label>Laissez ce champ vide <input name="botcheck" tabindex="-1" autocomplete="off"></label></p>
         <div class="f"><label for="a1">Nom</label><input id="a1" name="nom" type="text" placeholder="Votre nom" required></div>
         <div class="f"><label for="a2">E-mail</label><input id="a2" name="email" type="email" placeholder="vous@organisation.fr" required></div>
         <div class="f"><label for="a3">Vous êtes</label>
@@ -467,7 +470,7 @@ ogTitre: "DeeeMines"
           <p>Devra provenir du recyclage. C'est l'objectif auquel DeeeMines contribue directement.</p>
         </div>
       </div>
-      <p class="lead" style="margin-top:clamp(26px,3vw,42px);max-width:74ch">
+      <p class="lead" style="margin-top:clamp(26px,3vw,42px);max-width:none">
         Ces trois objectifs sont fixés par le Critical Raw Materials Act, le règlement européen sur
         les matières premières critiques adopté en 2024, qui s'inscrit dans la stratégie
         industrielle du pacte vert pour l'Europe.
