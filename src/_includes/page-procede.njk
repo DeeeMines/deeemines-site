@@ -29,10 +29,13 @@
       <div class="video">
         {%- set embed = video | lecteur %}
         {%- if embed %}
-        <div class="cadre">
-          <iframe src="{{ embed }}" title="Présentation de la thèse de Morvan Gaudin"
-                  loading="lazy" allowfullscreen
-                  allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"></iframe>
+        <div class="cadre apercu" data-video="{{ embed }}">
+          <img src="/assets/video-these.jpg" alt="Morvan Gaudin présente ses travaux">
+          <button class="jouer" type="button" aria-label="Lire la présentation">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <circle cx="12" cy="12" r="10.4"/><path d="M9.8 8.2l6.4 3.8-6.4 3.8z" stroke-linejoin="round"/>
+            </svg>
+          </button>
         </div>
         {%- elif video %}
         <div class="cadre vide">
@@ -95,26 +98,26 @@
     <div class="wrap">
       <div class="eyebrow">Le principe</div>
       <div class="stmt">
-        <h2>Un solvant dissout, un complexant capte.</h2>
+        <h2>Solvatation, extraction liquide‑liquide, précipitation.</h2>
         <div class="lead">
           <div data-l="fr">
-            <p>Le procédé repose sur un mélange biphasique : un solvant organique qui
-               met le polymère en solution, et une solution aqueuse complexante qui capte
-               l'antimoine.</p>
-            <p>Libéré de sa matrice, l'oxyde d'antimoine passe sélectivement dans la
-               phase aqueuse. Le tétrabromobisphénol A, principal retardateur de flamme
-               bromé, est ensuite extrait par un traitement au non-solvant. Le polymère
-               dépollué est récupéré solide.</p>
+            <p>Des solvants et des complexants bien choisis permettent d'enchaîner ces trois
+               opérations dans un même réacteur, à température ambiante et à pression
+               atmosphérique.</p>
+            <p>Le solvant organique met le polymère en solution ; la solution aqueuse
+               complexante capte l'antimoine. Libéré de sa matrice, l'oxyde d'antimoine passe
+               sélectivement dans la phase aqueuse. Le tétrabromobisphénol A est extrait
+               ensuite, par un traitement au non-solvant.</p>
             <p>Le choix des couples solvant et complexant a été établi par simulation
                thermodynamique, puis affiné par criblage expérimental.</p>
           </div>
           <div data-l="en" hidden>
-            <p>The process uses a two-phase mixture: an organic solvent that dissolves
-               the polymer, and a complexing water-based solution that captures the antimony.</p>
-            <p>Once freed from the matrix, the antimony oxide moves selectively into
-               the water phase. Tetrabromobisphenol A, the main brominated flame
-               retardant, is then extracted by a non-solvent treatment. The cleaned polymer
-               is recovered as a solid.</p>
+            <p>Well-chosen solvents and complexing agents make it possible to run these three
+               operations in one reactor, at room temperature and atmospheric pressure.</p>
+            <p>The organic solvent dissolves the polymer; the complexing water solution
+               captures the antimony. Once freed from the matrix, the antimony oxide moves
+               selectively into the water phase. Tetrabromobisphenol A is then extracted with
+               a non-solvent treatment.</p>
             <p>The solvent and complexing pairs were chosen through thermodynamic simulation,
                then refined by experimental screening.</p>
           </div>
@@ -128,7 +131,7 @@
   <section class="tint">
     <div class="wrap">
       <div class="eyebrow">Ce qui en sort</div>
-      <div class="stmt">
+      <div class="stmt stmt-large">
         <h2>Trois produits valorisés à partir d'un déchet.</h2>
         <div class="lead">
           <div data-l="fr">
@@ -161,35 +164,15 @@
         </div>
         <div>
           <div class="sym">C<sub>n</sub></div>
-          <h3>Polymère</h3>
+          <h3>Polymères</h3>
           <div data-l="fr"><p>Débarrassé de ses additifs, sous le seuil réglementaire de polluants,
             il peut réintégrer la filière plastique au lieu de partir en fumée.</p></div>
           <div data-l="en" hidden><p>Stripped of its additives and below the regulatory limit for
             pollutants, it can go back into the plastics industry instead of up in smoke.</p></div>
         </div>
       </div>
-    </div>
-  </section>
 
-
-  <section class="dark">
-    <div class="wrap">
-      <div class="eyebrow">Ce qui l'atteste</div>
-      <div class="stmt">
-        <h2 style="color:#fff">Publié, et relu par des pairs.</h2>
-        <div class="lead">
-          <div data-l="fr">
-            <p>Le procédé n'est pas une promesse de laboratoire : il a été soumis à l'examen
-               de la communauté scientifique, et protégé.</p>
-          </div>
-          <div data-l="en" hidden>
-            <p>The process is not a laboratory promise. It has been reviewed by the scientific
-               community, and protected.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="mesures">
+      <div class="mesures cartes">
         <div>
           <div class="q">Sur des plastiques réels</div>
           <div data-l="fr">
@@ -221,6 +204,26 @@
           <div data-l="en" hidden>
             <p>The recovered polymer holds fewer pollutants than the regulatory limit allows.
                It can therefore go back into the plastics industry.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="dark">
+    <div class="wrap">
+      <div class="eyebrow">Ce qui l'atteste</div>
+      <div class="stmt">
+        <h2 style="color:#fff">Publié, et relu par des pairs.</h2>
+        <div class="lead">
+          <div data-l="fr">
+            <p>Le procédé n'est pas une promesse de laboratoire : il a été soumis à l'examen
+               de la communauté scientifique, et protégé.</p>
+          </div>
+          <div data-l="en" hidden>
+            <p>The process is not a laboratory promise. It has been reviewed by the scientific
+               community, and protected.</p>
           </div>
         </div>
       </div>

@@ -29,8 +29,8 @@
       </defs>
 
       <!-- ── ce qui entre ── -->
-      <text class="lbl" x="248" y="40">Plastiques ignifugés</text>
-      <text class="sous" x="248" y="62">déchets électroniques, bâches, câbles, etc.</text>
+      <text class="lbl fort" x="286" y="40">Plastiques ignifugés</text>
+      <text class="sous" x="286" y="62">déchets électroniques, bâches, câbles, etc.</text>
       <g class="gros">
         <rect class="gr g1" width="46" height="30" rx="5"/>
         <rect class="gr g2" width="34" height="38" rx="5"/>
@@ -56,10 +56,8 @@
       <rect class="moteur" x="192" y="196" width="36" height="22" rx="5"/>
       <g clip-path="url(#sgCuve)">
         <rect x="100" y="220" width="220" height="325" fill="#080848"/>
-        <path class="phase org"
-              d="M82 304 C 136 290, 194 318, 250 304 C 288 295, 316 300, 338 304 L338 570 L82 570 z"/>
-        <path class="phase aq"
-              d="M82 392 C 136 380, 194 406, 250 392 C 288 383, 316 388, 338 392 L338 570 L82 570 z"/>
+        <path class="phase org" d="M -230 304 C -211.667 293.95, -193.333 293.95, -175 304 C -156.667 314.05, -138.333 314.05, -120 304 C -101.667 293.95, -83.3333 293.95, -65 304 C -46.6667 314.05, -28.3333 314.05, -10 304 C 8.33333 293.95, 26.6667 293.95, 45 304 C 63.3333 314.05, 81.6667 314.05, 100 304 C 118.333 293.95, 136.667 293.95, 155 304 C 173.333 314.05, 191.667 314.05, 210 304 C 228.333 293.95, 246.667 293.95, 265 304 C 283.333 314.05, 301.667 314.05, 320 304 C 338.333 293.95, 356.667 293.95, 375 304 C 393.333 314.05, 411.667 314.05, 430 304 C 448.333 293.95, 466.667 293.95, 485 304 C 503.333 314.05, 521.667 314.05, 540 304 L 540 600 L -230 600 Z"/>
+        <path class="phase aq" d="M -300 392 C -276.667 383.29, -253.333 383.29, -230 392 C -206.667 400.71, -183.333 400.71, -160 392 C -136.667 383.29, -113.333 383.29, -90 392 C -66.6667 400.71, -43.3333 400.71, -20 392 C 3.33333 383.29, 26.6667 383.29, 50 392 C 73.3333 400.71, 96.6667 400.71, 120 392 C 143.333 383.29, 166.667 383.29, 190 392 C 213.333 400.71, 236.667 400.71, 260 392 C 283.333 383.29, 306.667 383.29, 330 392 C 353.333 400.71, 376.667 400.71, 400 392 C 423.333 383.29, 446.667 383.29, 470 392 C 493.333 400.71, 516.667 400.71, 540 392 L 540 600 L -300 600 Z"/>
 
         <!-- matière en suspension dans la phase organique -->
         <g class="grains org">
@@ -138,52 +136,48 @@
     <svg class="onde" viewBox="0 0 100 800" preserveAspectRatio="none" fill="none" aria-hidden="true">
       <defs>
         <linearGradient id="sgOnde" x1="0" y1="0" x2="0" y2="1">
-          <!-- les teintes tombent sur les quatre points, et l'onde se dissout
-               après le dernier plutôt que de courir jusqu'en bas -->
           <stop offset="0" stop-color="#2B2BE8"/><stop offset=".25" stop-color="#297EE1"/>
           <stop offset=".5" stop-color="#3EBDD2"/><stop offset=".75" stop-color="#52FCC3"/>
-          <stop offset="1" stop-color="#52FCC3" stop-opacity="0"/>
+          <stop offset="1" stop-color="#52FCC3"/>
         </linearGradient>
       </defs>
-      <!-- une onde continue, sans amorce ni sortie droites : elle traverse
-           l'axe à 0, 200, 400, 600 et 800, exactement où se posent les points -->
-      <path d="M50 0 C 96 60, 96 140, 50 200 C 4 260, 4 340, 50 400
-               C 96 460, 96 540, 50 600 C 4 660, 4 740, 50 800"
+      <!-- L'onde traverse le cadre de part en part : elle se prolonge au-delà
+           du dernier point, au lieu de s'y éteindre. Elle croise l'axe à
+           0, 200, 400 et 600, exactement là où se posent les quatre points. -->
+      <path d="M50 -140 C 4 -80, 4 0, 50 0 C 96 60, 96 140, 50 200
+               C 4 260, 4 340, 50 400 C 96 460, 96 540, 50 600
+               C 4 660, 4 740, 50 800 C 96 860, 96 940, 50 1000"
             stroke="url(#sgOnde)" stroke-width="2" vector-effect="non-scaling-stroke"
             stroke-linecap="round"/>
     </svg>
 
     <div class="et" style="--c:var(--blue)">
-      <div class="num"><span class="pt"></span>01</div>
-      <h3>Broyage</h3>
-      <div data-l="fr"><p>Le gisement arrive en pièces de tailles très diverses. Le broyage
-        donne une fraction homogène, sans laquelle les rendements varieraient d'un lot à l'autre.</p></div>
-      <div data-l="en" hidden><p>The waste arrives as pieces of very different sizes. Shredding
-        gives an even fraction, without which yields would vary from one batch to the next.</p></div>
+      <h3><span class="pt"></span>Broyage</h3>
+      <div data-l="fr"><p>Le gisement arrive en pièces de toutes tailles. Le broyage donne une
+        fraction homogène, condition d'un rendement stable.</p></div>
+      <div data-l="en" hidden><p>The waste arrives in pieces of every size. Shredding gives an
+        even fraction, the condition for a stable yield.</p></div>
     </div>
     <div class="et" style="--c:var(--azure)">
-      <div class="num"><span class="pt"></span>02</div>
-      <h3>Solvatation</h3>
+      <h3><span class="pt"></span>Solvatation</h3>
       <div data-l="fr"><p>Le solvant organique met le polymère en solution. Les additifs,
         jusque-là prisonniers de la matrice, deviennent accessibles.</p></div>
       <div data-l="en" hidden><p>The organic solvent dissolves the polymer. The additives,
         until then trapped in the matrix, become reachable.</p></div>
     </div>
     <div class="et" style="--c:var(--cyan)">
-      <div class="num"><span class="pt"></span>03</div>
-      <h3>Extraction sélective</h3>
+      <h3><span class="pt"></span>Extraction sélective</h3>
       <div data-l="fr"><p>La solution aqueuse complexante capte l'oxyde d'antimoine. Le
-        tétrabromobisphénol A est extrait ensuite, par traitement au non-solvant.</p></div>
+        tétrabromobisphénol A est extrait ensuite, au non-solvant.</p></div>
       <div data-l="en" hidden><p>The complexing water solution captures the antimony oxide.
-        Tetrabromobisphenol A is extracted next, by a non-solvent treatment.</p></div>
+        Tetrabromobisphenol A is then extracted with a non-solvent.</p></div>
     </div>
     <div class="et" style="--c:var(--mint)">
-      <div class="num"><span class="pt"></span>04</div>
-      <h3>Insolubilisation</h3>
-      <div data-l="fr"><p>Le polymère dépollué est reprécipité, récupéré solide et séché.
-        Les solvants sont régénérés et repartent dans le cycle suivant.</p></div>
-      <div data-l="en" hidden><p>The cleaned polymer is precipitated back out, recovered as a
-        solid and dried. The solvents are regenerated and go into the next cycle.</p></div>
+      <h3><span class="pt"></span>Insolubilisation</h3>
+      <div data-l="fr"><p>Le polymère dépollué est reprécipité, récupéré solide et séché. Les
+        solvants régénérés repartent dans le cycle suivant.</p></div>
+      <div data-l="en" hidden><p>The cleaned polymer is precipitated out, recovered solid and
+        dried. The regenerated solvents go into the next cycle.</p></div>
     </div>
   </div>
 </div>

@@ -432,6 +432,17 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 .video .cadre{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
   background:var(--ink-deep);border:1px solid var(--line)}
 .video .cadre iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+/* Le lecteur extérieur n'est chargé qu'au clic : la page reste légère et
+   aucune requête ne part vers la plateforme tant que rien n'est demandé. */
+.video .cadre.apercu{cursor:pointer}
+.video .cadre.apercu img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.video .cadre.apercu::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(4,4,64,.18),rgba(4,4,64,.42));transition:.25s}
+.video .cadre.apercu:hover::after{background:linear-gradient(180deg,rgba(4,4,64,.06),rgba(4,4,64,.3))}
+.video .jouer{position:absolute;inset:0;margin:auto;width:74px;height:74px;z-index:2;
+  border:0;background:none;color:#fff;cursor:pointer;padding:0;transition:transform .25s}
+.video .cadre.apercu:hover .jouer{transform:scale(1.08)}
+.video .jouer svg{width:100%;height:100%;filter:drop-shadow(0 2px 14px rgba(4,4,64,.6))}
 /* Tant que le lien n'est pas renseigné, un visuel d'attente occupe la place
    exacte de la vidéo : la mise en page ne bougera pas le jour de l'ajout. */
 .video .cadre.vide{display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -444,6 +455,9 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
    La césure automatique évite les trous que la justification creuse. */
 #page-procede .stmt{grid-template-columns:.82fr 1.18fr;align-items:center}
 #page-procede .stmt h2{max-width:15ch}
+#page-procede .stmt-large{grid-template-columns:1.12fr .88fr}
+#page-procede .stmt-large h2{max-width:24ch}
+@media(max-width:880px){ #page-procede .stmt-large{grid-template-columns:1fr}}
 #page-procede .stmt .lead{max-width:none}
 #page-procede .stmt .lead p{hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 #page-procede .stmt .lead p+p{margin-top:15px}
@@ -501,7 +515,7 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 /* ═════════ Schéma animé du procédé ═════════
    Deux colonnes : la scène à gauche, la sinusoïde et les quatre étapes à
    droite. Entièrement en SVG et en CSS, sans bibliothèque ni fichier chargé. */
-.schema{margin-top:clamp(30px,3.6vw,48px);background:var(--ink-deep);border-radius:18px;
+.schema{margin-top:clamp(30px,3.6vw,48px);background:var(--ink-deep);border-radius:18px;overflow:hidden;
   padding:clamp(20px,2.4vw,34px) clamp(16px,2.2vw,32px);
   display:grid;grid-template-columns:1.16fr 1fr;gap:clamp(16px,2.2vw,34px);align-items:stretch}
 .schema svg{display:block}
@@ -513,6 +527,7 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
   text-transform:uppercase;fill:#8FA0CE}
 .schema .sous{font-family:var(--sans);font-size:13.5px;fill:#6E7DB6}
 .schema .lbl.mint{fill:var(--mint);text-anchor:middle;letter-spacing:.1em}
+.schema .lbl.fort{fill:#fff}
 
 /* ── les gros morceaux tombent vers le broyeur ── */
 .gros .gr{fill:#5F6CA0}
@@ -550,9 +565,13 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 /* ── le réacteur : deux phases, de la matière en suspension, un agitateur ── */
 .schema .cuve{fill:none;stroke:#6E7DB6;stroke-width:2.4}
 .moteur{fill:#141466;stroke:#6E7DB6;stroke-width:2}
-.schema .phase.org{fill:url(#sgOrg);animation:sg-houle 7s ease-in-out infinite}
-.schema .phase.aq{fill:url(#sgAq);animation:sg-houle 9s ease-in-out .8s infinite reverse}
-@keyframes sg-houle{0%,100%{transform:translateX(-13px)}50%{transform:translateX(13px)}}
+/* Le tracé des phases porte une houle régulière, plus large que la cuve.
+   On le fait défiler d'exactement une longueur d'onde : la boucle est
+   invisible et le liquide paraît réellement onduler. */
+.schema .phase.org{fill:url(#sgOrg);animation:sg-houle-o 6.5s linear infinite}
+.schema .phase.aq{fill:url(#sgAq);animation:sg-houle-a 9s linear infinite}
+@keyframes sg-houle-o{from{transform:translate(0,0)}to{transform:translate(-110px,0)}}
+@keyframes sg-houle-a{from{transform:translate(0,0)}to{transform:translate(140px,0)}}
 /* les grains dérivent lentement, chacun à son rythme, ce qui donne au bain
    l'aspect d'un milieu vivant plutôt que d'un aplat de couleur */
 .grains circle{animation-name:sg-derive;animation-timing-function:ease-in-out;
@@ -579,7 +598,7 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 @keyframes sg-bulle{
   0%{transform:translateY(0) scale(.5);opacity:0}
   22%{opacity:.9}
-  100%{transform:translateY(-150px) scale(1);opacity:0}
+  100%{transform:translateY(-74px) scale(1);opacity:0}
 }
 
 /* ── la boucle des solvants ── */
@@ -605,16 +624,19 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
    trouve donc toujours au même endroit de sa rangée, et l'onde peut le
    rejoindre exactement. L'onde est descendue de la demi-hauteur du numéro. */
 .etapes{position:relative;display:grid;grid-template-rows:repeat(4,1fr);
-  padding-left:clamp(66px,7.2vw,108px)}
-.etapes .onde{position:absolute;left:0;top:9px;width:clamp(66px,7.2vw,108px);height:100%}
+  padding-left:clamp(88px,9.4vw,140px)}
+/* L'onde déborde volontairement du cadre, en haut comme en bas : elle le
+   traverse au lieu de commencer et finir sur un point. Le décalage vertical
+   la fait croiser l'axe exactement à la hauteur des titres. */
+.etapes .onde{position:absolute;left:0;top:15px;width:clamp(88px,9.4vw,140px);
+  height:100%;overflow:visible}
 .et{position:relative}
-.et .num{font-size:12px;letter-spacing:.16em;color:var(--soft-dark);opacity:.75;
-  position:relative;line-height:18px}
-.et .num .pt{position:absolute;top:0;left:calc(clamp(66px,7.2vw,108px) * -.5 - 9px);
+.et h3{color:#fff;margin:0 0 9px;position:relative}
+.et h3 .pt{position:absolute;top:50%;margin-top:-9px;
+  left:calc(clamp(88px,9.4vw,140px) * -.5 - 9px);
   width:18px;height:18px;border-radius:50%;
   background:var(--ink-deep);border:2px solid var(--c)}
-.et .num .pt::after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--c)}
-.et h3{color:#fff;margin:6px 0 8px}
+.et h3 .pt::after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--c)}
 .et p{font-size:14.6px;line-height:1.58;color:var(--soft-dark);max-width:40ch;
   hyphens:auto;-webkit-hyphens:auto}
 
@@ -622,9 +644,9 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
   .schema{grid-template-columns:1fr;gap:clamp(26px,4vw,40px)}
   .etapes{grid-template-rows:none;gap:26px;padding-left:38px}
   .etapes .onde{display:none}
-  .etapes::before{content:"";position:absolute;left:9px;top:9px;bottom:8px;width:2px;
+  .etapes::before{content:"";position:absolute;left:9px;top:12px;bottom:8px;width:2px;
     background:var(--grad);opacity:.55}
-  .et .num .pt{left:-38px}
+  .et h3 .pt{left:-38px;top:12px;margin-top:0}
   .et p{max-width:none}
   .schema .lbl{font-size:15px}
   .schema .sous{font-size:15px}
@@ -649,9 +671,12 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 .mesures .q{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
   color:var(--mint-d);margin-bottom:11px}
 .mesures p{font-size:15.4px;line-height:1.6;color:var(--soft)}
-.dark .mesures{border-top-color:var(--line-d)}
-.dark .mesures .q{color:var(--mint)}
-.dark .mesures p{color:var(--soft-dark)}
+/* Les trois résultats mesurés, présentés en encadrés sous les produits :
+   même famille visuelle que les points clés de l'accueil. */
+.mesures.cartes{border-top:0;padding-top:0;margin-top:clamp(26px,3vw,40px);gap:14px}
+.mesures.cartes > div{border:1px solid var(--line);border-radius:14px;
+  padding:20px 22px;background:rgba(255,255,255,.5)}
+.mesures.cartes .q{color:var(--mint-d)}
 
 .preuves{margin-top:clamp(28px,3.4vw,44px);display:grid;gap:0;
   border-top:1px solid var(--line-d)}
