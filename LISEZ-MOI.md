@@ -92,13 +92,39 @@ Tant qu'elle est là, les moteurs de recherche ignorent le site.
 
 ---
 
-## Travailler en local
+## Travailler en local, sans consommer de crédits Netlify
+
+Netlify facture chaque publication en production 15 crédits, sur les 300
+que le plan gratuit accorde chaque mois, soit une vingtaine de publications.
+Quand les crédits sont épuisés, **le site est suspendu** jusqu'au mois
+suivant. Il ne faut donc publier que des versions validées, et faire toutes
+les vérifications en local.
+
+Une seule fois, installez Node.js (`winget install OpenJS.NodeJS.LTS`),
+puis dans le dossier du site :
 
     npm install
+
+Ensuite, à chaque séance de travail :
+
     npm start
 
-Le site s'ouvre sur `http://localhost:8080` et se recharge à chaque
-modification. `npm run build` produit le dossier `_site` sans le serveur.
+Le site s'ouvre sur `http://localhost:8080` et se recharge tout seul à
+chaque fichier déposé dans le dossier. Aucune connexion, aucun crédit.
+`npm run build` produit le dossier `_site` sans lancer le serveur.
+
+### Montrer une version à quelqu'un sans publier
+
+Les publications **de branche et d'aperçu sont gratuites et illimitées**.
+Pour faire relire une évolution sans toucher au site public, déposez les
+fichiers sur une branche autre que `main` : Netlify construit un aperçu à
+une adresse temporaire, sans consommer un seul crédit. La fusion dans
+`main`, elle, publie et coûte 15 crédits.
+
+Attention : chaque enregistrement depuis `/admin` écrit dans `main` et
+déclenche donc une publication facturée. Mieux vaut préparer une actualité
+entière et l'enregistrer une fois, plutôt que d'enregistrer à chaque
+paragraphe.
 
 ---
 

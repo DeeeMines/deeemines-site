@@ -498,38 +498,62 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 .sorties p{font-size:15.2px;line-height:1.6;color:var(--soft);
   hyphens:auto;-webkit-hyphens:auto;text-wrap:pretty}
 
-/* ===== Schéma animé du procédé =====
-   Entièrement en SVG et en CSS : aucune bibliothèque, aucun fichier à charger.
-   Le gisement entre par le haut, les matières sortent à droite, les solvants
-   reviennent par-dessous. Mouvements lents : illustrer, pas distraire. */
+/* ═════════ Schéma animé du procédé ═════════
+   Deux colonnes : la scène à gauche, la sinusoïde et les quatre étapes à
+   droite. Entièrement en SVG et en CSS, sans bibliothèque ni fichier chargé. */
 .schema{margin-top:clamp(30px,3.6vw,48px);background:var(--ink-deep);border-radius:18px;
-  padding:clamp(14px,1.8vw,24px) clamp(8px,1.4vw,18px)}
-.schema svg{width:100%;height:auto;display:block}
-.schema .lbl{font-family:var(--sans);font-size:13px;letter-spacing:.14em;
+  padding:clamp(20px,2.4vw,34px) clamp(16px,2.2vw,32px);
+  display:grid;grid-template-columns:1.18fr 1fr;gap:clamp(20px,3vw,46px);align-items:stretch}
+.schema svg{display:block}
+.scene svg{width:100%;height:auto}
+.schema .lbl{font-family:var(--sans);font-size:13px;letter-spacing:.13em;
   text-transform:uppercase;fill:#8FA0CE}
-.schema .lbl.mint{fill:var(--mint);text-anchor:middle;letter-spacing:.11em}
+.schema .lbl.mint{fill:var(--mint);text-anchor:middle;letter-spacing:.1em}
 
-/* 01 · les copeaux avancent puis tombent dans la trémie */
-.copeaux .cp{fill:#7C88B8}
-.cp1{animation:sg-chute 5s linear infinite}
-.cp2{animation:sg-chute 5s linear 1s infinite}
-.cp3{animation:sg-chute 5s linear 2s infinite}
-.cp4{animation:sg-chute 5s linear 3s infinite}
-.cp5{animation:sg-chute 5s linear 4s infinite}
-@keyframes sg-chute{
-  0%  {transform:translate(58px,56px) rotate(-12deg);opacity:0}
-  9%  {opacity:1}
-  54% {transform:translate(410px,56px) rotate(16deg);opacity:1}
-  78% {transform:translate(428px,104px) rotate(44deg);opacity:1}
-  90%,100%{transform:translate(430px,128px) rotate(52deg);opacity:0}
+/* ── les gros morceaux tombent vers le broyeur ── */
+.gros .gr{fill:#5F6CA0}
+.g1{animation:sg-gros 4.5s ease-in infinite}
+.g2{animation:sg-gros 4.5s ease-in 1.5s infinite}
+.g3{animation:sg-gros 4.5s ease-in 3s infinite}
+@keyframes sg-gros{
+  0%  {transform:translate(136px,-52px) rotate(-16deg);opacity:0}
+  16% {opacity:1}
+  66% {transform:translate(146px,30px) rotate(12deg);opacity:1}
+  84%,100%{transform:translate(152px,52px) rotate(22deg);opacity:0}
 }
-.tremie{fill:none;stroke:#5A6BA8;stroke-width:2;stroke-linejoin:round}
+.carter{fill:none;stroke:#5A6BA8;stroke-width:2;stroke-linejoin:round}
+.rouleau circle{fill:none;stroke:#7C88B8;stroke-width:2}
+.rouleau .dents path{stroke:#7C88B8;stroke-width:2.4;stroke-linecap:round}
+.rouleau{transform-box:fill-box;transform-origin:center}
+.r1{animation:sg-tourne 3.2s linear infinite}
+.r2{animation:sg-tourne 3.2s linear infinite reverse}
+@keyframes sg-tourne{to{transform:rotate(360deg)}}
 
-/* 02 · deux phases qui ondulent, des bulles qui montent */
+/* ── les copeaux sortent du broyeur et tombent dans la cuve ── */
+.copeaux .cp{fill:#7C88B8}
+.c1{animation:sg-copeau 3.4s ease-in infinite}
+.c2{animation:sg-copeau 3.4s ease-in .85s infinite}
+.c3{animation:sg-copeau 3.4s ease-in 1.7s infinite}
+.c4{animation:sg-copeau 3.4s ease-in 2.55s infinite}
+@keyframes sg-copeau{
+  0%  {transform:translate(152px,150px) rotate(0deg);opacity:0}
+  16% {opacity:1}
+  76% {transform:translate(158px,216px) rotate(58deg);opacity:1}
+  92%,100%{transform:translate(160px,240px) rotate(76deg);opacity:0}
+}
+
+/* ── le réacteur : deux phases, un agitateur, des bulles ── */
 .schema .cuve{fill:none;stroke:#6E7DB6;stroke-width:2.4}
+.moteur{fill:#141466;stroke:#6E7DB6;stroke-width:2}
 .schema .phase.org{fill:url(#sgOrg);animation:sg-houle 7s ease-in-out infinite}
 .schema .phase.aq{fill:url(#sgAq);animation:sg-houle 9s ease-in-out .8s infinite reverse}
 @keyframes sg-houle{0%,100%{transform:translateX(-13px)}50%{transform:translateX(13px)}}
+.arbre{stroke:#9AA6D2;stroke-width:3;stroke-linecap:round}
+/* La pale tourne autour de l'arbre : on l'aplatit puis on la rouvre, ce qui
+   donne l'illusion d'une rotation vue de face. */
+.pale{fill:#9AA6D2;transform-box:fill-box;transform-origin:center;
+  animation:sg-pale 1.7s ease-in-out infinite}
+@keyframes sg-pale{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.14)}}
 .schema .bul{fill:#52FCC3;opacity:0}
 .b1{animation:sg-bulle 4s ease-in infinite}
 .b2{animation:sg-bulle 4s ease-in .9s infinite}
@@ -538,20 +562,20 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 @keyframes sg-bulle{
   0%{transform:translateY(0) scale(.5);opacity:0}
   22%{opacity:.9}
-  100%{transform:translateY(-92px) scale(1);opacity:0}
+  100%{transform:translateY(-150px) scale(1);opacity:0}
 }
 
-/* la boucle des solvants : un trait qui défile sans jamais s'interrompre */
+/* ── la boucle des solvants ── */
 .boucle{fill:none;stroke:#52FCC3;stroke-width:2.2;stroke-linecap:round;
   stroke-dasharray:9 13;animation:sg-defile 2.4s linear infinite}
 @keyframes sg-defile{to{stroke-dashoffset:-44}}
 
-/* 03 · chaque sortie s'allume à son tour */
+/* ── les trois sorties ── */
 .schema .fil{stroke:#6E7DB6;stroke-width:2;stroke-dasharray:6 8;
   animation:sg-defile 3.4s linear infinite}
 .sorties .pastille{fill:rgba(255,255,255,.05);stroke:var(--mint);stroke-width:1.6}
-.sorties .sym{font-family:var(--disp);font-size:20px;font-weight:500;fill:var(--mint);text-anchor:middle}
-.sorties .sym.petit{font-size:17px}
+.sorties .sym{font-family:var(--disp);font-size:19px;font-weight:500;fill:var(--mint);text-anchor:middle}
+.sorties .sym.petit{font-size:16px}
 .sorties .nom{font-family:var(--sans);font-size:15px;fill:#C6D0EE}
 .so{opacity:.55}
 .so1{animation:sg-allume 6s ease-in-out infinite}
@@ -559,19 +583,44 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 .so3{animation:sg-allume 6s ease-in-out 2.4s infinite}
 @keyframes sg-allume{0%,58%,100%{opacity:.55}16%,40%{opacity:1}}
 
-@media(max-width:760px){
-  .schema{padding:12px 6px}
-  .schema .lbl{font-size:16px}
+/* ── la colonne des étapes : quatre rangées égales, la sinusoïde derrière ── */
+.etapes{position:relative;display:grid;grid-template-rows:repeat(4,1fr);
+  padding-left:clamp(46px,5vw,72px)}
+.etapes .onde{position:absolute;left:0;top:0;width:clamp(46px,5vw,72px);height:100%}
+.et{display:flex;flex-direction:column;justify-content:center;position:relative;
+  padding:6px 0}
+/* la pastille se pose sur la courbe, au milieu de sa rangée */
+.et .pt{position:absolute;left:calc(clamp(46px,5vw,72px) * -.5 - 9px);top:50%;
+  width:18px;height:18px;margin-top:-9px;border-radius:50%;
+  background:var(--ink-deep);border:2px solid var(--c)}
+.et .pt::after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--c)}
+.et .num{font-size:12px;letter-spacing:.16em;color:var(--soft-dark);opacity:.75}
+.et h3{color:#fff;margin:5px 0 8px}
+.et p{font-size:14.6px;line-height:1.58;color:var(--soft-dark);max-width:40ch;
+  hyphens:auto;-webkit-hyphens:auto}
+
+@media(max-width:900px){
+  .schema{grid-template-columns:1fr;gap:clamp(26px,4vw,40px)}
+  .etapes{grid-template-rows:none;gap:26px;padding-left:38px}
+  .etapes .onde{display:none}
+  .etapes::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;
+    background:var(--grad);opacity:.55}
+  .et{justify-content:flex-start}
+  .et .pt{left:-38px;top:9px;margin-top:0}
+  .et p{max-width:none}
+  .schema .lbl{font-size:15px}
   .sorties .nom{font-size:17px}
-  .sorties .sym{font-size:23px}
+  .sorties .sym{font-size:22px}
 }
 @media(prefers-reduced-motion:reduce){
   .schema *{animation:none !important}
   .so{opacity:1}
-  .copeaux .cp{opacity:1}
-  .cp1{transform:translate(58px,56px)}  .cp2{transform:translate(148px,56px)}
-  .cp3{transform:translate(238px,56px)} .cp4{transform:translate(328px,56px)}
-  .cp5{transform:translate(416px,84px) rotate(30deg)}
+  .gros .gr,.copeaux .cp{opacity:1}
+  .g1{transform:translate(104px,8px) rotate(-14deg)}
+  .g2{transform:translate(168px,-6px) rotate(9deg)}
+  .g3{transform:translate(212px,16px) rotate(20deg)}
+  .c1{transform:translate(140px,176px)}  .c2{transform:translate(166px,192px)}
+  .c3{transform:translate(148px,208px)}  .c4{transform:translate(174px,216px)}
   .schema .bul{opacity:.7}
 }
 
