@@ -1,6 +1,12 @@
 <!-- ===================== LE PROCÉDÉ =====================
-     Page profonde, atteinte depuis « Notre technologie » dans le bandeau du
-     haut et depuis le bouton de la section technologie de l'accueil.
+     Page profonde, atteinte depuis le bandeau du haut et depuis le bouton
+     de la section technologie de l'accueil.
+
+     Les paragraphes explicatifs sont écrits en deux versions complètes,
+     français et anglais, dans des blocs « data-l ». C'est ce qui permet d'y
+     mettre des mots en gras : le dictionnaire de traduction travaille sur des
+     textes entiers, et un mot en gras couperait le texte en morceaux qu'il ne
+     saurait plus reconnaître.
      Le lien de la vidéo se saisit depuis /admin, rubrique « Page d'accueil ». -->
 <main class="page" id="page-procede">
   <div class="phead">
@@ -43,9 +49,16 @@
         </div>
         {%- endif %}
         <div class="lead vlegende">
-          <p>Morvan Gaudin présente les travaux dont est issu le procédé, menés à
-             l'Institut de Recherche de Chimie Paris dans le cadre de la Chaire Mines
-             Urbaines, avec le soutien de l'éco-organisme ecosystem.</p>
+          <div data-l="fr">
+            <p>Morvan Gaudin présente les travaux dont est issu le procédé, menés à
+               l'Institut de Recherche de Chimie Paris dans le cadre de la
+               <b>Chaire Mines Urbaines</b>, avec le soutien de l'éco-organisme ecosystem.</p>
+          </div>
+          <div data-l="en" hidden>
+            <p>Morvan Gaudin presents the research behind the process, carried out at the
+               Institut de Recherche de Chimie Paris within the <b>Urban Mining Chair</b>,
+               with the support of the producer responsibility organisation ecosystem.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -55,14 +68,24 @@
     <div class="wrap">
       <div class="eyebrow">Le verrou</div>
       <div class="stmt">
-        <h2>Des additifs prisonniers<br>de la matière.</h2>
+        <h2>Des additifs prisonniers de la matière.</h2>
         <div class="lead">
-          <p>Les plastiques des équipements électriques et électroniques contiennent des
-             retardateurs de flamme bromés, associés à du trioxyde d'antimoine qui en
-             démultiplie l'effet. Les deux sont dispersés dans la matrice polymère,
-             et non déposés en surface.</p>
-          <p>Aucune filière ne sait aujourd'hui les en séparer. Ces plastiques partent
-             donc en incinération, avec l'antimoine et le brome qu'ils contiennent.</p>
+          <div data-l="fr">
+            <p>Les plastiques des équipements électriques et électroniques contiennent des
+               <b>retardateurs de flamme bromés</b>, associés à du <b>trioxyde d'antimoine</b>
+               qui en démultiplie l'effet. Les deux sont dispersés dans la matrice polymère,
+               et non déposés en surface.</p>
+            <p>Aucune filière ne sait aujourd'hui les en séparer. Ces plastiques partent donc
+               <b>en incinération</b>, avec l'antimoine et le brome qu'ils contiennent.</p>
+          </div>
+          <div data-l="en" hidden>
+            <p>The plastics in electrical and electronic equipment contain
+               <b>brominated flame retardants</b>, combined with <b>antimony trioxide</b>,
+               which makes them far more effective. Both are spread through the polymer
+               matrix, not laid on the surface.</p>
+            <p>No industry today can separate them out. These plastics therefore go
+               <b>to incineration</b>, along with the antimony and the bromine they hold.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -72,35 +95,164 @@
     <div class="wrap">
       <div class="eyebrow">Le principe</div>
       <div class="stmt">
-        <h2>Deux phases,<br>deux récupérations.</h2>
+        <h2>Deux phases, deux récupérations.</h2>
         <div class="lead">
-          <p>Le procédé repose sur un mélange biphasique : un solvant organique qui met
-             le polymère en solution, et une solution aqueuse complexante qui capte
-             l'antimoine.</p>
-          <p>Libéré de sa matrice, l'oxyde d'antimoine passe sélectivement dans la phase
-             aqueuse. Le tétrabromobisphénol A, principal retardateur de flamme bromé,
-             est ensuite extrait par un traitement au non-solvant. Le polymère dépollué
-             est récupéré solide.</p>
-          <p>Le choix des couples solvant et complexant a été établi par simulation
-             thermodynamique, puis affiné par criblage expérimental.</p>
+          <div data-l="fr">
+            <p>Le procédé repose sur un <b>mélange biphasique</b> : un solvant organique qui
+               met le polymère en solution, et une solution aqueuse complexante qui capte
+               l'antimoine.</p>
+            <p>Libéré de sa matrice, l'oxyde d'antimoine passe <b>sélectivement</b> dans la
+               phase aqueuse. Le <b>tétrabromobisphénol A</b>, principal retardateur de flamme
+               bromé, est ensuite extrait par un traitement au non-solvant. Le polymère
+               dépollué est récupéré solide.</p>
+            <p>Le choix des couples solvant et complexant a été établi par simulation
+               thermodynamique, puis affiné par criblage expérimental.</p>
+          </div>
+          <div data-l="en" hidden>
+            <p>The process uses a <b>two-phase mixture</b>: an organic solvent that dissolves
+               the polymer, and a complexing water-based solution that captures the antimony.</p>
+            <p>Once freed from the matrix, the antimony oxide moves <b>selectively</b> into
+               the water phase. <b>Tetrabromobisphenol A</b>, the main brominated flame
+               retardant, is then extracted by a non-solvent treatment. The cleaned polymer
+               is recovered as a solid.</p>
+            <p>The solvent and complexing pairs were chosen through thermodynamic simulation,
+               then refined by experimental screening.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow flow-page">
+        <div class="track">
+          <svg viewBox="0 0 300 200" preserveAspectRatio="none" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="wave2" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#2B2BE8"/><stop offset=".38" stop-color="#297EE1"/>
+                <stop offset=".7" stop-color="#3EBDD2"/><stop offset="1" stop-color="#52FCC3"/>
+              </linearGradient>
+            </defs>
+            <path pathLength="1" d="M0 85 C 25 4, 75 4, 100 85 C 125 196, 175 196, 200 85 C 225 4, 275 4, 300 85"
+                  stroke="url(#wave2)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="steps">
+          <div class="st" style="--c:var(--blue)">
+            <div class="dot"><i></i></div>
+            <div class="num">01</div>
+            <h3>Broyage</h3>
+            <div data-l="fr"><p>Le gisement arrive en pièces de tailles très diverses. Le broyage
+              donne une fraction homogène, sans laquelle les rendements varieraient d'un lot à l'autre.</p></div>
+            <div data-l="en" hidden><p>The waste arrives as pieces of very different sizes. Shredding
+              gives an even fraction, without which yields would vary from one batch to the next.</p></div>
+          </div>
+          <div class="st" style="--c:var(--azure)">
+            <div class="dot"><i></i></div>
+            <div class="num">02</div>
+            <h3>Solvatation</h3>
+            <div data-l="fr"><p>Le solvant organique met le polymère en solution. Les additifs,
+              jusque-là prisonniers de la matrice, deviennent accessibles.</p></div>
+            <div data-l="en" hidden><p>The organic solvent dissolves the polymer. The additives,
+              until then trapped in the matrix, become reachable.</p></div>
+          </div>
+          <div class="st" style="--c:var(--cyan)">
+            <div class="dot"><i></i></div>
+            <div class="num">03</div>
+            <h3>Extraction sélective</h3>
+            <div data-l="fr"><p>La solution aqueuse complexante capte l'oxyde d'antimoine. Le
+              tétrabromobisphénol A est extrait ensuite, par traitement au non-solvant.</p></div>
+            <div data-l="en" hidden><p>The complexing water solution captures the antimony oxide.
+              Tetrabromobisphenol A is extracted next, by a non-solvent treatment.</p></div>
+          </div>
+          <div class="st" style="--c:var(--mint)">
+            <div class="dot"><i></i></div>
+            <div class="num">04</div>
+            <h3>Insolubilisation</h3>
+            <div data-l="fr"><p>Le polymère dépollué est reprécipité, récupéré solide et séché.
+              Les solvants sont régénérés et repartent dans le cycle suivant.</p></div>
+            <div data-l="en" hidden><p>The cleaned polymer is precipitated back out, recovered as a
+              solid and dried. The solvents are regenerated and go into the next cycle.</p></div>
+          </div>
         </div>
       </div>
 
       <div class="mesures">
         <div>
           <div class="q">Sur des plastiques réels</div>
-          <p>Les 98&#8239;% d'extraction ne sont pas mesurés sur un plastique modèle, mais sur
-             des broyats issus de véritables déchets d'équipements électriques et électroniques.</p>
+          <div data-l="fr">
+            <p>Les 98&#8239;% d'extraction ne sont pas mesurés sur un plastique modèle, mais sur
+               des broyats issus de véritables déchets d'équipements électriques et électroniques.</p>
+          </div>
+          <div data-l="en" hidden>
+            <p>The 98&#8239;% extraction rate is not measured on a model plastic, but on shredded
+               material from real waste electrical and electronic equipment.</p>
+          </div>
         </div>
         <div>
           <div class="q">Retardateur de flamme retiré</div>
-          <p>Le tétrabromobisphénol A est extrait à son tour. Ce n'est pas seulement
-             l'antimoine qui sort du plastique, c'est aussi le composé bromé.</p>
+          <div data-l="fr">
+            <p>Le tétrabromobisphénol A est extrait à son tour. Ce n'est pas seulement
+               l'antimoine qui sort du plastique, c'est aussi le composé bromé.</p>
+          </div>
+          <div data-l="en" hidden>
+            <p>Tetrabromobisphenol A is extracted in turn. It is not only the antimony that
+               leaves the plastic, but the brominated compound as well.</p>
+          </div>
         </div>
         <div>
           <div class="q">Sous le seuil réglementaire</div>
-          <p>Le polymère récupéré présente une teneur en polluants inférieure à la limite
-             réglementaire. Il peut donc réintégrer la filière plastique.</p>
+          <div data-l="fr">
+            <p>Le polymère récupéré présente une teneur en polluants inférieure à la limite
+               réglementaire. Il peut donc réintégrer la filière plastique.</p>
+          </div>
+          <div data-l="en" hidden>
+            <p>The recovered polymer holds fewer pollutants than the regulatory limit allows.
+               It can therefore go back into the plastics industry.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tint">
+    <div class="wrap">
+      <div class="eyebrow">Ce qui en sort</div>
+      <div class="stmt">
+        <h2>Trois matières, une seule opération.</h2>
+        <div class="lead">
+          <div data-l="fr">
+            <p>Le procédé ne choisit pas entre récupérer le métal et sauver le plastique.
+               Les trois sortent du même traitement.</p>
+          </div>
+          <div data-l="en" hidden>
+            <p>The process does not choose between recovering the metal and saving the plastic.
+               All three come out of the same operation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sorties">
+        <div>
+          <div class="sym">Sb</div>
+          <h3>Antimoine</h3>
+          <div data-l="fr"><p>Récupéré sous forme de trioxyde ou de métal, selon les spécifications
+            de l'acheteur. Une matière tracée, produite sur le continent.</p></div>
+          <div data-l="en" hidden><p>Recovered as trioxide or as metal, depending on the buyer's
+            specifications. A traceable material, produced on the continent.</p></div>
+        </div>
+        <div>
+          <div class="sym">Br</div>
+          <h3>Composés bromés</h3>
+          <div data-l="fr"><p>Isolés intacts et séparés du polymère. Une partie relève des polluants
+            organiques persistants et demande une transformation avant tout réemploi.</p></div>
+          <div data-l="en" hidden><p>Isolated intact and separated from the polymer. Some of them are
+            persistent organic pollutants and need to be transformed before any reuse.</p></div>
+        </div>
+        <div>
+          <div class="sym">C<sub>n</sub></div>
+          <h3>Polymère</h3>
+          <div data-l="fr"><p>Débarrassé de ses additifs, sous le seuil réglementaire de polluants,
+            il peut réintégrer la filière plastique au lieu de partir en fumée.</p></div>
+          <div data-l="en" hidden><p>Stripped of its additives and below the regulatory limit for
+            pollutants, it can go back into the plastics industry instead of up in smoke.</p></div>
         </div>
       </div>
     </div>
@@ -110,35 +262,69 @@
     <div class="wrap">
       <div class="eyebrow">Ce qui l'atteste</div>
       <div class="stmt">
-        <h2 style="color:#fff">Publié,<br>et relu par des pairs.</h2>
+        <h2 style="color:#fff">Publié, et relu par des pairs.</h2>
         <div class="lead">
-          <p>Le procédé n'est pas une promesse de laboratoire : il a été soumis
-             à l'examen de la communauté scientifique, et protégé.</p>
+          <div data-l="fr">
+            <p>Le procédé n'est pas une promesse de laboratoire : il a été soumis à l'examen
+               de la communauté scientifique, et protégé.</p>
+          </div>
+          <div data-l="en" hidden>
+            <p>The process is not a laboratory promise. It has been reviewed by the scientific
+               community, and protected.</p>
+          </div>
         </div>
       </div>
 
       <ul class="preuves">
         <li>
           <div class="q">Thèse</div>
-          <h3>Recyclage de l'antimoine dans les plastiques des équipements électroniques</h3>
-          <p>Travaux de Morvan Gaudin, menés à l'Institut de Recherche de Chimie Paris
-             dans le cadre de la Chaire Mines Urbaines, réunissant Chimie ParisTech - PSL,
-             Mines Paris - PSL et Arts et Métiers ParisTech, avec le soutien de l'éco-organisme ecosystem.</p>
-          <a class="nlien" href="https://theses.fr/s298986" target="_blank" rel="noopener">Consulter la thèse <span class="a">&#8594;</span></a>
+          <div class="pv">
+            <h3>Recyclage de l'antimoine dans les plastiques des équipements électroniques</h3>
+            <div data-l="fr">
+              <p>Travaux de <b>Morvan Gaudin</b>, menés à l'Institut de Recherche de Chimie Paris
+                 dans le cadre de la Chaire Mines Urbaines, réunissant Chimie ParisTech - PSL,
+                 Mines Paris - PSL et Arts et Métiers ParisTech, avec le soutien de
+                 l'éco-organisme ecosystem.</p>
+            </div>
+            <div data-l="en" hidden>
+              <p>Research by <b>Morvan Gaudin</b>, carried out at the Institut de Recherche de
+                 Chimie Paris within the Urban Mining Chair, which brings together Chimie
+                 ParisTech - PSL, Mines Paris - PSL and Arts et Métiers ParisTech, with the
+                 support of the producer responsibility organisation ecosystem.</p>
+            </div>
+            <a class="nlien" href="https://theses.fr/s298986" target="_blank" rel="noopener">Consulter la thèse <span class="a">&#8594;</span></a>
+          </div>
         </li>
         <li>
           <div class="q">Publication</div>
-          <h3>Antimony Trioxide Extraction from E-Waste Brominated Flame Retardant Laden Plastics</h3>
-          <p>Morvan Gaudin, Vincent Semetey, Frédéric Rousseau et Grégory Lefèvre,
-             dans ACS Sustainable Resource Management, 2025. La partie du procédé
-             consacrée à l'extraction de l'antimoine y est décrite et validée.</p>
-          <a class="nlien" href="https://pubs.acs.org/doi/10.1021/acssusresmgt.4c00466" target="_blank" rel="noopener">Lire la publication <span class="a">&#8594;</span></a>
+          <div class="pv">
+            <h3>Antimony Trioxide Extraction from E-Waste Brominated Flame Retardant Laden Plastics</h3>
+            <div data-l="fr">
+              <p>Morvan Gaudin, Vincent Semetey, Frédéric Rousseau et Grégory Lefèvre, dans
+                 <b>ACS Sustainable Resource Management</b>, 2025. La partie du procédé consacrée
+                 à l'extraction de l'antimoine y est décrite et validée.</p>
+            </div>
+            <div data-l="en" hidden>
+              <p>Morvan Gaudin, Vincent Semetey, Frédéric Rousseau and Grégory Lefèvre, in
+                 <b>ACS Sustainable Resource Management</b>, 2025. The paper describes and
+                 validates the antimony extraction part of the process.</p>
+            </div>
+            <a class="nlien" href="https://pubs.acs.org/doi/10.1021/acssusresmgt.4c00466" target="_blank" rel="noopener">Lire la publication <span class="a">&#8594;</span></a>
+          </div>
         </li>
         <li>
           <div class="q">Brevet</div>
-          <h3>Procédé breveté, publié en 2025</h3>
-          <p>DeeeMines exploite le brevet sous licence et porte son passage à l'échelle
-             industrielle, avec les trois chercheurs co&#8209;inventeurs.</p>
+          <div class="pv">
+            <h3>Procédé breveté, publié en 2025</h3>
+            <div data-l="fr">
+              <p>DeeeMines exploite le brevet <b>sous licence</b> et porte son passage à l'échelle
+                 industrielle, avec les trois chercheurs co&#8209;inventeurs.</p>
+            </div>
+            <div data-l="en" hidden>
+              <p>DeeeMines uses the patent <b>under licence</b> and is taking it to industrial
+                 scale, together with the three co-inventors.</p>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
@@ -148,12 +334,22 @@
     <div class="wrap">
       <div class="eyebrow">La suite</div>
       <div class="stmt">
-        <h2>Du laboratoire<br>au pilote.</h2>
+        <h2>Du laboratoire au pilote.</h2>
         <div class="lead">
-          <p>Deux chantiers sont ouverts. Élargir le procédé aux autres polymères et aux
-             autres molécules bromées que l'on rencontre dans les gisements réels.</p>
-          <p>Et construire un pilote industriel, seule façon de vérifier que ce qui tient
-             en laboratoire tient aussi à l'échelle d'une tonne.</p>
+          <div data-l="fr">
+            <p>Deux chantiers sont ouverts. Le premier est d'élargir le procédé aux
+               <b>autres polymères</b> et aux autres molécules bromées que l'on rencontre dans
+               les gisements réels.</p>
+            <p>Le second est de construire un <b>pilote industriel</b>, seule façon de vérifier
+               que ce qui tient en laboratoire tient aussi à l'échelle d'une tonne.</p>
+          </div>
+          <div data-l="en" hidden>
+            <p>Two tracks are open. The first is to extend the process to the
+               <b>other polymers</b> and the other brominated molecules found in real waste
+               streams.</p>
+            <p>The second is to build an <b>industrial pilot</b>, the only way to check that
+               what holds in the laboratory also holds at the scale of one tonne.</p>
+          </div>
         </div>
       </div>
     </div>

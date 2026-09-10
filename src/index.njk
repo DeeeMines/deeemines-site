@@ -161,14 +161,14 @@ ogTitre: "DeeeMines"
 
     <div class="flow">
       <div class="track">
-        <svg viewBox="0 0 300 170" preserveAspectRatio="none" fill="none" aria-hidden="true">
+        <svg viewBox="0 0 300 200" preserveAspectRatio="none" fill="none" aria-hidden="true">
           <defs>
             <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
               <stop offset="0" stop-color="#2B2BE8"/><stop offset=".38" stop-color="#297EE1"/>
               <stop offset=".7" stop-color="#3EBDD2"/><stop offset="1" stop-color="#52FCC3"/>
             </linearGradient>
           </defs>
-          <path pathLength="1" d="M0 85 C 25 2, 75 2, 100 85 C 125 168, 175 168, 200 85 C 225 2, 275 2, 300 85"
+          <path pathLength="1" d="M0 85 C 25 4, 75 4, 100 85 C 125 196, 175 196, 200 85 C 225 4, 275 4, 300 85"
                 stroke="url(#wave)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
         </svg>
       </div>
@@ -207,8 +207,19 @@ ogTitre: "DeeeMines"
       <div class="chip"><b>Procédé breveté</b><span>publié en 2025, issu de quatre ans de thèse</span></div>
     </div>
 
-    <div style="margin-top:clamp(30px,3.4vw,44px)">
-      <a href="#procede" data-go="procede" class="btn btn-mint">Le procédé en détail <span class="a">&#8594;</span></a>
+    <div class="vers-procede">
+      <a href="#procede" data-go="procede" class="btn btn-mint btn-fiole">
+        <svg class="fiole" viewBox="0 0 26 30" fill="none" aria-hidden="true">
+          <path class="verre" d="M10 2v8.4L3.4 24.2A2.6 2.6 0 0 0 5.8 28h14.4a2.6 2.6 0 0 0 2.4-3.8L16 10.4V2"
+                stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+          <path d="M8.4 2h9.2" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+          <path class="jus" d="M6.4 20h13.2l2.6 4.2A2.6 2.6 0 0 1 19.8 28H6.2a2.6 2.6 0 0 1-2.4-3.8z"
+                fill="currentColor" opacity=".85"/>
+          <circle class="b1" cx="10.5" cy="19" r="1.5" fill="currentColor"/>
+          <circle class="b2" cx="15" cy="17" r="1.1" fill="currentColor"/>
+          <circle class="b3" cx="12.6" cy="15" r=".9" fill="currentColor"/>
+        </svg>
+        Le procédé en détail <span class="a">&#8594;</span></a>
     </div>
   </div>
 </section>

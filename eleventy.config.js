@@ -27,6 +27,8 @@ function lecteur(lien) {
     return 'https://player.vimeo.com/video/' + m[1];
   if ((m = u.match(/dailymotion\.com\/video\/([\w]+)/)))
     return 'https://www.dailymotion.com/embed/video/' + m[1];
+  // Storyfox : l'adresse de prévisualisation s'affiche directement dans un cadre
+  if (/app\.storyfox\.io\/preview\/public\//.test(u)) return u;
   return '';
 }
 

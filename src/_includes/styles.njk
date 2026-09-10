@@ -174,8 +174,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,250,246,.92);
 }
 
 /* ===== 4. NOTRE TECHNOLOGIE · chaîne de procédé ===== */
-.flow{margin-top:clamp(46px,5.2vw,70px);position:relative;--g:clamp(20px,3vw,40px)}
-.flow .track{position:absolute;left:calc(12.5% - var(--g) * .375);width:calc(75% + var(--g) * .75);top:-75px;height:170px;opacity:.9}
+.flow{margin-top:clamp(68px,7.4vw,102px);position:relative;--g:clamp(20px,3vw,40px)}
+.flow .track{position:absolute;left:calc(12.5% - var(--g) * .375);width:calc(75% + var(--g) * .75);top:-75px;height:200px;opacity:.9}
 .flow .track svg{width:100%;height:100%;display:block}
 .flow .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--g);position:relative}
 .st{text-align:center}
@@ -439,6 +439,65 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 .video .cadre.vide p{font-size:14.6px;line-height:1.5;max-width:34ch;color:rgba(255,255,255,.55)}
 .video .vlegende{max-width:none}
 
+/* --- Page « Le procédé » : colonne de titre plus étroite, texte justifié ---
+   Le titre tient alors sur trois lignes et le paragraphe gagne en largeur.
+   La césure automatique évite les trous que la justification creuse. */
+#page-procede .stmt{grid-template-columns:.82fr 1.18fr;align-items:start}
+#page-procede .stmt h2{max-width:15ch}
+#page-procede .stmt .lead{max-width:none}
+#page-procede .stmt .lead p{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+#page-procede .stmt .lead p+p{margin-top:15px}
+#page-procede .mesures p{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+@media(max-width:880px){
+  #page-procede .stmt{grid-template-columns:1fr}
+  #page-procede .stmt h2{max-width:none}
+}
+#page-procede .lead b,#page-procede .mesures b,#page-procede .preuves b{font-weight:600;color:inherit}
+#page-procede .stmt .lead b{color:var(--text)}
+#page-procede .dark .stmt .lead b,#page-procede .preuves b{color:#fff}
+
+/* Bloc des preuves : moins d'air vertical, davantage de largeur utile */
+
+/* Bouton d'accès à la page, centré, avec sa fiole */
+.vers-procede{margin-top:clamp(34px,4vw,52px);display:flex;justify-content:center}
+.btn-fiole{gap:12px}
+.fiole{width:22px;height:26px;flex:none;overflow:visible}
+.fiole .jus{transform-origin:13px 24px;animation:remuer 3.4s ease-in-out infinite}
+.fiole .b1,.fiole .b2,.fiole .b3{opacity:0}
+.btn-fiole:hover .b1{animation:bulle 1.5s ease-in infinite}
+.btn-fiole:hover .b2{animation:bulle 1.5s ease-in .45s infinite}
+.btn-fiole:hover .b3{animation:bulle 1.5s ease-in .9s infinite}
+@keyframes remuer{0%,100%{transform:rotate(0deg)}35%{transform:rotate(-2.4deg)}70%{transform:rotate(2.4deg)}}
+@keyframes bulle{0%{opacity:0;transform:translateY(3px) scale(.6)}
+  30%{opacity:.9}100%{opacity:0;transform:translateY(-11px) scale(1)}}
+@media(prefers-reduced-motion:reduce){
+  .fiole .jus{animation:none}
+  .btn-fiole:hover .b1,.btn-fiole:hover .b2,.btn-fiole:hover .b3{animation:none}
+}
+
+/* La chaîne d'étapes reprise sur la page du procédé : mêmes proportions que
+   sur l'accueil, avec des textes plus longs, donc un peu plus de place. */
+.flow-page{margin-top:clamp(44px,5vw,66px)}
+.flow-page .st p{max-width:34ch;font-size:14.4px}
+#page-procede .flow .st h3{color:var(--text)}
+#page-procede .flow .st .num{color:var(--soft)}
+#page-procede .flow .st .dot{background:var(--paper)}
+@media(max-width:880px){ #page-procede .flow-page .track{background:var(--grad);opacity:.45}}
+
+/* Ce qui sort du procédé : trois colonnes sobres, sans les grandes cartes
+   de l'accueil, pour rappeler sans répéter. */
+.sorties{margin-top:clamp(30px,3.6vw,46px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(22px,3vw,44px)}
+@media(max-width:840px){.sorties{grid-template-columns:1fr;gap:28px}}
+.sorties .sym{font-family:var(--disp);font-size:34px;font-weight:500;letter-spacing:-.03em;
+  color:var(--mint-d);line-height:1;margin-bottom:12px;height:1em}
+/* L'indice de « Cn » ne doit pas rallonger la ligne, sinon le titre de la
+   troisième colonne descend et les trois ne s'alignent plus. */
+.sorties .sym sub{font-size:.6em;line-height:0;vertical-align:baseline;position:relative;top:.18em}
+.sorties h3{margin-bottom:9px}
+.sorties p{font-size:15.2px;line-height:1.6;color:var(--soft);
+  text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+
 .mesures{margin-top:clamp(30px,3.6vw,48px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
   gap:clamp(22px,3vw,44px);border-top:1px solid var(--line);padding-top:clamp(24px,2.6vw,34px)}
 @media(max-width:840px){.mesures{grid-template-columns:1fr;gap:26px}}
@@ -448,18 +507,22 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 
 .preuves{margin-top:clamp(28px,3.4vw,44px);display:grid;gap:0;
   border-top:1px solid var(--line-d)}
-.preuves li{padding:clamp(22px,2.4vw,30px) 0;border-bottom:1px solid var(--line-d);
+.preuves li{padding:clamp(17px,1.8vw,23px) 0;border-bottom:1px solid var(--line-d);
   display:grid;grid-template-columns:150px 1fr;gap:clamp(18px,2.6vw,40px);align-items:start}
-@media(max-width:760px){.preuves li{grid-template-columns:1fr;gap:10px}}
+@media(max-width:760px){.preuves li{grid-template-columns:1fr;gap:10px}
+  .preuves .pv{grid-column:1}}
 .preuves .q{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
   color:var(--mint);padding-top:5px;grid-column:1;grid-row:1/-1}
 /* Le titre, le texte et le lien s'empilent dans la seconde colonne, sous peine
    de se répartir en quinconce entre les deux. */
-.preuves h3,.preuves p,.preuves .nlien{grid-column:2}
+.preuves h3,.preuves p,.preuves .nlien,.preuves .pv{grid-column:2}
 @media(max-width:760px){.preuves .q{grid-column:1;grid-row:auto}
   .preuves h3,.preuves p,.preuves .nlien{grid-column:1}}
-.preuves h3{color:#fff;max-width:44ch}
-.preuves p{margin-top:10px;font-size:15.4px;line-height:1.6;color:var(--soft-dark);max-width:66ch}
+.preuves h3{color:#fff;max-width:60ch}
+.preuves p{margin-top:9px;font-size:15.4px;line-height:1.6;color:var(--soft-dark);
+  max-width:none;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.preuves .pv .nlien{margin-top:11px}
+.preuves b{color:#fff;font-weight:600}
 .preuves .nlien{display:inline-flex;align-items:center;gap:8px;margin-top:13px;font-size:14.6px;
   color:var(--mint);border-bottom:1px solid rgba(82,252,195,.4);padding-bottom:2px;transition:.2s}
 .preuves .nlien:hover{color:#fff;border-color:#fff}
