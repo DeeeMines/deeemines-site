@@ -529,14 +529,20 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 .schema .lbl.mint{fill:var(--mint);text-anchor:middle;letter-spacing:.1em}
 .schema .lbl.fort{fill:#fff}
 
-/* ── les gros morceaux tombent vers le broyeur ── */
-.gros .gr{fill:#5F6CA0}
+/* ── les gros morceaux tombent vers le broyeur ──
+   Opacité nulle au repos : pendant le délai d'attente, un morceau porte son
+   style de base et non la première image de l'animation. Sans cela, ceux qui
+   attendent leur tour restent visibles à l'origine du dessin, en haut à
+   gauche du cadre. Le bloc « mouvement réduit » les rallume plus bas. */
+.gros .gr{fill:#5F6CA0;opacity:0}
 .g1{animation:sg-gros 4.5s ease-in infinite}
 .g2{animation:sg-gros 4.5s ease-in 1.5s infinite}
 .g3{animation:sg-gros 4.5s ease-in 3s infinite}
 @keyframes sg-gros{
-  0%  {transform:translate(136px,-52px) rotate(-16deg);opacity:0}
-  16% {opacity:1}
+  /* Le morceau naît déjà entièrement à l'intérieur du cadre : en partant plus
+     haut, il apparaissait coupé en deux par le bord de la carte. */
+  0%  {transform:translate(136px,-6px) rotate(-16deg);opacity:0}
+  18% {opacity:1}
   66% {transform:translate(146px,30px) rotate(12deg);opacity:1}
   84%,100%{transform:translate(152px,52px) rotate(22deg);opacity:0}
 }
@@ -550,7 +556,7 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 @keyframes sg-tourne{to{transform:rotate(360deg)}}
 
 /* ── les copeaux tombent jusqu'à la surface du bain, où ils disparaissent ── */
-.copeaux .cp{fill:#7C88B8}
+.copeaux .cp{fill:#7C88B8;opacity:0}
 .c1{animation:sg-copeau 3.8s ease-in infinite}
 .c2{animation:sg-copeau 3.8s ease-in .95s infinite}
 .c3{animation:sg-copeau 3.8s ease-in 1.9s infinite}
@@ -626,13 +632,21 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
    rejoindre exactement. L'onde est descendue de la demi-hauteur du numéro. */
 .etapes{position:relative;display:grid;grid-template-rows:repeat(4,1fr);
   --couloir:clamp(92px,9.8vw,148px); --onde:clamp(58px,6vw,92px);
+  /* moitié de la hauteur d'un bloc, moins la moitié de celle de son titre :
+     de combien le centre du titre remonte au-dessus du centre de la rangée. */
+  --cale:39px;
   padding-left:var(--couloir)}
 /* L'onde déborde volontairement du cadre, en haut comme en bas : la carte la
    coupe à ses propres bords. Le décalage vertical la fait croiser l'axe
    exactement à la hauteur des titres. */
-.etapes .onde{position:absolute;left:0;top:15px;width:var(--onde);
+.etapes .onde{position:absolute;left:0;top:calc(12.5% - var(--cale));width:var(--onde);
   height:100%;overflow:visible}
-.et{position:relative}
+/* Chaque bloc est centré dans sa rangée : l'espace au-dessus du premier titre
+   et celui sous le dernier paragraphe deviennent égaux, et les quatre blocs
+   sont séparés par le même intervalle. Les quatre textes faisant trois lignes,
+   le titre se trouve toujours à la même distance du centre de sa rangée :
+   l'onde peut donc le rejoindre avec un décalage constant. */
+.et{position:relative;display:flex;flex-direction:column;justify-content:center}
 .et h3{color:#fff;margin:0 0 9px;position:relative}
 .et h3 .pt{position:absolute;top:50%;margin-top:-9px;
   left:calc(var(--onde) * .5 - var(--couloir) - 9px);
@@ -643,7 +657,11 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 .et p{font-size:14.6px;line-height:1.58;color:var(--soft-dark);max-width:40ch;
   hyphens:auto;-webkit-hyphens:auto}
 
-@media(max-width:900px){
+/* En dessous de mille pixels, la colonne devient trop étroite : un texte y
+   passe à quatre lignes tandis que son voisin en garde trois, et les points
+   ne peuvent plus tomber tous les quatre sur la même onde. Le dessin passe
+   alors sur une seule colonne, et l'onde cède la place à un trait droit. */
+@media(max-width:1000px){
   .schema{grid-template-columns:1fr;gap:clamp(26px,4vw,40px)}
   .etapes{grid-template-rows:none;gap:26px;padding-left:38px}
   .etapes .onde{display:none}
@@ -651,8 +669,11 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
     background:var(--grad);opacity:.55}
   .et h3 .pt{left:-38px;top:12px;margin-top:0}
   .et p{max-width:none}
-  .schema .lbl{font-size:15px}
-  .schema .sous{font-size:15px}
+  /* Sur une seule colonne, la scène disposerait de toute la largeur : elle
+     grossirait démesurément. On la borne et on la centre. */
+  .scene svg{max-width:600px;margin:0 auto}
+}
+@media(max-width:900px){
   .sorties .nom{font-size:17px}
   .sorties .sym{font-size:22px}
 }
