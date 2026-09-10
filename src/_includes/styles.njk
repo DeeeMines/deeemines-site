@@ -627,26 +627,29 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 @keyframes sg-allume{0%,58%,100%{opacity:.55}16%,40%{opacity:1}}
 
 /* ── la colonne des étapes ──
-   Quatre rangées de hauteur égale, contenu calé en haut : le numéro se
-   trouve donc toujours au même endroit de sa rangée, et l'onde peut le
-   rejoindre exactement. L'onde est descendue de la demi-hauteur du numéro. */
+   Quatre rangées de hauteur égale, chaque bloc centré dans la sienne : l'espace
+   au-dessus du premier titre et celui sous le dernier paragraphe sont égaux.
+   Pour que les quatre points tombent sur l'onde, il faut que le titre se trouve
+   toujours à la même distance du centre de sa rangée, donc que les quatre blocs
+   aient la même hauteur. Or un paragraphe passe de trois à quatre lignes selon
+   la largeur de la fenêtre et selon la police effectivement chargée. On réserve
+   donc au texte une hauteur fixe de quatre lignes, qu'il en occupe trois ou
+   quatre : la géométrie ne dépend plus du découpage des lignes. */
 .etapes{position:relative;display:grid;grid-template-rows:repeat(4,1fr);
   --couloir:clamp(92px,9.8vw,148px); --onde:clamp(58px,6vw,92px);
-  /* moitié de la hauteur d'un bloc, moins la moitié de celle de son titre :
-     de combien le centre du titre remonte au-dessus du centre de la rangée. */
-  --cale:39px;
+  --ligne:calc(14.6px * 1.58);      /* hauteur d'une ligne de paragraphe */
+  --reserve:calc(4 * var(--ligne)); /* hauteur réservée au texte */
+  /* de combien le centre du titre remonte au-dessus du centre de sa rangée :
+     la moitié de ce qui suit le titre, soit sa marge basse plus la réserve */
+  --cale:calc((9px + var(--reserve)) / 2);
   padding-left:var(--couloir)}
 /* L'onde déborde volontairement du cadre, en haut comme en bas : la carte la
    coupe à ses propres bords. Le décalage vertical la fait croiser l'axe
    exactement à la hauteur des titres. */
 .etapes .onde{position:absolute;left:0;top:calc(12.5% - var(--cale));width:var(--onde);
   height:100%;overflow:visible}
-/* Chaque bloc est centré dans sa rangée : l'espace au-dessus du premier titre
-   et celui sous le dernier paragraphe deviennent égaux, et les quatre blocs
-   sont séparés par le même intervalle. Les quatre textes faisant trois lignes,
-   le titre se trouve toujours à la même distance du centre de sa rangée :
-   l'onde peut donc le rejoindre avec un décalage constant. */
 .et{position:relative;display:flex;flex-direction:column;justify-content:center}
+.et>[data-l]{min-height:var(--reserve)}
 .et h3{color:#fff;margin:0 0 9px;position:relative}
 .et h3 .pt{position:absolute;top:50%;margin-top:-9px;
   left:calc(var(--onde) * .5 - var(--couloir) - 9px);
@@ -669,6 +672,8 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
     background:var(--grad);opacity:.55}
   .et h3 .pt{left:-38px;top:12px;margin-top:0}
   .et p{max-width:none}
+  /* Empilé, l'onde disparaît : la réserve de hauteur n'a plus lieu d'être. */
+  .et>[data-l]{min-height:0}
   /* Sur une seule colonne, la scène disposerait de toute la largeur : elle
      grossirait démesurément. On la borne et on la centre. */
   .scene svg{max-width:600px;margin:0 auto}
