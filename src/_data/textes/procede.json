@@ -84,6 +84,12 @@
       "symbole2": "Br",
       "symbole3": "C<sub>n</sub>"
     },
+    "verrou": {
+      "legende": "A piece of shredded plastic",
+      "legende2": "The material seen close up",
+      "nom": "Antimony",
+      "nom2": "Brominated compounds"
+    },
     "video": {
       "lien": "https://app.storyfox.io/preview/public/653982244fb6a30007c9f2fd.65cf6a17fc0a2b00079617d5"
     }
@@ -172,6 +178,12 @@
       "symbole": "Sb",
       "symbole2": "Br",
       "symbole3": "C<sub>n</sub>"
+    },
+    "verrou": {
+      "legende": "Un morceau de broyat",
+      "legende2": "La matière vue de près",
+      "nom": "Antimoine",
+      "nom2": "Composés bromés"
     },
     "video": {
       "lien": "https://app.storyfox.io/preview/public/653982244fb6a30007c9f2fd.65cf6a17fc0a2b00079617d5"

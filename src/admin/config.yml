@@ -240,6 +240,27 @@ collections:
       - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 9 caractères."}
       - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 38 caractères."}
       - {label: "Bloc de texte", name: bloc, widget: text, i18n: true, hint: "Longueur actuelle : 391 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+    - label: Schéma du verrou
+      name: verrou
+      widget: object
+      i18n: true
+      fields:
+      - label: Intitulé de gauche
+        name: legende
+        widget: string
+        i18n: true
+      - label: Intitulé de droite
+        name: legende2
+        widget: string
+        i18n: true
+      - label: Légende du point vert
+        name: nom
+        widget: string
+        i18n: true
+      - label: Légende du point bleu
+        name: nom2
+        widget: string
+        i18n: true
     - label: Le principe
       name: le_principe
       widget: object

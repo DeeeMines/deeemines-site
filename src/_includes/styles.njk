@@ -683,6 +683,76 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 
 /* ── le réacteur : deux phases, de la matière en suspension, un agitateur ── */
 .schema .cuve{fill:none;stroke:#6E7DB6;stroke-width:2.4}
+
+/* ── Le verrou : un additif pris dans la matière ──
+   Même carte sombre et même trait que le schéma du procédé, pour que les deux
+   dessins se lisent comme une seule famille. Le tremblement des grains est
+   minuscule, deux pixels : il suffit à dire qu'ils sont retenus, sans agiter
+   la page. */
+/* Ce schéma n'a qu'une scène, là où celui du procédé en a deux : il prend
+   donc toute la largeur, avec une limite pour ne pas devenir démesuré sur
+   les grands écrans. */
+.verrou{grid-template-columns:1fr}
+/* Les deux intitulés se calent chacun au-dessus de sa moitié du dessin :
+   42 % pour le morceau, le reste pour la vue rapprochée. Sur un téléphone
+   ils passent l'un sous l'autre. */
+.vr-tetes{display:flex;gap:14px;margin-bottom:4px}
+.vr-tetes span{text-align:center;font-size:12.5px;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;color:#8FA0CE;line-height:1.4}
+.vr-tetes span:first-child{flex:0 0 42%}
+.vr-tetes span:last-child{flex:1}
+.vr-cle{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin-top:6px}
+.vr-cle span{display:inline-flex;align-items:center;gap:9px}
+.vr-cle i{width:13px;height:13px;border-radius:50%;flex:0 0 auto}
+.vr-cle i.sb{background:#52FCC3}
+.vr-cle i.br{background:#3EBDD2}
+.vr-cle b{font-weight:400;font-size:14px;color:#8FA0CE}
+@media(max-width:620px){
+  /* Sur un téléphone les deux intitulés ne surplombent plus chacun sa moitié :
+     une flèche rétablit le lien entre le morceau et sa vue rapprochée. */
+  .vr-tetes{flex-wrap:wrap;gap:0 9px}
+  .vr-tetes span{flex:none;text-align:left}
+  .vr-tetes span:first-child::after{content:"\2192";margin-left:9px;opacity:.55}
+  .vr-cle{gap:18px;justify-content:flex-start}
+}
+.verrou .scene svg{max-width:720px;margin:0 auto}
+.verrou .eclat path:first-child{fill:#5F6CA0;fill-opacity:.28;stroke:#5A6BA8;
+  stroke-width:2;stroke-linejoin:round}
+.verrou .strie{stroke:#5A6BA8;stroke-width:1.6;opacity:.65;fill:none;stroke-linecap:round}
+.verrou .viseur{fill:none;stroke:#8FA0CE;stroke-width:1.8;stroke-dasharray:5 6}
+.verrou .cone{stroke:#5A6BA8;stroke-width:1.4;stroke-dasharray:4 7;fill:none}
+.verrou .loupe{fill:none;stroke:#6E7DB6;stroke-width:2.4}
+.verrou .chaines path{fill:none;stroke:#7C88B8;stroke-width:2.6;stroke-linecap:round}
+.verrou .gr{stroke:rgba(4,4,64,.55);stroke-width:1.4}
+.verrou .gr.sb{fill:#52FCC3}
+.verrou .gr.br{fill:#3EBDD2}
+.verrou .pastille.sb{fill:#52FCC3}
+.verrou .pastille.br{fill:#3EBDD2}
+/* Six grains frissonnent sur place. Le septième tente de sortir, bute et
+   revient : c'est lui qui raconte le verrou, les autres l'accompagnent. */
+.verrou .gr{animation:vr-frisson 3.4s ease-in-out infinite}
+.verrou .g2{animation-delay:.4s}
+.verrou .g3{animation-delay:.9s}
+.verrou .g5{animation-delay:1.3s}
+.verrou .g6{animation-delay:1.8s}
+.verrou .g7{animation-delay:2.2s}
+.verrou .g4{animation:vr-evasion 5.2s ease-in-out infinite}
+@keyframes vr-frisson{
+  0%,100%{transform:translate(0,0)}
+  25%{transform:translate(1.6px,-1.4px)}
+  50%{transform:translate(-1.4px,1.2px)}
+  75%{transform:translate(1.1px,1.5px)}
+}
+@keyframes vr-evasion{
+  0%,58%{transform:translate(0,0)}
+  70%{transform:translate(13px,-9px)}
+  76%{transform:translate(11px,-7px)}
+  88%,100%{transform:translate(0,0)}
+}
+@media(prefers-reduced-motion:reduce){
+  .verrou .gr{animation:none}
+}
+
 .moteur{fill:#141466;stroke:#6E7DB6;stroke-width:2}
 /* Le tracé des phases porte une houle régulière, plus large que la cuve.
    On le fait défiler d'exactement une longueur d'onde : la boucle est
