@@ -1,0 +1,291 @@
+---
+layout: socle.njk
+page_cle: accueil
+pagination:
+  data: langues
+  size: 1
+  alias: langue
+permalink: "{{ adresses['accueil'][langue] }}index.html"
+---
+<main>
+
+<!-- 1 · HERO -->
+<div class="hero" id="top">
+  <!-- Vidéo de fond : hero.mp4 dans le même dossier que cette page.
+       Image d'attente facultative : hero-poster.jpg, affichée avant que la vidéo ne démarre. -->
+  <video autoplay muted loop playsinline preload="auto" poster="/hero-poster.jpg">
+    <source src="/hero.mp4" type="video/mp4">
+  </video>
+  <div class="veil"></div>
+  <div class="wrap">
+    <h1>{{ contenu[langue].hero.titre1 }}<br><span>{{ contenu[langue].hero.titre2 }}</span></h1>
+    <div class="lead">
+      <p>{{ contenu[langue].hero.para1 }}</p>
+      <p>{{ contenu[langue].hero.para2 }}</p>
+    </div>
+  </div>
+</div>
+<hr class="grad-rule">
+
+<!-- 2 · SOUVERAINETÉ -->
+<section id="souverainete">
+  <div class="wrap">
+    <div class="eyebrow" data-champ="accueil.le_probleme.surtitre">{{ t.accueil.le_probleme.surtitre | safe }}</div>
+    <div class="stmt">
+      <h2 data-champ="accueil.le_probleme.titre">{{ t.accueil.le_probleme.titre | safe }}</h2>
+      <div class="lead">
+        <p data-champ="accueil.le_probleme.texte">{{ t.accueil.le_probleme.texte | safe }}</p>
+        <p data-champ="accueil.le_probleme.texte2">{{ t.accueil.le_probleme.texte2 | safe }}</p>
+      </div>
+    </div>
+
+    <div class="figs figs-4">
+      <div class="fig" style="--c:var(--blue)">
+        <div class="n" data-champ="accueil.figs.chiffre">{{ t.accueil.figs.chiffre | safe }}</div>
+        <div class="k" data-champ="accueil.figs.libelle">{{ t.accueil.figs.libelle | safe }}</div>
+        <p data-champ="accueil.figs.texte">{{ t.accueil.figs.texte | safe }}</p>
+      </div>
+      <div class="fig" style="--c:var(--azure)">
+        <div class="n" data-champ="accueil.figs.chiffre2">{{ t.accueil.figs.chiffre2 | safe }}</div>
+        <div class="k" data-champ="accueil.figs.libelle2">{{ t.accueil.figs.libelle2 | safe }}</div>
+        <p data-champ="accueil.figs.texte2">{{ t.accueil.figs.texte2 | safe }}</p>
+      </div>
+      <div class="fig" style="--c:var(--cyan)">
+        <div class="n" data-champ="accueil.figs.chiffre3">{{ t.accueil.figs.chiffre3 | safe }}</div>
+        <div class="k" data-champ="accueil.figs.libelle3">{{ t.accueil.figs.libelle3 | safe }}</div>
+        <p data-champ="accueil.figs.texte3">{{ t.accueil.figs.texte3 | safe }}</p>
+      </div>
+      <div class="fig" style="--c:var(--cyan-d)">
+        <div class="n" data-champ="accueil.figs.chiffre4">{{ t.accueil.figs.chiffre4 | safe }}</div>
+        <div class="k" data-champ="accueil.figs.libelle4">{{ t.accueil.figs.libelle4 | safe }}</div>
+        <p data-champ="accueil.figs.texte4">{{ t.accueil.figs.texte4 | safe }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · NOTRE SOLUTION -->
+<section class="tint" id="solution">
+  <div class="wrap">
+    <div class="eyebrow" data-champ="accueil.notre_solution.surtitre">{{ t.accueil.notre_solution.surtitre | safe }}</div>
+    <div class="stmt">
+      <h2 data-champ="accueil.notre_solution.titre">{{ t.accueil.notre_solution.titre | safe }}</h2>
+      <p class="lead" data-champ="accueil.notre_solution.chapo">{{ t.accueil.notre_solution.chapo | safe }}</p>
+    </div>
+
+    <div class="row" style="--c:var(--mint);--ct:var(--mint-d)">
+      <div class="panel">
+        <div class="el">
+          <div class="z" data-champ="accueil.row.exposant">{{ t.accueil.row.exposant | safe }}</div>
+          <div class="s" data-champ="accueil.row.symbole">{{ t.accueil.row.symbole | safe }}</div>
+          <div class="m" data-champ="accueil.row.nom">{{ t.accueil.row.nom | safe }}</div>
+        </div>
+      </div>
+      <div class="rowtxt">
+        <div class="tag">{{ contenu[langue].produits[0].etiquette }}</div>
+        <h3>{{ contenu[langue].produits[0].titre }}</h3>
+        <p>{{ contenu[langue].produits[0].texte }}</p>
+        <div class="who">{{ t.communs.divers.pour }} <b>{{ contenu[langue].produits[0].pour }}</b></div>
+      </div>
+    </div>
+
+    <div class="row flip" style="--c:var(--cyan);--ct:var(--cyan-d)">
+      <div class="panel">
+        <div class="el">
+          <div class="z" data-champ="accueil.row.exposant2">{{ t.accueil.row.exposant2 | safe }}</div>
+          <div class="s" data-champ="accueil.row.symbole2">{{ t.accueil.row.symbole2 | safe }}</div>
+          <div class="m" data-champ="accueil.row.nom2">{{ t.accueil.row.nom2 | safe }}</div>
+        </div>
+      </div>
+      <div class="rowtxt">
+        <div class="tag">{{ contenu[langue].produits[1].etiquette }}</div>
+        <h3>{{ contenu[langue].produits[1].titre }}</h3>
+        <p>{{ contenu[langue].produits[1].texte }}</p>
+        <div class="who">{{ t.communs.divers.pour }} <b>{{ contenu[langue].produits[1].pour }}</b></div>
+      </div>
+    </div>
+
+    <div class="row" style="--c:var(--azure)">
+      <div class="panel">
+        <div class="el">
+          <div class="z" data-champ="accueil.row.exposant3">{{ t.accueil.row.exposant3 | safe }}</div>
+          <div class="s">
+            <svg viewBox="0 0 230 130" fill="none" aria-hidden="true" style="width:clamp(120px,14vw,160px);height:auto">
+              <!-- crochets du motif répétitif -->
+              <path d="M30 20 H16 V110 H30" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".75"/>
+              <path d="M186 20 H200 V110 H186" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".75"/>
+              <!-- squelette carboné -->
+              <path d="M44 82 L72 50 L100 82 L128 50 L156 82" stroke="var(--c)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M28 66 L44 82 M156 82 L172 66" stroke="var(--c)" stroke-width="3.6" stroke-linecap="round" opacity=".4"/>
+              <!-- groupes pendants -->
+              <path d="M72 50 V26 M128 50 V26" stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity=".55"/>
+              <circle cx="72" cy="50" r="7" fill="var(--c)"/>
+              <circle cx="128" cy="50" r="7" fill="var(--c)"/>
+              <circle cx="100" cy="82" r="5.5" fill="#fff" opacity=".9"/>
+              <circle cx="44" cy="82" r="5.5" fill="#fff" opacity=".9"/>
+              <circle cx="156" cy="82" r="5.5" fill="#fff" opacity=".9"/>
+              <circle cx="72" cy="24" r="5" fill="#fff" opacity=".55"/>
+              <circle cx="128" cy="24" r="5" fill="#fff" opacity=".55"/>
+              <text x="208" y="116" font-family="Inter Tight, sans-serif" font-size="26" font-style="italic" fill="#fff" opacity=".75" data-champ="accueil.row.legende">{{ t.accueil.row.legende | safe }}</text>
+            </svg>
+          </div>
+          <div class="m" data-champ="accueil.row.nom3">{{ t.accueil.row.nom3 | safe }}</div>
+        </div>
+      </div>
+      <div class="rowtxt">
+        <div class="tag">{{ contenu[langue].produits[2].etiquette }}</div>
+        <h3>{{ contenu[langue].produits[2].titre }}</h3>
+        <p>{{ contenu[langue].produits[2].texte }}</p>
+        <div class="who">{{ t.communs.divers.pour }} <b>{{ contenu[langue].produits[2].pour }}</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · NOTRE TECHNOLOGIE -->
+<section class="dark" id="technologie">
+  <div class="wrap">
+    <div class="eyebrow" data-champ="accueil.notre_technologie.surtitre">{{ t.accueil.notre_technologie.surtitre | safe }}</div>
+    <div class="stmt">
+      <h2 style="color:#fff" data-champ="accueil.notre_technologie.titre">{{ t.accueil.notre_technologie.titre | safe }}</h2>
+      <div class="lead">
+        <p data-champ="accueil.notre_technologie.texte">{{ t.accueil.notre_technologie.texte | safe }}</p>
+        <p data-champ="accueil.notre_technologie.texte2">{{ t.accueil.notre_technologie.texte2 | safe }}</p>
+      </div>
+    </div>
+
+    <div class="flow">
+      <div class="track">
+        <svg viewBox="0 0 300 200" preserveAspectRatio="none" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#2B2BE8"/><stop offset=".38" stop-color="#297EE1"/>
+              <stop offset=".7" stop-color="#3EBDD2"/><stop offset="1" stop-color="#52FCC3"/>
+            </linearGradient>
+          </defs>
+          <path pathLength="1" d="M0 85 C 25 4, 75 4, 100 85 C 125 196, 175 196, 200 85 C 225 4, 275 4, 300 85"
+                stroke="url(#wave)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="steps">
+        <div class="st" style="--c:var(--blue)">
+          <div class="dot"><i></i></div>
+          <div class="num" data-champ="accueil.flow.texte">{{ t.accueil.flow.texte | safe }}</div>
+          <h3 data-champ="accueil.flow.soustitre">{{ t.accueil.flow.soustitre | safe }}</h3>
+          <p data-champ="accueil.flow.texte2">{{ t.accueil.flow.texte2 | safe }}</p>
+        </div>
+        <div class="st" style="--c:var(--azure)">
+          <div class="dot"><i></i></div>
+          <div class="num" data-champ="accueil.flow.texte3">{{ t.accueil.flow.texte3 | safe }}</div>
+          <h3 data-champ="accueil.flow.soustitre2">{{ t.accueil.flow.soustitre2 | safe }}</h3>
+          <p data-champ="accueil.flow.texte4">{{ t.accueil.flow.texte4 | safe }}</p>
+        </div>
+        <div class="st" style="--c:var(--cyan)">
+          <div class="dot"><i></i></div>
+          <div class="num" data-champ="accueil.flow.texte5">{{ t.accueil.flow.texte5 | safe }}</div>
+          <h3 data-champ="accueil.flow.soustitre3">{{ t.accueil.flow.soustitre3 | safe }}</h3>
+          <p data-champ="accueil.flow.texte6">{{ t.accueil.flow.texte6 | safe }}</p>
+        </div>
+        <div class="st" style="--c:var(--mint)">
+          <div class="dot"><i></i></div>
+          <div class="num" data-champ="accueil.flow.texte7">{{ t.accueil.flow.texte7 | safe }}</div>
+          <h3 data-champ="accueil.flow.soustitre4">{{ t.accueil.flow.soustitre4 | safe }}</h3>
+          <p data-champ="accueil.flow.texte8">{{ t.accueil.flow.texte8 | safe }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="chips">
+      <div class="chip" data-champ="accueil.notre_technologie.texte3">{{ t.accueil.notre_technologie.texte3 | safe }}</div>
+      <div class="chip" data-champ="accueil.notre_technologie.texte4">{{ t.accueil.notre_technologie.texte4 | safe }}</div>
+      <div class="chip" data-champ="accueil.notre_technologie.texte5">{{ t.accueil.notre_technologie.texte5 | safe }}</div>
+      <div class="chip" data-champ="accueil.notre_technologie.texte6">{{ t.accueil.notre_technologie.texte6 | safe }}</div>
+    </div>
+
+    <div class="vers-procede" data-champ="accueil.notre_technologie.texte7">{{ t.accueil.notre_technologie.texte7 | safe }}</div>
+  </div>
+</section>
+
+<!-- 6 · PARTENAIRES -->
+<div class="band">
+  <div class="wrap">
+    <div class="eyebrow" style="margin-bottom:4px" data-champ="accueil.band.surtitre">{{ t.accueil.band.surtitre | safe }}</div>
+    <div class="logos">
+      {%- for p in partenaires.logos %}
+      <div><img src="{{ p.image }}" alt="{{ p.nom }}" style="height:{{ p.image | hauteurLogo }}px"></div>
+      {%- endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- 6 bis · DISTINCTIONS -->
+<section class="tint" style="padding:clamp(38px,4vw,58px) 0">
+  <div class="wrap">
+    <div class="eyebrow" data-champ="accueil.concours_et_distinctions.surtitre">{{ t.accueil.concours_et_distinctions.surtitre | safe }}</div>
+    <div class="dist">
+      <div class="di">
+        <img src="/assets/i-phd.png" alt="{{ t.communs.alt.iphd }}">
+        <div>
+          <h3 data-champ="accueil.dist.soustitre">{{ t.accueil.dist.soustitre | safe }}</h3>
+          <p data-champ="accueil.dist.texte">{{ t.accueil.dist.texte | safe }}</p>
+        </div>
+      </div>
+      <div class="di">
+        <img src="/assets/cnrs.png" alt="CNRS Innovation">
+        <div>
+          <h3 data-champ="accueil.dist.soustitre2">{{ t.accueil.dist.soustitre2 | safe }}</h3>
+          <p data-champ="accueil.dist.texte2">{{ t.accueil.dist.texte2 | safe }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · CONTACT -->
+<section id="contact" style="background:var(--ink);color:#fff" class="dark">
+  <div class="wrap cgrid">
+    <div>
+      <div class="eyebrow" data-champ="accueil.cgrid.surtitre">{{ t.accueil.cgrid.surtitre | safe }}</div>
+      <h2 style="color:#fff" data-champ="accueil.cgrid.titre">{{ t.accueil.cgrid.titre | safe }}</h2>
+      <p class="lead" style="margin-top:24px" data-champ="accueil.cgrid.chapo">{{ t.accueil.cgrid.chapo | safe }}</p>
+      <ul class="co">
+        <li><div class="k" data-champ="accueil.cgrid.libelle">{{ t.accueil.cgrid.libelle | safe }}</div><div class="v">{{ contenu[langue].contact.email }}</div></li>
+        <li><div class="k" data-champ="accueil.cgrid.libelle2">{{ t.accueil.cgrid.libelle2 | safe }}</div><div class="v">{{ contenu[langue].contact.adresse }}</div></li>
+        <li><div class="k" data-champ="accueil.cgrid.libelle3">{{ t.accueil.cgrid.libelle3 | safe }}</div><div class="v"><a href="{{ contenu[langue].contact.linkedin }}" target="_blank" rel="noopener" style="border-bottom:1px solid rgba(255,255,255,.3)">LinkedIn</a></div></li>
+      </ul>
+    </div>
+    <div>
+      <form id="cform" name="contact" method="POST">
+        <input type="hidden" name="access_key" value="{{ reglages.formulaire_cle }}">
+        <input type="hidden" name="subject" value="Message depuis le site DeeeMines">
+        <input type="hidden" name="from_name" value="Site DeeeMines">
+        <!-- champ piège : rempli seulement par les robots, le message est alors ignoré -->
+        <p hidden><label>{{ t.communs.divers.piege }} <input name="botcheck" tabindex="-1" autocomplete="off"></label></p>
+        <div class="f"><label for="a1" data-champ="accueil.cgrid.intitule">{{ t.accueil.cgrid.intitule | safe }}</label><input id="a1" name="nom" type="text" placeholder="Votre nom" required></div>
+        <div class="f"><label for="a2" data-champ="accueil.cgrid.intitule2">{{ t.accueil.cgrid.intitule2 | safe }}</label><input id="a2" name="email" type="email" placeholder="vous@organisation.fr" required></div>
+        <div class="f"><label for="a3" data-champ="accueil.cgrid.intitule3">{{ t.accueil.cgrid.intitule3 | safe }}</label>
+          <select id="a3" name="profil">
+            <option data-champ="accueil.cgrid.choix">{{ t.accueil.cgrid.choix | safe }}</option>
+            <option data-champ="accueil.cgrid.choix2">{{ t.accueil.cgrid.choix2 | safe }}</option>
+            <option data-champ="accueil.cgrid.choix3">{{ t.accueil.cgrid.choix3 | safe }}</option>
+            <option data-champ="accueil.cgrid.choix4">{{ t.accueil.cgrid.choix4 | safe }}</option>
+            <option data-champ="accueil.cgrid.choix5">{{ t.accueil.cgrid.choix5 | safe }}</option>
+            <option data-champ="accueil.cgrid.choix6">{{ t.accueil.cgrid.choix6 | safe }}</option>
+            <option data-champ="accueil.cgrid.choix7">{{ t.accueil.cgrid.choix7 | safe }}</option>
+          
+          <option data-champ="accueil.cgrid.choix8">{{ t.accueil.cgrid.choix8 | safe }}</option></select>
+        </div>
+        <div class="f"><label for="a4" data-champ="accueil.cgrid.intitule4">{{ t.accueil.cgrid.intitule4 | safe }}</label><textarea id="a4" name="message" placeholder="Quelques lignes suffisent." required></textarea></div>
+        <button class="btn btn-mint" type="submit" data-champ="accueil.cgrid.bouton">{{ t.accueil.cgrid.bouton | safe }}</button>
+        <p class="cerr" id="cerr" hidden data-champ="accueil.cgrid.texte">{{ t.accueil.cgrid.texte | safe }}</p>
+      </form>
+      <div class="sent" id="sent" hidden>
+        <div class="tick" data-champ="accueil.sent.texte">{{ t.accueil.sent.texte | safe }}</div>
+        <h3 data-champ="accueil.sent.soustitre">{{ t.accueil.sent.soustitre | safe }}</h3>
+        <p data-champ="accueil.sent.texte2">{{ t.accueil.sent.texte2 | safe }}</p>
+        <a class="alt" id="mailto" href="mailto:kristell.riounivert@deeemines.com" data-champ="accueil.sent.lien">{{ t.accueil.sent.lien | safe }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>

@@ -1,21 +1,20 @@
 <footer>
   <div class="wrap">
     <div class="fg">
-      <a href="/" data-go="home"><img src="/assets/logo.png" alt="DeeeMines"></a>
+      <a href="{{ adresses['accueil'][langue] }}"><img src="/assets/logo.png" alt="DeeeMines"></a>
       <div class="fl">
-        <a href="/#souverainete" data-go="home">Souveraineté</a>
-        <a href="/#solution" data-go="home">Notre solution</a>
-        <a href="/#technologie" data-go="home">Notre technologie</a>
-        <a href="/#antimoine" data-go="antimoine">L'antimoine</a>
-        <a href="/#equipe" data-go="equipe">Équipe</a>
-        <a href="/#actualites" data-go="actus">Actualités</a>
-        <a href="/#contact" data-go="home">Contact</a>
-        <a href="https://www.linkedin.com/in/kristell-r-4ab4b9bb/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="{{ adresses['accueil'][langue] }}" data-champ="communs.nav.accueil">{{ t.communs.nav.accueil }}</a>
+        {%- for cle in ["technologie", "antimoine", "equipe", "actualites"] %}
+        <a href="{{ adresses[cle][langue] }}" data-champ="communs.nav.{{ cle }}">{{ t.communs.nav[cle] }}</a>
+        {%- endfor %}
+        <a href="{{ adresses['accueil'][langue] }}#contact" data-champ="communs.nav.contact">{{ t.communs.nav.contact }}</a>
+        <a href="{{ contenu[langue].contact.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
     <div class="fb">
-      <span>© 2026 DeeeMines</span>
-      <span><a href="/#mentions" data-go="mentions">Mentions légales</a> · <a href="/#confidentialite" data-go="privacy">Politique de confidentialité</a></span>
+      <span data-champ="communs.nav.droits">{{ t.communs.nav.droits }}</span>
+      <span><a href="{{ adresses['mentions'][langue] }}" data-champ="communs.nav.mentions">{{ t.communs.nav.mentions }}</a>
+        · <a href="{{ adresses['confidentialite'][langue] }}" data-champ="communs.nav.confidentialite">{{ t.communs.nav.confidentialite }}</a></span>
     </div>
   </div>
 </footer>

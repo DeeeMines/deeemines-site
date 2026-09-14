@@ -1,0 +1,190 @@
+---
+layout: socle.njk
+page_cle: technologie
+pagination:
+  data: langues
+  size: 1
+  alias: langue
+permalink: "{{ adresses['technologie'][langue] }}index.html"
+---
+<!-- ===================== LE PROCÉDÉ =====================
+     Page profonde, atteinte depuis le bandeau du haut et depuis le bouton
+     de la section technologie de l'accueil.
+
+     Les paragraphes explicatifs sont écrits en deux versions complètes,
+     français et anglais, dans des blocs « data-l ». C'est ce qui permet d'y
+     mettre des mots en gras : le dictionnaire de traduction travaille sur des
+     textes entiers, et un mot en gras couperait le texte en morceaux qu'il ne
+     saurait plus reconnaître.
+     Le lien de la vidéo se saisit depuis /admin, rubrique « Page d'accueil ». -->
+<main>
+  <div class="phead">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--mint)" data-champ="procede.phead.surtitre">{{ t.procede.phead.surtitre | safe }}</div>
+      <h1 data-champ="procede.phead.titre">{{ t.procede.phead.titre | safe }}</h1>
+      <p class="lead" data-champ="procede.phead.chapo">{{ t.procede.phead.chapo | safe }}</p>
+    </div>
+  </div>
+  <hr class="grad-rule">
+
+  {%- set video = contenu[langue].procede.video | default("") %}
+  <section>
+    <div class="wrap">
+      <div class="eyebrow" data-champ="procede.en_quatre_minutes.surtitre">{{ t.procede.en_quatre_minutes.surtitre | safe }}</div>
+      <div class="video">
+        {%- set embed = video | lecteur %}
+        {%- if embed %}
+        <div class="cadre apercu" data-video="{{ embed }}">
+          <img src="/assets/video-these.jpg" alt="{{ t.communs.alt.video }}">
+          <button class="jouer" type="button" aria-label="{{ t.communs.alt.jouer }}">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+              <circle cx="12" cy="12" r="10.4"/><path d="M9.8 8.2l6.4 3.8-6.4 3.8z" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        {%- elif video %}
+        <div class="cadre vide">
+          <a class="btn btn-ink" href="{{ video }}" target="_blank" rel="noopener">
+            {{ t.communs.divers.voir_video }} <span class="a">&#8594;</span></a>
+        </div>
+        {%- else %}
+        <div class="cadre vide">
+          <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="1.3" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><path d="M10 8.6l6 3.4-6 3.4z" stroke-linejoin="round"/>
+          </svg>
+          <p data-champ="procede.en_quatre_minutes.texte">{{ t.procede.en_quatre_minutes.texte | safe }}</p>
+        </div>
+        {%- endif %}
+        <div class="lead vlegende">
+          <div data-l="fr" data-champ="procede.en_quatre_minutes.bloc">{{ t.procede.en_quatre_minutes.bloc | safe }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tint">
+    <div class="wrap">
+      <div class="eyebrow" data-champ="procede.le_verrou.surtitre">{{ t.procede.le_verrou.surtitre | safe }}</div>
+      <div class="stmt">
+        <h2 data-champ="procede.le_verrou.titre">{{ t.procede.le_verrou.titre | safe }}</h2>
+        <div class="lead">
+          <div data-l="fr" data-champ="procede.le_verrou.bloc">{{ t.procede.le_verrou.bloc | safe }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow" data-champ="procede.le_principe.surtitre">{{ t.procede.le_principe.surtitre | safe }}</div>
+      <div class="stmt">
+        <h2 data-champ="procede.le_principe.titre">{{ t.procede.le_principe.titre | safe }}</h2>
+        <div class="lead">
+          <div data-l="fr" data-champ="procede.le_principe.bloc">{{ t.procede.le_principe.bloc | safe }}</div>
+        </div>
+      </div>
+
+{% include "anim-procede.njk" %}
+
+    </div>
+  </section>
+  <section class="tint">
+    <div class="wrap">
+      <div class="eyebrow" data-champ="procede.ce_qui_en_sort.surtitre">{{ t.procede.ce_qui_en_sort.surtitre | safe }}</div>
+      <div class="stmt stmt-large">
+        <h2 data-champ="procede.ce_qui_en_sort.titre">{{ t.procede.ce_qui_en_sort.titre | safe }}</h2>
+        <div class="lead">
+          <div data-l="fr" data-champ="procede.ce_qui_en_sort.bloc">{{ t.procede.ce_qui_en_sort.bloc | safe }}</div>
+        </div>
+      </div>
+
+      <div class="sorties">
+        <div class="phare">
+          <div class="sym" data-champ="procede.sorties.symbole">{{ t.procede.sorties.symbole | safe }}</div>
+          <h3 data-champ="procede.sorties.soustitre">{{ t.procede.sorties.soustitre | safe }}</h3>
+          <div data-l="fr" data-champ="procede.sorties.bloc">{{ t.procede.sorties.bloc | safe }}</div>
+        </div>
+        <div>
+          <div class="sym" data-champ="procede.sorties.symbole2">{{ t.procede.sorties.symbole2 | safe }}</div>
+          <h3 data-champ="procede.sorties.soustitre2">{{ t.procede.sorties.soustitre2 | safe }}</h3>
+          <div data-l="fr" data-champ="procede.sorties.bloc2">{{ t.procede.sorties.bloc2 | safe }}</div>
+        </div>
+        <div>
+          <div class="sym" data-champ="procede.sorties.symbole3">{{ t.procede.sorties.symbole3 | safe }}</div>
+          <h3 data-champ="procede.sorties.soustitre3">{{ t.procede.sorties.soustitre3 | safe }}</h3>
+          <div data-l="fr" data-champ="procede.sorties.bloc3">{{ t.procede.sorties.bloc3 | safe }}</div>
+        </div>
+      </div>
+
+      <div class="mesures cartes">
+        <div>
+          <div class="q" data-champ="procede.ce_qui_en_sort.libelle">{{ t.procede.ce_qui_en_sort.libelle | safe }}</div>
+          <div data-l="fr" data-champ="procede.ce_qui_en_sort.bloc2">{{ t.procede.ce_qui_en_sort.bloc2 | safe }}</div>
+        </div>
+        <div>
+          <div class="q" data-champ="procede.ce_qui_en_sort.libelle2">{{ t.procede.ce_qui_en_sort.libelle2 | safe }}</div>
+          <div data-l="fr" data-champ="procede.ce_qui_en_sort.bloc3">{{ t.procede.ce_qui_en_sort.bloc3 | safe }}</div>
+        </div>
+        <div>
+          <div class="q" data-champ="procede.ce_qui_en_sort.libelle3">{{ t.procede.ce_qui_en_sort.libelle3 | safe }}</div>
+          <div data-l="fr" data-champ="procede.ce_qui_en_sort.bloc4">{{ t.procede.ce_qui_en_sort.bloc4 | safe }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="dark">
+    <div class="wrap">
+      <div class="eyebrow" data-champ="procede.ce_qui_l_atteste.surtitre">{{ t.procede.ce_qui_l_atteste.surtitre | safe }}</div>
+      <div class="stmt">
+        <h2 style="color:#fff" data-champ="procede.ce_qui_l_atteste.titre">{{ t.procede.ce_qui_l_atteste.titre | safe }}</h2>
+        <div class="lead">
+          <div data-l="fr" data-champ="procede.ce_qui_l_atteste.bloc">{{ t.procede.ce_qui_l_atteste.bloc | safe }}</div>
+        </div>
+      </div>
+
+      <ul class="preuves">
+        <li>
+          <div class="q" data-champ="procede.ce_qui_l_atteste.libelle">{{ t.procede.ce_qui_l_atteste.libelle | safe }}</div>
+          <div class="pv">
+            <h3 data-champ="procede.ce_qui_l_atteste.soustitre">{{ t.procede.ce_qui_l_atteste.soustitre | safe }}</h3>
+            <div data-l="fr" data-champ="procede.ce_qui_l_atteste.bloc2">{{ t.procede.ce_qui_l_atteste.bloc2 | safe }}</div>
+            <a class="nlien" href="https://theses.fr/s298986" target="_blank" rel="noopener" data-champ="procede.ce_qui_l_atteste.lien">{{ t.procede.ce_qui_l_atteste.lien | safe }}</a>
+          </div>
+        </li>
+        <li>
+          <div class="q" data-champ="procede.ce_qui_l_atteste.libelle2">{{ t.procede.ce_qui_l_atteste.libelle2 | safe }}</div>
+          <div class="pv">
+            <h3 data-champ="procede.ce_qui_l_atteste.soustitre2">{{ t.procede.ce_qui_l_atteste.soustitre2 | safe }}</h3>
+            <div data-l="fr" data-champ="procede.ce_qui_l_atteste.bloc3">{{ t.procede.ce_qui_l_atteste.bloc3 | safe }}</div>
+            <a class="nlien" href="https://pubs.acs.org/doi/10.1021/acssusresmgt.4c00466" target="_blank" rel="noopener" data-champ="procede.ce_qui_l_atteste.lien2">{{ t.procede.ce_qui_l_atteste.lien2 | safe }}</a>
+          </div>
+        </li>
+        <li>
+          <div class="q" data-champ="procede.ce_qui_l_atteste.libelle3">{{ t.procede.ce_qui_l_atteste.libelle3 | safe }}</div>
+          <div class="pv">
+            <h3 data-champ="procede.ce_qui_l_atteste.soustitre3">{{ t.procede.ce_qui_l_atteste.soustitre3 | safe }}</h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="tint">
+    <div class="wrap">
+      <div class="eyebrow" data-champ="procede.la_suite.surtitre">{{ t.procede.la_suite.surtitre | safe }}</div>
+      <div class="stmt">
+        <h2 data-champ="procede.la_suite.titre">{{ t.procede.la_suite.titre | safe }}</h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" style="text-align:center">
+    <div class="wrap">
+      <h2 style="color:#fff;font-size:clamp(24px,3vw,34px);margin-bottom:22px" data-champ="procede.divers.titre">{{ t.procede.divers.titre | safe }}</h2>
+      <a href="#contact" data-go="home" class="btn btn-mint" data-champ="procede.divers.lien">{{ t.procede.divers.lien | safe }}</a>
+    </div>
+  </section>
+</main>

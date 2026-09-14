@@ -32,55 +32,69 @@ d'attente. Ils vont à côté de `index.njk`, pas à la racine.
 
 ## Mise en place, une seule fois
 
+Le site est hébergé chez **Cloudflare Pages**. Trois raisons : c'est gratuit
+sans compteur qui puisse éteindre le site, les publications sont plafonnées à
+500 par mois au lieu d'une vingtaine, et un dépassement bloque les nouvelles
+publications sans jamais mettre le site hors ligne.
+
 ### 1. Le dépôt GitHub
 
-Créez un dépôt nommé `deeemines-site`, en **privé**, et déposez-y le contenu
-de ce dossier. La branche doit s'appeler `main`.
+Un dépôt `deeemines-site`, branche `main`, contenant ce dossier. La ligne
+`repo:` de `src/admin/config.yml` porte le nom du compte qui l'héberge.
 
-Puis ouvrez `src/admin/config.yml` et complétez la ligne `repo:` avec le nom
-du compte GitHub qui héberge le dépôt. C'est la seule ligne à changer.
+### 2. Cloudflare Pages
 
-### 2. Netlify
+Sur dash.cloudflare.com, « Workers & Pages », « Create application », onglet
+« Pages », « Connect to Git ». Choisissez le dépôt, puis renseignez :
 
-Sur netlify.com, « Add new site », « Import an existing project », choisissez
-GitHub et le dépôt. Netlify lit `netlify.toml` et n'a besoin d'aucun réglage :
-il lance `npm run build` et publie le dossier `_site`.
+    Framework preset            None
+    Build command               npm run build
+    Build output directory      _site
+    Variable d'environnement    NODE_VERSION = 20
 
-À partir de là, toute modification enregistrée depuis l'administration
-reconstruit et republie le site automatiquement, en une minute environ.
+Cloudflare publie sur une adresse en `.pages.dev` et reconstruit à chaque
+modification du dépôt, y compris celles enregistrées depuis l'administration.
 
-### 3. L'authentification
+### 3. La connexion à l'administration
 
-Dans Netlify, ouvrez les réglages du site, « Access control », puis
-« OAuth » et « Install provider » : choisissez GitHub. C'est ce qui permet
-au bouton « se connecter » de l'administration de fonctionner.
+L'administration a besoin d'un petit service qui gère la connexion GitHub.
+Il est gratuit, publié par l'auteur de Sveltia, et s'installe en trois clics :
+`github.com/sveltia/sveltia-cms-auth`, bouton « Deploy to Cloudflare ».
+
+Ensuite, sur GitHub, « Settings » du compte, « Developer settings »,
+« OAuth Apps », « New OAuth App ». L'adresse de rappel est celle du service
+suivie de `/callback`. Reportez l'identifiant et le secret obtenus dans les
+variables du service, côté Cloudflare.
+
+Enfin, dans `src/admin/config.yml`, complétez la ligne `base_url:` avec
+l'adresse du service. Sans elle, le bouton « se connecter » ne fait rien.
 
 ### 4. Les accès
 
-Sur GitHub, dans les réglages du dépôt, « Collaborators », invitez le second
-compte. Les personnes invitées se connectent ensuite sur
-`deeemines.com/admin`, cliquent sur « se connecter avec GitHub », et voient
-directement le formulaire. Elles n'ont jamais à ouvrir GitHub ensuite.
+Sur GitHub, réglages du dépôt, « Collaborators », invitez le second compte
+avec le rôle **Write**. Les personnes invitées se connectent ensuite sur
+`deeemines.com/admin` et n'ont jamais à rouvrir GitHub.
 
 ### 5. Le domaine
 
-Le nom de domaine reste chez OVH. Dans Netlify, « Domain management »,
-ajoutez `deeemines.com` : Netlify indique les enregistrements DNS à créer
-chez OVH. Le certificat de sécurité est délivré automatiquement.
+Le nom de domaine reste chez OVH. Dans le projet Cloudflare Pages, onglet
+« Custom domains », ajoutez `deeemines.com` : Cloudflare indique les
+enregistrements à créer chez OVH. Le certificat est délivré automatiquement.
 
 ### 6. Les messages du formulaire
 
-Le formulaire de contact est branché sur Netlify Forms : rien à configurer,
-Netlify détecte le formulaire au premier déploiement. Les messages arrivent
-dans « Forms » dans le tableau de bord du site.
+Le formulaire est envoyé à un service extérieur qui les transmet par courriel.
+Créez une clé d'accès gratuite sur `web3forms.com` en indiquant l'adresse de
+réception, puis reportez cette clé dans `src/_data/reglages.json`, champ
+`formulaire_cle`.
 
-Pour les recevoir par courriel, allez dans les réglages du site,
-« Forms », « Form notifications », « Add notification », « Email
-notification », et indiquez kristell.riounivert@deeemines.com. Gratuit jusqu'à cent
-messages par mois.
+Tant que ce champ est vide, le formulaire n'essaie même pas d'envoyer : il
+affiche le message invitant à écrire directement, avec un lien de messagerie
+prérempli. C'est aussi ce qui se passe en local, et c'est normal.
 
-Le formulaire ne fonctionne que sur le site publié. En local il affichera
-un message d'erreur invitant à écrire directement : c'est normal.
+Ce service reçoit le nom, l'adresse électronique et le message des personnes
+qui écrivent. Il doit donc être mentionné dans la politique de confidentialité,
+et le point mérite d'être soumis au conseil juridique.
 
 ### 7. Avant l'ouverture au public
 
@@ -92,13 +106,9 @@ Tant qu'elle est là, les moteurs de recherche ignorent le site.
 
 ---
 
-## Travailler en local, sans consommer de crédits Netlify
+## Travailler en local
 
-Netlify facture chaque publication en production 15 crédits, sur les 300
-que le plan gratuit accorde chaque mois, soit une vingtaine de publications.
-Quand les crédits sont épuisés, **le site est suspendu** jusqu'au mois
-suivant. Il ne faut donc publier que des versions validées, et faire toutes
-les vérifications en local.
+Rien n'oblige à publier pour voir le résultat, et c'est bien plus rapide.
 
 Une seule fois, installez Node.js (`winget install OpenJS.NodeJS.LTS`),
 puis dans le dossier du site :
@@ -115,16 +125,9 @@ chaque fichier déposé dans le dossier. Aucune connexion, aucun crédit.
 
 ### Montrer une version à quelqu'un sans publier
 
-Les publications **de branche et d'aperçu sont gratuites et illimitées**.
-Pour faire relire une évolution sans toucher au site public, déposez les
-fichiers sur une branche autre que `main` : Netlify construit un aperçu à
-une adresse temporaire, sans consommer un seul crédit. La fusion dans
-`main`, elle, publie et coûte 15 crédits.
-
-Attention : chaque enregistrement depuis `/admin` écrit dans `main` et
-déclenche donc une publication facturée. Mieux vaut préparer une actualité
-entière et l'enregistrer une fois, plutôt que d'enregistrer à chaque
-paragraphe.
+Déposez les fichiers sur une branche autre que `main` : Cloudflare construit
+un aperçu à une adresse temporaire, sans toucher au site public. La fusion
+dans `main` publie pour de bon.
 
 ---
 

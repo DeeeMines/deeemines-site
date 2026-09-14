@@ -25,10 +25,6 @@
       "nom": "PC'up, ESPCI Paris"
     },
     {
-      "image": "/assets/pepite-france.png",
-      "nom": "Pépite France"
-    },
-    {
       "image": "/assets/ecosystem.png",
       "nom": "ecosystem"
     },
@@ -38,11 +34,7 @@
     },
     {
       "image": "/assets/amg-antimony.png",
-      "nom": "AMG Antimony"
-    },
-    {
-      "image": "/assets/campine.png",
-      "nom": "Campine"
+      "nom": "AMG Antimony SICA"
     }
   ]
 }

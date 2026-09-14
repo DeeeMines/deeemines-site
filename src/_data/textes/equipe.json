@@ -1,0 +1,40 @@
+{
+  "en": {
+    "cofondateurs": {
+      "surtitre": "Founders"
+    },
+    "divers": {
+      "lien": "Write to us <span class=\"a\">→</span>",
+      "titre": "Would you like to join us?"
+    },
+    "equipe_scientifique": {
+      "surtitre": "Scientific team",
+      "texte": "\n        The research team also includes <b style=\"font-weight:500;color:var(--text)\">Rachida Benmammar</b>, postdoctoral researcher.\n      ",
+      "titre": "The co-inventors of the patent"
+    },
+    "phead": {
+      "chapo": "\n        DeeeMines was founded by two engineers from Paris Sciences & Lettres university, alongside the three researchers who co-invented the patent at the Institut de Recherche de Chimie Paris.\n      ",
+      "surtitre": "Who we are",
+      "titre": "The team"
+    }
+  },
+  "fr": {
+    "cofondateurs": {
+      "surtitre": "Cofondateurs"
+    },
+    "divers": {
+      "lien": "Écrivez-nous <span class=\"a\">→</span>",
+      "titre": "Vous voulez nous rejoindre ?"
+    },
+    "equipe_scientifique": {
+      "surtitre": "Équipe scientifique",
+      "texte": "\n        L'équipe de recherche est complétée par <b style=\"font-weight:500;color:var(--text)\">Rachida Benmammar</b>, post-doctorante.\n      ",
+      "titre": "Les co‑inventeurs du brevet"
+    },
+    "phead": {
+      "chapo": "\n        DeeeMines est fondée par deux ingénieurs issus de l'université Paris Sciences &amp; Lettres,\n        entourés des trois chercheurs co‑inventeurs du brevet, à l'Institut de Recherche de Chimie\n        Paris.\n      ",
+      "surtitre": "Qui nous sommes",
+      "titre": "L'équipe"
+    }
+  }
+}

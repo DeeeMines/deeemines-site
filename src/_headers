@@ -1,0 +1,6 @@
+# En-têtes HTTP, lus par Cloudflare Pages dans le site publié.
+# Remplace ce que netlify.toml faisait auparavant.
+
+/admin/*
+  X-Robots-Tag: noindex
+  Cache-Control: no-cache, max-age=0, must-revalidate

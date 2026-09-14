@@ -4,9 +4,124 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
-    <title>DeeeMines — administration du site</title>
+    <title>DeeeMines · administration du site</title>
   </head>
   <body>
-    <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+    <!-- La version est fixée : une mise à jour du logiciel d'administration ne peut
+         donc pas casser cette page du jour au lendemain. Pour en changer, remplacer
+         le numéro ci-dessous après avoir vérifié que tout fonctionne encore. -->
+    <script src="https://unpkg.com/@sveltia/cms@0.211.2/dist/sveltia-cms.js"></script>
+    <script>
+      /* ═══════════ L'aperçu montre le vrai site ═══════════
+
+         Plutôt que de redessiner le site dans le volet de droite, ce qui
+         obligerait à maintenir deux versions de chaque page, on y affiche la
+         page elle-même dans un cadre. À chaque frappe, les textes du
+         formulaire lui sont envoyés, et la page remplace les siens : ce que
+         l'on voit est donc exactement ce que verront les visiteurs.
+
+         Chaque élément du site porte une étiquette « data-champ » qui dit quel
+         texte il affiche. C'est par elle que le cadre retrouve quoi remplacer. */
+
+      const CHEMINS = {
+        "accueil": {
+                "fr": "/",
+                "en": "/en/"
+        },
+        "procede": {
+                "fr": "/notre-technologie/",
+                "en": "/en/our-technology/"
+        },
+        "antimoine": {
+                "fr": "/l-antimoine/",
+                "en": "/en/antimony/"
+        },
+        "equipe": {
+                "fr": "/equipe/",
+                "en": "/en/team/"
+        },
+        "actualites": {
+                "fr": "/actualites/",
+                "en": "/en/news/"
+        },
+        "mentions": {
+                "fr": "/mentions-legales/",
+                "en": "/en/legal-notice/"
+        },
+        "confidentialite": {
+                "fr": "/confidentialite/",
+                "en": "/en/privacy/"
+        },
+        "article": {
+                "fr": "/actualites/prix-i-phd-morvan-gaudin/",
+                "en": "/en/news/prix-i-phd-morvan-gaudin/"
+        },
+        "communs": {
+                "fr": "/",
+                "en": "/en/"
+        }
+      };
+
+      /* Met la page, la section et le rôle bout à bout : c'est la forme que
+         porte l'étiquette data-champ dans les gabarits. */
+      function aplatit(page, donnees) {
+        const out = {};
+        Object.entries(donnees || {}).forEach(([section, champs]) => {
+          if (!champs || typeof champs !== 'object') return;
+          Object.entries(champs).forEach(([role, valeur]) => {
+            if (typeof valeur === 'string') out[page + '.' + section + '.' + role] = valeur;
+          });
+        });
+        return out;
+      }
+
+      function cadreDe(page) {
+        return createClass({
+          composeEtEnvoie() {
+            const cadre = this.cadre;
+            if (!cadre || !cadre.contentWindow) return;
+            let donnees = {};
+            try {
+              const e = this.props.entry;
+              donnees = (e && e.get('data') && e.get('data').toJS) ? e.get('data').toJS() : {};
+            } catch (err) { return; }
+            const langue = (this.props.locale === 'en') ? 'en' : 'fr';
+            const branche = donnees[langue] || donnees.fr || donnees;
+            cadre.contentWindow.postMessage(
+              { type: 'deeemines-apercu', textes: aplatit(page, branche) }, location.origin);
+          },
+          componentDidMount() { this.minuteur = setInterval(() => this.composeEtEnvoie(), 400); },
+          componentWillUnmount() { clearInterval(this.minuteur); },
+          render() {
+            const langue = (this.props.locale === 'en') ? 'en' : 'fr';
+            const base = (CHEMINS[page] || CHEMINS.accueil)[langue];
+            return h('iframe', {
+              ref: (el) => { this.cadre = el; },
+              src: base + '?apercu=1',
+              style: { width: '100%', height: '100%', border: '0', display: 'block' },
+              title: 'Aperçu du site',
+            });
+          },
+        });
+      }
+
+      /* Le logiciel d'administration se charge depuis un autre serveur : on
+         attend qu'il soit prêt plutôt que de supposer qu'il l'est déjà. Si
+         jamais il ne venait pas, la page reste utilisable, simplement sans le
+         volet d'aperçu. */
+      (function attends(reste) {
+        if (typeof CMS === 'undefined' || typeof createClass === 'undefined') {
+          if (reste > 0) return setTimeout(function () { attends(reste - 1); }, 150);
+          return console.warn("Aperçu indisponible : l'administration n'a pas pu être chargée.");
+        }
+        try {
+          Object.keys(CHEMINS).forEach(function (page) {
+            CMS.registerPreviewTemplate(page, cadreDe(page));
+          });
+        } catch (e) {
+          console.warn("Aperçu indisponible :", e && e.message);
+        }
+      })(80);
+    </script>
   </body>
 </html>

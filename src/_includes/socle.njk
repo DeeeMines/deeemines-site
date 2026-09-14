@@ -1,0 +1,14 @@
+{% include "tete.njk" %}
+<body>
+
+{% include "entete.njk" %}
+
+{{ content | safe }}
+
+{% include "pied.njk" %}
+
+{% include "js-commun.njk" %}
+{% include "js-accueil.njk" %}
+{% include "js-apercu.njk" %}
+</body>
+</html>

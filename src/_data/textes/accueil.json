@@ -1,0 +1,208 @@
+{
+  "en": {
+    "band": {
+      "surtitre": "They support us and work with us"
+    },
+    "cgrid": {
+      "bouton": "Send <span class=\"a\">→</span>",
+      "chapo": "\n        Sorting centres, producer responsibility organisations, manufacturers, laboratories, investors: tell us what brings you here and we will reply within a few days.\n      ",
+      "choix": "Sorting centre, recycler or producer responsibility organisation",
+      "choix2": "Manufacturer using antimony",
+      "choix3": "Laboratory or research partner",
+      "choix4": "Public body or public funder",
+      "choix5": "Investor",
+      "choix6": "Press",
+      "choix7": "Job application",
+      "choix8": "Other",
+      "intitule": "Name",
+      "intitule2": "Email",
+      "intitule3": "You are",
+      "intitule4": "Message",
+      "libelle": "Write to us",
+      "libelle2": "Address",
+      "libelle3": "Follow us",
+      "surtitre": "Contact",
+      "texte": "The message could not be sent. Please write to us directly at kristell.riounivert@deeemines.com",
+      "titre": "A waste stream,<br>a need,<br>a question"
+    },
+    "concours_et_distinctions": {
+      "surtitre": "Awards and distinctions"
+    },
+    "dist": {
+      "soustitre": "Winner of the i-PhD award",
+      "soustitre2": "RISE programme, 2026 summer cohort",
+      "texte": "Morvan Gaudin, recognised by Bpifrance for the thesis behind the process.",
+      "texte2": "Twelve projects from CNRS laboratories selected by CNRS Innovation."
+    },
+    "figs": {
+      "chiffre": "100&#8239;%",
+      "chiffre2": "3",
+      "chiffre3": "&#215;6",
+      "chiffre4": "0",
+      "libelle": "Imported",
+      "libelle2": "Producing countries",
+      "libelle3": "The price between 2021 and 2025",
+      "libelle4": "Recycling route for flame-retarded plastics",
+      "texte": "All the antimony used in the European Union comes from outside it.",
+      "texte2": "China, Russia and Tajikistan account for most of world production.",
+      "texte3": "Lasting pressure on a metal the European Union lists as critical.",
+      "texte4": "Antimony from batteries is already recycled. Antimony from plastics is incinerated."
+    },
+    "flow": {
+      "soustitre": "Shredding",
+      "soustitre2": "Dissolution",
+      "soustitre3": "Selective extraction",
+      "soustitre4": "Precipitation",
+      "texte": "01",
+      "texte2": "Brominated, antimony-bearing plastics from electronic equipment are reduced to a uniform fraction.",
+      "texte3": "02",
+      "texte4": "The polymer is dissolved, which opens access to the additives trapped in the matrix.",
+      "texte5": "03",
+      "texte6": "Antimony is extracted first, then the brominated molecules. Each family is isolated in its own phase.",
+      "texte7": "04",
+      "texte8": "The cleaned polymer is recovered as a solid, and the solvents go back into the next cycle."
+    },
+    "le_probleme": {
+      "surtitre": "The problem",
+      "texte": "This critical metal goes into batteries, cables, touchscreens, solar panels and ammunition.",
+      "texte2": "At end of life, with no recycling route, these products go to the incinerator along with the antimony they contain.",
+      "titre": "Europe burns a strategic resource it needs<br><span style=\"color:var(--azure)\">DeeeMines recovers it</span>"
+    },
+    "notre_solution": {
+      "chapo": "\n        We take from sorting centres the antimony-bearing fraction they incinerate for lack of any way to recover it, and we extract three resources from it.\n      ",
+      "surtitre": "Our solution",
+      "titre": "We bring three raw materials back to life, out of waste"
+    },
+    "notre_technologie": {
+      "surtitre": "Our technology",
+      "texte": "The process was developed at the Institut de Recherche de Chimie Paris, with the three researchers who co-invented it.",
+      "texte2": "No other technology can recover the antimony contained in plastics today.",
+      "texte3": "<b>98&#8239;%</b><span>antimony extraction yield in the laboratory</span>",
+      "texte4": "<b>Mild conditions</b><span>room temperature and atmospheric pressure</span>",
+      "texte5": "<b>Closed loop</b><span>the solvents are regenerated and reused</span>",
+      "texte6": "<b>Patented process</b><span>published in 2025, from four years of doctoral research</span>",
+      "texte7": "\n      <a href=\"#procede\" data-go=\"procede\" class=\"btn btn-mint btn-fiole\">\n        <svg class=\"fiole\" viewBox=\"0 0 26 30\" fill=\"none\" aria-hidden=\"true\">\n          <path class=\"verre\" d=\"M10 2v8.4L3.4 24.2A2.6 2.6 0 0 0 5.8 28h14.4a2.6 2.6 0 0 0 2.4-3.8L16 10.4V2\"\n                stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linejoin=\"round\"/>\n          <path d=\"M8.4 2h9.2\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\"/>\n          <path class=\"jus\" d=\"M6.4 20h13.2l2.6 4.2A2.6 2.6 0 0 1 19.8 28H6.2a2.6 2.6 0 0 1-2.4-3.8z\"\n                fill=\"currentColor\" opacity=\".85\"/>\n          <circle class=\"b1\" cx=\"10.5\" cy=\"19\" r=\"1.5\" fill=\"currentColor\"/>\n          <circle class=\"b2\" cx=\"15\" cy=\"17\" r=\"1.1\" fill=\"currentColor\"/>\n          <circle class=\"b3\" cx=\"12.6\" cy=\"15\" r=\".9\" fill=\"currentColor\"/>\n        </svg>\n        Our technology in detail <span class=\"a\">&#8594;</span></a>\n    ",
+      "titre": "Separate,<br>without destroying"
+    },
+    "row": {
+      "exposant": "51",
+      "exposant2": "35",
+      "exposant3": "ABS · HIPS",
+      "legende": "n",
+      "nom": "Antimony",
+      "nom2": "Bromine",
+      "nom3": "Polymer",
+      "symbole": "Sb",
+      "symbole2": "Br"
+    },
+    "sent": {
+      "lien": "Or write to us directly",
+      "soustitre": "Message sent.",
+      "texte": "✓",
+      "texte2": "Thank you. We will get back to you within a few days."
+    }
+  },
+  "fr": {
+    "band": {
+      "surtitre": "Ils nous soutiennent et travaillent avec nous"
+    },
+    "cgrid": {
+      "bouton": "Envoyer <span class=\"a\">→</span>",
+      "chapo": "\n        Centres de tri, éco-organismes, industriels, laboratoires, investisseurs :\n        dites-nous d'où vous venez, nous répondons sous quelques jours.\n      ",
+      "choix": "Centre de tri, recycleur ou éco-organisme",
+      "choix2": "Industriel utilisateur d'antimoine",
+      "choix3": "Laboratoire ou partenaire de recherche",
+      "choix4": "Institution ou financeur public",
+      "choix5": "Investisseur",
+      "choix6": "Presse",
+      "choix7": "Candidature",
+      "choix8": "Autre",
+      "intitule": "Nom",
+      "intitule2": "E-mail",
+      "intitule3": "Vous êtes",
+      "intitule4": "Message",
+      "libelle": "Écrire",
+      "libelle2": "Adresse",
+      "libelle3": "Suivre",
+      "surtitre": "Contact",
+      "texte": "L'envoi n'a pas abouti. Écrivez-nous directement à kristell.riounivert@deeemines.com",
+      "titre": "Un gisement,<br>un besoin,<br>une question"
+    },
+    "concours_et_distinctions": {
+      "surtitre": "Concours et distinctions"
+    },
+    "dist": {
+      "soustitre": "Lauréat du prix i-PhD",
+      "soustitre2": "Programme RISE, promotion d'été 2026",
+      "texte": "Morvan Gaudin, distingué par Bpifrance pour la thèse à l'origine du procédé.",
+      "texte2": "Douze projets issus des laboratoires du CNRS retenus par CNRS Innovation."
+    },
+    "figs": {
+      "chiffre": "100&#8239;%",
+      "chiffre2": "3",
+      "chiffre3": "&#215;6",
+      "chiffre4": "0",
+      "libelle": "Importé",
+      "libelle2": "Pays producteurs",
+      "libelle3": "Le prix entre 2021 et 2025",
+      "libelle4": "Voie de recyclage pour les plastiques ignifugés",
+      "texte": "La totalité de l'antimoine consommé dans l'Union européenne vient de l'extérieur.",
+      "texte2": "La Chine, la Russie et le Tadjikistan concentrent l'essentiel de la production mondiale.",
+      "texte3": "Une tension durable sur un métal que l'Union européenne classe comme critique.",
+      "texte4": "Celui des batteries se recycle déjà. Celui des plastiques part en incinération."
+    },
+    "flow": {
+      "soustitre": "Broyage",
+      "soustitre2": "Mise en solution",
+      "soustitre3": "Extraction sélective",
+      "soustitre4": "Insolubilisation",
+      "texte": "01",
+      "texte2": "Les plastiques bromés et antimoniés issus des équipements électroniques sont réduits en une fraction homogène.",
+      "texte3": "02",
+      "texte4": "Le polymère est mis en solution, ce qui libère l'accès aux additifs prisonniers de la matrice.",
+      "texte5": "03",
+      "texte6": "L'antimoine est extrait, puis les molécules bromées. Chaque famille est isolée dans sa propre phase.",
+      "texte7": "04",
+      "texte8": "Le polymère dépollué est récupéré solide, et les solvants repartent dans le cycle suivant."
+    },
+    "le_probleme": {
+      "surtitre": "Le problème",
+      "texte": "Ce métal critique entre dans la fabrication des batteries, des câbles, des écrans tactiles, des panneaux solaires et des munitions.",
+      "texte2": "En fin de vie, faute de solution de recyclage, ces produits partent à l'incinérateur avec l'antimoine qu'ils contiennent.",
+      "titre": "L'Europe incinère une ressource stratégique dont elle a besoin.<br><span style=\"color:var(--azure)\">DeeeMines la récupère</span>"
+    },
+    "notre_solution": {
+      "chapo": "\n        Nous reprenons aux centres de tri la fraction contenant de l'antimoine qu'ils incinèrent\n        faute de pouvoir la revaloriser, et nous en extrayons trois ressources.\n      ",
+      "surtitre": "Notre solution",
+      "titre": "Nous redonnons vie à trois matières premières à partir de déchets"
+    },
+    "notre_technologie": {
+      "surtitre": "Notre technologie",
+      "texte": "Le procédé a été mis au point à l'Institut de Recherche de Chimie Paris, avec les trois chercheurs qui en sont les co‑inventeurs.",
+      "texte2": "Aucune autre technologie ne sait aujourd'hui récupérer l'antimoine contenu dans les plastiques.",
+      "texte3": "<b>98&#8239;%</b><span>de rendement d'extraction de l'antimoine en laboratoire</span>",
+      "texte4": "<b>Conditions douces</b><span>température ambiante et pression atmosphérique</span>",
+      "texte5": "<b>Boucle fermée</b><span>les solvants sont régénérés et réutilisés</span>",
+      "texte6": "<b>Procédé breveté</b><span>publié en 2025, issu de quatre ans de thèse</span>",
+      "texte7": "\n      <a href=\"#procede\" data-go=\"procede\" class=\"btn btn-mint btn-fiole\">\n        <svg class=\"fiole\" viewBox=\"0 0 26 30\" fill=\"none\" aria-hidden=\"true\">\n          <path class=\"verre\" d=\"M10 2v8.4L3.4 24.2A2.6 2.6 0 0 0 5.8 28h14.4a2.6 2.6 0 0 0 2.4-3.8L16 10.4V2\"\n                stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linejoin=\"round\"/>\n          <path d=\"M8.4 2h9.2\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\"/>\n          <path class=\"jus\" d=\"M6.4 20h13.2l2.6 4.2A2.6 2.6 0 0 1 19.8 28H6.2a2.6 2.6 0 0 1-2.4-3.8z\"\n                fill=\"currentColor\" opacity=\".85\"/>\n          <circle class=\"b1\" cx=\"10.5\" cy=\"19\" r=\"1.5\" fill=\"currentColor\"/>\n          <circle class=\"b2\" cx=\"15\" cy=\"17\" r=\"1.1\" fill=\"currentColor\"/>\n          <circle class=\"b3\" cx=\"12.6\" cy=\"15\" r=\".9\" fill=\"currentColor\"/>\n        </svg>\n        Notre technologie en détail <span class=\"a\">&#8594;</span></a>\n    ",
+      "titre": "Séparer,<br>sans détruire"
+    },
+    "row": {
+      "exposant": "51",
+      "exposant2": "35",
+      "exposant3": "ABS · HIPS",
+      "legende": "n",
+      "nom": "Antimoine",
+      "nom2": "Brome",
+      "nom3": "Polymère",
+      "symbole": "Sb",
+      "symbole2": "Br"
+    },
+    "sent": {
+      "lien": "Ou écrivez-nous directement",
+      "soustitre": "Message envoyé.",
+      "texte": "✓",
+      "texte2": "Merci, nous revenons vers vous sous quelques jours."
+    }
+  }
+}

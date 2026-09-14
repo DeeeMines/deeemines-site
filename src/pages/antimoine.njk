@@ -1,0 +1,137 @@
+---
+layout: socle.njk
+page_cle: antimoine
+pagination:
+  data: langues
+  size: 1
+  alias: langue
+permalink: "{{ adresses['antimoine'][langue] }}index.html"
+---
+<main>
+  <div class="phead">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--mint);text-transform:none;letter-spacing:.13em" data-champ="antimoine.phead.surtitre">{{ t.antimoine.phead.surtitre | safe }}</div>
+      <h1 data-champ="antimoine.phead.titre">{{ t.antimoine.phead.titre | safe }}</h1>
+      <p class="lead" data-champ="antimoine.phead.chapo">{{ t.antimoine.phead.chapo | safe }}</p>
+    </div>
+  </div>
+  <hr class="grad-rule">
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow" data-champ="antimoine.ses_usages.surtitre">{{ t.antimoine.ses_usages.surtitre | safe }}</div>
+      <div class="stmt">
+        <h2 data-champ="antimoine.ses_usages.titre">{{ t.antimoine.ses_usages.titre | safe }}</h2>
+        <p class="lead" data-champ="antimoine.ses_usages.chapo">{{ t.antimoine.ses_usages.chapo | safe }}</p>
+      </div>
+      <div class="bulles">
+        <div class="bul" style="--c:var(--blue)">
+          <div class="rond"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="13" width="46" height="34" rx="4"/><path d="M25 47v5h14v-5"/><path d="M18 52h28"/></svg></div>
+          <div class="nom" data-champ="antimoine.ses_usages.nom">{{ t.antimoine.ses_usages.nom | safe }}</div>
+          <p class="det" data-champ="antimoine.ses_usages.detail">{{ t.antimoine.ses_usages.detail | safe }}</p>
+        </div>
+        <div class="bul" style="--c:var(--azure)">
+          <div class="rond"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="20" width="40" height="24" rx="4"/><path d="M50 28h5v8h-5"/><path d="M19 32h12M25 26v12"/></svg></div>
+          <div class="nom" data-champ="antimoine.ses_usages.nom2">{{ t.antimoine.ses_usages.nom2 | safe }}</div>
+          <p class="det" data-champ="antimoine.ses_usages.detail2">{{ t.antimoine.ses_usages.detail2 | safe }}</p>
+        </div>
+        <div class="bul" style="--c:var(--cyan-d)">
+          <div class="rond"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10M32 12v10"/><rect x="13" y="22" width="26" height="14" rx="4"/><path d="M26 36v6c0 8 8 8 16 8s8 0 8 0"/><path d="M50 44a6 6 0 0 1 0 12 6 6 0 0 1 0-12z"/></svg></div>
+          <div class="nom" data-champ="antimoine.ses_usages.nom3">{{ t.antimoine.ses_usages.nom3 | safe }}</div>
+          <p class="det" data-champ="antimoine.ses_usages.detail3">{{ t.antimoine.ses_usages.detail3 | safe }}</p>
+        </div>
+        <div class="bul" style="--c:var(--mint-d)">
+          <div class="rond"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="12" width="48" height="30" rx="3"/><path d="M8 22h48M8 32h48M24 12v30M40 12v30"/><path d="M32 42v10M22 52h20"/></svg></div>
+          <div class="nom" data-champ="antimoine.ses_usages.nom4">{{ t.antimoine.ses_usages.nom4 | safe }}</div>
+          <p class="det" data-champ="antimoine.ses_usages.detail4">{{ t.antimoine.ses_usages.detail4 | safe }}</p>
+        </div>
+        <div class="bul" style="--c:var(--blue)">
+          <div class="rond"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18c8-6 16 6 24 0s16-6 24 0"/><path d="M8 18v28c8-6 16 6 24 0s16-6 24 0V18"/><path d="M8 32c8-6 16 6 24 0s16-6 24 0"/></svg></div>
+          <div class="nom" data-champ="antimoine.ses_usages.nom5">{{ t.antimoine.ses_usages.nom5 | safe }}</div>
+          <p class="det" data-champ="antimoine.ses_usages.detail5">{{ t.antimoine.ses_usages.detail5 | safe }}</p>
+        </div>
+        <div class="bul" style="--c:var(--azure)">
+          <div class="rond"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 8l20 8v14c0 14-9 22-20 26-11-4-20-12-20-26V16z"/></svg></div>
+          <div class="nom" data-champ="antimoine.ses_usages.nom6">{{ t.antimoine.ses_usages.nom6 | safe }}</div>
+          <p class="det" data-champ="antimoine.ses_usages.detail6">{{ t.antimoine.ses_usages.detail6 | safe }}</p>
+        </div>
+        <div class="bul" style="--c:var(--cyan-d)">
+          <div class="rond"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="12" width="40" height="40" rx="4"/><path d="M20 44 44 20"/><path d="M32 44l12-12"/></svg></div>
+          <div class="nom" data-champ="antimoine.ses_usages.nom7">{{ t.antimoine.ses_usages.nom7 | safe }}</div>
+          <p class="det" data-champ="antimoine.ses_usages.detail7">{{ t.antimoine.ses_usages.detail7 | safe }}</p>
+        </div>
+        <div class="bul" style="--c:var(--mint-d)">
+          <div class="rond"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="32" height="32" rx="4"/><rect x="26" y="26" width="12" height="12" rx="2"/><path d="M26 8v8M38 8v8M26 48v8M38 48v8M8 26h8M8 38h8M48 26h8M48 38h8"/></svg></div>
+          <div class="nom" data-champ="antimoine.ses_usages.nom8">{{ t.antimoine.ses_usages.nom8 | safe }}</div>
+          <p class="det" data-champ="antimoine.ses_usages.detail8">{{ t.antimoine.ses_usages.detail8 | safe }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="wrap">
+      <div class="eyebrow" data-champ="antimoine.criticite.surtitre">{{ t.antimoine.criticite.surtitre | safe }}</div>
+      <div class="stmt">
+        <h2 style="color:#fff" data-champ="antimoine.criticite.titre">{{ t.antimoine.criticite.titre | safe }}</h2>
+        <div class="lead">
+          <p data-champ="antimoine.criticite.texte">{{ t.antimoine.criticite.texte | safe }}</p>
+          <p data-champ="antimoine.criticite.texte2">{{ t.antimoine.criticite.texte2 | safe }}</p>
+        </div>
+      </div>
+      <div class="uses">
+        <div class="use" style="--c:var(--mint-d)">
+          <h3 data-champ="antimoine.uses.soustitre">{{ t.antimoine.uses.soustitre | safe }}</h3>
+          <p data-champ="antimoine.uses.texte">{{ t.antimoine.uses.texte | safe }}</p>
+        </div>
+        <div class="use" style="--c:var(--cyan-d)">
+          <h3 data-champ="antimoine.uses.soustitre2">{{ t.antimoine.uses.soustitre2 | safe }}</h3>
+          <p data-champ="antimoine.uses.texte2">{{ t.antimoine.uses.texte2 | safe }}</p>
+        </div>
+        <div class="use" style="--c:var(--azure)">
+          <h3 data-champ="antimoine.uses.soustitre3">{{ t.antimoine.uses.soustitre3 | safe }}</h3>
+          <p data-champ="antimoine.uses.texte3">{{ t.antimoine.uses.texte3 | safe }}</p>
+        </div>
+      </div>
+      <p class="lead" style="margin-top:clamp(26px,3vw,42px);max-width:none" data-champ="antimoine.criticite.chapo">{{ t.antimoine.criticite.chapo | safe }}</p>
+    </div>
+  </section>
+
+  <section class="tint">
+    <div class="wrap">
+      <div class="eyebrow" data-champ="antimoine.en_synthese.surtitre">{{ t.antimoine.en_synthese.surtitre | safe }}</div>
+      <div class="stmt">
+        <h2 data-champ="antimoine.en_synthese.titre">{{ t.antimoine.en_synthese.titre | safe }}</h2>
+        <p class="lead" data-champ="antimoine.en_synthese.chapo">{{ t.antimoine.en_synthese.chapo | safe }}</p>
+      </div>
+      <div class="steps-n">
+        <div class="sn"><div class="i" data-champ="antimoine.en_synthese.texte">{{ t.antimoine.en_synthese.texte | safe }}</div><div>
+          <h3 data-champ="antimoine.en_synthese.soustitre">{{ t.antimoine.en_synthese.soustitre | safe }}</h3>
+          <p data-champ="antimoine.en_synthese.texte2">{{ t.antimoine.en_synthese.texte2 | safe }}</p>
+        </div></div>
+        <div class="sn"><div class="i" data-champ="antimoine.en_synthese.texte3">{{ t.antimoine.en_synthese.texte3 | safe }}</div><div>
+          <h3 data-champ="antimoine.en_synthese.soustitre2">{{ t.antimoine.en_synthese.soustitre2 | safe }}</h3>
+          <p data-champ="antimoine.en_synthese.texte4">{{ t.antimoine.en_synthese.texte4 | safe }}</p>
+        </div></div>
+        <div class="sn"><div class="i" data-champ="antimoine.en_synthese.texte5">{{ t.antimoine.en_synthese.texte5 | safe }}</div><div>
+          <h3 data-champ="antimoine.en_synthese.soustitre3">{{ t.antimoine.en_synthese.soustitre3 | safe }}</h3>
+          <p data-champ="antimoine.en_synthese.texte6">{{ t.antimoine.en_synthese.texte6 | safe }}</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" style="padding:clamp(42px,4.4vw,64px) 0">
+    <div class="wrap concl">
+      <div>
+        <h2 style="color:#fff;font-size:clamp(25px,3vw,38px);max-width:26ch" data-champ="antimoine.divers.titre">{{ t.antimoine.divers.titre | safe }}</h2>
+        <div class="lead" style="margin-top:20px;max-width:66ch">
+          <p data-champ="antimoine.divers.texte">{{ t.antimoine.divers.texte | safe }}</p>
+          <p data-champ="antimoine.divers.texte2">{{ t.antimoine.divers.texte2 | safe }}</p>
+          <p data-champ="antimoine.divers.texte3">{{ t.antimoine.divers.texte3 | safe }}</p>
+        </div>
+      </div>
+      <a href="#technologie" data-go="home" class="btn btn-mint" data-champ="antimoine.divers.lien">{{ t.antimoine.divers.lien | safe }}</a>
+    </div>
+  </section>
+</main>

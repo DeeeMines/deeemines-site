@@ -1,0 +1,20 @@
+{
+  "en": {
+    "divers": {
+      "lien": "Write to us <span class=\"a\">&#8594;</span>",
+      "titre": "A waste stream, a need, a question?"
+    },
+    "phead": {
+      "lien": "&#8592; <span>All news</span>"
+    }
+  },
+  "fr": {
+    "divers": {
+      "lien": "Écrivez-nous <span class=\"a\">&#8594;</span>",
+      "titre": "Un gisement, un besoin, une question ?"
+    },
+    "phead": {
+      "lien": "&#8592; <span>Toutes les actualités</span>"
+    }
+  }
+}

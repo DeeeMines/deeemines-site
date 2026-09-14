@@ -1,0 +1,48 @@
+{#- Ce script ne sert qu'à l'aperçu de l'administration. Il ne s'active que si
+    la page est appelée avec ?apercu=1, et n'accepte que les messages venant du
+    même site : un autre site ne peut donc rien lui faire afficher. -#}
+<script>
+(function(){
+  if (new URLSearchParams(location.search).get('apercu') !== '1') return;
+
+  var precedent = {};
+  var style = document.createElement('style');
+  style.textContent =
+    '.apercu-vise{outline:2px solid #52FCC3;outline-offset:4px;border-radius:3px;' +
+    'transition:outline-color .8s ease}' +
+    '.apercu-eteint{outline-color:transparent}';
+  document.head.appendChild(style);
+
+  function vise(el){
+    document.querySelectorAll('.apercu-vise').forEach(function(e){
+      e.classList.remove('apercu-vise','apercu-eteint');
+    });
+    el.classList.add('apercu-vise');
+    el.scrollIntoView({behavior:'smooth', block:'center'});
+    setTimeout(function(){ el.classList.add('apercu-eteint'); }, 1400);
+  }
+
+  window.addEventListener('message', function(e){
+    if (e.origin !== location.origin) return;
+    var m = e.data;
+    if (!m || m.type !== 'deeemines-apercu' || !m.textes) return;
+    var change = null;
+    Object.keys(m.textes).forEach(function(cle){
+      var valeur = m.textes[cle];
+      if (precedent[cle] === valeur) return;
+      var neuf = (precedent[cle] !== undefined);
+      precedent[cle] = valeur;
+      document.querySelectorAll('[data-champ="' + cle + '"]').forEach(function(el){
+        el.innerHTML = valeur;
+        if (neuf && !change) change = el;
+      });
+    });
+    if (change) vise(change);
+  });
+
+  /* On signale à l'administration que le cadre est prêt à recevoir. */
+  if (window.parent !== window) {
+    window.parent.postMessage({type:'deeemines-apercu-pret'}, location.origin);
+  }
+})();
+</script>

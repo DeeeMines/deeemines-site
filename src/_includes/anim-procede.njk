@@ -10,7 +10,7 @@
 
   <!-- ───────────── la scène ───────────── -->
   <div class="scene" role="img"
-       aria-label="Schéma animé : des plastiques ignifugés issus de déchets électroniques, de bâches et de câbles passent dans un broyeur, tombent dans un réacteur agité contenant deux phases liquides, et il en sort de l'antimoine, des composés bromés et du polymère purifié ; les solvants sont régénérés et repartent dans le réacteur.">
+       aria-label="{{ t.communs.alt.schema }}">
     <svg viewBox="0 0 578 664" preserveAspectRatio="xMidYMid meet">
       <defs>
         <linearGradient id="sgOrg" x1="0" y1="0" x2="0" y2="1">
@@ -32,8 +32,8 @@
       </defs>
 
       <!-- ── ce qui entre ── -->
-      <text class="lbl fort" x="286" y="40">Plastiques ignifugés</text>
-      <text class="sous" x="286" y="62">déchets électroniques, bâches, câbles, etc.</text>
+      <text class="lbl fort" x="286" y="40" data-champ="procede.schema.legende">{{ t.procede.schema.legende | safe }}</text>
+      <text class="sous" x="286" y="62" data-champ="procede.schema.legende2">{{ t.procede.schema.legende2 | safe }}</text>
       <g class="gros">
         <rect class="gr g1" width="46" height="30" rx="5"/>
         <rect class="gr g2" width="34" height="38" rx="5"/>
@@ -110,27 +110,27 @@
       <!-- ── la boucle des solvants ── -->
       <path class="boucle" marker-end="url(#sgFleche)"
             d="M300 538 L300 592 Q300 602 290 602 L140 602 Q130 602 130 592 L130 542"/>
-      <text class="lbl mint" x="215" y="638">Solvants régénérés, en boucle fermée</text>
+      <text class="lbl mint" x="215" y="638" data-champ="procede.schema.legende3">{{ t.procede.schema.legende3 | safe }}</text>
 
       <!-- ── les trois sorties, prises dans les phases ── -->
       <g class="sorties">
         <g class="so so1">
           <line class="fil" x1="326" y1="352" x2="372" y2="352"/>
           <rect class="pastille" x="372" y="331" width="42" height="42" rx="11"/>
-          <text class="sym" x="393" y="359">Sb</text>
-          <text class="nom" x="424" y="358">Antimoine</text>
+          <text class="sym" x="393" y="359" data-champ="procede.schema.symbole">{{ t.procede.schema.symbole | safe }}</text>
+          <text class="nom" x="424" y="358" data-champ="procede.schema.nom">{{ t.procede.schema.nom | safe }}</text>
         </g>
         <g class="so so2">
           <line class="fil" x1="326" y1="428" x2="372" y2="428"/>
           <rect class="pastille" x="372" y="407" width="42" height="42" rx="11"/>
-          <text class="sym" x="393" y="435">Br</text>
-          <text class="nom" x="424" y="434">Composés bromés</text>
+          <text class="sym" x="393" y="435" data-champ="procede.schema.symbole2">{{ t.procede.schema.symbole2 | safe }}</text>
+          <text class="nom" x="424" y="434" data-champ="procede.schema.nom2">{{ t.procede.schema.nom2 | safe }}</text>
         </g>
         <g class="so so3">
           <line class="fil" x1="326" y1="504" x2="372" y2="504"/>
           <rect class="pastille" x="372" y="483" width="42" height="42" rx="11"/>
-          <text class="sym petit" x="393" y="511">Cn</text>
-          <text class="nom" x="424" y="510">Polymère purifié</text>
+          <text class="sym petit" x="390" y="511" data-champ="procede.schema.symbole3">{{ t.procede.schema.symbole3 | safe }}</text>
+          <text class="nom" x="424" y="510" data-champ="procede.schema.nom3">{{ t.procede.schema.nom3 | safe }}</text>
         </g>
       </g>
     </svg>
@@ -157,32 +157,20 @@
     </svg>
 
     <div class="et" style="--c:var(--blue)">
-      <h3><span class="pt"></span>Broyage</h3>
-      <div data-l="fr"><p>Le gisement arrive en pièces de toutes tailles. Le broyage donne une
-        fraction homogène, condition d'un rendement stable.</p></div>
-      <div data-l="en" hidden><p>The waste arrives in pieces of every size. Shredding gives an
-        even fraction, the condition for a stable yield.</p></div>
+      <h3 data-champ="procede.schema.soustitre">{{ t.procede.schema.soustitre | safe }}</h3>
+      <div data-l="fr" data-champ="procede.schema.bloc">{{ t.procede.schema.bloc | safe }}</div>
     </div>
     <div class="et" style="--c:var(--azure)">
-      <h3><span class="pt"></span>Solvatation</h3>
-      <div data-l="fr"><p>Le solvant organique met le polymère en solution. Les additifs,
-        jusque-là prisonniers de la matrice, deviennent accessibles.</p></div>
-      <div data-l="en" hidden><p>The organic solvent dissolves the polymer. The additives,
-        until then trapped in the matrix, become reachable.</p></div>
+      <h3 data-champ="procede.schema.soustitre2">{{ t.procede.schema.soustitre2 | safe }}</h3>
+      <div data-l="fr" data-champ="procede.schema.bloc2">{{ t.procede.schema.bloc2 | safe }}</div>
     </div>
     <div class="et" style="--c:var(--cyan)">
-      <h3><span class="pt"></span>Extraction sélective</h3>
-      <div data-l="fr"><p>La solution aqueuse complexante capte l'oxyde d'antimoine. Le
-        tétrabromobisphénol A est extrait ensuite, au non-solvant.</p></div>
-      <div data-l="en" hidden><p>The complexing water solution captures the antimony oxide.
-        Tetrabromobisphenol A is then extracted with a non-solvent.</p></div>
+      <h3 data-champ="procede.schema.soustitre3">{{ t.procede.schema.soustitre3 | safe }}</h3>
+      <div data-l="fr" data-champ="procede.schema.bloc3">{{ t.procede.schema.bloc3 | safe }}</div>
     </div>
     <div class="et" style="--c:var(--mint)">
-      <h3><span class="pt"></span>Insolubilisation</h3>
-      <div data-l="fr"><p>Le polymère dépollué est reprécipité, récupéré solide et séché. Les
-        solvants régénérés repartent dans le cycle suivant.</p></div>
-      <div data-l="en" hidden><p>The cleaned polymer is precipitated out, recovered solid and
-        dried. The regenerated solvents go into the next cycle.</p></div>
+      <h3 data-champ="procede.schema.soustitre4">{{ t.procede.schema.soustitre4 | safe }}</h3>
+      <div data-l="fr" data-champ="procede.schema.bloc4">{{ t.procede.schema.bloc4 | safe }}</div>
     </div>
   </div>
 </div>

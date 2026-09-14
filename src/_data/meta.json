@@ -1,0 +1,62 @@
+{
+  "fr": {
+    "accueil": {
+      "titre": "DeeeMines · L'Europe consomme l'antimoine, elle ne le produit pas",
+      "description": "L'Europe importe la totalité de son antimoine. DeeeMines le produit à partir des plastiques des équipements électroniques, grâce à un procédé breveté."
+    },
+    "technologie": {
+      "titre": "Notre technologie · DeeeMines",
+      "description": "Un procédé breveté récupère l'antimoine, les composés bromés et le polymère des plastiques ignifugés, à température ambiante et en boucle fermée."
+    },
+    "antimoine": {
+      "titre": "L'antimoine · DeeeMines",
+      "description": "Métal critique importé à 100 % par l'Union européenne, l'antimoine est indispensable aux batteries, aux câbles, aux panneaux solaires et à la défense."
+    },
+    "equipe": {
+      "titre": "L'équipe · DeeeMines",
+      "description": "DeeeMines est fondée par deux ingénieurs, entourés des chercheurs co-inventeurs du procédé."
+    },
+    "actualites": {
+      "titre": "Nos actualités · DeeeMines",
+      "description": "Distinctions, colloques, incubation et partenariats : ce qui avance chez DeeeMines."
+    },
+    "mentions": {
+      "titre": "Mentions légales · DeeeMines",
+      "description": "Mentions légales du site DeeeMines."
+    },
+    "confidentialite": {
+      "titre": "Politique de confidentialité · DeeeMines",
+      "description": "Comment DeeeMines traite les données transmises par le formulaire de contact."
+    }
+  },
+  "en": {
+    "accueil": {
+      "titre": "DeeeMines · Europe imports all of its antimony. We produce it here",
+      "description": "Europe imports all of its antimony. DeeeMines produces it from the plastics of electronic equipment, through a patented process."
+    },
+    "technologie": {
+      "titre": "Our technology · DeeeMines",
+      "description": "A patented process recovers antimony, brominated compounds and polymer from flame-retarded plastics, at room temperature and in a closed loop."
+    },
+    "antimoine": {
+      "titre": "Antimony · DeeeMines",
+      "description": "A critical metal that the European Union imports in full, antimony is essential to batteries, cables, solar panels and defence."
+    },
+    "equipe": {
+      "titre": "The team · DeeeMines",
+      "description": "DeeeMines was founded by two engineers, alongside the researchers who co-invented the process."
+    },
+    "actualites": {
+      "titre": "Our news · DeeeMines",
+      "description": "Awards, conferences, incubation and partnerships: what is moving at DeeeMines."
+    },
+    "mentions": {
+      "titre": "Legal notice · DeeeMines",
+      "description": "Legal notice for the DeeeMines website."
+    },
+    "confidentialite": {
+      "titre": "Privacy policy · DeeeMines",
+      "description": "How DeeeMines handles the data sent through the contact form."
+    }
+  }
+}

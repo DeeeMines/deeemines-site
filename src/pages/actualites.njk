@@ -1,0 +1,53 @@
+---
+layout: socle.njk
+page_cle: actualites
+pagination:
+  data: langues
+  size: 1
+  alias: langue
+permalink: "{{ adresses['actualites'][langue] }}index.html"
+---
+<main>
+  <div class="phead">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--mint)" data-champ="actualites.phead.surtitre">{{ t.actualites.phead.surtitre | safe }}</div>
+      <h1 data-champ="actualites.phead.titre">{{ t.actualites.phead.titre | safe }}</h1>
+    </div>
+  </div>
+  <hr class="grad-rule">
+
+  <section>
+    <div class="wrap">
+      <div class="news">
+        {%- set ct = ["var(--mint-d)","var(--cyan-d)","var(--azure)"] %}
+        {%- for a in actualites[langue].articles %}
+        <article class="na" style="--ct:{{ ct[loop.index0 % 3] }}">
+          <div class="nc">
+            <div>
+              <div class="cat">{{ a.categorie }}</div>
+              <h3>{{ a.titre }}</h3>
+              <div class="when">{{ a.date }}</div>
+              <p>{{ a.resume }}</p>
+              {%- if a.corps %}
+              <a class="nlien" href="/actualites/{{ a.slug or (a.titre | adresse) }}/" data-champ="actualites.news.lien">{{ t.actualites.news.lien | safe }}</a>
+              {%- elif a.lien %}
+              <a class="nlien" href="{{ a.lien }}" target="_blank" rel="noopener">{{ a.lien_texte or "En savoir plus" }} <span class="a">&#8594;</span></a>
+              {%- endif %}
+            </div>
+          </div>
+        </article>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" style="padding:clamp(42px,4.4vw,64px) 0;text-align:center">
+    <div class="wrap">
+      <h2 style="font-size:clamp(26px,3.4vw,40px)" data-champ="actualites.divers.titre">{{ t.actualites.divers.titre | safe }}</h2>
+      <div style="margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="{{ contenu[langue].contact.linkedin }}" target="_blank" rel="noopener" class="btn btn-mint">{{ t.communs.divers.suivre_linkedin }} <span class="a">&#8594;</span></a>
+        <a href="#contact" data-go="home" class="btn btn-line">{{ t.communs.divers.ecrivez }} <span class="a">&#8594;</span></a>
+      </div>
+    </div>
+  </section>
+</main>

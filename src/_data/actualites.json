@@ -2,6 +2,19 @@
   "fr": {
     "articles": [
       {
+        "date": "Septembre 2026",
+        "categorie": "Distinction",
+        "slug": "prix-poster-hydrometallurgie",
+        "titre": "Premier prix du poster à un colloque européen d'hydrométallurgie",
+        "resume": "Rachida Benmammar a reçu le premier prix du poster pour la présentation de ses travaux sur l'optimisation du procédé breveté, lors d'un colloque d'hydrométallurgie en Belgique.",
+        "corps": "",
+        "image": "",
+        "photos": [],
+        "lien": "",
+        "lien_texte": "",
+        "cadrage": "50%"
+      },
+      {
         "date": "Juin 2026",
         "categorie": "Accompagnement",
         "slug": "programme-rise-2026",
@@ -16,15 +29,28 @@
       },
       {
         "date": "Mars 2026",
-        "categorie": "Société",
-        "slug": "creation-de-deeemines",
-        "titre": "Création de DeeeMines",
-        "resume": "La société est immatriculée à Paris le 18 mars 2026, au terme de quatre années de recherche menées à l'Institut de Recherche de Chimie Paris. Elle est incubée à l'ESPCI Paris.",
+        "categorie": "Incubation",
+        "slug": "incubation-pcup-espci",
+        "titre": "DeeeMines rejoint PC'up, l'incubateur de l'ESPCI Paris",
+        "resume": "PC'up accompagne les jeunes sociétés issues de la recherche en chimie et en physique. DeeeMines y trouve un laboratoire, un accompagnement et un premier réseau industriel.",
         "corps": "",
         "image": "",
         "photos": [],
-        "lien": "",
-        "lien_texte": "",
+        "lien": "https://www.linkedin.com/posts/pcup-incubateur-espci-paris_deeemines-startups-innovation-activity-7475838995260805136-3K1G",
+        "lien_texte": "Voir la publication",
+        "cadrage": "50%"
+      },
+      {
+        "date": "Novembre 2025",
+        "categorie": "Colloque",
+        "slug": "antimony-days-2025",
+        "titre": "Présentation aux Antimony Days",
+        "resume": "DeeeMines a présenté son approche du recyclage de l'antimoine aux Antimony Days, le rendez-vous européen de la filière, en Belgique.",
+        "corps": "",
+        "image": "",
+        "photos": [],
+        "lien": "https://www.linkedin.com/posts/kristell-r-4ab4b9bb_antimony-criticalrawmaterials-circulareconomy-activity-7397551050058153984-hB_R",
+        "lien_texte": "Voir la publication",
         "cadrage": "50%"
       },
       {
@@ -33,7 +59,7 @@
         "slug": "prix-i-phd-morvan-gaudin",
         "titre": "Morvan Gaudin, lauréat du prix i-PhD de Bpifrance",
         "resume": "Le prix i-PhD récompense les travaux de thèse à l'origine du procédé DeeeMines, et ouvre une année d'accompagnement par Bpifrance.",
-        "corps": "Nous sommes heureux d'annoncer que Morvan Gaudin a reçu le prix i-PhD de Bpifrance. Cette distinction annuelle récompense des projets scientifiques à fort potentiel d'innovation.\n\nLe prix salue les travaux de thèse de Morvan sur la récupération de l'antimoine, un métal classé critique par l'Union européenne, contenu dans les plastiques bromés des équipements électriques et électroniques en fin de vie. Ces déchets sont aujourd'hui très majoritairement incinérés en France et en Europe, alors qu'ils représentent une ressource stratégique inexploitée.\n\n### La recherche à l'origine de DeeeMines\n\nLes résultats de cette thèse, menée au sein de la Chaire Mines Urbaines à Chimie ParisTech - PSL avec le soutien de l'éco-organisme ecosystem, ont fondé le projet DeeeMines, développé avec Grégory Lefèvre, Vincent Semetey et Frédéric Rousseau.\n\n### Un appui pour structurer la filière européenne de l'antimoine\n\nGrâce à ce prix, les cofondateurs bénéficient d'une année d'accompagnement par Bpifrance : mentorat, expertise deeptech et structuration stratégique. Un appui déterminant vers l'industrialisation du procédé et la construction d'une filière européenne de recyclage de l'antimoine et des plastiques bromés.\n\nNous remercions chaleureusement Bpifrance pour son soutien.",
+        "corps": "Nous sommes heureux d'annoncer que Morvan Gaudin a reçu le prix i-PhD de Bpifrance. Cette distinction annuelle récompense des projets scientifiques à fort potentiel d'innovation.\n\nLe prix salue les travaux de thèse de Morvan sur la récupération de l'antimoine, un métal classé critique par l'Union européenne, contenu dans les plastiques bromés des équipements électriques et électroniques en fin de vie. Ces déchets sont aujourd'hui très majoritairement incinérés en France et en Europe, alors qu'ils représentent une ressource stratégique inexploitée.\n\n### La recherche à l'origine de DeeeMines\n\nLes résultats de cette thèse, menée au sein de la Chaire Mines Urbaines à Chimie ParisTech - PSL avec le soutien de l'éco-organisme ecosystem, ont fondé le projet DeeeMines, développé avec Grégory Lefèvre, Vincent Semetey et Frédéric Rousseau.\n\n### Un appui pour structurer la filière européenne de l'antimoine\n\nGrâce à ce prix, les cofondateurs bénéficient d'une année d'accompagnement par Bpifrance : mentorat, expertise deeptech et structuration stratégique. Un appui déterminant vers l'industrialisation du procédé et la construction d'une filière européenne de recyclage de l'antimoine et des plastiques bromés.\n\nNous remercions chaleureusement Bpifrance pour son soutien.",
         "image": "/assets/iphd-ceremonie.jpg",
         "photos": [
           {
@@ -93,11 +119,24 @@
   "en": {
     "articles": [
       {
+        "date": "September 2026",
+        "categorie": "Award",
+        "slug": "prix-poster-hydrometallurgie",
+        "titre": "First poster prize at a European hydrometallurgy conference",
+        "resume": "Rachida Benmammar received the first poster prize for presenting her work on optimising the patented process, at a hydrometallurgy conference in Belgium.",
+        "corps": "",
+        "image": "",
+        "photos": [],
+        "lien": "",
+        "lien_texte": "",
+        "cadrage": "50%"
+      },
+      {
         "date": "June 2026",
         "categorie": "Support",
         "slug": "programme-rise-2026",
         "titre": "DeeeMines joins the RISE summer cohort",
-        "resume": "CNRS Innovation selected twelve projects from CNRS laboratories for its 2026 summer cohort. DeeeMines presented its process for recycling flame-retardant plastics.",
+        "resume": "CNRS Innovation selected twelve projects from CNRS laboratories for its 2026 summer cohort. DeeeMines presented its process for recycling flame-retarded plastics.",
         "corps": "",
         "image": "",
         "photos": [],
@@ -107,15 +146,28 @@
       },
       {
         "date": "March 2026",
-        "categorie": "Company",
-        "slug": "creation-de-deeemines",
-        "titre": "DeeeMines is founded",
-        "resume": "The company was registered in Paris on 18 March 2026, after four years of research at the Institut de Recherche de Chimie Paris. It is incubated at ESPCI Paris.",
+        "categorie": "Incubation",
+        "slug": "incubation-pcup-espci",
+        "titre": "DeeeMines joins PC'up, the ESPCI Paris incubator",
+        "resume": "PC'up supports young companies born out of research in chemistry and physics. DeeeMines finds there a laboratory, guidance and a first industrial network.",
         "corps": "",
         "image": "",
         "photos": [],
-        "lien": "",
-        "lien_texte": "",
+        "lien": "https://www.linkedin.com/posts/pcup-incubateur-espci-paris_deeemines-startups-innovation-activity-7475838995260805136-3K1G",
+        "lien_texte": "See the post",
+        "cadrage": "50%"
+      },
+      {
+        "date": "November 2025",
+        "categorie": "Conference",
+        "slug": "antimony-days-2025",
+        "titre": "Presentation at the Antimony Days",
+        "resume": "DeeeMines presented its approach to antimony recycling at the Antimony Days, the European gathering of the sector, in Belgium.",
+        "corps": "",
+        "image": "",
+        "photos": [],
+        "lien": "https://www.linkedin.com/posts/kristell-r-4ab4b9bb_antimony-criticalrawmaterials-circulareconomy-activity-7397551050058153984-hB_R",
+        "lien_texte": "See the post",
         "cadrage": "50%"
       },
       {
@@ -124,12 +176,12 @@
         "slug": "prix-i-phd-morvan-gaudin",
         "titre": "Morvan Gaudin wins the Bpifrance i-PhD award",
         "resume": "The i-PhD award recognises the doctoral work behind the DeeeMines process, and opens a year of support from Bpifrance.",
-        "corps": "We are proud to announce that Morvan Gaudin has received the i-PhD award from Bpifrance. This annual distinction recognises scientific projects with high innovation potential.\n\nThe award recognises Morvan's doctoral research into the recovery of antimony, a metal classified as critical by the European Union, from the brominated plastics of end-of-life electrical and electronic equipment. This waste is largely incinerated in France and in Europe today, although it is an untapped strategic resource.\n\n### The research behind DeeeMines\n\nThe results of this thesis, carried out within the Urban Mining Chair at Chimie ParisTech - PSL with the support of the producer responsibility organisation ecosystem, formed the basis of the DeeeMines project, developed with Grégory Lefèvre, Vincent Semetey and Frédéric Rousseau.\n\n### Support for building a European antimony industry\n\nThanks to this award, the founders benefit from a year of support from Bpifrance: mentoring, deeptech expertise and strategic structuring. A decisive step towards industrialising the process and building a European recycling industry for antimony and brominated plastics.\n\nWe would like to thank Bpifrance warmly for its support.",
+        "corps": "We are pleased to announce that Morvan Gaudin has received the i-PhD award from Bpifrance. This annual distinction recognises scientific projects with high innovation potential.\n\nThe award recognises Morvan's doctoral research into the recovery of antimony, a metal classified as critical by the European Union, from the brominated plastics of end-of-life electrical and electronic equipment. This waste is largely incinerated in France and in Europe today, although it is an untapped strategic resource.\n\n### The research behind DeeeMines\n\nThe results of this thesis, carried out within the Urban Mining Chair at Chimie ParisTech - PSL with the support of the producer responsibility organisation ecosystem, formed the basis of the DeeeMines project, developed with Grégory Lefèvre, Vincent Semetey and Frédéric Rousseau.\n\n### Support for building a European antimony industry\n\nThanks to this award, the founders benefit from a year of support from Bpifrance: mentoring, deeptech expertise and strategic structuring. A decisive step towards industrialising the process and building a European recycling industry for antimony and brominated plastics.\n\nWe would like to thank Bpifrance warmly for its support.",
         "image": "/assets/iphd-ceremonie.jpg",
         "photos": [
           {
             "image": "/assets/iphd-equipe.jpg",
-            "legende": "The team at the State Innovation Competition ceremony",
+            "legende": "The team at the Concours d'innovation ceremony",
             "cadrage": "50%"
           }
         ],
@@ -143,7 +195,7 @@
         "slug": "visite-environnement-recycling",
         "titre": "A visit to Environnement Recycling, towards a brominated plastics industry",
         "resume": "At its site in Montluçon, Environnement Recycling reaches a purity in separating brominated plastics that is rarely seen at industrial scale. A material that goes to the incinerator today.",
-        "corps": "In October 2025 we visited the site of Environnement Recycling in Montluçon, a leading French company specialising in the treatment of waste electrical and electronic equipment.\n\nAt this seventeen-thousand-square-metre industrial site, a team of more than two hundred people uses advanced European technologies to decontaminate, shred and sort equipment. In separating brominated plastics, the process reaches levels of purity rarely seen at industrial scale.\n\n### A resource that goes to the incinerator today\n\nThese plastics contain brominated flame retardants and antimony trioxide. For lack of any alternative they are mostly incinerated today, although they are a strategic source of critical metals and molecules. Recovering them is an environmental and economic challenge, at a time when Europe is seeking to secure its supply of critical raw materials.\n\nThe DeeeMines project is part of a circular economy approach. It aims to turn complex waste streams into secondary resources, through a selective chemical recycling process that extracts and purifies bromine and antimony without degrading the polymer matrix.\n\n### Areas to work on together\n\nThe visit allowed us to identify several areas for technical and scientific collaboration, with the aim of running prototype trials.\n\nWe would like to thank Farida and the team at Environnement Recycling for their welcome and the quality of our discussions. Together we are helping the French brominated plastics recovery industry to emerge.",
+        "corps": "In October 2025 we visited the site of Environnement Recycling in Montluçon, a leading French company specialising in the treatment of waste electrical and electronic equipment.\n\nAt this seventeen-thousand-square-metre industrial site, a team of more than two hundred employees uses advanced European technologies to decontaminate, shred and sort equipment. In separating brominated plastics, the process reaches levels of purity rarely seen at industrial scale.\n\n### A resource that goes to the incinerator today\n\nThese plastics contain brominated flame retardants and antimony trioxide. For lack of any alternative they are mostly incinerated today, although they are a strategic source of critical metals and molecules. Recovering them is an environmental and economic challenge, at a time when Europe is seeking to secure its supply of critical raw materials.\n\nThe DeeeMines project is part of a circular economy approach. It aims to turn complex waste streams into secondary resources, through a selective chemical recycling process that extracts and purifies bromine and antimony without degrading the polymer matrix.\n\n### Areas to work on together\n\nThe visit allowed us to identify several areas for technical and scientific collaboration, with the aim of running prototype trials.\n\nWe would like to thank Farida and the team at Environnement Recycling for their welcome and the quality of our discussions. Together we are helping the French brominated plastics recovery industry to emerge.",
         "image": "/assets/visite-environnement-recycling.jpg",
         "photos": [
           {
@@ -153,7 +205,7 @@
           },
           {
             "image": "/assets/broyat-tas.jpg",
-            "legende": "The shredded material after decontamination and sorting",
+            "legende": "The shredded material after decontamination, shredding and sorting",
             "cadrage": "35%"
           },
           {

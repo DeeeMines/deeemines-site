@@ -1,0 +1,44 @@
+---
+layout: socle.njk
+page_cle: confidentialite
+pagination:
+  data: langues
+  size: 1
+  alias: langue
+permalink: "{{ adresses['confidentialite'][langue] }}index.html"
+---
+<main>
+  <div class="phead">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--mint)" data-champ="confidentialite.phead.surtitre">{{ t.confidentialite.phead.surtitre | safe }}</div>
+      <h1 data-champ="confidentialite.phead.titre">{{ t.confidentialite.phead.titre | safe }}</h1>
+    </div>
+  </div>
+  <hr class="grad-rule">
+  <section>
+    <div class="wrap"><div class="legal">
+      <h3 data-champ="confidentialite.legal.soustitre">{{ t.confidentialite.legal.soustitre | safe }}</h3>
+      <p data-champ="confidentialite.legal.texte">{{ t.confidentialite.legal.texte | safe }}</p>
+      <h3 data-champ="confidentialite.legal.soustitre2">{{ t.confidentialite.legal.soustitre2 | safe }}</h3>
+      <p data-champ="confidentialite.legal.texte2">{{ t.confidentialite.legal.texte2 | safe }}</p>
+      <h3 data-champ="confidentialite.legal.soustitre3">{{ t.confidentialite.legal.soustitre3 | safe }}</h3>
+      <p data-champ="confidentialite.legal.texte3">{{ t.confidentialite.legal.texte3 | safe }}</p>
+      <h3 data-champ="confidentialite.legal.soustitre4">{{ t.confidentialite.legal.soustitre4 | safe }}</h3>
+      <p data-champ="confidentialite.legal.texte4">{{ t.confidentialite.legal.texte4 | safe }}</p>
+      <p data-champ="confidentialite.legal.texte5">{{ t.confidentialite.legal.texte5 | safe }}</p>
+      <h3 data-champ="confidentialite.legal.soustitre5">{{ t.confidentialite.legal.soustitre5 | safe }}</h3>
+      <p data-champ="confidentialite.legal.texte6">{{ t.confidentialite.legal.texte6 | safe }}</p>
+      <h3 data-champ="confidentialite.legal.soustitre6">{{ t.confidentialite.legal.soustitre6 | safe }}</h3>
+      <p data-champ="confidentialite.legal.texte7">{{ t.confidentialite.legal.texte7 | safe }}</p>
+      <ul>
+        <li data-champ="confidentialite.legal.point">{{ t.confidentialite.legal.point | safe }}</li>
+        <li data-champ="confidentialite.legal.point2">{{ t.confidentialite.legal.point2 | safe }}</li>
+      </ul>
+      <h3 data-champ="confidentialite.legal.soustitre7">{{ t.confidentialite.legal.soustitre7 | safe }}</h3>
+      <p data-champ="confidentialite.legal.texte8">{{ t.confidentialite.legal.texte8 | safe }}</p>
+      <p data-champ="confidentialite.legal.texte9">{{ t.confidentialite.legal.texte9 | safe }}</p>
+      <h3 data-champ="confidentialite.legal.soustitre8">{{ t.confidentialite.legal.soustitre8 | safe }}</h3>
+      <p data-champ="confidentialite.legal.texte10">{{ t.confidentialite.legal.texte10 | safe }}</p>
+    </div></div>
+  </section>
+</main>

@@ -1,0 +1,34 @@
+{
+  "accueil": {
+    "fr": "/",
+    "en": "/en/"
+  },
+  "technologie": {
+    "fr": "/notre-technologie/",
+    "en": "/en/our-technology/"
+  },
+  "antimoine": {
+    "fr": "/l-antimoine/",
+    "en": "/en/antimony/"
+  },
+  "equipe": {
+    "fr": "/equipe/",
+    "en": "/en/team/"
+  },
+  "actualites": {
+    "fr": "/actualites/",
+    "en": "/en/news/"
+  },
+  "mentions": {
+    "fr": "/mentions-legales/",
+    "en": "/en/legal-notice/"
+  },
+  "confidentialite": {
+    "fr": "/confidentialite/",
+    "en": "/en/privacy/"
+  },
+  "article": {
+    "fr": "/actualites/",
+    "en": "/en/news/"
+  }
+}

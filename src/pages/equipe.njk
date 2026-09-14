@@ -1,0 +1,64 @@
+---
+layout: socle.njk
+page_cle: equipe
+pagination:
+  data: langues
+  size: 1
+  alias: langue
+permalink: "{{ adresses['equipe'][langue] }}index.html"
+---
+<main>
+  <div class="phead">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--mint)" data-champ="equipe.phead.surtitre">{{ t.equipe.phead.surtitre | safe }}</div>
+      <h1 data-champ="equipe.phead.titre">{{ t.equipe.phead.titre | safe }}</h1>
+      <p class="lead" data-champ="equipe.phead.chapo">{{ t.equipe.phead.chapo | safe }}</p>
+    </div>
+  </div>
+  <hr class="grad-rule">
+
+  <section style="padding:clamp(44px,4.6vw,68px) 0">
+    <div class="wrap">
+      <div class="eyebrow" data-champ="equipe.cofondateurs.surtitre">{{ t.equipe.cofondateurs.surtitre | safe }}</div>
+      <div class="people">
+        {%- for m in equipe[langue].cofondateurs %}
+        <div class="mem">
+          <img class="av" src="{{ m.photo }}" alt="{{ m.nom }}">
+          <div>
+            <h3>{{ m.nom }}</h3>
+            <div class="r">{{ m.role }}</div>
+            <p>{{ m.texte }}</p>
+            <div class="aff">{% for l in m.logos %}<img src="{{ l.image }}" alt="{{ l.nom }}">{% endfor %}</div>
+          </div>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="tint" style="padding:clamp(44px,4.6vw,68px) 0">
+    <div class="wrap">
+      <div class="eyebrow" data-champ="equipe.equipe_scientifique.surtitre">{{ t.equipe.equipe_scientifique.surtitre | safe }}</div>
+      <h2 style="font-size:clamp(27px,3.4vw,40px)" data-champ="equipe.equipe_scientifique.titre">{{ t.equipe.equipe_scientifique.titre | safe }}</h2>
+      <div class="cards3">
+        {%- set cs = ["var(--mint)","var(--cyan)","var(--azure)"] %}
+        {%- for m in equipe[langue].scientifiques %}
+        <div class="pc" style="--c:{{ cs[loop.index0] }}">
+          <img class="ph" src="{{ m.photo }}" alt="{{ m.nom }}">
+          <h3>{{ m.nom }}</h3>
+          <p>{{ m.texte }}</p>
+          <div class="aff">{% for l in m.logos %}<img src="{{ l.image }}" alt="{{ l.nom }}">{% endfor %}</div>
+        </div>
+        {%- endfor %}
+      </div>
+      <p style="margin-top:40px;font-size:15.4px;color:var(--soft)" data-champ="equipe.equipe_scientifique.texte">{{ t.equipe.equipe_scientifique.texte | safe }}</p>
+    </div>
+  </section>
+
+  <section style="padding:clamp(42px,4.4vw,64px) 0;text-align:center">
+    <div class="wrap">
+      <h2 style="font-size:clamp(26px,3.2vw,38px);margin-bottom:24px" data-champ="equipe.divers.titre">{{ t.equipe.divers.titre | safe }}</h2>
+      <a href="#contact" data-go="home" class="btn btn-ink" data-champ="equipe.divers.lien">{{ t.equipe.divers.lien | safe }}</a>
+    </div>
+  </section>
+</main>

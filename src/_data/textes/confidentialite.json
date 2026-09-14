@@ -1,0 +1,58 @@
+{
+  "en": {
+    "legal": {
+      "point": "To exercise these rights, write to kristell.riounivert@deeemines.com",
+      "point2": "You may also lodge a complaint with the Commission nationale de l'informatique et des libertés (CNIL), the French data protection authority",
+      "soustitre": "Data controller",
+      "soustitre2": "Data collected",
+      "soustitre3": "Purpose and legal basis",
+      "soustitre4": "Recipients",
+      "soustitre5": "Retention period",
+      "soustitre6": "Your rights",
+      "soustitre7": "Cookies",
+      "soustitre8": "Security",
+      "texte": "DeeeMines, 11 rue Pierre et Marie Curie, 75005 Paris. For any question about your data: kristell.riounivert@deeemines.com",
+      "texte10": "DeeeMines applies appropriate technical and organisational measures to protect the confidentiality and integrity of the data entrusted to it.",
+      "texte2": "This site only collects the data you send us of your own accord through the contact form: name, email address, organisation, role and the content of your message.",
+      "texte3": "This data is used only to answer your request and, where relevant, to follow up our exchanges. Processing is based on your consent and on the legitimate interest of DeeeMines in answering the requests it receives.",
+      "texte4": "Your data is handled only by authorised people within DeeeMines. It is never sold, transferred or passed to third parties for commercial purposes.",
+      "texte5": "Two technical providers act on our behalf: Cloudflare, which hosts the site, and Web3Forms, which delivers messages sent from the contact form to our mailbox. They act as processors and do not use the data for their own purposes.",
+      "texte6": "Messages received are kept for three years from the last exchange, then deleted.",
+      "texte7": "Under the General Data Protection Regulation and the French Data Protection Act (loi Informatique et Libertés), you have the right to access, correct, erase, restrict and object to the processing of your data, as well as the right to data portability.",
+      "texte8": "This site places no analytics or advertising cookies. Only cookies strictly necessary to make it work may be used, and these do not require consent.",
+      "texte9": "Your language choice is kept in your browser's local storage, so that it can be offered again on your next visit. This information never leaves your device."
+    },
+    "phead": {
+      "surtitre": "Personal data",
+      "titre": "Privacy policy"
+    }
+  },
+  "fr": {
+    "legal": {
+      "point": "Pour les exercer, écrivez à kristell.riounivert@deeemines.com",
+      "point2": "Vous pouvez également introduire une réclamation auprès de la Commission nationale de l'informatique et des libertés",
+      "soustitre": "Responsable du traitement",
+      "soustitre2": "Données collectées",
+      "soustitre3": "Finalité et base légale",
+      "soustitre4": "Destinataires",
+      "soustitre5": "Durée de conservation",
+      "soustitre6": "Vos droits",
+      "soustitre7": "Cookies",
+      "soustitre8": "Sécurité",
+      "texte": "DeeeMines, 11 rue Pierre et Marie Curie, 75005 Paris. Pour toute question relative à vos données : kristell.riounivert@deeemines.com",
+      "texte10": "DeeeMines met en œuvre les mesures techniques et organisationnelles appropriées pour préserver la confidentialité et l'intégrité des données qui lui sont confiées.",
+      "texte2": "Ce site ne collecte que les données que vous nous transmettez volontairement par le formulaire de contact : nom, adresse électronique, organisation, qualité et contenu du message.",
+      "texte3": "Ces données servent uniquement à répondre à votre demande et, le cas échéant, à assurer le suivi de nos échanges. Le traitement repose sur votre consentement et sur l'intérêt légitime de DeeeMines à répondre aux sollicitations qui lui sont adressées.",
+      "texte4": "Vos données sont traitées par les seules personnes habilitées au sein de DeeeMines. Elles ne sont ni vendues, ni cédées, ni transmises à des tiers à des fins commerciales.",
+      "texte5": "Deux prestataires techniques interviennent pour notre compte : Cloudflare, qui héberge le site, et Web3Forms, qui achemine vers notre boîte aux lettres les messages envoyés depuis le formulaire. Ils agissent comme sous-traitants et n'utilisent pas ces données pour leur propre compte.",
+      "texte6": "Les messages reçus sont conservés trois ans à compter du dernier échange, puis supprimés.",
+      "texte7": "Conformément au règlement général sur la protection des données et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition, ainsi que d'un droit à la portabilité de vos données.",
+      "texte8": "Ce site ne dépose aucun cookie de mesure d'audience ni de publicité. Seuls les cookies strictement nécessaires à son fonctionnement peuvent être utilisés, et ils ne requièrent pas de consentement.",
+      "texte9": "Votre choix de langue est conservé dans le stockage local de votre navigateur, afin de vous le proposer de nouveau lors d'une prochaine visite. Cette information ne quitte pas votre appareil."
+    },
+    "phead": {
+      "surtitre": "Données personnelles",
+      "titre": "Politique de confidentialité"
+    }
+  }
+}

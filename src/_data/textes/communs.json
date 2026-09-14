@@ -1,0 +1,58 @@
+{
+  "en": {
+    "alt": {
+      "iphd": "i-PhD innovation competition",
+      "jouer": "Play the presentation",
+      "schema": "Animated diagram: flame-retarded plastics from electronic waste, technical covers and cables go through a shredder, fall into a stirred reactor holding two liquid phases, and out come antimony, brominated compounds and purified polymer; the inputs are regenerated and go back into the reactor.",
+      "video": "Morvan Gaudin presenting his research",
+      "video_titre": "Morvan Gaudin presenting his research"
+    },
+    "divers": {
+      "ecrivez": "Write to us",
+      "en_savoir_plus": "Find out more",
+      "piege": "Leave this field empty",
+      "pour": "For",
+      "suivre_linkedin": "Follow us on LinkedIn",
+      "voir_video": "Watch the presentation"
+    },
+    "nav": {
+      "accueil": "Home",
+      "actualites": "News",
+      "antimoine": "Antimony",
+      "confidentialite": "Privacy policy",
+      "contact": "Contact us",
+      "droits": "© 2026 DeeeMines",
+      "equipe": "Team",
+      "mentions": "Legal notice",
+      "technologie": "Our technology"
+    }
+  },
+  "fr": {
+    "alt": {
+      "iphd": "i-PhD, concours d'innovation",
+      "jouer": "Lire la présentation",
+      "schema": "Schéma animé : des plastiques ignifugés issus de déchets électroniques, de bâches et de câbles passent dans un broyeur, tombent dans un réacteur agité contenant deux phases liquides, et il en sort de l'antimoine, des composés bromés et du polymère purifié ; les intrants sont régénérés et repartent dans le réacteur.",
+      "video": "Morvan Gaudin présente ses travaux",
+      "video_titre": "Présentation de la thèse de Morvan Gaudin"
+    },
+    "divers": {
+      "ecrivez": "Écrivez-nous",
+      "en_savoir_plus": "En savoir plus",
+      "piege": "Laissez ce champ vide",
+      "pour": "Pour",
+      "suivre_linkedin": "Suivez-nous sur LinkedIn",
+      "voir_video": "Voir la présentation"
+    },
+    "nav": {
+      "accueil": "Accueil",
+      "actualites": "Actualités",
+      "antimoine": "L'antimoine",
+      "confidentialite": "Politique de confidentialité",
+      "contact": "Nous contacter",
+      "droits": "© 2026 DeeeMines",
+      "equipe": "Équipe",
+      "mentions": "Mentions légales",
+      "technologie": "Notre technologie"
+    }
+  }
+}

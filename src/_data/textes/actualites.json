@@ -1,0 +1,26 @@
+{
+  "en": {
+    "divers": {
+      "titre": "Would you like to follow what comes next?"
+    },
+    "news": {
+      "lien": "Read the full story <span class=\"a\">&#8594;</span>"
+    },
+    "phead": {
+      "surtitre": "News",
+      "titre": "Our news"
+    }
+  },
+  "fr": {
+    "divers": {
+      "titre": "Vous voulez suivre la suite ?"
+    },
+    "news": {
+      "lien": "Lire la suite <span class=\"a\">&#8594;</span>"
+    },
+    "phead": {
+      "surtitre": "Actualités",
+      "titre": "Nos actualités"
+    }
+  }
+}

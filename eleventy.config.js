@@ -1,4 +1,30 @@
 const MarkdownIt = require('markdown-it');
+/* Hauteur d'affichage d'un logo partenaire.
+
+   Tous les logos partageaient la même hauteur maximale. Un logo très large
+   couvrait alors une surface bien supérieure à celle d'un logo carré, et
+   paraissait deux fois plus important. On corrige en faisant dépendre la
+   hauteur des proportions du fichier : plus un logo est large, plus on le
+   raccourcit. L'exposant 0,42 est un compromis entre l'égalité des hauteurs,
+   qui avantage les logos larges, et l'égalité des surfaces, qui écrase trop
+   les logos en bandeau. */
+function mesurePng(chemin) {
+  const fs = require('fs');
+  const tampon = fs.readFileSync(chemin);
+  if (tampon.length < 24) return null;
+  if (tampon.toString('ascii', 1, 4) !== 'PNG') return null;
+  return { l: tampon.readUInt32BE(16), h: tampon.readUInt32BE(20) };
+}
+function hauteurLogo(image) {
+  const path = require('path');
+  try {
+    const m = mesurePng(path.join(__dirname, 'src', String(image).replace(/^\//, '')));
+    if (!m || !m.h) return 40;
+    const proportion = m.l / m.h;
+    return Math.round(46 / Math.pow(proportion, 0.42) * 10) / 10;
+  } catch (e) { return 40; }
+}
+
 const md = new MarkdownIt({ html: false, linkify: true, typographer: false });
 
 /* Transforme un titre en adresse lisible : « Le procédé est breveté »
@@ -36,6 +62,7 @@ module.exports = function (eleventyConfig) {
   // L'administration est recopiée telle quelle, jamais interprétée
   eleventyConfig.ignores.add('src/admin/**');
 
+  eleventyConfig.addFilter('hauteurLogo', hauteurLogo);
   eleventyConfig.addFilter('markdown', (t) => (t ? md.render(String(t)) : ''));
   eleventyConfig.addFilter('adresse', adresse);
   eleventyConfig.addFilter('lecteur', lecteur);
@@ -44,6 +71,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' });
   eleventyConfig.addPassthroughCopy({ 'src/admin': 'admin' });
   eleventyConfig.addPassthroughCopy({ 'src/og.jpg': 'og.jpg' });
+  eleventyConfig.addPassthroughCopy({ 'src/_headers': '_headers' });
   eleventyConfig.addPassthroughCopy({ 'src/hero.mp4': 'hero.mp4' });
   eleventyConfig.addPassthroughCopy({ 'src/hero-poster.jpg': 'hero-poster.jpg' });
 

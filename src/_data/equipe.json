@@ -16,8 +16,8 @@
       {
         "photo": "/assets/morvan-gaudin.jpg",
         "nom": "Morvan Gaudin",
-        "role": "Cofondateur & CTO",
-        "texte": "Docteur et ingénieur, formé à Chimie ParisTech - PSL et à AgroParisTech. Il est l'auteur de la thèse dont est issu le procédé, menée au sein de la Chaire Mines Urbaines. Lauréat du prix i-PhD de Bpifrance, il pilote le développement technologique et le passage à l'échelle.",
+        "role": "Cofondateur",
+        "texte": "Docteur et ingénieur, formé à Chimie ParisTech - PSL et à AgroParisTech. Il est l'auteur de la thèse dont est issu le procédé, menée au sein de la Chaire Mines Urbaines. Lauréat du prix i-PhD de Bpifrance, il pilote le développement technologique et le passage à l'échelle industrielle.",
         "logos": [
           {
             "image": "/assets/chimie-paristech-psl.png",
@@ -91,8 +91,8 @@
       {
         "photo": "/assets/morvan-gaudin.jpg",
         "nom": "Morvan Gaudin",
-        "role": "Co-founder & CTO",
-        "texte": "A doctor and engineer trained at Chimie ParisTech - PSL and AgroParisTech. He is the author of the thesis behind the process, carried out within the Urban Mining Chair. Winner of the Bpifrance i-PhD award, he leads the technical development and the scale-up.",
+        "role": "Co-founder",
+        "texte": "An engineer with a doctorate, trained at Chimie ParisTech - PSL and AgroParisTech. He is the author of the thesis behind the process, carried out within the Urban Mining Chair. Winner of the Bpifrance i-PhD award, he leads the technical development and the scale-up.",
         "logos": [
           {
             "image": "/assets/chimie-paristech-psl.png",
@@ -135,7 +135,7 @@
       {
         "photo": "/assets/vincent-semetey.jpg",
         "nom": "Vincent Semetey",
-        "texte": "Researcher at the French National Centre for Scientific Research, Institut de Recherche de Chimie Paris. Polymer chemistry, head of the Urban Mines Chair.",
+        "texte": "Researcher at the French National Centre for Scientific Research, Institut de Recherche de Chimie Paris. Polymer chemistry, head of the Urban Mining Chair.",
         "logos": [
           {
             "image": "/assets/cnrs.png",

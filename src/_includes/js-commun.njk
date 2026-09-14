@@ -36,48 +36,16 @@
     els.forEach(function(el){ io.observe(el); });
   })();
 
-  /* --- Bascule français / anglais --- */
-  var I18N = {{ i18n | dump | safe }};
-  var ATTRS = {"Votre nom": "Your name", "vous@organisation.fr": "you@organisation.com", "Quelques lignes suffisent.": "A few lines are enough."};
-  var TITRE_EN = document.documentElement.getAttribute('data-titre-en') || document.title;
-  var TITRE_FR = document.title;
-  var nodes = [];
-  (function walk(el){
-    for (var i=0;i<el.childNodes.length;i++){
-      var n = el.childNodes[i];
-      if (n.nodeType === 3){
-        var m = n.nodeValue.match(/^(\s*)([\s\S]*?)(\s*)$/);
-        var key = m[2].replace(/\s+/g,' ');
-        if (key && I18N[key]) nodes.push([n, n.nodeValue, m[1] + I18N[key] + m[3]]);
-      } else if (n.nodeType === 1 && n.tagName !== 'SCRIPT' && n.tagName !== 'STYLE'
-                 && !n.hasAttribute('data-l')){
-        walk(n);
-      }
-    }
-  })(document.body);
-  var fields = [];
-  document.querySelectorAll('[placeholder]').forEach(function(el){
-    var p = el.getAttribute('placeholder');
-    if (ATTRS[p]) fields.push([el, p, ATTRS[p]]);
-  });
-  /* blocs rédigés en deux versions complètes (corps des actualités) */
-  var blocs = [].slice.call(document.querySelectorAll('[data-l]'));
+  /* --- Anciennes adresses ---
+     Le site tenait autrefois en une seule page, où l'on changeait de rubrique
+     par un dièse. Ces adresses ont pu être partagées : on les fait suivre. */
+  (function(){
+    var VERS = {{ adresses | dump | safe }};
+    var ANCIEN = {'#procede':'technologie','#antimoine':'antimoine','#equipe':'equipe',
+                  '#actualites':'actualites','#mentions':'mentions','#confidentialite':'confidentialite'};
+    var cle = ANCIEN[location.hash];
+    if (cle && VERS[cle]) location.replace(VERS[cle]['{{ langue }}']);
+  })();
 
-  window.setLang = function(l){
-    var k = (l === 'en') ? 2 : 1;
-    nodes.forEach(function(t){ t[0].nodeValue = t[k]; });
-    fields.forEach(function(f){ f[0].setAttribute('placeholder', f[k]); });
-    blocs.forEach(function(b){ b.hidden = (b.getAttribute('data-l') !== l); });
-    document.documentElement.lang = l;
-    document.title = (l === 'en') ? TITRE_EN : TITRE_FR;
-    document.querySelectorAll('.lang b').forEach(function(b){
-      b.classList.toggle('on', b.getAttribute('data-lang') === l);
-    });
-    try { localStorage.setItem('langue', l); } catch(e){}
-  };
-  document.querySelectorAll('.lang b').forEach(function(b){
-    b.addEventListener('click', function(){ window.setLang(b.getAttribute('data-lang')); });
-  });
-  try { if (localStorage.getItem('langue') === 'en') window.setLang('en'); } catch(e){}
 })();
 </script>
