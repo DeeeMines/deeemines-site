@@ -1,0 +1,19 @@
+# Redirections, lues par Cloudflare Pages dans le site publié.
+#
+# Les adresses de l'ancien site Wix. Elles ont circulé pendant deux ans : dans
+# des courriels, des dossiers de financement, des publications. Le jour où le
+# domaine passe sur le nouveau site, elles doivent mener quelque part plutôt
+# que sur une page d'erreur. Le code 301 dit aux moteurs de recherche que le
+# déplacement est définitif, et leur transmet l'ancienneté de l'adresse.
+#
+# /l-antimoine n'a pas besoin de ligne : le nouveau site sert déjà cette
+# adresse. C'est la seule qui ne change pas.
+
+/nous-découvrir      /equipe/              301
+/nous-d%C3%A9couvrir /equipe/              301
+/nous-decouvrir      /equipe/              301
+/general-6           /notre-technologie/   301
+/projects            /actualites/          301
+
+# L'archive de l'ancien site, gardée hors des moteurs de recherche par
+# l'en-tête déclaré dans _headers.

@@ -72,6 +72,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'src/admin': 'admin' });
   eleventyConfig.addPassthroughCopy({ 'src/og.jpg': 'og.jpg' });
   eleventyConfig.addPassthroughCopy({ 'src/_headers': '_headers' });
+  eleventyConfig.addPassthroughCopy({ 'src/_redirects': '_redirects' });
+  eleventyConfig.addPassthroughCopy({ 'src/old': 'old' });
   eleventyConfig.addPassthroughCopy({ 'src/hero.mp4': 'hero.mp4' });
   eleventyConfig.addPassthroughCopy({ 'src/hero-poster.jpg': 'hero-poster.jpg' });
 

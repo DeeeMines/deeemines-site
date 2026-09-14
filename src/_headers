@@ -4,3 +4,9 @@
 /admin/*
   X-Robots-Tag: noindex
   Cache-Control: no-cache, max-age=0, must-revalidate
+
+# L'archive de l'ancien site : consultable par qui connaît l'adresse, jamais
+# indexée, pour qu'elle ne concurrence pas les pages du site dans les moteurs
+# de recherche.
+/old/*
+  X-Robots-Tag: noindex

@@ -1,32 +1,40 @@
 # Site DeeeMines
 
-Le site vitrine, avec son administration à `/admin` pour modifier les textes,
-les images et les actualités sans toucher au code.
+Le site vitrine, avec son administration à `/admin` pour modifier tous les
+textes, les images et les actualités sans toucher au code.
 
 ---
 
 ## Ce qu'il y a dans ce dossier
 
-    src/index.njk           la page du site (accueil, antimoine, équipe, actualités, mentions)
+    src/pages/              les sept pages du site, une par fichier
+      accueil.njk             l'accueil
+      technologie.njk         Notre technologie
+      antimoine.njk           L'antimoine
+      equipe.njk              L'équipe
+      actualites.njk          Les actualités
+      mentions.njk            Les mentions légales
+      confidentialite.njk     La politique de confidentialité
     src/article.njk         le gabarit des pages d'actualité
     src/_includes/          les morceaux communs : tête, en-tête, styles, pied, scripts
     src/_data/              le contenu modifiable depuis l'administration
-      contenu.json            bandeau d'accueil, trois matières, feuille de route, coordonnées
+      textes/                 les 272 textes du site, un fichier par page, en deux langues
       actualites.json         la liste des actualités
       equipe.json             cofondateurs, équipe scientifique, comité stratégique
       partenaires.json        le bandeau de logos
-      statique.json           les traductions des textes qui restent dans le gabarit
-      i18n.js                 assemble le dictionnaire français / anglais
-      articles.js             la liste des actualités qui ont une page dédiée
-    src/assets/             les 25 logos et photos
+      dependance.json         les chiffres du graphique de la page L'antimoine
+      contenu.json            coordonnées, liens, feuille de route
+      adresses.json           l'adresse de chaque page, en français et en anglais
+      reglages.json           la clé du formulaire de contact et le nom de domaine
+    src/assets/             les logos et les photos
     src/admin/              l'administration (Sveltia CMS)
+    src/hero.mp4            la vidéo de fond du bandeau d'accueil, et son image d'attente
     eleventy.config.js      la configuration du générateur
-    netlify.toml            la configuration de la mise en ligne
+    package.json            la liste des outils à installer
 
-Deux fichiers ne sont pas dans l'archive et sont à copier **dans le
-sous-dossier `src/`** avant l'envoi sur GitHub : **hero.mp4** et
-**hero-poster.jpg**, la vidéo de fond du bandeau d'accueil et son image
-d'attente. Ils vont à côté de `index.njk`, pas à la racine.
+Chaque page existe en français et en anglais à sa propre adresse, soit seize
+adresses au total. Les anciennes adresses à dièse redirigent vers les
+nouvelles.
 
 ---
 
@@ -57,23 +65,50 @@ modification du dépôt, y compris celles enregistrées depuis l'administration.
 
 ### 3. La connexion à l'administration
 
-L'administration a besoin d'un petit service qui gère la connexion GitHub.
-Il est gratuit, publié par l'auteur de Sveltia, et s'installe en trois clics :
-`github.com/sveltia/sveltia-cms-auth`, bouton « Deploy to Cloudflare ».
+C'est l'étape qui ouvre `/admin` à Kristell. Elle se fait en trois temps, une
+seule fois, et ne se touche plus ensuite.
 
-Ensuite, sur GitHub, « Settings » du compte, « Developer settings »,
-« OAuth Apps », « New OAuth App ». L'adresse de rappel est celle du service
-suivie de `/callback`. Reportez l'identifiant et le secret obtenus dans les
-variables du service, côté Cloudflare.
+**a. Le service de connexion.** L'administration a besoin d'un petit service
+qui gère la connexion GitHub. Il est gratuit, publié par l'auteur de Sveltia,
+et s'installe en trois clics : sur `github.com/sveltia/sveltia-cms-auth`,
+bouton « Deploy to Cloudflare ». Cloudflare vous donne son adresse, du type
+`https://sveltia-cms-auth.votre-compte.workers.dev`. Notez-la.
 
-Enfin, dans `src/admin/config.yml`, complétez la ligne `base_url:` avec
-l'adresse du service. Sans elle, le bouton « se connecter » ne fait rien.
+**b. L'autorisation GitHub.** Sur GitHub, « Settings » du compte, « Developer
+settings », « OAuth Apps », « New OAuth App ».
+
+    Application name              DeeeMines admin
+    Homepage URL                  https://deeemines.com
+    Authorization callback URL    <adresse du service>/callback
+
+GitHub délivre un identifiant (*Client ID*) et un secret (*Client Secret*, à
+générer d'un clic). Reportez-les côté Cloudflare, dans les réglages du
+service, « Settings », « Variables and Secrets » :
+
+    GITHUB_CLIENT_ID        l'identifiant
+    GITHUB_CLIENT_SECRET    le secret, en type « Secret »
+    ALLOWED_DOMAINS         deeemines.com,deeemines-site.pages.dev
+
+La dernière variable interdit à tout autre site d'utiliser votre service de
+connexion. Redéployez le service pour que les variables prennent effet.
+
+**c. L'adresse dans la configuration.** Dans `src/admin/config.yml`,
+complétez la ligne `base_url:` avec l'adresse du service, sans barre oblique
+finale :
+
+    base_url: https://sveltia-cms-auth.votre-compte.workers.dev
+
+Tant que cette ligne est vide, le bouton « se connecter » ne fait rien.
 
 ### 4. Les accès
 
-Sur GitHub, réglages du dépôt, « Collaborators », invitez le second compte
-avec le rôle **Write**. Les personnes invitées se connectent ensuite sur
-`deeemines.com/admin` et n'ont jamais à rouvrir GitHub.
+Sur GitHub, réglages du dépôt, « Collaborators », invitez le compte de
+Kristell avec le rôle **Write**. Elle reçoit une invitation par courriel,
+l'accepte, et n'a plus jamais à rouvrir GitHub : tout se passe ensuite sur
+`deeemines.com/admin`.
+
+Il lui faut donc un compte GitHub, gratuit, créé en deux minutes sur
+`github.com`. C'est le seul compte à créer.
 
 ### 5. Le domaine
 
@@ -93,16 +128,36 @@ affiche le message invitant à écrire directement, avec un lien de messagerie
 prérempli. C'est aussi ce qui se passe en local, et c'est normal.
 
 Ce service reçoit le nom, l'adresse électronique et le message des personnes
-qui écrivent. Il doit donc être mentionné dans la politique de confidentialité,
-et le point mérite d'être soumis au conseil juridique.
+qui écrivent. Il est mentionné à ce titre dans la politique de
+confidentialité, dont la lecture par un conseil juridique reste souhaitable.
 
 ### 7. Avant l'ouverture au public
 
-Retirez du fichier `src/index.njk` la ligne :
+Retirez du fichier `src/_includes/tete.njk` la ligne :
 
     <meta name="robots" content="noindex, nofollow">
 
 Tant qu'elle est là, les moteurs de recherche ignorent le site.
+
+---
+
+## L'administration au quotidien
+
+Sur `deeemines.com/admin`, après connexion : la liste des pages à gauche,
+le formulaire d'une page au centre, l'aperçu du site à droite.
+
+L'aperçu n'est pas une imitation du site : c'est le site lui-même, affiché
+dans un cadre, qui remplace ses textes à mesure que vous tapez. Ce que l'on y
+voit est donc exactement ce que verront les visiteurs.
+
+Chaque texte apparaît en français et en anglais. « Enregistrer » écrit la
+modification dans le dépôt ; Cloudflare reconstruit le site dans la minute
+qui suit. Une modification malheureuse se retrouve donc toujours dans
+l'historique du dépôt, et se défait.
+
+Quelques textes contiennent de la mise en forme entre chevrons, par exemple
+`<br>` pour un retour à la ligne ou `<span>` pour une couleur. Gardez-la
+telle quelle et écrivez autour : le formulaire le rappelle au cas par cas.
 
 ---
 
@@ -145,13 +200,13 @@ adresse : les liens déjà envoyés cesseraient de fonctionner.
 
 ## Ce qui se modifie depuis l'administration
 
-Le bandeau d'accueil, les textes des trois matières valorisées, la feuille
-de route, les coordonnées, les actualités, les membres de l'équipe et leurs
-photos, les logos partenaires. Chaque texte apparaît en français et en
-anglais côte à côte.
+Tous les textes des sept pages, dans les deux langues : titres, sur-titres,
+paragraphes, légendes, étiquettes du schéma, libellés de la navigation et du
+pied de page. Plus les actualités, les membres de l'équipe et leurs photos,
+les logos partenaires, les coordonnées.
 
 ## Ce qui reste dans le code
 
-Les mises en page, les largeurs, les espacements, les couleurs, la page
-« L'antimoine », les mentions légales et la politique de confidentialité.
-C'est volontaire : ce sont les réglages qui font tenir la cohérence du site.
+Les mises en page, les largeurs, les espacements, les couleurs, l'animation
+du schéma, les chiffres du graphique de la page L'antimoine. C'est
+volontaire : ce sont les réglages qui font tenir la cohérence du site.
