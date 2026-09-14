@@ -114,8 +114,7 @@ permalink: "{{ adresses['antimoine'][langue] }}index.html"
         </div>
         {%- endfor %}
       </div>
-      <p class="dep-src"><span data-champ="antimoine.dependance.note">{{ t.antimoine.dependance.note | safe }}</span>
-        {{ dependance.source[langue] }}.</p>
+      <p class="dep-src">{{ dependance.source[langue] }}.</p>
     </div>
   </section>
 
@@ -151,7 +150,7 @@ permalink: "{{ adresses['antimoine'][langue] }}index.html"
         <p data-champ="antimoine.divers.texte2">{{ t.antimoine.divers.texte2 | safe }}</p>
         <p data-champ="antimoine.divers.texte3">{{ t.antimoine.divers.texte3 | safe }}</p>
       </div>
-      <div class="vers-procede gauche">
+      <div class="vers-procede">
         <a href="{{ adresses['technologie'][langue] }}" class="btn btn-mint btn-fiole">
           {% include "fiole.njk" %}
           <span data-champ="antimoine.divers.lien">{{ t.antimoine.divers.lien | safe }}</span></a>

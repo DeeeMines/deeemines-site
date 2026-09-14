@@ -1,16 +1,15 @@
 {
   "en": {
     "criticite": {
-      "chapo": "\n        This framework is the Critical Raw Materials Act, the European regulation on critical raw materials adopted in 2024. No industry recovers the antimony from that residual fraction today. It is the fraction DeeeMines treats.\n      ",
+      "chapo": "\n        This framework is the Critical Raw Materials Act, the European regulation on critical raw materials adopted in 2024. No industry recovers the antimony from flame-retarded plastics today, and this is where DeeeMines comes in.\n      ",
       "surtitre": "A European sovereignty issue",
       "texte": "The European Union has identified thirty-four raw materials that are essential to its economy and exposed to a high risk of supply disruption, antimony among them.",
       "texte2": "Its production is concentrated in a handful of countries, and its price rose sixfold between 2021 and 2025.",
-      "titre": "Thirty-four critical raw materials<br>Antimony is one of them"
+      "titre": "Thirty-four critical raw materials: antimony is one of them"
     },
     "dependance": {
       "chapo": "Of the critical raw materials, fifteen are imported at 98&#8239;% or more. Antimony is imported in full.",
       "legende": "Share of imports from non-EU countries in the European Union&#8217;s supply.",
-      "note": "Strontium is the exception: 99.7&#8239;% of European supply comes from Spain.",
       "surtitre": "Dependence",
       "titre": "All of Europe&#8217;s antimony comes from abroad"
     },
@@ -19,7 +18,7 @@
       "texte": "We take these plastics (electronic waste, technical covers, cables) before they reach the incinerator.",
       "texte2": "With our patented process we extract the antimony and the brominated compounds, and put them back on the European market.",
       "texte3": "The mild temperature and pressure conditions also allow the plastic itself to be recycled once purified.",
-      "titre": "This is where DeeeMines comes in"
+      "titre": "DeeeMines answers this paradox"
     },
     "en_synthese": {
       "chapo": "\n          Three facts that, put together, describe exactly the problem DeeeMines solves.\n        ",
@@ -66,21 +65,20 @@
       "soustitre3": "A named waste stream",
       "texte": "Antimony is on the European list of critical raw materials, which is reviewed every three years.",
       "texte2": "Every Member State must adopt a national programme of measures to improve the circularity of these materials.",
-      "texte3": "Waste electrical and electronic equipment, and the fraction left after dismantling, are named as priorities."
+      "texte3": "Electronic waste and the fraction left after dismantling are named as priorities."
     }
   },
   "fr": {
     "criticite": {
-      "chapo": "\n        Ce cadre est celui du Critical Raw Materials Act, le règlement européen sur les matières\n        premières critiques adopté en 2024. Aucune filière ne récupère aujourd'hui l'antimoine\n        de cette fraction résiduelle. C'est celle que DeeeMines traite.\n      ",
+      "chapo": "\n        Ce cadre est celui du Critical Raw Materials Act, le règlement européen sur les matières\n        premières critiques adopté en 2024. Aucune filière ne récupère aujourd'hui l'antimoine\n        des plastiques ignifugés, c'est là que DeeeMines intervient.\n      ",
       "surtitre": "Enjeu de souveraineté européenne",
       "texte": "L'Union européenne a identifié trente-quatre matières premières indispensables à son économie et exposées à un risque élevé de rupture d'approvisionnement, dont l'antimoine.",
       "texte2": "Sa production est concentrée dans quelques pays, et son prix a été multiplié par six entre 2021 et 2025.",
-      "titre": "Trente-quatre matières critiques<br>L'antimoine en fait partie"
+      "titre": "Trente-quatre matières critiques : l’antimoine en fait partie"
     },
     "dependance": {
       "chapo": "Parmi les matières premières critiques, quinze sont importées à 98&#8239;% ou plus. L'antimoine l'est dans sa totalité.",
       "legende": "Part des importations en provenance de pays tiers dans l'approvisionnement de l'Union européenne.",
-      "note": "Le strontium fait exception : 99,7&#8239;% de l'approvisionnement européen vient d'Espagne.",
       "surtitre": "Dépendance",
       "titre": "Tout l'antimoine européen vient d'ailleurs"
     },
@@ -89,7 +87,7 @@
       "texte": "Nous récupérons ces plastiques (déchets électroniques, bâches, câbles) avant l'incinérateur.",
       "texte2": "Grâce à notre procédé breveté, nous en extrayons l'antimoine et les composés bromés, que nous remettons sur le marché européen.",
       "texte3": "Les conditions douces de température et de pression permettent aussi de recycler le plastique une fois purifié.",
-      "titre": "C'est là que DeeeMines intervient"
+      "titre": "DeeeMines répond à ce paradoxe"
     },
     "en_synthese": {
       "chapo": "\n          Trois faits qui, mis bout à bout, décrivent exactement le problème que DeeeMines résout.\n        ",
@@ -136,7 +134,7 @@
       "soustitre3": "Gisement désigné",
       "texte": "L'antimoine figure sur la liste européenne des matières premières critiques, révisée tous les trois ans.",
       "texte2": "Chaque État membre doit adopter un programme national de mesures pour améliorer la circularité de ces matières.",
-      "texte3": "Les déchets d'équipements électriques et électroniques, et leur fraction résiduelle après démantèlement, sont visés en priorité."
+      "texte3": "Les déchets électroniques et leur fraction résiduelle après démantèlement sont visés en priorité."
     }
   }
 }

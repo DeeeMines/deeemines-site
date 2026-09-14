@@ -537,7 +537,6 @@ collections:
               - { label: "Titre", name: titre, widget: text, i18n: true, hint: "Longueur actuelle : 42 caractères." }
               - { label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 148 caractères." }
               - { label: "Légende du graphique", name: legende, widget: text, i18n: true, hint: "Longueur actuelle : 95 caractères." }
-              - { label: "Note sous le graphique", name: note, widget: text, i18n: true, hint: "Longueur actuelle : 82 caractères. La source du graphique, elle, est écrite dans le fichier des données." }
           - label: Divers
             name: divers
             widget: object
