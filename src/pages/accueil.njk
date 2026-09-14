@@ -242,6 +242,22 @@ permalink: "{{ adresses['accueil'][langue] }}index.html"
           <p data-champ="accueil.dist.texte2">{{ t.accueil.dist.texte2 | safe }}</p>
         </div>
       </div>
+      <div class="di">
+        {# Le symposium n'a pas de logo public : une médaille dessinée dans le
+           trait des autres icônes du site tient lieu de marque, sans en
+           inventer une. #}
+        <svg class="medaille" viewBox="0 0 64 64" fill="none" stroke="currentColor"
+             stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"
+             role="img" aria-label="{{ t.communs.alt.poster }}">
+          <path d="M22 6 32 26M42 6 32 26"/>
+          <circle cx="32" cy="40" r="17"/>
+          <path d="M32 31 34.6 36.4 40.6 37.2 36.2 41.4 37.3 47.3 32 44.5 26.7 47.3 27.8 41.4 23.4 37.2 29.4 36.4z"/>
+        </svg>
+        <div>
+          <h3 data-champ="accueil.dist.soustitre3">{{ t.accueil.dist.soustitre3 | safe }}</h3>
+          <p data-champ="accueil.dist.texte3">{{ t.accueil.dist.texte3 | safe }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>

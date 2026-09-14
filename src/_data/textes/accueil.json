@@ -31,8 +31,10 @@
     "dist": {
       "soustitre": "Winner of the i-PhD award",
       "soustitre2": "RISE programme, 2026 summer cohort",
+      "soustitre3": "Best scientific poster award",
       "texte": "Morvan Gaudin, recognised by Bpifrance for the thesis behind the process.",
-      "texte2": "Twelve projects from CNRS laboratories selected by CNRS Innovation."
+      "texte2": "Twelve projects from CNRS laboratories selected by CNRS Innovation.",
+      "texte3": "Rachida Benmammar, recognised at the International Circular Hydrometallurgy Symposium."
     },
     "figs": {
       "chiffre": "100&#8239;%",
@@ -75,7 +77,7 @@
     },
     "notre_technologie": {
       "surtitre": "Our technology",
-      "texte": "The process was developed at the Institut de Recherche de Chimie Paris, with the three researchers who co-invented it.",
+      "texte": "The process was developed at the Institut de Recherche de Chimie Paris, in the course of a doctoral thesis, with the three researchers who co-invented it.",
       "texte2": "No other technology can recover the antimony contained in plastics today.",
       "texte3": "<b>98&#8239;%</b><span>antimony extraction yield in the laboratory</span>",
       "texte4": "<b>Mild conditions</b><span>room temperature and atmospheric pressure</span>",
@@ -134,8 +136,10 @@
     "dist": {
       "soustitre": "Lauréat du prix i-PhD",
       "soustitre2": "Programme RISE, promotion d'été 2026",
+      "soustitre3": "Prix du meilleur poster scientifique",
       "texte": "Morvan Gaudin, distingué par Bpifrance pour la thèse à l'origine du procédé.",
-      "texte2": "Douze projets issus des laboratoires du CNRS retenus par CNRS Innovation."
+      "texte2": "Douze projets issus des laboratoires du CNRS retenus par CNRS Innovation.",
+      "texte3": "Rachida Benmammar, primée au symposium international d'hydrométallurgie circulaire."
     },
     "figs": {
       "chiffre": "100&#8239;%",
@@ -178,7 +182,7 @@
     },
     "notre_technologie": {
       "surtitre": "Notre technologie",
-      "texte": "Le procédé a été mis au point à l'Institut de Recherche de Chimie Paris, avec les trois chercheurs qui en sont les co‑inventeurs.",
+      "texte": "Le procédé a été mis au point à l'Institut de Recherche de Chimie Paris, au cours d'une thèse de doctorat, avec les trois chercheurs qui en sont les co‑inventeurs.",
       "texte2": "Aucune autre technologie ne sait aujourd'hui récupérer l'antimoine contenu dans les plastiques.",
       "texte3": "<b>98&#8239;%</b><span>de rendement d'extraction de l'antimoine en laboratoire</span>",
       "texte4": "<b>Conditions douces</b><span>température ambiante et pression atmosphérique</span>",

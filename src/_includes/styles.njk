@@ -219,11 +219,16 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,250,246,.92);
   min-height:1.14em;display:flex;align-items:center;justify-content:center;text-align:center}
 .chip span{display:block;font-size:13.6px;line-height:1.45;color:var(--soft-dark)}
 
-.dist{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3.4vw,54px);margin-top:22px}
-.di{display:grid;grid-template-columns:132px 1fr;gap:24px;align-items:center}
+.dist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(22px,2.6vw,40px);margin-top:22px}
+.di{display:grid;grid-template-columns:104px 1fr;gap:18px;align-items:center}
 .di img{max-height:40px;max-width:100%;width:auto;height:auto;object-fit:contain;justify-self:center}
 .di h3{font-size:18px;margin-bottom:5px}
 .di p{font-size:14.6px;color:var(--soft);line-height:1.5}
+/* La médaille du poster n'est pas un logo : elle emprunte le trait des
+   icônes du site et la couleur de la charte. */
+.di .medaille{width:46px;height:46px;color:var(--mint-d);justify-self:center}
+@media(max-width:1080px){.dist{grid-template-columns:1fr 1fr}}
 @media(max-width:820px){.dist{grid-template-columns:1fr;gap:22px}}
 
 /* ===== 5. Bandeau partenaires ===== */
@@ -361,12 +366,12 @@ main{display:block}
 /* Le logo AgroParisTech porte aussi celui de Paris-Saclay : très large, il
    chassait le premier logo à la ligne suivante. Sa hauteur descend pour que
    les deux tiennent côte à côte et pèsent le même poids à l'œil. */
-.mem .aff img[src*="agroparistech"]{height:24px}
-.pc .aff img[src*="agroparistech"]{height:21px}
+.mem .aff img[src*="agroparistech"]{height:28px}
+.pc .aff img[src*="agroparistech"]{height:24px}
 @media(max-width:520px){
   .mem .aff img{height:36px}
   .mem .aff img[src*="chimie-paristech"]{height:44px}
-  .mem .aff img[src*="agroparistech"]{height:20px}
+  .mem .aff img[src*="agroparistech"]{height:23px}
   .pc .aff img{height:32px}
   .pc .aff img[src*="chimie-paristech"]{height:38px}
 }
