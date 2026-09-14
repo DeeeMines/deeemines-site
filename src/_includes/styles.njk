@@ -690,20 +690,40 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
    les deux dessins se lisent comme une seule famille. Le tremblement des
    grains est minuscule, deux pixels : il suffit à dire qu'ils sont retenus,
    sans agiter la page. */
-.duo{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(26px,3.6vw,58px);
-  align-items:center}
+/* Les deux colonnes font la même hauteur : la carte s'aligne sur le bloc de
+   texte, et le dessin se met à l'échelle pour y tenir. Sans cela l'illustration
+   imposait sa propre hauteur et débordait largement du texte. */
+/* Largeurs fixées plutôt que proportionnelles : le texte garde une longueur
+   de ligne confortable, la carte se resserre autour du dessin, et l'air
+   restant se met entre les deux plutôt qu'à l'intérieur de la carte. */
+.duo{display:grid;grid-template-columns:minmax(0,566px) minmax(0,404px);
+  justify-content:space-between;gap:clamp(26px,4vw,64px);align-items:stretch}
 .duo-txt h2{font-size:clamp(28px,3.5vw,44px);max-width:21ch;text-wrap:balance}
-.duo-txt .lead{margin-top:20px;max-width:46ch}
+.duo-txt .lead{margin-top:20px;max-width:58ch}
 @media(max-width:860px){
+  /* Empilées, les deux colonnes n'ont plus de hauteur commune : le dessin
+     retrouve donc une taille fixée par sa largeur. */
   .duo{grid-template-columns:1fr;gap:28px}
+  .verrou{min-height:0}
+  .verrou .scene{flex:none}
+  .verrou .scene svg{height:auto;max-width:344px}
   .duo-txt h2{max-width:22ch}
   .duo-txt .lead{max-width:62ch}
 }
-.verrou{grid-template-columns:1fr;margin-top:0;align-content:center}
-.verrou .scene svg{width:100%;height:auto;max-width:286px;margin:0 auto}
+.verrou{grid-template-columns:1fr;margin-top:0;align-content:stretch;
+  display:flex;flex-direction:column;justify-content:center;min-height:360px}
+/* La carte se resserre autour du dessin : sa hauteur étant fixée par le
+   texte, tout ce qu'on lui prend en marges, le dessin le gagne. */
+.verrou{padding:20px 16px}
+.verrou .scene{flex:1 1 0;min-height:0;justify-content:center}
+.verrou .scene svg{width:100%;height:100%;max-width:none;margin:0 auto}
 .verrou .eclat path:first-child{fill:#5F6CA0;fill-opacity:.28;stroke:#5A6BA8;
   stroke-width:2;stroke-linejoin:round}
 .verrou .strie{stroke:#5A6BA8;stroke-width:1.6;opacity:.65;fill:none;stroke-linecap:round}
+/* Les morceaux qui ne sont pas prélevés restent en retrait : c'est celui du
+   milieu que l'on regarde. */
+.verrou .eclat.menu path{fill:#5F6CA0;fill-opacity:.17;stroke:#5A6BA8;stroke-opacity:.6;
+  stroke-width:1.8;stroke-linejoin:round}
 .verrou .viseur{fill:none;stroke:#8FA0CE;stroke-width:1.8;stroke-dasharray:5 6}
 .verrou .cone{stroke:#5A6BA8;stroke-width:1.4;stroke-dasharray:4 7;fill:none}
 .verrou .loupe{fill:none;stroke:#6E7DB6;stroke-width:2.4}
@@ -715,17 +735,17 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 .verrou .chaines path{fill:none;stroke:#7C88B8;stroke-width:2.6;stroke-linecap:round}
 /* Le dessin étant étroit, ses intitulés peuvent revenir dedans : à cette
    échelle ils s'affichent autour de treize pixels, comme le reste du site. */
-.verrou .vlbl{font-family:var(--sans);font-size:9px;letter-spacing:.14em;
+/* Le dessin étant mis à l'échelle, ses textes sont exprimés en unités du
+   dessin : quinze unités donnent une douzaine de pixels à l'écran, comme les
+   sur-titres du reste du site. */
+.verrou .vlbl{font-family:var(--sans);font-size:15px;letter-spacing:.14em;
   text-transform:uppercase;fill:#8FA0CE;font-weight:500}
+.verrou .vleg{font-family:var(--sans);font-size:15px;fill:#8FA0CE}
+.verrou .pastille.sb{fill:#52FCC3}
+.verrou .pastille.br{fill:#3EBDD2}
 .verrou .gr{stroke:rgba(4,4,64,.55);stroke-width:1.4}
 .verrou .gr.sb{fill:#52FCC3}
 .verrou .gr.br{fill:#3EBDD2}
-.vr-cle{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:8px}
-.vr-cle span{display:inline-flex;align-items:center;gap:9px}
-.vr-cle i{width:12px;height:12px;border-radius:50%;flex:0 0 auto}
-.vr-cle i.sb{background:#52FCC3}
-.vr-cle i.br{background:#3EBDD2}
-.vr-cle b{font-weight:400;font-size:13.6px;color:#8FA0CE}
 /* Six grains frissonnent sur place. Le septième tente de sortir, bute et
    revient : c'est lui qui raconte le verrou, les autres l'accompagnent. */
 .verrou .gr{animation:vr-frisson 3.4s ease-in-out infinite}
@@ -749,6 +769,13 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 }
 @media(prefers-reduced-motion:reduce){
   .verrou .gr{animation:none}
+}
+/* Répété après coup : une fois les colonnes empilées, la carte ne doit plus
+   respecter la hauteur minimale prévue pour l'alignement sur le texte. */
+@media(max-width:860px){
+  .verrou{min-height:0}
+  .verrou .scene{flex:none}
+  .verrou .scene svg{height:auto;max-width:344px}
 }
 
 .moteur{fill:#141466;stroke:#6E7DB6;stroke-width:2}

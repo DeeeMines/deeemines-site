@@ -10,76 +10,83 @@
      a demandé à son système de les réduire. -->
 <div class="schema verrou">
   <div class="scene" role="img" aria-label="{{ t.communs.alt.verrou }}">
-    <svg viewBox="40 6 260 444" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="0 0 400 440" preserveAspectRatio="xMidYMid meet">
       <defs>
-        <clipPath id="vrLoupe"><circle cx="170" cy="300" r="104"/></clipPath>
+        <clipPath id="vrLoupe"><circle cx="284" cy="300" r="90"/></clipPath>
         <radialGradient id="vrHalo" cx="50%" cy="50%" r="50%">
           <stop offset="0" stop-color="#52FCC3" stop-opacity=".15"/>
           <stop offset="1" stop-color="#52FCC3" stop-opacity="0"/>
         </radialGradient>
       </defs>
 
-      <!-- ── le morceau de plastique ── -->
-      <text class="vlbl" x="170" y="20" text-anchor="middle"
+      <!-- Deux axes d'alignement, et deux seulement : la marge de gauche porte
+           l'intitulé du haut et la légende, la marge de droite porte l'intitulé
+           du bas. Les deux intitulés se répondent en diagonale, comme les deux
+           objets qu'ils désignent. -->
+
+      <!-- ── les morceaux de broyat, en haut à gauche ── -->
+      <text class="vlbl" x="24" y="22"
             data-champ="procede.verrou.legende">{{ t.procede.verrou.legende | safe }}</text>
 
+      <g class="eclat menu">
+        <path d="M28 68 L50 58 L68 72 L62 94 L38 98 L24 84 z"/>
+        <path d="M154 60 L180 46 L204 60 L206 88 L180 102 L156 88 z"/>
+        <path d="M26 150 L50 136 L74 150 L72 178 L46 190 L24 174 z"/>
+      </g>
+
       <g class="eclat">
-        <path d="M122 76 L150 36 L206 32 L228 72 L214 118 L164 130 L128 112 z"/>
-        <path class="strie" d="M136 72 L196 58"/>
-        <path class="strie" d="M134 96 L210 82"/>
+        <path d="M66 120 L82 86 L128 78 L148 108 L140 152 L100 166 L70 148 z"/>
+        <path class="strie" d="M80 116 L128 104"/>
+        <path class="strie" d="M78 138 L134 126"/>
       </g>
 
-      <!-- la zone que l'on regarde de près, et le cône qui y mène -->
-      <circle class="viseur" cx="172" cy="82" r="24"/>
-      <!-- Les pointillés relient vraiment les deux cercles : ils partent du
-           bord du viseur et s'arrêtent sur le bord de la vue rapprochée, aux
-           points calculés pour que le cône épouse les deux courbures. -->
-      <path class="cone" d="M154 98 L94 229"/>
-      <path class="cone" d="M190 98 L248 231"/>
+      <!-- la zone prélevée, et le cône qui mène à son agrandissement -->
+      <circle class="viseur" cx="106" cy="122" r="26"/>
+      <path class="cone" d="M93 145 L239 378"/>
+      <path class="cone" d="M129 109 L362 255"/>
 
-      <!-- une loupe posée sur le cône, décalée sur la gauche : sans elle, rien
-           ne dit que le cercle du bas est un agrandissement et non un second
-           objet -->
+      <!-- la loupe, au milieu exact du trajet -->
       <g class="loupette">
-        <circle cx="126" cy="157" r="11"/>
-        <path class="manche" d="M118 165 L110 173"/>
-        <path class="plus" d="M121 157 h10 M126 152 v10"/>
+        <circle cx="195" cy="211" r="13"/>
+        <path class="manche" d="M185 221 L174 232"/>
+        <path class="plus" d="M189 211 h12 M195 205 v12"/>
       </g>
 
-      <!-- ── la même matière, de près ── -->
-      <circle class="loupe" cx="170" cy="300" r="104"/>
+      <!-- la légende, sur la marge de gauche, centrée sur la hauteur du cercle -->
+      <g class="vcle">
+        <circle class="pastille sb" cx="31" cy="286" r="7"/>
+        <text class="vleg" x="48" y="291" data-champ="procede.verrou.nom">{{ t.procede.verrou.nom | safe }}</text>
+        <circle class="pastille br" cx="31" cy="318" r="7"/>
+        <text class="vleg" x="48" y="323" data-champ="procede.verrou.nom2">{{ t.procede.verrou.nom2 | safe }}</text>
+      </g>
+
+      <!-- ── la même matière, de près, en bas à droite ── -->
+      <circle class="loupe" cx="284" cy="300" r="90"/>
       <g clip-path="url(#vrLoupe)">
-        <circle cx="170" cy="300" r="104" fill="url(#vrHalo)"/>
-        <!-- les chaînes du polymère, enchevêtrées -->
+        <circle cx="284" cy="300" r="90" fill="url(#vrHalo)"/>
         <g class="chaines">
-          <path d="M58 242 C 90 226, 122 258, 170 242 S 240 258, 284 240"/>
-          <path d="M56 276 C 92 294, 120 262, 170 278 S 238 260, 286 274"/>
-          <path d="M58 312 C 94 296, 124 330, 172 310 S 240 328, 284 310"/>
-          <path d="M58 348 C 96 366, 122 330, 172 348 S 238 330, 284 346"/>
-          <path d="M124 192 C 110 244, 140 278, 126 324 S 146 380, 134 412"/>
-          <path d="M216 192 C 230 244, 200 278, 224 324 S 204 380, 216 412"/>
+          <path d="M186 252 C 214 236, 242 268, 284 252 S 348 268, 388 250"/>
+          <path d="M184 284 C 216 302, 240 270, 284 286 S 346 268, 390 282"/>
+          <path d="M186 316 C 218 300, 244 334, 286 314 S 350 332, 388 314"/>
+          <path d="M186 348 C 220 366, 242 330, 286 348 S 348 330, 388 346"/>
+          <path d="M242 204 C 228 252, 254 282, 240 324 S 260 376, 248 404"/>
+          <path d="M326 204 C 340 252, 312 282, 334 324 S 316 376, 328 404"/>
         </g>
-        <!-- les additifs, pris entre les chaînes -->
         <g class="grains">
-          <circle class="gr sb g1" cx="142" cy="259" r="9"/>
-          <circle class="gr br g2" cx="204" cy="257" r="7.5"/>
-          <circle class="gr br g3" cx="106" cy="295" r="7.5"/>
-          <circle class="gr sb g4" cx="170" cy="295" r="9"/>
-          <circle class="gr br g5" cx="234" cy="294" r="7.5"/>
-          <circle class="gr sb g6" cx="144" cy="330" r="9"/>
-          <circle class="gr br g7" cx="204" cy="332" r="7.5"/>
+          <circle class="gr sb g1" cx="260" cy="268" r="9"/>
+          <circle class="gr br g2" cx="316" cy="266" r="7.5"/>
+          <circle class="gr br g3" cx="228" cy="300" r="7.5"/>
+          <circle class="gr sb g4" cx="284" cy="300" r="9"/>
+          <circle class="gr br g5" cx="340" cy="299" r="7.5"/>
+          <circle class="gr sb g6" cx="262" cy="333" r="9"/>
+          <circle class="gr br g7" cx="316" cy="335" r="7.5"/>
         </g>
       </g>
 
-      <!-- l'intitulé de la vue rapprochée passe sous le cercle : au-dessus, il
-           croisait les traits du cône -->
-      <text class="vlbl" x="170" y="434" text-anchor="middle"
+      <text class="vlbl" x="376" y="418" text-anchor="end"
             data-champ="procede.verrou.legende2">{{ t.procede.verrou.legende2 | safe }}</text>
     </svg>
   </div>
 
-  <div class="vr-cle">
-    <span><i class="sb"></i><b data-champ="procede.verrou.nom">{{ t.procede.verrou.nom | safe }}</b></span>
-    <span><i class="br"></i><b data-champ="procede.verrou.nom2">{{ t.procede.verrou.nom2 | safe }}</b></span>
-  </div>
+
 </div>
