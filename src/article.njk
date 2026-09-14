@@ -23,7 +23,7 @@ eleventyComputed:
 <main>
   <div class="phead phead-art">
     <div class="wrap">
-      <a class="retour" href="/#actualites" data-go="actus" data-champ="article.phead.lien">{{ t.article.phead.lien | safe }}</a>
+      <a class="retour" href="{{ adresses['actualites'][langue] }}" data-champ="article.phead.lien">{{ t.article.phead.lien | safe }}</a>
       <div data-l="fr">
         <div class="eyebrow" style="color:var(--mint)">{{ paire.art.categorie }} &#183; {{ paire.art.date }}</div>
         <h1>{{ paire.art.titre }}</h1>

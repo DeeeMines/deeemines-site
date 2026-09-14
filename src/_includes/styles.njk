@@ -466,7 +466,10 @@ main{display:block}
 .sn h3{font-size:21px;margin-bottom:8px}
 .sn p{font-size:15.4px;color:var(--soft);line-height:1.6}
 
-.legal{max-width:74ch}
+/* Les pages légales se lisent en diagonale plutôt qu'au mot à mot : le texte
+   court jusqu'à la marge de droite, comme demandé, au lieu de s'arrêter
+   au milieu de la page. */
+.legal{max-width:none}
 .legal h3{font-size:21px;margin:38px 0 12px}
 .legal h3:first-child{margin-top:0}
 .legal p,.legal li{font-size:15.6px;line-height:1.7;color:var(--soft)}

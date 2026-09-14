@@ -676,7 +676,6 @@ collections:
             collapsed: true
             i18n: true
             fields:
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 10 caractères." }
               - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 14 caractères." }
       - name: mentions
         label: Mentions légales
@@ -711,7 +710,6 @@ collections:
             collapsed: true
             i18n: true
             fields:
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères." }
               - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères." }
       - name: confidentialite
         label: Politique de confidentialité
@@ -751,7 +749,6 @@ collections:
             collapsed: true
             i18n: true
             fields:
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères." }
               - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 28 caractères." }
       - name: article
         label: Pages d'article

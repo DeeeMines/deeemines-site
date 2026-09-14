@@ -23,7 +23,6 @@
       "texte9": "Your language choice is kept in your browser's local storage, so that it can be offered again on your next visit. This information never leaves your device."
     },
     "phead": {
-      "surtitre": "Personal data",
       "titre": "Privacy policy"
     }
   },
@@ -51,7 +50,6 @@
       "texte9": "Votre choix de langue est conservé dans le stockage local de votre navigateur, afin de vous le proposer de nouveau lors d'une prochaine visite. Cette information ne quitte pas votre appareil."
     },
     "phead": {
-      "surtitre": "Données personnelles",
       "titre": "Politique de confidentialité"
     }
   }

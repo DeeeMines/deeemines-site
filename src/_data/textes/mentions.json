@@ -3,22 +3,21 @@
     "legal": {
       "soustitre": "Publisher",
       "soustitre2": "Publication director",
-      "soustitre3": "Hosting provider",
+      "soustitre3": "Hosting and domain name",
       "soustitre4": "Intellectual property",
       "soustitre5": "Patented process",
       "soustitre6": "Liability",
       "soustitre7": "Governing law",
       "texte": "<b>DeeeMines</b>, a simplified joint-stock company with a share capital of 10,000 euros.<br>\n      Registered office: 11 rue Pierre et Marie Curie, 75005 Paris, France.<br>\n      Registered with the Paris Trade and Companies Register (Registre du commerce et des sociétés) under number 102 418 902 (registered office establishment number: 102 418 902 00015).<br>\n      Intra-community value added tax number: FR03102418902.<br>\n      Email: kristell.riounivert@deeemines.com",
       "texte2": "Kristell Riou-Nivert, as president of the company.",
-      "texte3": "Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States. Website: www.cloudflare.com",
+      "texte3": "The site is hosted by <b>Cloudflare, Inc.</b>, 101 Townsend Street, San Francisco, CA 94107, United States. Website: www.cloudflare.com<br>\n      The domain name deeemines.com is registered with <b>OVH SAS</b>, 2 rue Kellermann, 59100 Roubaix, France.",
       "texte4": "All content on this site, including text, images, diagrams, logos and graphic elements, is protected by intellectual property law. Any reproduction, display or distribution, in whole or in part, without prior written permission is forbidden.",
       "texte5": "The trademarks and logos of the partners shown on this site remain the property of their respective owners and are reproduced with their agreement.",
-      "texte6": "The selective extraction process operated by DeeeMines is covered by a patent published in 2025 and is used under licence.",
+      "texte6": "The selective extraction process operated by DeeeMines is covered by a patent published in 2025.",
       "texte7": "The information on this site is provided for guidance only. DeeeMines works to keep it accurate and up to date but cannot guarantee that it is free of error or omission. DeeeMines is not responsible for the content of third-party sites linked from this one.",
       "texte8": "This site is governed by French law. Any dispute relating to its use falls within the jurisdiction of the French courts."
     },
     "phead": {
-      "surtitre": "Legal information",
       "titre": "Legal notice"
     }
   },
@@ -26,22 +25,21 @@
     "legal": {
       "soustitre": "Éditeur du site",
       "soustitre2": "Directeur de la publication",
-      "soustitre3": "Hébergeur",
+      "soustitre3": "Hébergeur et nom de domaine",
       "soustitre4": "Propriété intellectuelle",
       "soustitre5": "Procédé breveté",
       "soustitre6": "Responsabilité",
       "soustitre7": "Droit applicable",
       "texte": "<b>DeeeMines</b>, société par actions simplifiée au capital de 10 000 euros.<br>\n      Siège social : 11 rue Pierre et Marie Curie, 75005 Paris, France.<br>\n      Immatriculée au registre du commerce et des sociétés de Paris sous le numéro 102 418 902 (numéro d'établissement du siège : 102 418 902 00015).<br>\n      Numéro de taxe sur la valeur ajoutée intracommunautaire : FR03102418902.<br>\n      Adresse électronique : kristell.riounivert@deeemines.com",
       "texte2": "Kristell Riou-Nivert, en qualité de présidente de la société.",
-      "texte3": "Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis. Site : www.cloudflare.com",
+      "texte3": "Le site est hébergé par <b>Cloudflare, Inc.</b>, 101 Townsend Street, San Francisco, CA 94107, États-Unis. Site : www.cloudflare.com<br>\n      Le nom de domaine deeemines.com est enregistré auprès d'<b>OVH SAS</b>, 2 rue Kellermann, 59100 Roubaix, France.",
       "texte4": "L'ensemble des contenus de ce site, textes, images, schémas, logotypes et éléments graphiques, est protégé par le droit de la propriété intellectuelle. Toute reproduction, représentation ou diffusion, totale ou partielle, sans autorisation écrite préalable, est interdite.",
       "texte5": "Les marques et logotypes des partenaires figurant sur ce site restent la propriété de leurs titulaires respectifs et sont reproduits avec leur accord.",
-      "texte6": "Le procédé d'extraction sélective exploité par DeeeMines fait l'objet d'un brevet publié en 2025, exploité sous licence.",
+      "texte6": "Le procédé d'extraction sélective exploité par DeeeMines fait l'objet d'un brevet publié en 2025.",
       "texte7": "Les informations publiées sur ce site sont fournies à titre indicatif. DeeeMines s'efforce d'en assurer l'exactitude et la mise à jour, sans pouvoir garantir qu'elles soient exemptes d'erreur ou d'omission. Les liens vers des sites tiers n'engagent pas la responsabilité de DeeeMines quant à leur contenu.",
       "texte8": "Le présent site est soumis au droit français. Tout litige relatif à son utilisation relève de la compétence des tribunaux français."
     },
     "phead": {
-      "surtitre": "Informations légales",
       "titre": "Mentions légales"
     }
   }
