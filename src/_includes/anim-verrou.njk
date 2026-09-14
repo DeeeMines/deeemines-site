@@ -10,9 +10,9 @@
      a demandé à son système de les réduire. -->
 <div class="schema verrou">
   <div class="scene" role="img" aria-label="{{ t.communs.alt.verrou }}">
-    <svg viewBox="0 0 400 440" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="0 0 400 436" preserveAspectRatio="xMidYMid meet">
       <defs>
-        <clipPath id="vrLoupe"><circle cx="284" cy="300" r="90"/></clipPath>
+        <clipPath id="vrLoupe"><circle cx="290" cy="300" r="86"/></clipPath>
         <radialGradient id="vrHalo" cx="50%" cy="50%" r="50%">
           <stop offset="0" stop-color="#52FCC3" stop-opacity=".15"/>
           <stop offset="1" stop-color="#52FCC3" stop-opacity="0"/>
@@ -42,48 +42,49 @@
 
       <!-- la zone prélevée, et le cône qui mène à son agrandissement -->
       <circle class="viseur" cx="106" cy="122" r="26"/>
-      <path class="cone" d="M93 145 L239 378"/>
-      <path class="cone" d="M129 109 L362 255"/>
+      <path class="cone" d="M93 144 L246 374"/>
+      <path class="cone" d="M128 108 L363 254"/>
 
       <!-- la loupe, au milieu exact du trajet -->
       <g class="loupette">
-        <circle cx="195" cy="211" r="13"/>
-        <path class="manche" d="M185 221 L174 232"/>
-        <path class="plus" d="M189 211 h12 M195 205 v12"/>
+        <circle cx="198" cy="211" r="13"/>
+        <path class="manche" d="M188 221 L177 232"/>
+        <path class="plus" d="M192 211 h12 M198 205 v12"/>
       </g>
 
-      <!-- la légende, sur la marge de gauche, centrée sur la hauteur du cercle -->
+      <!-- la légende, sur la marge de gauche, descendue là où le cercle se
+           rétrécit : elle garde ainsi une vraie respiration à sa droite -->
       <g class="vcle">
-        <circle class="pastille sb" cx="31" cy="286" r="7"/>
-        <text class="vleg" x="48" y="291" data-champ="procede.verrou.nom">{{ t.procede.verrou.nom | safe }}</text>
-        <circle class="pastille br" cx="31" cy="318" r="7"/>
-        <text class="vleg" x="48" y="323" data-champ="procede.verrou.nom2">{{ t.procede.verrou.nom2 | safe }}</text>
+        <circle class="pastille sb" cx="31" cy="330" r="7"/>
+        <text class="vleg" x="48" y="335" data-champ="procede.verrou.nom">{{ t.procede.verrou.nom | safe }}</text>
+        <circle class="pastille br" cx="31" cy="362" r="7"/>
+        <text class="vleg" x="48" y="367" data-champ="procede.verrou.nom2">{{ t.procede.verrou.nom2 | safe }}</text>
       </g>
 
       <!-- ── la même matière, de près, en bas à droite ── -->
-      <circle class="loupe" cx="284" cy="300" r="90"/>
+      <circle class="loupe" cx="290" cy="300" r="86"/>
       <g clip-path="url(#vrLoupe)">
-        <circle cx="284" cy="300" r="90" fill="url(#vrHalo)"/>
+        <circle cx="290" cy="300" r="86" fill="url(#vrHalo)"/>
         <g class="chaines">
-          <path d="M186 252 C 214 236, 242 268, 284 252 S 348 268, 388 250"/>
-          <path d="M184 284 C 216 302, 240 270, 284 286 S 346 268, 390 282"/>
-          <path d="M186 316 C 218 300, 244 334, 286 314 S 350 332, 388 314"/>
-          <path d="M186 348 C 220 366, 242 330, 286 348 S 348 330, 388 346"/>
-          <path d="M242 204 C 228 252, 254 282, 240 324 S 260 376, 248 404"/>
-          <path d="M326 204 C 340 252, 312 282, 334 324 S 316 376, 328 404"/>
+          <path d="M196 256 C 222 240, 250 272, 290 256 S 352 272, 392 254"/>
+          <path d="M194 286 C 224 304, 248 272, 290 288 S 350 270, 394 284"/>
+          <path d="M196 316 C 226 300, 252 334, 292 314 S 354 332, 392 314"/>
+          <path d="M196 346 C 228 364, 250 328, 292 346 S 352 328, 392 344"/>
+          <path d="M250 208 C 236 256, 262 286, 248 326 S 268 378, 256 404"/>
+          <path d="M330 208 C 344 256, 316 286, 338 326 S 320 378, 332 404"/>
         </g>
         <g class="grains">
-          <circle class="gr sb g1" cx="260" cy="268" r="9"/>
-          <circle class="gr br g2" cx="316" cy="266" r="7.5"/>
-          <circle class="gr br g3" cx="228" cy="300" r="7.5"/>
-          <circle class="gr sb g4" cx="284" cy="300" r="9"/>
-          <circle class="gr br g5" cx="340" cy="299" r="7.5"/>
-          <circle class="gr sb g6" cx="262" cy="333" r="9"/>
-          <circle class="gr br g7" cx="316" cy="335" r="7.5"/>
+          <circle class="gr sb g1" cx="268" cy="271" r="9"/>
+          <circle class="gr br g2" cx="320" cy="269" r="7.5"/>
+          <circle class="gr br g3" cx="238" cy="300" r="7.5"/>
+          <circle class="gr sb g4" cx="290" cy="300" r="9"/>
+          <circle class="gr br g5" cx="342" cy="299" r="7.5"/>
+          <circle class="gr sb g6" cx="270" cy="331" r="9"/>
+          <circle class="gr br g7" cx="320" cy="333" r="7.5"/>
         </g>
       </g>
 
-      <text class="vlbl" x="376" y="418" text-anchor="end"
+      <text class="vlbl" x="376" y="414" text-anchor="end"
             data-champ="procede.verrou.legende2">{{ t.procede.verrou.legende2 | safe }}</text>
     </svg>
   </div>
