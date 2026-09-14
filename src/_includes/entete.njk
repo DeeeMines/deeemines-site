@@ -4,7 +4,7 @@
 {%- set autre = "en" if langue == "fr" else "fr" %}
 <header>
   <div class="wrap nav">
-    <a href="{{ adresses['accueil'][langue] }}"><img src="/assets/logo.png" alt="DeeeMines"></a>
+    <a class="marque" href="{{ adresses['accueil'][langue] }}"><img class="symbole" src="/assets/symbole.png" alt="" aria-hidden="true"><img src="/assets/logo.png" alt="DeeeMines"></a>
     <nav class="links" id="links">
       {%- for cle in ["technologie", "antimoine", "equipe", "actualites"] %}
       <a href="{{ adresses[cle][langue] }}"{% if page_cle == cle %} class="on" aria-current="page"{% endif %}

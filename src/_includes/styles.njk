@@ -64,7 +64,13 @@ h3{font-size:clamp(20px,2vw,25px);letter-spacing:-.028em;line-height:1.14}
 header{position:sticky;top:0;z-index:50;background:rgba(255,250,246,.92);
   backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+/* Le symbole précède le nom, un peu plus haut que lui pour peser d'un
+   poids égal : une forme pleine paraît toujours plus petite qu'un mot. */
+.marque{display:inline-flex;align-items:center;gap:11px}
+.marque .symbole{height:36px;width:auto}
 .nav img{height:31px;width:auto}
+footer .marque .symbole{height:32px}
+@media(max-width:520px){.marque{gap:8px}.marque .symbole{height:30px}}
 .links{display:flex;gap:32px}
 .links a{font-size:14.5px;color:var(--soft);transition:.2s;position:relative}
 .links a:hover,.links a.on{color:var(--text)}

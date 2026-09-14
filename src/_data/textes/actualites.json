@@ -1,7 +1,7 @@
 {
   "en": {
     "divers": {
-      "titre": "Would you like to follow what comes next?"
+      "titre": "Would you like to follow our progress?"
     },
     "news": {
       "lien": "Read the full story <span class=\"a\">&#8594;</span>"
@@ -12,7 +12,7 @@
   },
   "fr": {
     "divers": {
-      "titre": "Vous voulez suivre la suite ?"
+      "titre": "Vous souhaitez suivre notre progression ?"
     },
     "news": {
       "lien": "Lire la suite <span class=\"a\">&#8594;</span>"
