@@ -66,6 +66,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('markdown', (t) => (t ? md.render(String(t)) : ''));
   eleventyConfig.addFilter('adresse', adresse);
   eleventyConfig.addFilter('lecteur', lecteur);
+  // Un retour à la ligne saisi dans l'administration doit se voir à l'écran :
+  // sans cela le navigateur le réduit à une espace et les phrases se collent.
+  eleventyConfig.addFilter('sauts', (t) => String(t == null ? '' : t)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/\r?\n/g, '<br>'));
+  // La même valeur, mise à plat, pour les endroits qui n'admettent qu'une ligne
+  eleventyConfig.addFilter('uneLigne', (t) => String(t == null ? '' : t)
+    .replace(/\s*\r?\n\s*/g, ' ').replace(/"/g, '&quot;').trim());
 
   // Fichiers recopiés tels quels dans le site construit
   eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' });

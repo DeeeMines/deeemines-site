@@ -9,7 +9,7 @@ permalink: "{{ adresses['article'][paire.langue] }}{{ paire.art.slug }}/index.ht
 eleventyComputed:
   langue: "{{ paire.langue }}"
   titre: "{{ paire.art.titre }} · DeeeMines"
-  description: "{{ paire.art.resume }}"
+  description: "{{ paire.art.resume | uneLigne }}"
   ogTitre: "{{ paire.art.titre }}"
   ogImage: "{{ paire.art.image or '/og.jpg' }}"
   adresse_fr_forcee: "/actualites/{{ paire.slug }}/"
@@ -34,7 +34,7 @@ eleventyComputed:
         {%- endif %}
 
         <div class="art-corps">
-          <p class="chapo">{{ paire.art.resume }}</p>
+          <p class="chapo">{{ paire.art.resume | sauts | safe }}</p>
           {{ paire.art.corps | markdown | safe }}
           {%- if paire.art.lien %}
           <p><a class="nlien" href="{{ paire.art.lien }}" target="_blank" rel="noopener">{{ paire.art.lien_texte or t.communs.divers.en_savoir_plus }} <span class="a">&#8594;</span></a></p>

@@ -26,7 +26,7 @@ permalink: "{{ adresses['actualites'][langue] }}index.html"
               <div class="cat">{{ a.categorie }}</div>
               <h2>{{ a.titre }}</h2>
               <div class="when">{{ a.date }}</div>
-              <p>{{ a.resume }}</p>
+              <p>{{ a.resume | sauts | safe }}</p>
               {%- if a.corps %}
               <a class="nlien" href="/actualites/{{ a.slug or (a.titre | adresse) }}/" data-champ="actualites.news.lien">{{ t.actualites.news.lien | safe }}</a>
               {%- elif a.lien %}
