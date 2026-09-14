@@ -1,140 +1,140 @@
 {
-  "en": {
-    "criticite": {
-      "chapo": "\n        This framework is the Critical Raw Materials Act, the European regulation on critical raw materials adopted in 2024. No industry recovers the antimony from flame-retarded plastics today, and this is where DeeeMines comes in.\n      ",
-      "surtitre": "A European sovereignty issue",
-      "texte": "The European Union has identified thirty-four raw materials that are essential to its economy and exposed to a high risk of supply disruption, antimony among them.",
-      "texte2": "Its production is concentrated in a handful of countries, and its price rose sixfold between 2021 and 2025.",
-      "titre": "Thirty-four critical raw materials: antimony is one of them"
-    },
-    "dependance": {
-      "chapo": "Of the critical raw materials, fifteen are imported at 98&#8239;% or more. Antimony is imported in full.",
-      "legende": "Share of imports from non-EU countries in the European Union&#8217;s supply.",
-      "surtitre": "Dependence",
-      "titre": "All of Europe&#8217;s antimony comes from abroad"
-    },
-    "divers": {
-      "lien": "Our technology <span class=\"a\">→</span>",
-      "texte": "We take these plastics (electronic waste, technical covers, cables) before they reach the incinerator.",
-      "texte2": "With our patented process we extract the antimony and the brominated compounds, and put them back on the European market.",
-      "texte3": "The mild temperature and pressure conditions also allow the plastic itself to be recycled once purified.",
-      "titre": "DeeeMines answers this paradox"
-    },
-    "en_synthese": {
-      "chapo": "\n          Three facts that, put together, describe exactly the problem DeeeMines solves.\n        ",
-      "soustitre": "Antimony is used first to make plastics flame retardant",
-      "soustitre2": "Those plastics end up incinerated",
-      "soustitre3": "The critical metal disappears with them",
-      "surtitre": "In short",
-      "texte": "01",
-      "texte2": "Half of world consumption goes into plastics, together with brominated flame retardants.",
-      "texte3": "02",
-      "texte4": "European rules on persistent organic pollutants and on chemical substances require them to be kept out of recycling. With no other option, the industry pays to destroy them.",
-      "texte5": "03",
-      "texte6": "The European Union imports all of its antimony, and every year burns the antimony it already has on its own soil.",
-      "titre": "The European paradox"
-    },
+  "fr": {
     "phead": {
-      "chapo": "\n        A quiet metalloid, present in almost every electrical object we use, mined on the other side of the world, that Europe uses and then burns for want of a way to recycle it.\n      ",
-      "titre": "The metal nobody sees"
+      "titre": "Le métal que personne ne voit",
+      "chapo": "Un métalloïde discret, présent dans presque tous les objets électriques du quotidien,\n        extrait à l'autre bout du monde, que l'Europe utilise puis incinère faute de savoir\n        le recycler."
     },
     "ses_usages": {
-      "chapo": "\n          Demand comes from sectors that cannot do without it: safety, digital technology, energy and defence.\n        ",
-      "detail": "Casings, screens and components, made flame retardant with antimony trioxide.",
-      "detail2": "Antimony hardens the lead plates and extends their life.",
-      "detail3": "Sheathing and insulation that must resist fire.",
-      "detail4": "Refines solar glass and limits its yellowing.",
-      "detail5": "Industrial covers, tents and flame-retarded clothing, including firefighters' kit.",
-      "detail6": "Alloys and ammunition, the reason the metal is classed as strategic.",
-      "detail7": "Fining agent and infrared optics.",
-      "detail8": "Dopant for components, a growing use.",
-      "nom": "Electronic plastics",
-      "nom2": "Lead-acid batteries",
-      "nom3": "Cables",
-      "nom4": "Solar panels",
-      "nom5": "Technical fabrics and covers",
-      "nom6": "Defence",
-      "nom7": "Technical glass",
-      "nom8": "Semiconductors",
-      "surtitre": "Its uses",
-      "titre": "Where antimony hides"
+      "surtitre": "Ses usages",
+      "titre": "Où se cache l'antimoine",
+      "chapo": "Sa demande est portée par des secteurs qui ne peuvent pas s'en passer :\n          la sécurité, le numérique, l'énergie et la défense.",
+      "nom": "Plastiques électroniques",
+      "detail": "Boîtiers, écrans et composants, ignifugés au trioxyde d'antimoine.",
+      "nom2": "Batteries au plomb",
+      "detail2": "L'antimoine durcit le plomb des plaques et prolonge leur tenue.",
+      "nom3": "Câbles",
+      "detail3": "Gaines et isolants qui doivent résister au feu.",
+      "nom4": "Panneaux solaires",
+      "detail4": "Affine le verre photovoltaïque et limite son jaunissement.",
+      "nom5": "Bâches et textiles techniques",
+      "detail5": "Toiles, tentes et vêtements ignifugés, jusqu'aux tenues de pompiers.",
+      "nom6": "Défense",
+      "detail6": "Alliages et munitions, à la base du classement stratégique du métal.",
+      "nom7": "Verres techniques",
+      "detail7": "Agent d'affinage et optique infrarouge.",
+      "nom8": "Semi-conducteurs",
+      "detail8": "Dopant des composants, un usage en croissance."
     },
-    "uses": {
-      "soustitre": "Listed as critical",
-      "soustitre2": "Circularity required",
-      "soustitre3": "A named waste stream",
-      "texte": "Antimony is on the European list of critical raw materials, which is reviewed every three years.",
-      "texte2": "Every Member State must adopt a national programme of measures to improve the circularity of these materials.",
-      "texte3": "Electronic waste and the fraction left after dismantling are named as priorities."
-    }
-  },
-  "fr": {
     "criticite": {
-      "chapo": "\n        Ce cadre est celui du Critical Raw Materials Act, le règlement européen sur les matières\n        premières critiques adopté en 2024. Aucune filière ne récupère aujourd'hui l'antimoine\n        des plastiques ignifugés, c'est là que DeeeMines intervient.\n      ",
       "surtitre": "Enjeu de souveraineté européenne",
+      "titre": "Trente-quatre matières critiques : l’antimoine en fait partie",
       "texte": "L'Union européenne a identifié trente-quatre matières premières indispensables à son économie et exposées à un risque élevé de rupture d'approvisionnement, dont l'antimoine.",
       "texte2": "Sa production est concentrée dans quelques pays, et son prix a été multiplié par six entre 2021 et 2025.",
-      "titre": "Trente-quatre matières critiques : l’antimoine en fait partie"
-    },
-    "dependance": {
-      "chapo": "Parmi les matières premières critiques, quinze sont importées à 98&#8239;% ou plus. L'antimoine l'est dans sa totalité.",
-      "legende": "Part des importations en provenance de pays tiers dans l'approvisionnement de l'Union européenne.",
-      "surtitre": "Dépendance",
-      "titre": "Tout l'antimoine européen vient d'ailleurs"
-    },
-    "divers": {
-      "lien": "Notre technologie <span class=\"a\">→</span>",
-      "texte": "Nous récupérons ces plastiques (déchets électroniques, bâches, câbles) avant l'incinérateur.",
-      "texte2": "Grâce à notre procédé breveté, nous en extrayons l'antimoine et les composés bromés, que nous remettons sur le marché européen.",
-      "texte3": "Les conditions douces de température et de pression permettent également de recycler le plastique une fois celui-ci purifié.",
-      "titre": "DeeeMines répond à ce paradoxe"
-    },
-    "en_synthese": {
-      "chapo": "\n          Trois faits qui, mis bout à bout, décrivent exactement le problème que DeeeMines résout.\n        ",
-      "soustitre": "L'antimoine sert d'abord à ignifuger des plastiques",
-      "soustitre2": "Ces plastiques finissent incinérés",
-      "soustitre3": "Le métal critique disparaît avec eux",
-      "surtitre": "En synthèse",
-      "texte": "01",
-      "texte2": "La moitié de la consommation mondiale part dans la plasturgie, en association avec des retardateurs de flamme bromés.",
-      "texte3": "02",
-      "texte4": "Les réglementations européennes sur les polluants organiques persistants et sur les substances chimiques imposent de les écarter du recyclage. Faute de solution, la filière paie pour les détruire.",
-      "texte5": "03",
-      "texte6": "L'Union européenne importe la totalité de son antimoine, et brûle chaque année celui qu'elle a déjà sur son territoire.",
-      "titre": "Le paradoxe européen"
-    },
-    "phead": {
-      "chapo": "\n        Un métalloïde discret, présent dans presque tous les objets électriques du quotidien,\n        extrait à l'autre bout du monde, que l'Europe utilise puis incinère faute de savoir\n        le recycler.\n      ",
-      "titre": "Le métal que personne ne voit"
-    },
-    "ses_usages": {
-      "chapo": "\n          Sa demande est portée par des secteurs qui ne peuvent pas s'en passer :\n          la sécurité, le numérique, l'énergie et la défense.\n        ",
-      "detail": "Boîtiers, écrans et composants, ignifugés au trioxyde d'antimoine.",
-      "detail2": "L'antimoine durcit le plomb des plaques et prolonge leur tenue.",
-      "detail3": "Gaines et isolants qui doivent résister au feu.",
-      "detail4": "Affine le verre photovoltaïque et limite son jaunissement.",
-      "detail5": "Toiles, tentes et vêtements ignifugés, jusqu'aux tenues de pompiers.",
-      "detail6": "Alliages et munitions, à la base du classement stratégique du métal.",
-      "detail7": "Agent d'affinage et optique infrarouge.",
-      "detail8": "Dopant des composants, un usage en croissance.",
-      "nom": "Plastiques électroniques",
-      "nom2": "Batteries au plomb",
-      "nom3": "Câbles",
-      "nom4": "Panneaux solaires",
-      "nom5": "Bâches et textiles techniques",
-      "nom6": "Défense",
-      "nom7": "Verres techniques",
-      "nom8": "Semi-conducteurs",
-      "surtitre": "Ses usages",
-      "titre": "Où se cache l'antimoine"
+      "chapo": "Ce cadre est celui du Critical Raw Materials Act, le règlement européen sur les matières\n        premières critiques adopté en 2024. Aucune filière ne récupère aujourd'hui l'antimoine\n        des plastiques ignifugés, c'est là que DeeeMines intervient."
     },
     "uses": {
       "soustitre": "Classé critique",
-      "soustitre2": "Circularité obligatoire",
-      "soustitre3": "Gisement désigné",
       "texte": "L'antimoine figure sur la liste européenne des matières premières critiques, révisée tous les trois ans.",
+      "soustitre2": "Circularité obligatoire",
       "texte2": "Chaque État membre doit adopter un programme national de mesures pour améliorer la circularité de ces matières.",
+      "soustitre3": "Gisement désigné",
       "texte3": "Les déchets électroniques et leur fraction résiduelle après démantèlement sont visés en priorité."
+    },
+    "dependance": {
+      "surtitre": "Dépendance",
+      "titre": "Tout l'antimoine européen vient d'ailleurs",
+      "chapo": "Parmi les matières premières critiques, quinze sont importées à 98&#8239;% ou plus. L'antimoine l'est dans sa totalité.",
+      "legende": "Part des importations en provenance de pays tiers dans l'approvisionnement de l'Union européenne."
+    },
+    "en_synthese": {
+      "surtitre": "En synthèse",
+      "titre": "Le paradoxe européen",
+      "chapo": "Trois faits qui, mis bout à bout, décrivent exactement le problème que DeeeMines résout.",
+      "texte": "01",
+      "soustitre": "L'antimoine sert d'abord à ignifuger des plastiques",
+      "texte2": "La moitié d'antimoine mondial est utilisé dans la plasturgie, souvent en association avec des retardateurs de flamme bromés.",
+      "texte3": "02",
+      "soustitre2": "Ces plastiques finissent incinérés",
+      "texte4": "Les réglementations européennes sur les polluants organiques persistants et sur les substances chimiques imposent d'écarter les plastiques bromés et antimoniés du recyclage. Faute de solution, la filière paie pour les détruire.",
+      "texte5": "03",
+      "soustitre3": "Le métal critique disparaît avec eux",
+      "texte6": "L'Union européenne importe la totalité de son antimoine, et brûle chaque année celui qu'elle a déjà sur son territoire."
+    },
+    "divers": {
+      "titre": "DeeeMines répond à ce paradoxe",
+      "texte": "Nous récupérons ces plastiques (déchets électroniques, bâches, câbles) avant l'incinérateur.",
+      "texte2": "Grâce à notre procédé breveté, nous en extrayons l'antimoine et les composés bromés, que nous remettons sur le marché européen.",
+      "texte3": "Les conditions douces de température et de pression permettent également de recycler le plastique une fois celui-ci purifié.",
+      "lien": "Notre technologie <span class=\"a\">→</span>"
+    }
+  },
+  "en": {
+    "phead": {
+      "titre": "The metal nobody sees",
+      "chapo": "A quiet metalloid, present in almost every electrical object we use, mined on the other side of the world, that Europe uses and then burns for want of a way to recycle it."
+    },
+    "ses_usages": {
+      "surtitre": "Its uses",
+      "titre": "Where antimony hides",
+      "chapo": "Demand comes from sectors that cannot do without it: safety, digital technology, energy and defence.",
+      "nom": "Electronic plastics",
+      "detail": "Casings, screens and components, made flame retardant with antimony trioxide.",
+      "nom2": "Lead-acid batteries",
+      "detail2": "Antimony hardens the lead plates and extends their life.",
+      "nom3": "Cables",
+      "detail3": "Sheathing and insulation that must resist fire.",
+      "nom4": "Solar panels",
+      "detail4": "Refines solar glass and limits its yellowing.",
+      "nom5": "Technical fabrics and covers",
+      "detail5": "Industrial covers, tents and flame-retarded clothing, including firefighters' kit.",
+      "nom6": "Defence",
+      "detail6": "Alloys and ammunition, the reason the metal is classed as strategic.",
+      "nom7": "Technical glass",
+      "detail7": "Fining agent and infrared optics.",
+      "nom8": "Semiconductors",
+      "detail8": "Dopant for components, a growing use."
+    },
+    "criticite": {
+      "surtitre": "A European sovereignty issue",
+      "titre": "Thirty-four critical raw materials: antimony is one of them",
+      "texte": "The European Union has identified thirty-four raw materials that are essential to its economy and exposed to a high risk of supply disruption, antimony among them.",
+      "texte2": "Its production is concentrated in a handful of countries, and its price rose sixfold between 2021 and 2025.",
+      "chapo": "This framework is the Critical Raw Materials Act, the European regulation on critical raw materials adopted in 2024. No industry recovers the antimony from flame-retarded plastics today, and this is where DeeeMines comes in."
+    },
+    "uses": {
+      "soustitre": "Listed as critical",
+      "texte": "Antimony is on the European list of critical raw materials, which is reviewed every three years.",
+      "soustitre2": "Circularity required",
+      "texte2": "Every Member State must adopt a national programme of measures to improve the circularity of these materials.",
+      "soustitre3": "A named waste stream",
+      "texte3": "Electronic waste and the fraction left after dismantling are named as priorities."
+    },
+    "dependance": {
+      "surtitre": "Dependence",
+      "titre": "All of Europe&#8217;s antimony comes from abroad",
+      "chapo": "Of the critical raw materials, fifteen are imported at 98&#8239;% or more. Antimony is imported in full.",
+      "legende": "Share of imports from non-EU countries in the European Union&#8217;s supply."
+    },
+    "en_synthese": {
+      "surtitre": "In short",
+      "titre": "The European paradox",
+      "chapo": "Three facts that, put together, describe exactly the problem DeeeMines solves.",
+      "texte": "01",
+      "soustitre": "Antimony is used first to make plastics flame retardant",
+      "texte2": "Half of world consumption goes into plastics, together with brominated flame retardants.",
+      "texte3": "02",
+      "soustitre2": "Those plastics end up incinerated",
+      "texte4": "European rules on persistent organic pollutants and on chemical substances require them to be kept out of recycling. With no other option, the industry pays to destroy them.",
+      "texte5": "03",
+      "soustitre3": "The critical metal disappears with them",
+      "texte6": "The European Union imports all of its antimony, and every year burns the antimony it already has on its own soil."
+    },
+    "divers": {
+      "titre": "DeeeMines answers this paradox",
+      "texte": "We take these plastics (electronic waste, technical covers, cables) before they reach the incinerator.",
+      "texte2": "With our patented process we extract the antimony and the brominated compounds, and put them back on the European market.",
+      "texte3": "The mild temperature and pressure conditions also allow the plastic itself to be recycled once purified.",
+      "lien": "Our technology <span class=\"a\">→</span>"
     }
   }
 }
