@@ -23,795 +23,795 @@ i18n:
 
 collections:
   # ------------------------------------------------------------------ ACTUALITÉS
-  - name: actualites
-    label: Actualités
+- name: actualites
+  label: Actualités
+  i18n: true
+  files:
+  - name: liste
+    label: Liste des actualités
+    file: src/_data/actualites.json
+    format: json
     i18n: true
-    files:
-      - name: liste
-        label: Liste des actualités
-        file: src/_data/actualites.json
-        format: json
+    fields:
+    - label: Actualités
+      label_singular: Actualité
+      name: articles
+      widget: list
+      i18n: true
+      summary: '{{fields.date}} — {{fields.titre}}'
+      fields:
+      - {label: Date affichée, name: date, widget: string, hint: "Par exemple : Juillet 2026", i18n: true}
+      - {label: Catégorie, name: categorie, widget: string, hint: "Financement, Société, Technologie, Partenariat…", i18n: true}
+      - {label: Titre, name: titre, widget: string, i18n: true}
+      - {label: Résumé, name: resume, widget: text, i18n: true, hint: "Deux ou trois lignes. C'est ce qui s'affiche dans la liste des actualités."}
+      - label: Article complet (facultatif)
+        name: corps
+        widget: markdown
+        required: false
+        default: ""
         i18n: true
+        hint: "Si vous remplissez ce champ, l'actualité obtient sa propre page et un lien « Lire la suite ». Sinon, seul le résumé est affiché."
+      - {label: Adresse de la page, name: slug, widget: string, required: false, default: "", i18n: duplicate, hint: "Par exemple prix-i-phd. Ne la changez plus une fois l'article partagé : les liens existants cesseraient de fonctionner."}
+      - {label: Image principale (facultative), name: image, widget: image, required: false, default: "", i18n: duplicate, hint: "Affichée en haut de la page de l'article."}
+      - label: Cadrage de l'image
+        name: cadrage
+        widget: select
+        required: false
+        default: "50%"
+        i18n: duplicate
+        hint: "L'image est recadrée au format du bandeau. Choisissez la partie à conserver si le sujet n'est pas au centre."
+        options:
+        - {label: "Haut", value: "0%"}
+        - {label: "Plutôt vers le haut", value: "25%"}
+        - {label: "Centre", value: "50%"}
+        - {label: "Plutôt vers le bas", value: "78%"}
+        - {label: "Bas", value: "100%"}
+      - label: Photos supplémentaires
+        name: photos
+        widget: list
+        required: false
+        i18n: true
+        label_singular: Photo
+        summary: '{{fields.legende}}'
         fields:
-          - label: Actualités
-            label_singular: Actualité
-            name: articles
-            widget: list
-            i18n: true
-            summary: '{{fields.date}} — {{fields.titre}}'
-            fields:
-              - { label: Date affichée, name: date, widget: string, hint: "Par exemple : Juillet 2026", i18n: true }
-              - { label: Catégorie, name: categorie, widget: string, hint: "Financement, Société, Technologie, Partenariat…", i18n: true }
-              - { label: Titre, name: titre, widget: string, i18n: true }
-              - { label: Résumé, name: resume, widget: text, i18n: true, hint: "Deux ou trois lignes. C'est ce qui s'affiche dans la liste des actualités." }
-              - label: Article complet (facultatif)
-                name: corps
-                widget: markdown
-                required: false
-                default: ""
-                i18n: true
-                hint: "Si vous remplissez ce champ, l'actualité obtient sa propre page et un lien « Lire la suite ». Sinon, seul le résumé est affiché."
-              - { label: Adresse de la page, name: slug, widget: string, required: false, default: "", i18n: duplicate, hint: "Par exemple prix-i-phd. Ne la changez plus une fois l'article partagé : les liens existants cesseraient de fonctionner." }
-              - { label: Image principale (facultative), name: image, widget: image, required: false, default: "", i18n: duplicate, hint: "Affichée en haut de la page de l'article." }
-              - label: Cadrage de l'image
-                name: cadrage
-                widget: select
-                required: false
-                default: "50%"
-                i18n: duplicate
-                hint: "L'image est recadrée au format du bandeau. Choisissez la partie à conserver si le sujet n'est pas au centre."
-                options:
-                  - { label: "Haut", value: "0%" }
-                  - { label: "Plutôt vers le haut", value: "25%" }
-                  - { label: "Centre", value: "50%" }
-                  - { label: "Plutôt vers le bas", value: "78%" }
-                  - { label: "Bas", value: "100%" }
-              - label: Photos supplémentaires
-                name: photos
-                widget: list
-                required: false
-                i18n: true
-                label_singular: Photo
-                summary: '{{fields.legende}}'
-                fields:
-                  - { label: Image, name: image, widget: image }
-                  - { label: Légende, name: legende, widget: string, required: false, default: "" }
-                  - label: Cadrage
-                    name: cadrage
-                    widget: select
-                    required: false
-                    default: "50%"
-                    options:
-                      - { label: "Haut", value: "0%" }
-                      - { label: "Plutôt vers le haut", value: "25%" }
-                      - { label: "Centre", value: "50%" }
-                      - { label: "Plutôt vers le bas", value: "78%" }
-                      - { label: "Bas", value: "100%" }
-              - { label: Lien externe (facultatif), name: lien, widget: string, required: false, default: "", hint: "Adresse complète, par exemple https://…", i18n: duplicate }
-              - { label: Texte du lien (facultatif), name: lien_texte, widget: string, required: false, default: "", hint: "Par défaut : « En savoir plus »", i18n: true }
+        - {label: Image, name: image, widget: image}
+        - {label: Légende, name: legende, widget: string, required: false, default: ""}
+        - label: Cadrage
+          name: cadrage
+          widget: select
+          required: false
+          default: "50%"
+          options:
+          - {label: "Haut", value: "0%"}
+          - {label: "Plutôt vers le haut", value: "25%"}
+          - {label: "Centre", value: "50%"}
+          - {label: "Plutôt vers le bas", value: "78%"}
+          - {label: "Bas", value: "100%"}
+      - {label: Lien externe (facultatif), name: lien, widget: string, required: false, default: "", hint: "Adresse complète, par exemple https://…", i18n: duplicate}
+      - {label: Texte du lien (facultatif), name: lien_texte, widget: string, required: false, default: "", hint: "Par défaut : « En savoir plus »", i18n: true}
 
   # ------------------------------------------------------------------ ACCUEIL
-  - name: accueil
-    label: Page d'accueil
+- name: accueil
+  label: Page d'accueil
+  i18n: true
+  files:
+  - name: contenu
+    label: Textes de la page d'accueil
+    file: src/_data/contenu.json
+    format: json
     i18n: true
-    files:
-      - name: contenu
-        label: Textes de la page d'accueil
-        file: src/_data/contenu.json
-        format: json
-        i18n: true
-        fields:
-          - label: Bandeau d'accueil
-            name: hero
-            widget: object
-            i18n: true
-            fields:
-              - { label: Titre, première ligne, name: titre1, widget: string, i18n: true }
-              - { label: Titre, seconde ligne (en vert), name: titre2, widget: string, i18n: true }
-              - { label: Premier paragraphe, name: para1, widget: text, i18n: true }
-              - { label: Second paragraphe, name: para2, widget: text, i18n: true }
+    fields:
+    - label: Bandeau d'accueil
+      name: hero
+      widget: object
+      i18n: true
+      fields:
+      - {label: Titre, première ligne: null, name: titre1, widget: string, i18n: true}
+      - {label: Titre, seconde ligne (en vert): null, name: titre2, widget: string, i18n: true}
+      - {label: Premier paragraphe, name: para1, widget: text, i18n: true}
+      - {label: Second paragraphe, name: para2, widget: text, i18n: true}
 
-          - label: Les trois matières valorisées
-            label_singular: Matière
-            name: produits
-            widget: list
-            i18n: true
-            max: 3
-            min: 3
-            summary: '{{fields.titre}}'
-            hint: "L'ordre et les illustrations (Sb, Br, polymère) sont fixes : seuls les textes se modifient."
-            fields:
-              - { label: Sur-titre, name: etiquette, widget: string, i18n: true }
-              - { label: Titre, name: titre, widget: string, i18n: true }
-              - { label: Texte, name: texte, widget: text, i18n: true }
-              - { label: Destinataires (après « Pour »), name: pour, widget: string, i18n: true }
+    - label: Les trois matières valorisées
+      label_singular: Matière
+      name: produits
+      widget: list
+      i18n: true
+      max: 3
+      min: 3
+      summary: '{{fields.titre}}'
+      hint: "L'ordre et les illustrations (Sb, Br, polymère) sont fixes : seuls les textes se modifient."
+      fields:
+      - {label: Sur-titre, name: etiquette, widget: string, i18n: true}
+      - {label: Titre, name: titre, widget: string, i18n: true}
+      - {label: Texte, name: texte, widget: text, i18n: true}
+      - {label: Destinataires (après « Pour »), name: pour, widget: string, i18n: true}
 
-          - label: Page « Le procédé »
-            name: procede
-            widget: object
-            i18n: true
-            fields:
-              - label: Lien de la vidéo de présentation
-                name: video
-                widget: string
-                required: false
-                default: ""
-                i18n: duplicate
-                hint: "Collez l'adresse de la vidéo telle qu'elle apparaît dans la barre du navigateur (YouTube, Vimeo ou Dailymotion). Laissez vide tant que vous ne l'avez pas : un visuel d'attente occupe la place."
+    - label: Page « Le procédé »
+      name: procede
+      widget: object
+      i18n: true
+      fields:
+      - label: Lien de la vidéo de présentation
+        name: video
+        widget: string
+        required: false
+        default: ""
+        i18n: duplicate
+        hint: "Collez l'adresse de la vidéo telle qu'elle apparaît dans la barre du navigateur (YouTube, Vimeo ou Dailymotion). Laissez vide tant que vous ne l'avez pas : un visuel d'attente occupe la place."
 
-          - label: Coordonnées
-            name: contact
-            widget: object
-            i18n: true
-            fields:
-              - { label: Adresse électronique, name: email, widget: string, i18n: duplicate }
-              - { label: Adresse postale, name: adresse, widget: string, i18n: duplicate }
-              - { label: Lien LinkedIn, name: linkedin, widget: string, i18n: duplicate }
+    - label: Coordonnées
+      name: contact
+      widget: object
+      i18n: true
+      fields:
+      - {label: Adresse électronique, name: email, widget: string, i18n: duplicate}
+      - {label: Adresse postale, name: adresse, widget: string, i18n: duplicate}
+      - {label: Lien LinkedIn, name: linkedin, widget: string, i18n: duplicate}
 
   # ------------------------------------------------------------------ ÉQUIPE
-  - name: equipe
-    label: Équipe
+- name: equipe
+  label: Équipe
+  i18n: true
+  files:
+  - name: membres
+    label: Membres de l'équipe
+    file: src/_data/equipe.json
+    format: json
     i18n: true
-    files:
-      - name: membres
-        label: Membres de l'équipe
-        file: src/_data/equipe.json
-        format: json
-        i18n: true
+    fields:
+    - label: Cofondateurs
+      label_singular: Cofondateur
+      name: cofondateurs
+      widget: list
+      i18n: true
+      summary: '{{fields.nom}}'
+      fields:
+      - {label: Photo, name: photo, widget: image, i18n: duplicate}
+      - {label: Nom, name: nom, widget: string, i18n: duplicate}
+      - {label: Fonction, name: role, widget: string, i18n: true}
+      - {label: Texte, name: texte, widget: text, i18n: true}
+      - label: Logos d'affiliation
+        label_singular: Logo
+        name: logos
+        widget: list
+        i18n: duplicate
+        summary: '{{fields.nom}}'
         fields:
-          - label: Cofondateurs
-            label_singular: Cofondateur
-            name: cofondateurs
-            widget: list
-            i18n: true
-            summary: '{{fields.nom}}'
-            fields:
-              - { label: Photo, name: photo, widget: image, i18n: duplicate }
-              - { label: Nom, name: nom, widget: string, i18n: duplicate }
-              - { label: Fonction, name: role, widget: string, i18n: true }
-              - { label: Texte, name: texte, widget: text, i18n: true }
-              - label: Logos d'affiliation
-                label_singular: Logo
-                name: logos
-                widget: list
-                i18n: duplicate
-                summary: '{{fields.nom}}'
-                fields:
-                  - { label: Image, name: image, widget: image }
-                  - { label: Texte de remplacement, name: nom, widget: string }
+        - {label: Image, name: image, widget: image}
+        - {label: Texte de remplacement, name: nom, widget: string}
 
-          - label: Équipe scientifique
-            label_singular: Chercheur
-            name: scientifiques
-            widget: list
-            i18n: true
-            summary: '{{fields.nom}}'
-            fields:
-              - { label: Photo, name: photo, widget: image, i18n: duplicate }
-              - { label: Nom, name: nom, widget: string, i18n: duplicate }
-              - { label: Texte, name: texte, widget: text, i18n: true }
-              - label: Logos d'affiliation
-                label_singular: Logo
-                name: logos
-                widget: list
-                i18n: duplicate
-                summary: '{{fields.nom}}'
-                fields:
-                  - { label: Image, name: image, widget: image }
-                  - { label: Texte de remplacement, name: nom, widget: string }
+    - label: Équipe scientifique
+      label_singular: Chercheur
+      name: scientifiques
+      widget: list
+      i18n: true
+      summary: '{{fields.nom}}'
+      fields:
+      - {label: Photo, name: photo, widget: image, i18n: duplicate}
+      - {label: Nom, name: nom, widget: string, i18n: duplicate}
+      - {label: Texte, name: texte, widget: text, i18n: true}
+      - label: Logos d'affiliation
+        label_singular: Logo
+        name: logos
+        widget: list
+        i18n: duplicate
+        summary: '{{fields.nom}}'
+        fields:
+        - {label: Image, name: image, widget: image}
+        - {label: Texte de remplacement, name: nom, widget: string}
 
   # ------------------------------------------------------------------ PARTENAIRES
-  - name: partenaires
-    label: Partenaires
-    files:
-      - name: logos
-        label: Bandeau des logos
-        file: src/_data/partenaires.json
-        format: json
-        fields:
-          - label: Logos
-            label_singular: Logo
-            name: logos
-            widget: list
-            summary: '{{fields.nom}}'
-            hint: "Format PNG à fond transparent, hauteur d'environ 100 pixels."
-            fields:
-              - { label: Image, name: image, widget: image }
-              - { label: Nom affiché aux lecteurs d'écran, name: nom, widget: string }
+- name: partenaires
+  label: Partenaires
+  files:
+  - name: logos
+    label: Bandeau des logos
+    file: src/_data/partenaires.json
+    format: json
+    fields:
+    - label: Logos
+      label_singular: Logo
+      name: logos
+      widget: list
+      summary: '{{fields.nom}}'
+      hint: "Format PNG à fond transparent, hauteur d'environ 100 pixels."
+      fields:
+      - {label: Image, name: image, widget: image}
+      - {label: Nom affiché aux lecteurs d'écran, name: nom, widget: string}
 
   # ═══════════ Les textes du site ═══════════
   # Chaque page du site a son entrée. À l'intérieur, les textes sont rangés
   # par section, dans l'ordre où ils apparaissent à l'écran. Le volet de
   # droite montre le site réel : il se met à jour à la frappe.
-  - name: textes
-    label: Textes du site
-    label_singular: page
-    icon: article
+- name: textes
+  label: Textes du site
+  label_singular: page
+  icon: article
+  i18n: true
+  files:
+  - name: accueil
+    label: Page d'accueil
+    file: src/_data/textes/accueil.json
     i18n: true
-    files:
-      - name: accueil
-        label: Page d'accueil
-        file: src/_data/textes/accueil.json
-        i18n: true
-        preview_path: "/"
-        fields:
-          - label: Bandeau des partenaires
-            name: band
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 45 caractères." }
-          - label: Le formulaire
-            name: cgrid
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Bouton", name: bouton, widget: text, i18n: true, hint: "Longueur actuelle : 9 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 138 caractères." }
-              - { label: "Choix du menu", name: choix, widget: string, i18n: true, hint: "Longueur actuelle : 41 caractères." }
-              - { label: "Choix du menu 2", name: choix2, widget: string, i18n: true, hint: "Longueur actuelle : 34 caractères." }
-              - { label: "Choix du menu 3", name: choix3, widget: string, i18n: true, hint: "Longueur actuelle : 38 caractères." }
-              - { label: "Choix du menu 4", name: choix4, widget: string, i18n: true, hint: "Longueur actuelle : 31 caractères." }
-              - { label: "Choix du menu 5", name: choix5, widget: string, i18n: true, hint: "Longueur actuelle : 12 caractères." }
-              - { label: "Choix du menu 6", name: choix6, widget: string, i18n: true, hint: "Longueur actuelle : 6 caractères." }
-              - { label: "Choix du menu 7", name: choix7, widget: string, i18n: true, hint: "Longueur actuelle : 11 caractères." }
-              - { label: "Choix du menu 8", name: choix8, widget: string, i18n: true, hint: "Longueur actuelle : 5 caractères." }
-              - { label: "Intitulé de champ", name: intitule, widget: string, i18n: true, hint: "Longueur actuelle : 3 caractères." }
-              - { label: "Intitulé de champ 2", name: intitule2, widget: string, i18n: true, hint: "Longueur actuelle : 6 caractères." }
-              - { label: "Intitulé de champ 3", name: intitule3, widget: string, i18n: true, hint: "Longueur actuelle : 9 caractères." }
-              - { label: "Intitulé de champ 4", name: intitule4, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères." }
-              - { label: "Libellé", name: libelle, widget: string, i18n: true, hint: "Longueur actuelle : 6 caractères." }
-              - { label: "Libellé 2", name: libelle2, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères." }
-              - { label: "Libellé 3", name: libelle3, widget: string, i18n: true, hint: "Longueur actuelle : 6 caractères." }
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères." }
-              - { label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 84 caractères." }
-              - { label: "Titre", name: titre, widget: text, i18n: true, hint: "Longueur actuelle : 34 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-          - label: Concours et distinctions
-            name: concours_et_distinctions
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 24 caractères." }
-          - label: Concours et distinctions
-            name: dist
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Sous-titre", name: soustitre, widget: string, i18n: true, hint: "Longueur actuelle : 21 caractères." }
-              - { label: "Sous-titre 2", name: soustitre2, widget: string, i18n: true, hint: "Longueur actuelle : 36 caractères." }
-              - { label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 76 caractères." }
-              - { label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 73 caractères." }
-          - label: Les quatre chiffres
-            name: figs
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Chiffre", name: chiffre, widget: string, i18n: true, hint: "Longueur actuelle : 11 caractères." }
-              - { label: "Chiffre 2", name: chiffre2, widget: string, i18n: true, hint: "Longueur actuelle : 1 caractères." }
-              - { label: "Chiffre 3", name: chiffre3, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères." }
-              - { label: "Chiffre 4", name: chiffre4, widget: string, i18n: true, hint: "Longueur actuelle : 1 caractères." }
-              - { label: "Libellé", name: libelle, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères." }
-              - { label: "Libellé 2", name: libelle2, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères." }
-              - { label: "Libellé 3", name: libelle3, widget: string, i18n: true, hint: "Longueur actuelle : 26 caractères." }
-              - { label: "Libellé 4", name: libelle4, widget: string, i18n: true, hint: "Longueur actuelle : 47 caractères." }
-              - { label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 81 caractères." }
-              - { label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 88 caractères." }
-              - { label: "Paragraphe 3", name: texte3, widget: text, i18n: true, hint: "Longueur actuelle : 78 caractères." }
-              - { label: "Paragraphe 4", name: texte4, widget: text, i18n: true, hint: "Longueur actuelle : 79 caractères." }
-          - label: La chaîne du procédé
-            name: flow
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Sous-titre", name: soustitre, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères." }
-              - { label: "Sous-titre 2", name: soustitre2, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères." }
-              - { label: "Sous-titre 3", name: soustitre3, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères." }
-              - { label: "Sous-titre 4", name: soustitre4, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères." }
-              - { label: "Paragraphe", name: texte, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères." }
-              - { label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 110 caractères." }
-              - { label: "Paragraphe 3", name: texte3, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères." }
-              - { label: "Paragraphe 4", name: texte4, widget: text, i18n: true, hint: "Longueur actuelle : 94 caractères." }
-              - { label: "Paragraphe 5", name: texte5, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères." }
-              - { label: "Paragraphe 6", name: texte6, widget: text, i18n: true, hint: "Longueur actuelle : 100 caractères." }
-              - { label: "Paragraphe 7", name: texte7, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères." }
-              - { label: "Paragraphe 8", name: texte8, widget: text, i18n: true, hint: "Longueur actuelle : 90 caractères." }
-          - label: Le probleme
-            name: le_probleme
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 11 caractères." }
-              - { label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 131 caractères." }
-              - { label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 121 caractères." }
-              - { label: "Titre", name: titre, widget: text, i18n: true, hint: "Longueur actuelle : 84 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-          - label: Notre solution
-            name: notre_solution
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 160 caractères." }
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 14 caractères." }
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 65 caractères." }
-          - label: Notre technologie
-            name: notre_technologie
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 17 caractères." }
-              - { label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 129 caractères." }
-              - { label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 95 caractères." }
-              - { label: "Paragraphe 3", name: texte3, widget: text, i18n: true, hint: "Longueur actuelle : 65 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Paragraphe 4", name: texte4, widget: text, i18n: true, hint: "Longueur actuelle : 63 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Paragraphe 5", name: texte5, widget: text, i18n: true, hint: "Longueur actuelle : 54 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Paragraphe 6", name: texte6, widget: text, i18n: true, hint: "Longueur actuelle : 58 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Paragraphe 7", name: texte7, widget: text, i18n: true, hint: "Longueur actuelle : 35 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Titre", name: titre, widget: text, i18n: true, hint: "Longueur actuelle : 21 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-          - label: Les trois produits
-            name: row
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Numéro de l'élément", name: exposant, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères." }
-              - { label: "Numéro de l'élément 2", name: exposant2, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères." }
-              - { label: "Numéro de l'élément 3", name: exposant3, widget: string, i18n: true, hint: "Longueur actuelle : 10 caractères." }
-              - { label: "Légende", name: legende, widget: string, i18n: true, hint: "Longueur actuelle : 1 caractères." }
-              - { label: "Nom", name: nom, widget: string, i18n: true, hint: "Longueur actuelle : 9 caractères." }
-              - { label: "Nom 2", name: nom2, widget: string, i18n: true, hint: "Longueur actuelle : 5 caractères." }
-              - { label: "Nom 3", name: nom3, widget: string, i18n: true, hint: "Longueur actuelle : 8 caractères." }
-              - { label: "Symbole chimique", name: symbole, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères." }
-              - { label: "Symbole chimique 2", name: symbole2, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères." }
-          - label: Message de confirmation
-            name: sent
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Lien", name: lien, widget: string, i18n: true, hint: "Longueur actuelle : 27 caractères." }
-              - { label: "Sous-titre", name: soustitre, widget: string, i18n: true, hint: "Longueur actuelle : 15 caractères." }
-              - { label: "Paragraphe", name: texte, widget: string, i18n: true, hint: "Longueur actuelle : 1 caractères." }
-              - { label: "Paragraphe 2", name: texte2, widget: string, i18n: true, hint: "Longueur actuelle : 51 caractères." }
-      - name: procede
-        label: Page Notre technologie
-        file: src/_data/textes/procede.json
-        i18n: true
-        preview_path: "/notre-technologie/"
-        fields:
-          - label: Ce qui en sort
-            name: ce_qui_en_sort
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Bloc de texte", name: bloc, widget: text, i18n: true, hint: "Longueur actuelle : 115 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Bloc de texte 2", name: bloc2, widget: text, i18n: true, hint: "Longueur actuelle : 126 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Bloc de texte 3", name: bloc3, widget: text, i18n: true, hint: "Longueur actuelle : 99 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Bloc de texte 4", name: bloc4, widget: text, i18n: true, hint: "Longueur actuelle : 122 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Libellé", name: libelle, widget: string, i18n: true, hint: "Longueur actuelle : 24 caractères." }
-              - { label: "Libellé 2", name: libelle2, widget: string, i18n: true, hint: "Longueur actuelle : 30 caractères." }
-              - { label: "Libellé 3", name: libelle3, widget: string, i18n: true, hint: "Longueur actuelle : 27 caractères." }
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 14 caractères." }
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 45 caractères." }
-          - label: Ce qui l atteste
-            name: ce_qui_l_atteste
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Bloc de texte", name: bloc, widget: text, i18n: true, hint: "Longueur actuelle : 120 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Bloc de texte 2", name: bloc2, widget: text, i18n: true, hint: "Longueur actuelle : 162 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Bloc de texte 3", name: bloc3, widget: text, i18n: true, hint: "Longueur actuelle : 117 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Libellé", name: libelle, widget: string, i18n: true, hint: "Longueur actuelle : 5 caractères." }
-              - { label: "Libellé 2", name: libelle2, widget: string, i18n: true, hint: "Longueur actuelle : 11 caractères." }
-              - { label: "Libellé 3", name: libelle3, widget: string, i18n: true, hint: "Longueur actuelle : 6 caractères." }
-              - { label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 26 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Lien 2", name: lien2, widget: text, i18n: true, hint: "Longueur actuelle : 27 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Sous-titre", name: soustitre, widget: text, i18n: true, hint: "Longueur actuelle : 74 caractères." }
-              - { label: "Sous-titre 2", name: soustitre2, widget: text, i18n: true, hint: "Longueur actuelle : 83 caractères." }
-              - { label: "Sous-titre 3", name: soustitre3, widget: string, i18n: true, hint: "Longueur actuelle : 31 caractères." }
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères." }
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 29 caractères." }
-          - label: Divers
-            name: divers
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 20 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 38 caractères." }
-          - label: En quatre minutes
-            name: en_quatre_minutes
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Bloc de texte", name: bloc, widget: text, i18n: true, hint: "Longueur actuelle : 197 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 17 caractères." }
-              - { label: "Paragraphe", name: texte, widget: string, i18n: true, hint: "Longueur actuelle : 65 caractères." }
-          - label: La suite
-            name: la_suite
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 8 caractères." }
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 24 caractères." }
-          - label: Le principe
-            name: le_principe
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Bloc de texte", name: bloc, widget: text, i18n: true, hint: "Longueur actuelle : 426 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 11 caractères." }
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 32 caractères." }
-          - label: Le verrou
-            name: le_verrou
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Bloc de texte", name: bloc, widget: text, i18n: true, hint: "Longueur actuelle : 391 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 9 caractères." }
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 38 caractères." }
-          - label: En-tête de la page
-            name: phead
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 185 caractères." }
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 10 caractères." }
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 28 caractères." }
-          - label: Le schéma animé
-            name: schema
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Bloc de texte", name: bloc, widget: text, i18n: true, hint: "Longueur actuelle : 120 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Bloc de texte 2", name: bloc2, widget: text, i18n: true, hint: "Longueur actuelle : 122 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Bloc de texte 3", name: bloc3, widget: text, i18n: true, hint: "Longueur actuelle : 107 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Bloc de texte 4", name: bloc4, widget: text, i18n: true, hint: "Longueur actuelle : 119 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Légende", name: legende, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères." }
-              - { label: "Légende 2", name: legende2, widget: string, i18n: true, hint: "Longueur actuelle : 43 caractères." }
-              - { label: "Légende 3", name: legende3, widget: string, i18n: true, hint: "Longueur actuelle : 36 caractères." }
-              - { label: "Nom", name: nom, widget: string, i18n: true, hint: "Longueur actuelle : 9 caractères." }
-              - { label: "Nom 2", name: nom2, widget: string, i18n: true, hint: "Longueur actuelle : 15 caractères." }
-              - { label: "Nom 3", name: nom3, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères." }
-              - { label: "Sous-titre", name: soustitre, widget: text, i18n: true, hint: "Longueur actuelle : 7 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Sous-titre 2", name: soustitre2, widget: text, i18n: true, hint: "Longueur actuelle : 16 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Sous-titre 3", name: soustitre3, widget: text, i18n: true, hint: "Longueur actuelle : 20 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Sous-titre 4", name: soustitre4, widget: text, i18n: true, hint: "Longueur actuelle : 16 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Symbole chimique", name: symbole, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères." }
-              - { label: "Symbole chimique 2", name: symbole2, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères." }
-              - { label: "Symbole chimique 3", name: symbole3, widget: text, i18n: true, hint: "Longueur actuelle : 2 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-          - label: Les trois produits
-            name: sorties
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Bloc de texte", name: bloc, widget: text, i18n: true, hint: "Longueur actuelle : 137 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Bloc de texte 2", name: bloc2, widget: text, i18n: true, hint: "Longueur actuelle : 144 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Bloc de texte 3", name: bloc3, widget: text, i18n: true, hint: "Longueur actuelle : 144 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Sous-titre", name: soustitre, widget: text, i18n: true, hint: "Longueur actuelle : 18 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Sous-titre 2", name: soustitre2, widget: string, i18n: true, hint: "Longueur actuelle : 15 caractères." }
-              - { label: "Sous-titre 3", name: soustitre3, widget: string, i18n: true, hint: "Longueur actuelle : 9 caractères." }
-              - { label: "Symbole chimique", name: symbole, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères." }
-              - { label: "Symbole chimique 2", name: symbole2, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères." }
-              - { label: "Symbole chimique 3", name: symbole3, widget: text, i18n: true, hint: "Longueur actuelle : 2 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-      - name: antimoine
-        label: Page L'antimoine
-        file: src/_data/textes/antimoine.json
-        i18n: true
-        preview_path: "/l-antimoine/"
-        fields:
-          - label: Criticite
-            name: criticite
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 239 caractères." }
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 9 caractères." }
-              - { label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 173 caractères." }
-              - { label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 104 caractères." }
-              - { label: "Titre", name: titre, widget: text, i18n: true, hint: "Longueur actuelle : 58 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-          - label: Dependance
-            name: dependance
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 10 caractères." }
-              - { label: "Titre", name: titre, widget: text, i18n: true, hint: "Longueur actuelle : 42 caractères." }
-              - { label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 148 caractères." }
-              - { label: "Légende du graphique", name: legende, widget: text, i18n: true, hint: "Longueur actuelle : 95 caractères." }
-          - label: Divers
-            name: divers
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 19 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 92 caractères." }
-              - { label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 127 caractères." }
-              - { label: "Paragraphe 3", name: texte3, widget: text, i18n: true, hint: "Longueur actuelle : 111 caractères." }
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 33 caractères." }
-          - label: En synthese
-            name: en_synthese
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 88 caractères." }
-              - { label: "Sous-titre", name: soustitre, widget: string, i18n: true, hint: "Longueur actuelle : 51 caractères." }
-              - { label: "Sous-titre 2", name: soustitre2, widget: string, i18n: true, hint: "Longueur actuelle : 34 caractères." }
-              - { label: "Sous-titre 3", name: soustitre3, widget: string, i18n: true, hint: "Longueur actuelle : 36 caractères." }
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 11 caractères." }
-              - { label: "Paragraphe", name: texte, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères." }
-              - { label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 117 caractères." }
-              - { label: "Paragraphe 3", name: texte3, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères." }
-              - { label: "Paragraphe 4", name: texte4, widget: text, i18n: true, hint: "Longueur actuelle : 196 caractères." }
-              - { label: "Paragraphe 5", name: texte5, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères." }
-              - { label: "Paragraphe 6", name: texte6, widget: text, i18n: true, hint: "Longueur actuelle : 119 caractères." }
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères." }
-          - label: En-tête de la page
-            name: phead
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 154 caractères." }
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 29 caractères." }
-          - label: Ses usages
-            name: ses_usages
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 123 caractères." }
-              - { label: "Précision", name: detail, widget: string, i18n: true, hint: "Longueur actuelle : 66 caractères." }
-              - { label: "Précision 2", name: detail2, widget: string, i18n: true, hint: "Longueur actuelle : 63 caractères." }
-              - { label: "Précision 3", name: detail3, widget: string, i18n: true, hint: "Longueur actuelle : 47 caractères." }
-              - { label: "Précision 4", name: detail4, widget: string, i18n: true, hint: "Longueur actuelle : 58 caractères." }
-              - { label: "Précision 5", name: detail5, widget: string, i18n: true, hint: "Longueur actuelle : 68 caractères." }
-              - { label: "Précision 6", name: detail6, widget: string, i18n: true, hint: "Longueur actuelle : 68 caractères." }
-              - { label: "Précision 7", name: detail7, widget: string, i18n: true, hint: "Longueur actuelle : 39 caractères." }
-              - { label: "Précision 8", name: detail8, widget: string, i18n: true, hint: "Longueur actuelle : 46 caractères." }
-              - { label: "Nom", name: nom, widget: string, i18n: true, hint: "Longueur actuelle : 24 caractères." }
-              - { label: "Nom 2", name: nom2, widget: string, i18n: true, hint: "Longueur actuelle : 18 caractères." }
-              - { label: "Nom 3", name: nom3, widget: string, i18n: true, hint: "Longueur actuelle : 6 caractères." }
-              - { label: "Nom 4", name: nom4, widget: string, i18n: true, hint: "Longueur actuelle : 17 caractères." }
-              - { label: "Nom 5", name: nom5, widget: string, i18n: true, hint: "Longueur actuelle : 29 caractères." }
-              - { label: "Nom 6", name: nom6, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères." }
-              - { label: "Nom 7", name: nom7, widget: string, i18n: true, hint: "Longueur actuelle : 17 caractères." }
-              - { label: "Nom 8", name: nom8, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères." }
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 10 caractères." }
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 23 caractères." }
-          - label: Les trois repères
-            name: uses
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Sous-titre", name: soustitre, widget: string, i18n: true, hint: "Longueur actuelle : 15 caractères." }
-              - { label: "Sous-titre 2", name: soustitre2, widget: string, i18n: true, hint: "Longueur actuelle : 23 caractères." }
-              - { label: "Sous-titre 3", name: soustitre3, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères." }
-              - { label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 104 caractères." }
-              - { label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 111 caractères." }
-              - { label: "Paragraphe 3", name: texte3, widget: text, i18n: true, hint: "Longueur actuelle : 128 caractères." }
-      - name: equipe
-        label: Page Équipe
-        file: src/_data/textes/equipe.json
-        i18n: true
-        preview_path: "/equipe/"
-        fields:
-          - label: Cofondateurs
-            name: cofondateurs
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 12 caractères." }
-          - label: Divers
-            name: divers
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 14 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 28 caractères." }
-          - label: Equipe scientifique
-            name: equipe_scientifique
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 19 caractères." }
-              - { label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 75 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 27 caractères." }
-          - label: En-tête de la page
-            name: phead
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 190 caractères." }
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 15 caractères." }
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 8 caractères." }
-      - name: actualites
-        label: Page Actualités
-        file: src/_data/textes/actualites.json
-        i18n: true
-        preview_path: "/actualites/"
-        fields:
-          - label: Divers
-            name: divers
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 29 caractères." }
-          - label: La liste
-            name: news
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 21 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-          - label: En-tête de la page
-            name: phead
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 14 caractères." }
-      - name: mentions
-        label: Mentions légales
-        file: src/_data/textes/mentions.json
-        i18n: true
-        preview_path: "/mentions-legales/"
-        fields:
-          - label: Le texte légal
-            name: legal
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Sous-titre", name: soustitre, widget: string, i18n: true, hint: "Longueur actuelle : 15 caractères." }
-              - { label: "Sous-titre 2", name: soustitre2, widget: string, i18n: true, hint: "Longueur actuelle : 27 caractères." }
-              - { label: "Sous-titre 3", name: soustitre3, widget: string, i18n: true, hint: "Longueur actuelle : 9 caractères." }
-              - { label: "Sous-titre 4", name: soustitre4, widget: string, i18n: true, hint: "Longueur actuelle : 24 caractères." }
-              - { label: "Sous-titre 5", name: soustitre5, widget: string, i18n: true, hint: "Longueur actuelle : 15 caractères." }
-              - { label: "Sous-titre 6", name: soustitre6, widget: string, i18n: true, hint: "Longueur actuelle : 14 caractères." }
-              - { label: "Sous-titre 7", name: soustitre7, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères." }
-              - { label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 409 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Paragraphe 2", name: texte2, widget: string, i18n: true, hint: "Longueur actuelle : 61 caractères." }
-              - { label: "Paragraphe 3", name: texte3, widget: text, i18n: true, hint: "Longueur actuelle : 101 caractères." }
-              - { label: "Paragraphe 4", name: texte4, widget: text, i18n: true, hint: "Longueur actuelle : 272 caractères." }
-              - { label: "Paragraphe 5", name: texte5, widget: text, i18n: true, hint: "Longueur actuelle : 150 caractères." }
-              - { label: "Paragraphe 6", name: texte6, widget: text, i18n: true, hint: "Longueur actuelle : 120 caractères." }
-              - { label: "Paragraphe 7", name: texte7, widget: text, i18n: true, hint: "Longueur actuelle : 305 caractères." }
-              - { label: "Paragraphe 8", name: texte8, widget: text, i18n: true, hint: "Longueur actuelle : 131 caractères." }
-          - label: En-tête de la page
-            name: phead
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères." }
-      - name: confidentialite
-        label: Politique de confidentialité
-        file: src/_data/textes/confidentialite.json
-        i18n: true
-        preview_path: "/confidentialite/"
-        fields:
-          - label: Le texte légal
-            name: legal
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Point de liste", name: point, widget: string, i18n: true, hint: "Longueur actuelle : 61 caractères." }
-              - { label: "Point de liste 2", name: point2, widget: text, i18n: true, hint: "Longueur actuelle : 116 caractères." }
-              - { label: "Sous-titre", name: soustitre, widget: string, i18n: true, hint: "Longueur actuelle : 25 caractères." }
-              - { label: "Sous-titre 2", name: soustitre2, widget: string, i18n: true, hint: "Longueur actuelle : 18 caractères." }
-              - { label: "Sous-titre 3", name: soustitre3, widget: string, i18n: true, hint: "Longueur actuelle : 23 caractères." }
-              - { label: "Sous-titre 4", name: soustitre4, widget: string, i18n: true, hint: "Longueur actuelle : 13 caractères." }
-              - { label: "Sous-titre 5", name: soustitre5, widget: string, i18n: true, hint: "Longueur actuelle : 21 caractères." }
-              - { label: "Sous-titre 6", name: soustitre6, widget: string, i18n: true, hint: "Longueur actuelle : 10 caractères." }
-              - { label: "Sous-titre 7", name: soustitre7, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères." }
-              - { label: "Sous-titre 8", name: soustitre8, widget: string, i18n: true, hint: "Longueur actuelle : 8 caractères." }
-              - { label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 132 caractères." }
-              - { label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 179 caractères." }
-              - { label: "Paragraphe 3", name: texte3, widget: text, i18n: true, hint: "Longueur actuelle : 250 caractères." }
-              - { label: "Paragraphe 4", name: texte4, widget: text, i18n: true, hint: "Longueur actuelle : 171 caractères." }
-              - { label: "Paragraphe 5", name: texte5, widget: text, i18n: true, hint: "Longueur actuelle : 284 caractères." }
-              - { label: "Paragraphe 6", name: texte6, widget: text, i18n: true, hint: "Longueur actuelle : 89 caractères." }
-              - { label: "Paragraphe 7", name: texte7, widget: text, i18n: true, hint: "Longueur actuelle : 252 caractères." }
-              - { label: "Paragraphe 8", name: texte8, widget: text, i18n: true, hint: "Longueur actuelle : 196 caractères." }
-              - { label: "Paragraphe 9", name: texte9, widget: text, i18n: true, hint: "Longueur actuelle : 191 caractères." }
-              - { label: "Paragraphe 10", name: texte10, widget: text, i18n: true, hint: "Longueur actuelle : 163 caractères." }
-          - label: En-tête de la page
-            name: phead
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 28 caractères." }
-      - name: article
-        label: Pages d'article
-        file: src/_data/textes/article.json
-        i18n: true
-        preview_path: "/actualites/prix-i-phd-morvan-gaudin/"
-        fields:
-          - label: Divers
-            name: divers
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 20 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-              - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 38 caractères." }
-          - label: En-tête de la page
-            name: phead
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 29 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle." }
-      - name: communs
-        label: Textes communs à tout le site
-        file: src/_data/textes/communs.json
-        i18n: true
-        preview_path: "/"
-        fields:
-          - label: Descriptions des images
-            name: alt
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Iphd", name: iphd, widget: string, i18n: true, hint: "Longueur actuelle : 28 caractères." }
-              - { label: "Jouer", name: jouer, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères." }
-              - { label: "Schema", name: schema, widget: text, i18n: true, hint: "Longueur actuelle : 316 caractères." }
-              - { label: "Video", name: video, widget: string, i18n: true, hint: "Longueur actuelle : 34 caractères." }
-              - { label: "Video titre", name: video_titre, widget: string, i18n: true, hint: "Longueur actuelle : 41 caractères." }
-          - label: Divers
-            name: divers
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Ecrivez", name: ecrivez, widget: string, i18n: true, hint: "Longueur actuelle : 12 caractères." }
-              - { label: "En savoir plus", name: en_savoir_plus, widget: string, i18n: true, hint: "Longueur actuelle : 14 caractères." }
-              - { label: "Piege", name: piege, widget: string, i18n: true, hint: "Longueur actuelle : 21 caractères." }
-              - { label: "Pour", name: pour, widget: string, i18n: true, hint: "Longueur actuelle : 4 caractères." }
-              - { label: "Suivre linkedin", name: suivre_linkedin, widget: string, i18n: true, hint: "Longueur actuelle : 24 caractères." }
-              - { label: "Voir video", name: voir_video, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères." }
-          - label: Navigation
-            name: nav
-            widget: object
-            collapsed: true
-            i18n: true
-            fields:
-              - { label: "Accueil", name: accueil, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères." }
-              - { label: "Actualites", name: actualites, widget: string, i18n: true, hint: "Longueur actuelle : 10 caractères." }
-              - { label: "Antimoine", name: antimoine, widget: string, i18n: true, hint: "Longueur actuelle : 11 caractères." }
-              - { label: "Confidentialite", name: confidentialite, widget: string, i18n: true, hint: "Longueur actuelle : 28 caractères." }
-              - { label: "Contact", name: contact, widget: string, i18n: true, hint: "Longueur actuelle : 14 caractères." }
-              - { label: "Droits", name: droits, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères." }
-              - { label: "Equipe", name: equipe, widget: string, i18n: true, hint: "Longueur actuelle : 6 caractères." }
-              - { label: "Mentions", name: mentions, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères." }
-              - { label: "Technologie", name: technologie, widget: string, i18n: true, hint: "Longueur actuelle : 17 caractères." }
+    preview_path: "/"
+    fields:
+    - label: Le problème
+      name: le_probleme
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 11 caractères."}
+      - {label: "Titre", name: titre, widget: text, i18n: true, hint: "Longueur actuelle : 84 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 131 caractères."}
+      - {label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 121 caractères."}
+    - label: Les quatre chiffres
+      name: figs
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Chiffre", name: chiffre, widget: string, i18n: true, hint: "Longueur actuelle : 11 caractères."}
+      - {label: "Libellé", name: libelle, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères."}
+      - {label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 81 caractères."}
+      - {label: "Chiffre 2", name: chiffre2, widget: string, i18n: true, hint: "Longueur actuelle : 1 caractères."}
+      - {label: "Libellé 2", name: libelle2, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères."}
+      - {label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 88 caractères."}
+      - {label: "Chiffre 3", name: chiffre3, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères."}
+      - {label: "Libellé 3", name: libelle3, widget: string, i18n: true, hint: "Longueur actuelle : 26 caractères."}
+      - {label: "Paragraphe 3", name: texte3, widget: text, i18n: true, hint: "Longueur actuelle : 78 caractères."}
+      - {label: "Chiffre 4", name: chiffre4, widget: string, i18n: true, hint: "Longueur actuelle : 1 caractères."}
+      - {label: "Libellé 4", name: libelle4, widget: string, i18n: true, hint: "Longueur actuelle : 47 caractères."}
+      - {label: "Paragraphe 4", name: texte4, widget: text, i18n: true, hint: "Longueur actuelle : 79 caractères."}
+    - label: Notre solution
+      name: notre_solution
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 14 caractères."}
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 65 caractères."}
+      - {label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 160 caractères."}
+    - label: Les trois produits
+      name: row
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Numéro de l'élément", name: exposant, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères."}
+      - {label: "Symbole chimique", name: symbole, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères."}
+      - {label: "Nom", name: nom, widget: string, i18n: true, hint: "Longueur actuelle : 9 caractères."}
+      - {label: "Numéro de l'élément 2", name: exposant2, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères."}
+      - {label: "Symbole chimique 2", name: symbole2, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères."}
+      - {label: "Nom 2", name: nom2, widget: string, i18n: true, hint: "Longueur actuelle : 5 caractères."}
+      - {label: "Numéro de l'élément 3", name: exposant3, widget: string, i18n: true, hint: "Longueur actuelle : 10 caractères."}
+      - {label: "Légende", name: legende, widget: string, i18n: true, hint: "Longueur actuelle : 1 caractères."}
+      - {label: "Nom 3", name: nom3, widget: string, i18n: true, hint: "Longueur actuelle : 8 caractères."}
+    - label: Notre technologie
+      name: notre_technologie
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 17 caractères."}
+      - {label: "Titre", name: titre, widget: text, i18n: true, hint: "Longueur actuelle : 21 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 129 caractères."}
+      - {label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 95 caractères."}
+      - {label: "Paragraphe 3", name: texte3, widget: text, i18n: true, hint: "Longueur actuelle : 65 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Paragraphe 4", name: texte4, widget: text, i18n: true, hint: "Longueur actuelle : 63 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Paragraphe 5", name: texte5, widget: text, i18n: true, hint: "Longueur actuelle : 54 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Paragraphe 6", name: texte6, widget: text, i18n: true, hint: "Longueur actuelle : 58 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Paragraphe 7", name: texte7, widget: text, i18n: true, hint: "Longueur actuelle : 35 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+    - label: La chaîne du procédé
+      name: flow
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Paragraphe", name: texte, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères."}
+      - {label: "Sous-titre", name: soustitre, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères."}
+      - {label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 110 caractères."}
+      - {label: "Paragraphe 3", name: texte3, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères."}
+      - {label: "Sous-titre 2", name: soustitre2, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères."}
+      - {label: "Paragraphe 4", name: texte4, widget: text, i18n: true, hint: "Longueur actuelle : 94 caractères."}
+      - {label: "Paragraphe 5", name: texte5, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères."}
+      - {label: "Sous-titre 3", name: soustitre3, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères."}
+      - {label: "Paragraphe 6", name: texte6, widget: text, i18n: true, hint: "Longueur actuelle : 100 caractères."}
+      - {label: "Paragraphe 7", name: texte7, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères."}
+      - {label: "Sous-titre 4", name: soustitre4, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères."}
+      - {label: "Paragraphe 8", name: texte8, widget: text, i18n: true, hint: "Longueur actuelle : 90 caractères."}
+    - label: Bandeau des partenaires
+      name: band
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 45 caractères."}
+    - label: Concours et distinctions · le sur-titre
+      name: concours_et_distinctions
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 24 caractères."}
+    - label: Les trois distinctions
+      name: dist
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sous-titre", name: soustitre, widget: string, i18n: true, hint: "Longueur actuelle : 21 caractères."}
+      - {label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 76 caractères."}
+      - {label: "Sous-titre 2", name: soustitre2, widget: string, i18n: true, hint: "Longueur actuelle : 36 caractères."}
+      - {label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 73 caractères."}
+    - label: Le formulaire
+      name: cgrid
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères."}
+      - {label: "Titre", name: titre, widget: text, i18n: true, hint: "Longueur actuelle : 34 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 138 caractères."}
+      - {label: "Libellé", name: libelle, widget: string, i18n: true, hint: "Longueur actuelle : 6 caractères."}
+      - {label: "Libellé 2", name: libelle2, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères."}
+      - {label: "Libellé 3", name: libelle3, widget: string, i18n: true, hint: "Longueur actuelle : 6 caractères."}
+      - {label: "Intitulé de champ", name: intitule, widget: string, i18n: true, hint: "Longueur actuelle : 3 caractères."}
+      - {label: "Intitulé de champ 2", name: intitule2, widget: string, i18n: true, hint: "Longueur actuelle : 6 caractères."}
+      - {label: "Intitulé de champ 3", name: intitule3, widget: string, i18n: true, hint: "Longueur actuelle : 9 caractères."}
+      - {label: "Choix du menu", name: choix, widget: string, i18n: true, hint: "Longueur actuelle : 41 caractères."}
+      - {label: "Choix du menu 2", name: choix2, widget: string, i18n: true, hint: "Longueur actuelle : 34 caractères."}
+      - {label: "Choix du menu 3", name: choix3, widget: string, i18n: true, hint: "Longueur actuelle : 38 caractères."}
+      - {label: "Choix du menu 4", name: choix4, widget: string, i18n: true, hint: "Longueur actuelle : 31 caractères."}
+      - {label: "Choix du menu 5", name: choix5, widget: string, i18n: true, hint: "Longueur actuelle : 12 caractères."}
+      - {label: "Choix du menu 6", name: choix6, widget: string, i18n: true, hint: "Longueur actuelle : 6 caractères."}
+      - {label: "Choix du menu 7", name: choix7, widget: string, i18n: true, hint: "Longueur actuelle : 11 caractères."}
+      - {label: "Choix du menu 8", name: choix8, widget: string, i18n: true, hint: "Longueur actuelle : 5 caractères."}
+      - {label: "Intitulé de champ 4", name: intitule4, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères."}
+      - {label: "Bouton", name: bouton, widget: text, i18n: true, hint: "Longueur actuelle : 9 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 84 caractères."}
+    - label: Message de confirmation
+      name: sent
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Paragraphe", name: texte, widget: string, i18n: true, hint: "Longueur actuelle : 1 caractères."}
+      - {label: "Sous-titre", name: soustitre, widget: string, i18n: true, hint: "Longueur actuelle : 15 caractères."}
+      - {label: "Paragraphe 2", name: texte2, widget: string, i18n: true, hint: "Longueur actuelle : 51 caractères."}
+      - {label: "Lien", name: lien, widget: string, i18n: true, hint: "Longueur actuelle : 27 caractères."}
+  - name: procede
+    label: Page Notre technologie
+    file: src/_data/textes/procede.json
+    i18n: true
+    preview_path: "/notre-technologie/"
+    fields:
+    - label: En-tête de la page
+      name: phead
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 28 caractères."}
+      - {label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 185 caractères."}
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 10 caractères."}
+    - label: En quatre minutes
+      name: en_quatre_minutes
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 17 caractères."}
+      - {label: "Paragraphe", name: texte, widget: string, i18n: true, hint: "Longueur actuelle : 65 caractères."}
+      - {label: "Bloc de texte", name: bloc, widget: text, i18n: true, hint: "Longueur actuelle : 197 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+    - label: Le verrou
+      name: le_verrou
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 9 caractères."}
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 38 caractères."}
+      - {label: "Bloc de texte", name: bloc, widget: text, i18n: true, hint: "Longueur actuelle : 391 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+    - label: Le principe
+      name: le_principe
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 11 caractères."}
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 32 caractères."}
+      - {label: "Bloc de texte", name: bloc, widget: text, i18n: true, hint: "Longueur actuelle : 426 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+    - label: Le schéma animé
+      name: schema
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Légende", name: legende, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères."}
+      - {label: "Légende 2", name: legende2, widget: string, i18n: true, hint: "Longueur actuelle : 43 caractères."}
+      - {label: "Légende 3", name: legende3, widget: string, i18n: true, hint: "Longueur actuelle : 36 caractères."}
+      - {label: "Symbole chimique", name: symbole, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères."}
+      - {label: "Nom", name: nom, widget: string, i18n: true, hint: "Longueur actuelle : 9 caractères."}
+      - {label: "Symbole chimique 2", name: symbole2, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères."}
+      - {label: "Nom 2", name: nom2, widget: string, i18n: true, hint: "Longueur actuelle : 15 caractères."}
+      - {label: "Symbole chimique 3", name: symbole3, widget: text, i18n: true, hint: "Longueur actuelle : 2 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Nom 3", name: nom3, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères."}
+      - {label: "Sous-titre", name: soustitre, widget: text, i18n: true, hint: "Longueur actuelle : 7 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Bloc de texte", name: bloc, widget: text, i18n: true, hint: "Longueur actuelle : 120 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Sous-titre 2", name: soustitre2, widget: text, i18n: true, hint: "Longueur actuelle : 16 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Bloc de texte 2", name: bloc2, widget: text, i18n: true, hint: "Longueur actuelle : 122 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Sous-titre 3", name: soustitre3, widget: text, i18n: true, hint: "Longueur actuelle : 20 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Bloc de texte 3", name: bloc3, widget: text, i18n: true, hint: "Longueur actuelle : 107 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Sous-titre 4", name: soustitre4, widget: text, i18n: true, hint: "Longueur actuelle : 16 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Bloc de texte 4", name: bloc4, widget: text, i18n: true, hint: "Longueur actuelle : 119 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+    - label: Ce qui en sort
+      name: ce_qui_en_sort
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 14 caractères."}
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 45 caractères."}
+      - {label: "Bloc de texte", name: bloc, widget: text, i18n: true, hint: "Longueur actuelle : 115 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Libellé", name: libelle, widget: string, i18n: true, hint: "Longueur actuelle : 24 caractères."}
+      - {label: "Bloc de texte 2", name: bloc2, widget: text, i18n: true, hint: "Longueur actuelle : 126 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Libellé 2", name: libelle2, widget: string, i18n: true, hint: "Longueur actuelle : 30 caractères."}
+      - {label: "Bloc de texte 3", name: bloc3, widget: text, i18n: true, hint: "Longueur actuelle : 99 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Libellé 3", name: libelle3, widget: string, i18n: true, hint: "Longueur actuelle : 27 caractères."}
+      - {label: "Bloc de texte 4", name: bloc4, widget: text, i18n: true, hint: "Longueur actuelle : 122 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+    - label: Les trois produits
+      name: sorties
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Symbole chimique", name: symbole, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères."}
+      - {label: "Sous-titre", name: soustitre, widget: text, i18n: true, hint: "Longueur actuelle : 18 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Bloc de texte", name: bloc, widget: text, i18n: true, hint: "Longueur actuelle : 137 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Symbole chimique 2", name: symbole2, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères."}
+      - {label: "Sous-titre 2", name: soustitre2, widget: string, i18n: true, hint: "Longueur actuelle : 15 caractères."}
+      - {label: "Bloc de texte 2", name: bloc2, widget: text, i18n: true, hint: "Longueur actuelle : 144 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Symbole chimique 3", name: symbole3, widget: text, i18n: true, hint: "Longueur actuelle : 2 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Sous-titre 3", name: soustitre3, widget: string, i18n: true, hint: "Longueur actuelle : 9 caractères."}
+      - {label: "Bloc de texte 3", name: bloc3, widget: text, i18n: true, hint: "Longueur actuelle : 144 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+    - label: Ce qui l'atteste
+      name: ce_qui_l_atteste
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères."}
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 29 caractères."}
+      - {label: "Bloc de texte", name: bloc, widget: text, i18n: true, hint: "Longueur actuelle : 120 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Libellé", name: libelle, widget: string, i18n: true, hint: "Longueur actuelle : 5 caractères."}
+      - {label: "Sous-titre", name: soustitre, widget: text, i18n: true, hint: "Longueur actuelle : 74 caractères."}
+      - {label: "Bloc de texte 2", name: bloc2, widget: text, i18n: true, hint: "Longueur actuelle : 162 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 26 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Libellé 2", name: libelle2, widget: string, i18n: true, hint: "Longueur actuelle : 11 caractères."}
+      - {label: "Sous-titre 2", name: soustitre2, widget: text, i18n: true, hint: "Longueur actuelle : 83 caractères."}
+      - {label: "Bloc de texte 3", name: bloc3, widget: text, i18n: true, hint: "Longueur actuelle : 117 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Lien 2", name: lien2, widget: text, i18n: true, hint: "Longueur actuelle : 27 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Libellé 3", name: libelle3, widget: string, i18n: true, hint: "Longueur actuelle : 6 caractères."}
+      - {label: "Sous-titre 3", name: soustitre3, widget: string, i18n: true, hint: "Longueur actuelle : 31 caractères."}
+    - label: La suite
+      name: la_suite
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 8 caractères."}
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 24 caractères."}
+    - label: Bloc de fin · nous écrire
+      name: divers
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 38 caractères."}
+      - {label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 20 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+  - name: antimoine
+    label: Page L'antimoine
+    file: src/_data/textes/antimoine.json
+    i18n: true
+    preview_path: "/l-antimoine/"
+    fields:
+    - label: En-tête de la page
+      name: phead
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 29 caractères."}
+      - {label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 154 caractères."}
+    - label: Ses usages
+      name: ses_usages
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 10 caractères."}
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 23 caractères."}
+      - {label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 123 caractères."}
+      - {label: "Nom", name: nom, widget: string, i18n: true, hint: "Longueur actuelle : 24 caractères."}
+      - {label: "Précision", name: detail, widget: string, i18n: true, hint: "Longueur actuelle : 66 caractères."}
+      - {label: "Nom 2", name: nom2, widget: string, i18n: true, hint: "Longueur actuelle : 18 caractères."}
+      - {label: "Précision 2", name: detail2, widget: string, i18n: true, hint: "Longueur actuelle : 63 caractères."}
+      - {label: "Nom 3", name: nom3, widget: string, i18n: true, hint: "Longueur actuelle : 6 caractères."}
+      - {label: "Précision 3", name: detail3, widget: string, i18n: true, hint: "Longueur actuelle : 47 caractères."}
+      - {label: "Nom 4", name: nom4, widget: string, i18n: true, hint: "Longueur actuelle : 17 caractères."}
+      - {label: "Précision 4", name: detail4, widget: string, i18n: true, hint: "Longueur actuelle : 58 caractères."}
+      - {label: "Nom 5", name: nom5, widget: string, i18n: true, hint: "Longueur actuelle : 29 caractères."}
+      - {label: "Précision 5", name: detail5, widget: string, i18n: true, hint: "Longueur actuelle : 68 caractères."}
+      - {label: "Nom 6", name: nom6, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères."}
+      - {label: "Précision 6", name: detail6, widget: string, i18n: true, hint: "Longueur actuelle : 68 caractères."}
+      - {label: "Nom 7", name: nom7, widget: string, i18n: true, hint: "Longueur actuelle : 17 caractères."}
+      - {label: "Précision 7", name: detail7, widget: string, i18n: true, hint: "Longueur actuelle : 39 caractères."}
+      - {label: "Nom 8", name: nom8, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères."}
+      - {label: "Précision 8", name: detail8, widget: string, i18n: true, hint: "Longueur actuelle : 46 caractères."}
+    - label: Enjeu de souveraineté européenne
+      name: criticite
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 9 caractères."}
+      - {label: "Titre", name: titre, widget: text, i18n: true, hint: "Longueur actuelle : 58 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 173 caractères."}
+      - {label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 104 caractères."}
+      - {label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 239 caractères."}
+    - label: Les trois repères
+      name: uses
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sous-titre", name: soustitre, widget: string, i18n: true, hint: "Longueur actuelle : 15 caractères."}
+      - {label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 104 caractères."}
+      - {label: "Sous-titre 2", name: soustitre2, widget: string, i18n: true, hint: "Longueur actuelle : 23 caractères."}
+      - {label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 111 caractères."}
+      - {label: "Sous-titre 3", name: soustitre3, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères."}
+      - {label: "Paragraphe 3", name: texte3, widget: text, i18n: true, hint: "Longueur actuelle : 128 caractères."}
+    - label: Dépendance aux importations
+      name: dependance
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 10 caractères."}
+      - {label: "Titre", name: titre, widget: text, i18n: true, hint: "Longueur actuelle : 42 caractères."}
+      - {label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 148 caractères."}
+      - {label: "Légende du graphique", name: legende, widget: text, i18n: true, hint: "Longueur actuelle : 95 caractères."}
+    - label: En synthèse
+      name: en_synthese
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 11 caractères."}
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères."}
+      - {label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 88 caractères."}
+      - {label: "Paragraphe", name: texte, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères."}
+      - {label: "Sous-titre", name: soustitre, widget: string, i18n: true, hint: "Longueur actuelle : 51 caractères."}
+      - {label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 117 caractères."}
+      - {label: "Paragraphe 3", name: texte3, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères."}
+      - {label: "Sous-titre 2", name: soustitre2, widget: string, i18n: true, hint: "Longueur actuelle : 34 caractères."}
+      - {label: "Paragraphe 4", name: texte4, widget: text, i18n: true, hint: "Longueur actuelle : 196 caractères."}
+      - {label: "Paragraphe 5", name: texte5, widget: string, i18n: true, hint: "Longueur actuelle : 2 caractères."}
+      - {label: "Sous-titre 3", name: soustitre3, widget: string, i18n: true, hint: "Longueur actuelle : 36 caractères."}
+      - {label: "Paragraphe 6", name: texte6, widget: text, i18n: true, hint: "Longueur actuelle : 119 caractères."}
+    - label: Bloc de fin · DeeeMines répond
+      name: divers
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 33 caractères."}
+      - {label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 92 caractères."}
+      - {label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 127 caractères."}
+      - {label: "Paragraphe 3", name: texte3, widget: text, i18n: true, hint: "Longueur actuelle : 111 caractères."}
+      - {label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 19 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+  - name: equipe
+    label: Page Équipe
+    file: src/_data/textes/equipe.json
+    i18n: true
+    preview_path: "/equipe/"
+    fields:
+    - label: En-tête de la page
+      name: phead
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 8 caractères."}
+      - {label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 190 caractères."}
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 15 caractères."}
+    - label: Cofondateurs
+      name: cofondateurs
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 12 caractères."}
+    - label: Équipe scientifique
+      name: equipe_scientifique
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 19 caractères."}
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 27 caractères."}
+      - {label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 75 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+    - label: Bloc de fin · nous rejoindre
+      name: divers
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 28 caractères."}
+      - {label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 14 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+  - name: actualites
+    label: Page Actualités
+    file: src/_data/textes/actualites.json
+    i18n: true
+    preview_path: "/actualites/"
+    fields:
+    - label: En-tête de la page
+      name: phead
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 14 caractères."}
+    - label: La liste
+      name: news
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 21 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+    - label: Bloc de fin · suivre la progression
+      name: divers
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 29 caractères."}
+  - name: mentions
+    label: Mentions légales
+    file: src/_data/textes/mentions.json
+    i18n: true
+    preview_path: "/mentions-legales/"
+    fields:
+    - label: En-tête de la page
+      name: phead
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères."}
+    - label: Le texte légal
+      name: legal
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sous-titre", name: soustitre, widget: string, i18n: true, hint: "Longueur actuelle : 15 caractères."}
+      - {label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 409 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+      - {label: "Sous-titre 2", name: soustitre2, widget: string, i18n: true, hint: "Longueur actuelle : 27 caractères."}
+      - {label: "Paragraphe 2", name: texte2, widget: string, i18n: true, hint: "Longueur actuelle : 61 caractères."}
+      - {label: "Sous-titre 3", name: soustitre3, widget: string, i18n: true, hint: "Longueur actuelle : 9 caractères."}
+      - {label: "Paragraphe 3", name: texte3, widget: text, i18n: true, hint: "Longueur actuelle : 101 caractères."}
+      - {label: "Sous-titre 4", name: soustitre4, widget: string, i18n: true, hint: "Longueur actuelle : 24 caractères."}
+      - {label: "Paragraphe 4", name: texte4, widget: text, i18n: true, hint: "Longueur actuelle : 272 caractères."}
+      - {label: "Paragraphe 5", name: texte5, widget: text, i18n: true, hint: "Longueur actuelle : 150 caractères."}
+      - {label: "Sous-titre 5", name: soustitre5, widget: string, i18n: true, hint: "Longueur actuelle : 15 caractères."}
+      - {label: "Paragraphe 6", name: texte6, widget: text, i18n: true, hint: "Longueur actuelle : 120 caractères."}
+      - {label: "Sous-titre 6", name: soustitre6, widget: string, i18n: true, hint: "Longueur actuelle : 14 caractères."}
+      - {label: "Paragraphe 7", name: texte7, widget: text, i18n: true, hint: "Longueur actuelle : 305 caractères."}
+      - {label: "Sous-titre 7", name: soustitre7, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères."}
+      - {label: "Paragraphe 8", name: texte8, widget: text, i18n: true, hint: "Longueur actuelle : 131 caractères."}
+  - name: confidentialite
+    label: Politique de confidentialité
+    file: src/_data/textes/confidentialite.json
+    i18n: true
+    preview_path: "/confidentialite/"
+    fields:
+    - label: En-tête de la page
+      name: phead
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 28 caractères."}
+    - label: Le texte légal
+      name: legal
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Sous-titre", name: soustitre, widget: string, i18n: true, hint: "Longueur actuelle : 25 caractères."}
+      - {label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 132 caractères."}
+      - {label: "Sous-titre 2", name: soustitre2, widget: string, i18n: true, hint: "Longueur actuelle : 18 caractères."}
+      - {label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 179 caractères."}
+      - {label: "Sous-titre 3", name: soustitre3, widget: string, i18n: true, hint: "Longueur actuelle : 23 caractères."}
+      - {label: "Paragraphe 3", name: texte3, widget: text, i18n: true, hint: "Longueur actuelle : 250 caractères."}
+      - {label: "Sous-titre 4", name: soustitre4, widget: string, i18n: true, hint: "Longueur actuelle : 13 caractères."}
+      - {label: "Paragraphe 4", name: texte4, widget: text, i18n: true, hint: "Longueur actuelle : 171 caractères."}
+      - {label: "Paragraphe 5", name: texte5, widget: text, i18n: true, hint: "Longueur actuelle : 284 caractères."}
+      - {label: "Sous-titre 5", name: soustitre5, widget: string, i18n: true, hint: "Longueur actuelle : 21 caractères."}
+      - {label: "Paragraphe 6", name: texte6, widget: text, i18n: true, hint: "Longueur actuelle : 89 caractères."}
+      - {label: "Sous-titre 6", name: soustitre6, widget: string, i18n: true, hint: "Longueur actuelle : 10 caractères."}
+      - {label: "Paragraphe 7", name: texte7, widget: text, i18n: true, hint: "Longueur actuelle : 252 caractères."}
+      - {label: "Point de liste", name: point, widget: string, i18n: true, hint: "Longueur actuelle : 61 caractères."}
+      - {label: "Point de liste 2", name: point2, widget: text, i18n: true, hint: "Longueur actuelle : 116 caractères."}
+      - {label: "Sous-titre 7", name: soustitre7, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères."}
+      - {label: "Paragraphe 8", name: texte8, widget: text, i18n: true, hint: "Longueur actuelle : 196 caractères."}
+      - {label: "Paragraphe 9", name: texte9, widget: text, i18n: true, hint: "Longueur actuelle : 191 caractères."}
+      - {label: "Sous-titre 8", name: soustitre8, widget: string, i18n: true, hint: "Longueur actuelle : 8 caractères."}
+      - {label: "Paragraphe 10", name: texte10, widget: text, i18n: true, hint: "Longueur actuelle : 163 caractères."}
+  - name: article
+    label: Pages d'article
+    file: src/_data/textes/article.json
+    i18n: true
+    preview_path: "/actualites/prix-i-phd-morvan-gaudin/"
+    fields:
+    - label: En-tête de la page
+      name: phead
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 29 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+    - label: Bloc de fin
+      name: divers
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 38 caractères."}
+      - {label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 20 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+  - name: communs
+    label: Textes communs à tout le site
+    file: src/_data/textes/communs.json
+    i18n: true
+    preview_path: "/"
+    fields:
+    - label: Navigation
+      name: nav
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Contact", name: contact, widget: string, i18n: true, hint: "Longueur actuelle : 14 caractères."}
+      - {label: "Accueil", name: accueil, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères."}
+      - {label: "Droits", name: droits, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères."}
+      - {label: "Mentions", name: mentions, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères."}
+      - {label: "Confidentialite", name: confidentialite, widget: string, i18n: true, hint: "Longueur actuelle : 28 caractères."}
+      - {label: "Actualites", name: actualites, widget: string, i18n: true, hint: "Longueur actuelle : 10 caractères."}
+      - {label: "Antimoine", name: antimoine, widget: string, i18n: true, hint: "Longueur actuelle : 11 caractères."}
+      - {label: "Equipe", name: equipe, widget: string, i18n: true, hint: "Longueur actuelle : 6 caractères."}
+      - {label: "Technologie", name: technologie, widget: string, i18n: true, hint: "Longueur actuelle : 17 caractères."}
+    - label: Descriptions des images
+      name: alt
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Iphd", name: iphd, widget: string, i18n: true, hint: "Longueur actuelle : 28 caractères."}
+      - {label: "Jouer", name: jouer, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères."}
+      - {label: "Schema", name: schema, widget: text, i18n: true, hint: "Longueur actuelle : 316 caractères."}
+      - {label: "Video", name: video, widget: string, i18n: true, hint: "Longueur actuelle : 34 caractères."}
+      - {label: "Video titre", name: video_titre, widget: string, i18n: true, hint: "Longueur actuelle : 41 caractères."}
+    - label: Libellés divers
+      name: divers
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Ecrivez", name: ecrivez, widget: string, i18n: true, hint: "Longueur actuelle : 12 caractères."}
+      - {label: "En savoir plus", name: en_savoir_plus, widget: string, i18n: true, hint: "Longueur actuelle : 14 caractères."}
+      - {label: "Piege", name: piege, widget: string, i18n: true, hint: "Longueur actuelle : 21 caractères."}
+      - {label: "Pour", name: pour, widget: string, i18n: true, hint: "Longueur actuelle : 4 caractères."}
+      - {label: "Suivre linkedin", name: suivre_linkedin, widget: string, i18n: true, hint: "Longueur actuelle : 24 caractères."}
+      - {label: "Voir video", name: voir_video, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères."}
