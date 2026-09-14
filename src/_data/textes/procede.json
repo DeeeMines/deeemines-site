@@ -2,7 +2,7 @@
   "en": {
     "ce_qui_en_sort": {
       "bloc": "\n            <p>Antimony is our priority. The bromine and the polymer come out of the same\n               operation and will be valorised in turn.</p>\n          ",
-      "bloc2": "<p>The 98&#8239;% yield is not measured on a model plastic, but on shredded\n               material from real electronic waste, supplied by our industrial partners.</p>",
+      "bloc2": "<p>The 98&#8239;% yield is reached on shredded material from real electronic waste,\n               supplied by our industrial partners.</p>",
       "bloc3": "\n            <p>The brominated compounds are extracted in turn. It is not only the antimony that\n               leaves the plastic.</p>\n          ",
       "bloc4": "\n            <p>The recovered polymer holds fewer pollutants than the regulatory limit allows,\n               and can go back into the industry.</p>\n          ",
       "libelle": "On real plastics",
@@ -21,7 +21,7 @@
       "lien": "Read the thesis <span class=\"a\">&#8594;</span>",
       "lien2": "Read the paper <span class=\"a\">&#8594;</span>",
       "soustitre": "Developing innovative processes to decontaminate brominated plastics from waste electrical and electronic equipment by extracting antimony oxide and organobrominated molecules",
-      "soustitre2": "Antimony Trioxide Extraction from E-Waste Brominated Flame Retardant Laden Plastics",
+      "soustitre2": "Antimony Trioxide Extraction from E-Waste Brominated Flame-Retardant Laden Plastics by Simultaneous Liquid–Liquid Extraction and Leaching",
       "soustitre3": "Patented process, published in 2025",
       "surtitre": "The evidence",
       "titre": "Published, and peer-reviewed"
@@ -41,14 +41,14 @@
       "titre": "From the laboratory to the pilot"
     },
     "le_principe": {
-      "bloc": "<p>The shredded material goes through three successive baths, at room temperature\n               and atmospheric pressure.</p>\n            <p>The first dissolves the polymer and frees the additives trapped in the material.\n               The second selectively captures the antimony. The third precipitates the polymer\n               back out, stripped of its additives.</p>\n            <p>These baths were chosen through thermodynamic simulation, then refined by\n               experimental screening.</p>",
+      "bloc": "<p>Everything happens at room temperature and atmospheric pressure, with no heating\n               and no pressure.</p>\n            <p>The shredded material is first dissolved: the polymer goes into solution and\n               frees the additives trapped in the material. The antimony is then selectively\n               captured, and the brominated compounds extracted in turn. The polymer, stripped\n               of its additives, is finally precipitated back out and recovered as a solid.</p>",
       "surtitre": "The principle",
-      "titre": "Three successive baths"
+      "titre": "… released by a patented process using solvents and complexing agents"
     },
     "le_verrou": {
       "bloc": "\n            <p>The plastics in electrical and electronic equipment contain\n               brominated flame retardants, combined with antimony trioxide,\n               which makes them far more effective. Both are spread through the polymer\n               matrix, not laid on the surface.</p>\n            <p>No industry today can separate them out. These plastics therefore go\n               to incineration, along with the antimony and the bromine they hold.</p>\n          ",
       "surtitre": "The obstacle",
-      "titre": "Additives trapped inside the material"
+      "titre": "Additives trapped inside the material…"
     },
     "phead": {
       "chapo": "\n        Four years of research at the Institut de Recherche de Chimie Paris, a doctoral thesis, a patent and a peer-reviewed paper. Here is what the process does, and the evidence that it works.\n      ",
@@ -56,12 +56,12 @@
     },
     "schema": {
       "bloc": "<p>The waste arrives in pieces of every size. Shredding gives an\n        even fraction, the condition for a stable yield.</p>",
-      "bloc2": "<p>The first bath dissolves the polymer. The additives, until\n        then trapped in the material, become reachable.</p>",
-      "bloc3": "<p>The second bath captures the antimony oxide. The brominated\n        compounds are extracted next, by a third one.</p>",
-      "bloc4": "<p>The cleaned polymer is precipitated out, recovered solid and\n        dried. The regenerated baths go into the next cycle.</p>",
+      "bloc2": "<p>The polymer goes into solution. The additives, until\n        then trapped in the material, become reachable.</p>",
+      "bloc3": "<p>The antimony oxide is selectively captured. The brominated\n        compounds are extracted in turn.</p>",
+      "bloc4": "<p>The cleaned polymer is precipitated out, recovered solid and\n        dried. The regenerated solvents go into the next cycle.</p>",
       "legende": "Flame-retarded plastics",
       "legende2": "electronic waste, technical covers, cables, and more",
-      "legende3": "Baths regenerated, in a closed loop",
+      "legende3": "Solvents regenerated, in a closed loop",
       "nom": "Brominated compounds",
       "nom2": "Antimony",
       "nom3": "Purified polymer",
@@ -88,7 +88,7 @@
   "fr": {
     "ce_qui_en_sort": {
       "bloc": "\n            <p>L'antimoine est notre priorité. Le brome et le polymère sortent du même\n               traitement et seront valorisés à leur tour.</p>\n          ",
-      "bloc2": "<p>Le rendement de 98&#8239;% n'est pas mesuré sur un plastique modèle, mais sur\n               de vrais broyats issus de déchets électroniques, transmis par nos partenaires\n               industriels.</p>",
+      "bloc2": "<p>Le rendement de 98&#8239;% est atteint sur de vrais broyats issus de déchets\n               électroniques, transmis par nos partenaires industriels.</p>",
       "bloc3": "\n            <p>Les composés bromés sont extraits à leur tour : il n'y a pas que l'antimoine\n               qui sort du plastique.</p>\n          ",
       "bloc4": "\n            <p>Le polymère récupéré présente une teneur en polluants inférieure à la limite\n               réglementaire, et peut réintégrer la filière.</p>\n          ",
       "libelle": "Sur des plastiques réels",
@@ -106,8 +106,8 @@
       "libelle3": "Brevet",
       "lien": "Consulter la thèse <span class=\"a\">&#8594;</span>",
       "lien2": "Lire la publication <span class=\"a\">&#8594;</span>",
-      "soustitre": "Développement de procédés innovants pour la dépollution des plastiques bromés issus des DEEE par l'extraction de l'oxyde antimoine et des molécules organobromées",
-      "soustitre2": "Antimony Trioxide Extraction from E-Waste Brominated Flame Retardant Laden Plastics",
+      "soustitre": "Développement de procédés innovants pour la dépollution des plastiques bromés issus des DEEE par l'extraction de l'oxyde d'antimoine et des molécules organobromées",
+      "soustitre2": "Antimony Trioxide Extraction from E-Waste Brominated Flame-Retardant Laden Plastics by Simultaneous Liquid–Liquid Extraction and Leaching",
       "soustitre3": "Procédé breveté, publié en 2025",
       "surtitre": "Ce qui l'atteste",
       "titre": "Publié, et relu par des pairs"
@@ -127,14 +127,14 @@
       "titre": "Du laboratoire au pilote"
     },
     "le_principe": {
-      "bloc": "<p>Le broyat traverse trois bains successifs, à température ambiante et à pression\n               atmosphérique.</p>\n            <p>Le premier met le polymère en solution et libère les additifs prisonniers de\n               la matière. Le deuxième capte sélectivement l'antimoine. Le troisième fait\n               reprécipiter le polymère, débarrassé de ses additifs.</p>\n            <p>Le choix de ces bains a été établi par simulation thermodynamique, puis\n               affiné par criblage expérimental.</p>",
+      "bloc": "<p>Tout se passe à température ambiante et à pression atmosphérique, sans chauffage\n               ni mise sous pression.</p>\n            <p>Le broyat est d'abord mis en solution : le polymère se dissout et libère les\n               additifs jusque-là prisonniers de la matière. L'antimoine est ensuite capté\n               sélectivement, et les composés bromés extraits à leur tour. Le polymère,\n               débarrassé de ses additifs, est enfin reprécipité et récupéré solide.</p>",
       "surtitre": "Le principe",
-      "titre": "Trois bains successifs"
+      "titre": "… libérés grâce à un procédé breveté utilisant des solvants et des complexants"
     },
     "le_verrou": {
       "bloc": "\n            <p>Les plastiques des équipements électriques et électroniques contiennent des\n               retardateurs de flamme bromés, associés à du trioxyde d'antimoine\n               qui en démultiplie l'effet. Les deux sont dispersés dans la matrice polymère,\n               et non déposés en surface.</p>\n            <p>Aucune filière ne sait aujourd'hui les en séparer. Ces plastiques partent donc\n               en incinération, avec l'antimoine et le brome qu'ils contiennent.</p>\n          ",
       "surtitre": "Le verrou",
-      "titre": "Des additifs prisonniers de la matière"
+      "titre": "Des additifs prisonniers de la matière…"
     },
     "phead": {
       "chapo": "\n        Quatre ans de recherche à l'Institut de Recherche de Chimie Paris, une thèse,\n        un brevet et une publication scientifique. Voici ce que le procédé fait, et\n        ce qui prouve qu'il fonctionne.\n      ",
@@ -142,12 +142,12 @@
     },
     "schema": {
       "bloc": "<p>Le gisement arrive en pièces de toutes tailles. Le broyage donne une\n        fraction homogène, condition d'un rendement stable.</p>",
-      "bloc2": "<p>Le premier bain met le polymère en solution. Les additifs,\n        jusque-là prisonniers de la matière, deviennent accessibles.</p>",
-      "bloc3": "<p>Le deuxième bain capte l'oxyde d'antimoine. Les composés bromés\n        sont extraits ensuite, par un troisième.</p>",
-      "bloc4": "<p>Le polymère dépollué est reprécipité, récupéré solide et séché. Les\n        bains régénérés repartent dans le cycle suivant.</p>",
+      "bloc2": "<p>Le polymère est mis en solution. Les additifs,\n        jusque-là prisonniers de la matière, deviennent accessibles.</p>",
+      "bloc3": "<p>L'oxyde d'antimoine est capté sélectivement. Les composés\n        bromés sont extraits à leur tour.</p>",
+      "bloc4": "<p>Le polymère dépollué est reprécipité, récupéré solide et séché.\n        Les solvants régénérés repartent dans le cycle suivant.</p>",
       "legende": "Plastiques ignifugés",
       "legende2": "déchets électroniques, bâches, câbles, etc.",
-      "legende3": "Bains régénérés, en boucle fermée",
+      "legende3": "Solvants régénérés, en boucle fermée",
       "nom": "Composés bromés",
       "nom2": "Antimoine",
       "nom3": "Polymère purifié",
