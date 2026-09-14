@@ -5,7 +5,10 @@
   --blue:#2B2BE8; --azure:#297EE1; --cyan:#3EBDD2; --mint:#52FCC3;
   /* variantes lisibles sur fond clair */
   --cyan-d:#1793AB; --mint-d:#0E9A72;
-  --paper:#FFFAF6; --paper-2:#F5EFE9;
+  /* Le fond est un blanc franc. Le second ton, qui sépare une section de
+     la suivante, est un gris très clair légèrement tiré vers le bleu de la
+     charte, et non plus un crème rosé. */
+  --paper:#FFFFFF; --paper-2:#F4F5F8;
   --text:#06065B; --soft:#5A5E8C; --soft-dark:#B9C6E6;
   --grad:linear-gradient(90deg,#040440,#2B2BE8 34%,#297EE1 58%,#3EBDD2 78%,#52FCC3);
   --line:rgba(6,6,91,.12); --line-d:rgba(255,255,255,.15);
@@ -62,7 +65,7 @@ h3{font-size:clamp(20px,2vw,25px);letter-spacing:-.028em;line-height:1.14}
 .grad-rule{height:3px;background:var(--grad);border:0;margin:0}
 
 /* ===== En-tête ===== */
-header{position:sticky;top:0;z-index:50;background:rgba(255,250,246,.92);
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
   backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
 /* Le symbole précède le nom, un peu plus haut que lui pour peser d'un
@@ -244,7 +247,7 @@ footer .marque .symbole{height:32px}
 @media(max-width:820px){.dist{grid-template-columns:1fr;gap:22px}}
 
 /* ===== 5. Bandeau partenaires ===== */
-.band{padding:clamp(42px,4.6vw,66px) 0;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band{padding:clamp(42px,4.6vw,66px) 0;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
   gap:clamp(18px,2vw,30px) clamp(14px,1.6vw,26px);margin-top:34px}
 .logos div{display:flex;align-items:center;justify-content:center;height:56px;flex:0 0 148px}
