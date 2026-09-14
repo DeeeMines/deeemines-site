@@ -15,23 +15,12 @@ eleventyComputed:
   adresse_fr_forcee: "/actualites/{{ paire.slug }}/"
   adresse_en_forcee: "/en/news/{{ paire.slug }}/"
 ---
-{% include "tete.njk" %}
-<body>
-
-{% include "entete.njk" %}
-
 <main>
   <div class="phead phead-art">
     <div class="wrap">
       <a class="retour" href="{{ adresses['actualites'][langue] }}" data-champ="article.phead.lien">{{ t.article.phead.lien | safe }}</a>
-      <div data-l="fr">
-        <div class="eyebrow" style="color:var(--mint)">{{ paire.art.categorie }} &#183; {{ paire.art.date }}</div>
-        <h1>{{ paire.art.titre }}</h1>
-      </div>
-      <div data-l="en" hidden>
-        <div class="eyebrow" style="color:var(--mint)">{{ paire.art.categorie }} &#183; {{ paire.art.date }}</div>
-        <h1>{{ paire.art.titre }}</h1>
-      </div>
+      <div class="eyebrow" style="color:var(--mint)">{{ paire.art.categorie }} &#183; {{ paire.art.date }}</div>
+      <h1>{{ paire.art.titre }}</h1>
     </div>
   </div>
   <hr class="grad-rule">
@@ -44,28 +33,11 @@ eleventyComputed:
              style="object-position:center {{ paire.art.cadrage or '50%' }}">
         {%- endif %}
 
-        <div class="art-corps" data-l="fr">
+        <div class="art-corps">
           <p class="chapo">{{ paire.art.resume }}</p>
           {{ paire.art.corps | markdown | safe }}
           {%- if paire.art.lien %}
           <p><a class="nlien" href="{{ paire.art.lien }}" target="_blank" rel="noopener">{{ paire.art.lien_texte or t.communs.divers.en_savoir_plus }} <span class="a">&#8594;</span></a></p>
-          {%- endif %}
-          {%- if paire.art.photos and paire.art.photos.length %}
-          <div class="art-photos">
-            {%- for ph in paire.art.photos %}
-            <figure><img src="{{ ph.image }}" alt="{{ ph.legende or '' }}"
-                        style="object-position:center {{ ph.cadrage or '50%' }}">
-              {%- if ph.legende %}<figcaption>{{ ph.legende }}</figcaption>{% endif %}
-            </figure>
-            {%- endfor %}
-          </div>
-          {%- endif %}
-        </div>
-        <div class="art-corps" data-l="en" hidden>
-          <p class="chapo">{{ paire.art.resume }}</p>
-          {{ paire.art.corps | markdown | safe }}
-          {%- if paire.art.lien %}
-          <p><a class="nlien" href="{{ paire.art.lien }}" target="_blank" rel="noopener">{{ paire.art.lien_texte or "Read more" }} <span class="a">&#8594;</span></a></p>
           {%- endif %}
           {%- if paire.art.photos and paire.art.photos.length %}
           <div class="art-photos">
@@ -86,13 +58,8 @@ eleventyComputed:
   <section class="tint" style="padding:clamp(42px,4.4vw,64px) 0;text-align:center">
     <div class="wrap">
       <h2 style="font-size:clamp(24px,3vw,34px);margin-bottom:22px" data-champ="article.divers.titre">{{ t.article.divers.titre | safe }}</h2>
-      <a href="/#contact" data-go="home" class="btn btn-ink" data-champ="article.divers.lien">{{ t.article.divers.lien | safe }}</a>
+      <a href="{{ adresses['accueil'][langue] }}#contact" class="btn btn-ink" data-champ="article.divers.lien">{{ t.article.divers.lien | safe }}</a>
     </div>
   </section>
 </main>
 
-{% include "pied.njk" %}
-
-{% include "js-commun.njk" %}
-</body>
-</html>

@@ -18,7 +18,7 @@ permalink: "{{ adresses['equipe'][langue] }}index.html"
 
   <section style="padding:clamp(44px,4.6vw,68px) 0">
     <div class="wrap">
-      <div class="eyebrow" data-champ="equipe.cofondateurs.surtitre">{{ t.equipe.cofondateurs.surtitre | safe }}</div>
+      <h2 class="eyebrow" data-champ="equipe.cofondateurs.surtitre">{{ t.equipe.cofondateurs.surtitre | safe }}</h2>
       <div class="people">
         {%- for m in equipe[langue].cofondateurs %}
         <div class="mem">
