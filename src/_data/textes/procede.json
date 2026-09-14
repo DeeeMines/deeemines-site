@@ -1,176 +1,180 @@
 {
-  "fr": {
-    "phead": {
-      "titre": "La chimie derrière DeeeMines",
-      "chapo": "Quatre ans de recherche à l'Institut de Recherche de Chimie Paris, une thèse,\n        un brevet et une publication scientifique.",
-      "surtitre": "Notre technologie"
-    },
-    "en_quatre_minutes": {
-      "surtitre": "En quatre minutes",
-      "texte": "La présentation de la thèse de Morvan Gaudin sera disponible ici.",
-      "bloc": "<p>Morvan Gaudin présente les travaux dont est issu le procédé, menés à\n               l'Institut de Recherche de Chimie Paris dans le cadre de la\n               Chaire Mines Urbaines, avec le soutien de l'éco-organisme ecosystem.</p>"
-    },
-    "le_verrou": {
-      "surtitre": "Le verrou",
-      "titre": "Des additifs prisonniers de la matière…",
-      "bloc": "<p>Les plastiques des équipements électriques et électroniques contiennent des\n               retardateurs de flamme bromés, associés à du trioxyde d'antimoine\n               qui en démultiplie l'effet. Les deux sont dispersés dans la matrice polymère,\n               et non déposés en surface.</p>\n            <p>Aucune filière ne sait aujourd'hui les en séparer. Ces plastiques partent donc\n               en incinération, avec l'antimoine et le brome qu'ils contiennent.</p>"
-    },
-    "le_principe": {
-      "surtitre": "Le principe",
-      "titre": "… libérés grâce à un procédé breveté",
-      "bloc": "<p>Tout se passe à température ambiante et à pression atmosphérique, sans chauffage\n               ni mise sous pression.</p>\n            <p>Le broyat traverse trois solvants successifs. Le premier met le polymère en\n               solution et libère les additifs jusque-là prisonniers de la matière. Le deuxième,\n               complexant, capte sélectivement l'antimoine, puis les composés bromés sont\n               extraits à leur tour. Le troisième fait reprécipiter le polymère, débarrassé de\n               ses additifs.</p>"
-    },
-    "schema": {
-      "legende": "Plastiques ignifugés",
-      "legende2": "déchets électroniques, bâches, câbles, etc.",
-      "legende3": "Solvants régénérés, en boucle fermée",
-      "symbole": "Br",
-      "nom": "Composés bromés",
-      "symbole2": "Sb",
-      "nom2": "Antimoine",
-      "symbole3": "C<tspan dy=\"5\" font-size=\"0.66em\">n</tspan>",
-      "nom3": "Polymère purifié",
-      "soustitre": "<span class=\"pt\"></span>Broyage",
-      "bloc": "<p>Le gisement arrive en pièces de toutes tailles. Le broyage donne une\n        fraction homogène, condition d'un rendement stable.</p>",
-      "soustitre2": "<span class=\"pt\"></span>Mise en solution",
-      "bloc2": "<p>Le premier solvant met le polymère en solution. Les additifs,\n        jusque-là prisonniers de la matière, deviennent accessibles.</p>",
-      "soustitre3": "<span class=\"pt\"></span>Extraction sélective",
-      "bloc3": "<p>Le deuxième capte sélectivement l'oxyde d'antimoine. Les\n        composés bromés sont extraits à leur tour.</p>",
-      "soustitre4": "<span class=\"pt\"></span>Insolubilisation",
-      "bloc4": "<p>Le troisième fait reprécipiter le polymère dépollué, récupéré\n        solide et séché. Les solvants régénérés repartent dans le cycle suivant.</p>"
-    },
+  "en": {
     "ce_qui_en_sort": {
-      "surtitre": "Ce qui en sort",
-      "titre": "Trois produits valorisés à partir d'un déchet",
-      "bloc": "<p>L'antimoine est notre priorité. Le brome et le polymère sortent du même\n               traitement et seront valorisés à leur tour.</p>",
-      "libelle": "Sur des plastiques réels",
-      "bloc2": "<p>Le rendement de 98&#8239;% est atteint sur de vrais broyats issus de déchets\n               électroniques, transmis par nos partenaires industriels.</p>",
-      "libelle2": "Retardateurs de flamme retirés",
-      "bloc3": "<p>Les composés bromés sont extraits à leur tour, dépolluant totalement le plastique.</p>",
-      "libelle3": "Sous le seuil réglementaire",
-      "bloc4": "<p>Le polymère récupéré présente une teneur en polluants inférieure à la limite\n               réglementaire, et peut réintégrer la filière.</p>"
-    },
-    "sorties": {
-      "symbole": "Sb",
-      "soustitre": "Antimoine <span class=\"pri\">Priorité</span>",
-      "bloc": "<p>L'oxyde d'antimoine extrait des plastiques est revendu tel quel ou\n            transformé selon l'usage visé. Une matière tracée, produite en Europe.</p>",
-      "symbole2": "Br",
-      "soustitre2": "Composés bromés",
-      "bloc2": "<p>Isolés intacts et séparés du polymère. Une partie relève des polluants\n            organiques persistants et demande une transformation avant tout réemploi.</p>",
-      "symbole3": "C<sub>n</sub>",
-      "soustitre3": "Polymères",
-      "bloc3": "<p>Débarrassés de leurs additifs, ils peuvent réintégrer la filière plastique\n            et évitent l'incinération.</p>"
+      "bloc": "\n            <p>Antimony is our priority. The bromine and the polymer come out of the same\n               operation and will be valorised in turn.</p>\n          ",
+      "bloc2": "<p>The 98&#8239;% yield is reached on shredded material from real electronic waste,\n               supplied by our industrial partners.</p>",
+      "bloc3": "\n            <p>The brominated compounds are extracted in turn, fully\n               decontaminating the plastic.</p>\n          ",
+      "bloc4": "\n            <p>The recovered polymer holds fewer pollutants than the regulatory limit allows,\n               and can go back into the industry.</p>\n          ",
+      "libelle": "On real plastics",
+      "libelle2": "Flame retardants removed",
+      "libelle3": "Below the regulatory limit",
+      "surtitre": "What comes out",
+      "titre": "Three products recovered from a waste stream"
     },
     "ce_qui_l_atteste": {
-      "surtitre": "Ce qui l'atteste",
-      "titre": "Publié et relu par des pairs",
-      "bloc": "<p>Le procédé n'est pas une promesse de laboratoire.<br>\n               Il a été soumis à l'examen de la communauté scientifique, validé et protégé\n               par un brevet.</p>",
-      "libelle": "Thèse",
-      "soustitre": "Développement de procédés innovants pour la dépollution des plastiques bromés issus des DEEE par l'extraction de l'oxyde d'antimoine et des molécules organobromées",
-      "bloc2": "<p>Travaux de Morvan Gaudin, soutenus le 3 décembre 2024 à l'université Paris Sciences\n                 et Lettres. Menés à l'Institut de Recherche de Chimie Paris dans le cadre de la\n                 Chaire Mines Urbaines, avec le soutien de l'éco-organisme Ecosystem.</p>",
-      "lien": "Consulter la thèse <span class=\"a\">&#8594;</span>",
-      "libelle2": "Publication",
+      "bloc": "<p>The process is not a laboratory promise.<br>\n               It has been reviewed by the scientific community, validated and protected by\n               a patent.</p>",
+      "bloc2": "<p>Research by Morvan Gaudin, defended on 3 December 2024 at Université Paris Sciences\n                 et Lettres. Carried out at the Institut de Recherche de Chimie Paris within the\n                 Urban Mining Chair, with the support of the producer responsibility organisation\n                 ecosystem.</p>",
+      "bloc3": "\n              <p>Morvan Gaudin, Vincent Semetey, Frédéric Rousseau and Grégory Lefèvre, in\n                 ACS Sustainable Resource Management, 2025.</p>\n            ",
+      "libelle": "Thesis",
+      "libelle2": "Paper",
+      "libelle3": "Patent",
+      "lien": "Read the thesis <span class=\"a\">&#8594;</span>",
+      "lien2": "Read the paper <span class=\"a\">&#8594;</span>",
+      "soustitre": "Developing innovative processes to decontaminate brominated plastics from waste electrical and electronic equipment by extracting antimony oxide and organobrominated molecules",
       "soustitre2": "Antimony Trioxide Extraction from E-Waste Brominated Flame-Retardant Laden Plastics by Simultaneous Liquid–Liquid Extraction and Leaching",
-      "bloc3": "<p>Morvan Gaudin, Vincent Semetey, Frédéric Rousseau et Grégory Lefèvre, dans\n                 ACS Sustainable Resource Management, 2025.</p>",
-      "lien2": "Lire la publication <span class=\"a\">&#8594;</span>",
-      "libelle3": "Brevet",
-      "soustitre3": "Procédé breveté, publié en 2025"
-    },
-    "la_suite": {
-      "surtitre": "La suite",
-      "titre": "Du laboratoire au pilote",
-      "bloc": "<p>Le procédé quitte le laboratoire.<br>\n           Un pilote est en préparation.</p>"
+      "soustitre3": "Patented process, published in 2025",
+      "surtitre": "The evidence",
+      "titre": "Published and peer-reviewed"
     },
     "divers": {
-      "titre": "Un gisement, un besoin, une question ?",
-      "lien": "Écrivez-nous <span class=\"a\">&#8594;</span>"
-    }
-  },
-  "en": {
-    "phead": {
-      "titre": "The chemistry behind DeeeMines",
-      "chapo": "Four years of research at the Institut de Recherche de Chimie Paris, a doctoral thesis, a patent and a peer-reviewed paper. Here is what the process does, and the evidence that it works.",
-      "surtitre": "Our technology"
+      "lien": "Write to us <span class=\"a\">&#8594;</span>",
+      "titre": "A waste stream, a need, a question?"
     },
     "en_quatre_minutes": {
+      "bloc": "\n            <p>Morvan Gaudin presents the research behind the process, carried out at the\n               Institut de Recherche de Chimie Paris within the Urban Mining Chair,\n               with the support of the producer responsibility organisation ecosystem.</p>\n          ",
       "surtitre": "In four minutes",
-      "texte": "Morvan Gaudin's thesis presentation will be available here.",
-      "bloc": "<p>Morvan Gaudin presents the research behind the process, carried out at the\n               Institut de Recherche de Chimie Paris within the Urban Mining Chair,\n               with the support of the producer responsibility organisation ecosystem.</p>"
+      "texte": "Morvan Gaudin's thesis presentation will be available here."
     },
-    "le_verrou": {
-      "surtitre": "The obstacle",
-      "titre": "Additives trapped inside the material…",
-      "bloc": "<p>The plastics in electrical and electronic equipment contain\n               brominated flame retardants, combined with antimony trioxide,\n               which makes them far more effective. Both are spread through the polymer\n               matrix, not laid on the surface.</p>\n            <p>No industry today can separate them out. These plastics therefore go\n               to incineration, along with the antimony and the bromine they hold.</p>"
+    "la_suite": {
+      "bloc": "<p>The process is leaving the laboratory.<br>\n           A pilot is in preparation.</p>",
+      "surtitre": "What comes next",
+      "titre": "From the laboratory to the pilot"
     },
     "le_principe": {
+      "bloc": "<p>Everything happens at room temperature and atmospheric pressure, with no heating\n               and no pressure.</p>\n            <p>The shredded material goes through three successive solvents. The first dissolves\n               the polymer and frees the additives trapped in the material. The second, a\n               complexing agent, selectively captures the antimony, and the brominated compounds\n               are extracted in turn. The third precipitates the polymer back out, stripped of\n               its additives.</p>",
       "surtitre": "The principle",
-      "titre": "… released by a patented process",
-      "bloc": "<p>Everything happens at room temperature and atmospheric pressure, with no heating\n               and no pressure.</p>\n            <p>The shredded material goes through three successive solvents. The first dissolves\n               the polymer and frees the additives trapped in the material. The second, a\n               complexing agent, selectively captures the antimony, and the brominated compounds\n               are extracted in turn. The third precipitates the polymer back out, stripped of\n               its additives.</p>"
+      "titre": "… released by a patented process"
+    },
+    "le_verrou": {
+      "bloc": "\n            <p>The plastics in electrical and electronic equipment contain\n               brominated flame retardants, combined with antimony trioxide,\n               which makes them far more effective. Both are spread through the polymer\n               matrix, not laid on the surface.</p>\n            <p>No industry today can separate them out. These plastics therefore go\n               to incineration, along with the antimony and the bromine they hold.</p>\n          ",
+      "surtitre": "The obstacle",
+      "titre": "Additives trapped inside the material…"
+    },
+    "phead": {
+      "chapo": "\n        Four years of research at the Institut de Recherche de Chimie Paris, a doctoral thesis, a patent and a peer-reviewed paper.\n      ",
+      "titre": "The chemistry behind DeeeMines"
     },
     "schema": {
+      "bloc": "<p>The waste arrives in pieces of every size. Shredding gives an\n        even fraction, the condition for a stable yield.</p>",
+      "bloc2": "<p>The first solvent dissolves the polymer. The additives, until\n        then trapped in the material, become reachable.</p>",
+      "bloc3": "<p>The second selectively captures the antimony oxide. The\n        brominated compounds are extracted in turn.</p>",
+      "bloc4": "<p>The third precipitates the cleaned polymer back out, recovered\n        solid and dried. The regenerated solvents go into the next cycle.</p>",
       "legende": "Flame-retarded plastics",
       "legende2": "electronic waste, technical covers, cables, and more",
       "legende3": "Solvents regenerated, in a closed loop",
-      "symbole": "Br",
       "nom": "Brominated compounds",
-      "symbole2": "Sb",
       "nom2": "Antimony",
-      "symbole3": "C<tspan dy=\"5\" font-size=\"0.66em\">n</tspan>",
       "nom3": "Purified polymer",
       "soustitre": "<span class=\"pt\"></span>Shredding",
-      "bloc": "<p>The waste arrives in pieces of every size. Shredding gives an\n        even fraction, the condition for a stable yield.</p>",
       "soustitre2": "<span class=\"pt\"></span>Dissolution",
-      "bloc2": "<p>The first solvent dissolves the polymer. The additives, until\n        then trapped in the material, become reachable.</p>",
       "soustitre3": "<span class=\"pt\"></span>Selective extraction",
-      "bloc3": "<p>The second selectively captures the antimony oxide. The\n        brominated compounds are extracted in turn.</p>",
       "soustitre4": "<span class=\"pt\"></span>Precipitation",
-      "bloc4": "<p>The third precipitates the cleaned polymer back out, recovered\n        solid and dried. The regenerated solvents go into the next cycle.</p>"
-    },
-    "ce_qui_en_sort": {
-      "surtitre": "What comes out",
-      "titre": "Three products recovered from a waste stream",
-      "bloc": "<p>Antimony is our priority. The bromine and the polymer come out of the same\n               operation and will be valorised in turn.</p>",
-      "libelle": "On real plastics",
-      "bloc2": "<p>The 98&#8239;% yield is reached on shredded material from real electronic waste,\n               supplied by our industrial partners.</p>",
-      "libelle2": "Flame retardants removed",
-      "bloc3": "<p>The brominated compounds are extracted in turn. It is not only the antimony that\n               leaves the plastic.</p>",
-      "libelle3": "Below the regulatory limit",
-      "bloc4": "<p>The recovered polymer holds fewer pollutants than the regulatory limit allows,\n               and can go back into the industry.</p>"
+      "symbole": "Br",
+      "symbole2": "Sb",
+      "symbole3": "C<tspan dy=\"5\" font-size=\"0.66em\">n</tspan>"
     },
     "sorties": {
-      "symbole": "Sb",
-      "soustitre": "Antimony <span class=\"pri\">Priority</span>",
       "bloc": "<p>The antimony oxide extracted from the plastics is sold as it is\n            or converted to suit the intended use. A traceable material, produced in Europe.</p>",
-      "symbole2": "Br",
-      "soustitre2": "Brominated compounds",
       "bloc2": "<p>Isolated intact and separated from the polymer. Some of them are\n            persistent organic pollutants and need to be transformed before any reuse.</p>",
-      "symbole3": "C<sub>n</sub>",
+      "bloc3": "<p>Stripped of their additives, they can go back into the plastics industry\n            instead of up in smoke.</p>",
+      "soustitre": "Antimony <span class=\"pri\">Priority</span>",
+      "soustitre2": "Brominated compounds",
       "soustitre3": "Polymers",
-      "bloc3": "<p>Stripped of their additives, they can go back into the plastics industry\n            instead of up in smoke.</p>"
+      "symbole": "Sb",
+      "symbole2": "Br",
+      "symbole3": "C<sub>n</sub>"
+    },
+    "video": {
+      "lien": "https://app.storyfox.io/preview/public/653982244fb6a30007c9f2fd.65cf6a17fc0a2b00079617d5"
+    }
+  },
+  "fr": {
+    "ce_qui_en_sort": {
+      "bloc": "\n            <p>L'antimoine est notre priorité. Le brome et le polymère sortent du même\n               traitement et seront valorisés à leur tour.</p>\n          ",
+      "bloc2": "<p>Le rendement de 98&#8239;% est atteint sur de vrais broyats issus de déchets\n               électroniques, transmis par nos partenaires industriels.</p>",
+      "bloc3": "\n            <p>Les composés bromés sont extraits à leur tour, dépolluant\n               totalement le plastique.</p>\n          ",
+      "bloc4": "\n            <p>Le polymère récupéré présente une teneur en polluants inférieure à la limite\n               réglementaire, et peut réintégrer la filière.</p>\n          ",
+      "libelle": "Sur des plastiques réels",
+      "libelle2": "Retardateurs de flamme retirés",
+      "libelle3": "Sous le seuil réglementaire",
+      "surtitre": "Ce qui en sort",
+      "titre": "Trois produits valorisés à partir d'un déchet"
     },
     "ce_qui_l_atteste": {
-      "surtitre": "The evidence",
-      "titre": "Published and peer-reviewed",
-      "bloc": "<p>The process is not a laboratory promise.<br>\n               It has been reviewed by the scientific community, validated and protected by\n               a patent.</p>",
-      "libelle": "Thesis",
-      "soustitre": "Developing innovative processes to decontaminate brominated plastics from waste electrical and electronic equipment by extracting antimony oxide and organobrominated molecules",
-      "bloc2": "<p>Research by Morvan Gaudin, defended on 3 December 2024 at Université Paris Sciences\n                 et Lettres. Carried out at the Institut de Recherche de Chimie Paris within the\n                 Urban Mining Chair, with the support of the producer responsibility organisation\n                 ecosystem.</p>",
-      "lien": "Read the thesis <span class=\"a\">&#8594;</span>",
-      "libelle2": "Paper",
+      "bloc": "<p>Le procédé n'est pas une promesse de laboratoire.<br>\n               Il a été soumis à l'examen de la communauté scientifique, validé et protégé\n               par un brevet.</p>",
+      "bloc2": "<p>Travaux de Morvan Gaudin, soutenus le 3 décembre 2024 à l'université Paris Sciences\n                 et Lettres. Menés à l'Institut de Recherche de Chimie Paris dans le cadre de la\n                 Chaire Mines Urbaines, avec le soutien de l'éco-organisme ecosystem.</p>",
+      "bloc3": "\n              <p>Morvan Gaudin, Vincent Semetey, Frédéric Rousseau et Grégory Lefèvre, dans\n                 ACS Sustainable Resource Management, 2025.</p>\n            ",
+      "libelle": "Thèse",
+      "libelle2": "Publication",
+      "libelle3": "Brevet",
+      "lien": "Consulter la thèse <span class=\"a\">&#8594;</span>",
+      "lien2": "Lire la publication <span class=\"a\">&#8594;</span>",
+      "soustitre": "Développement de procédés innovants pour la dépollution des plastiques bromés issus des DEEE par l'extraction de l'oxyde d'antimoine et des molécules organobromées",
       "soustitre2": "Antimony Trioxide Extraction from E-Waste Brominated Flame-Retardant Laden Plastics by Simultaneous Liquid–Liquid Extraction and Leaching",
-      "bloc3": "<p>Morvan Gaudin, Vincent Semetey, Frédéric Rousseau and Grégory Lefèvre, in\n                 ACS Sustainable Resource Management, 2025.</p>",
-      "lien2": "Read the paper <span class=\"a\">&#8594;</span>",
-      "libelle3": "Patent",
-      "soustitre3": "Patented process, published in 2025"
-    },
-    "la_suite": {
-      "surtitre": "What comes next",
-      "titre": "From the laboratory to the pilot",
-      "bloc": "<p>The process is leaving the laboratory.<br>\n           A pilot is in preparation.</p>"
+      "soustitre3": "Procédé breveté, publié en 2025",
+      "surtitre": "Ce qui l'atteste",
+      "titre": "Publié et relu par des pairs"
     },
     "divers": {
-      "titre": "A waste stream, a need, a question?",
-      "lien": "Write to us <span class=\"a\">&#8594;</span>"
+      "lien": "Écrivez-nous <span class=\"a\">&#8594;</span>",
+      "titre": "Un gisement, un besoin, une question ?"
+    },
+    "en_quatre_minutes": {
+      "bloc": "\n            <p>Morvan Gaudin présente les travaux dont est issu le procédé, menés à\n               l'Institut de Recherche de Chimie Paris dans le cadre de la\n               Chaire Mines Urbaines, avec le soutien de l'éco-organisme ecosystem.</p>\n          ",
+      "surtitre": "En quatre minutes",
+      "texte": "La présentation de la thèse de Morvan Gaudin sera disponible ici."
+    },
+    "la_suite": {
+      "bloc": "<p>Le procédé quitte le laboratoire.<br>\n           Un pilote est en préparation.</p>",
+      "surtitre": "La suite",
+      "titre": "Du laboratoire au pilote"
+    },
+    "le_principe": {
+      "bloc": "<p>Tout se passe à température ambiante et à pression atmosphérique, sans chauffage\n               ni mise sous pression.</p>\n            <p>Le broyat traverse trois solvants successifs. Le premier met le polymère en\n               solution et libère les additifs jusque-là prisonniers de la matière. Le deuxième,\n               complexant, capte sélectivement l'antimoine, puis les composés bromés sont\n               extraits à leur tour. Le troisième fait reprécipiter le polymère, débarrassé de\n               ses additifs.</p>",
+      "surtitre": "Le principe",
+      "titre": "… libérés grâce à un procédé breveté"
+    },
+    "le_verrou": {
+      "bloc": "\n            <p>Les plastiques des équipements électriques et électroniques contiennent des\n               retardateurs de flamme bromés, associés à du trioxyde d'antimoine\n               qui en démultiplie l'effet. Les deux sont dispersés dans la matrice polymère,\n               et non déposés en surface.</p>\n            <p>Aucune filière ne sait aujourd'hui les en séparer. Ces plastiques partent donc\n               en incinération, avec l'antimoine et le brome qu'ils contiennent.</p>\n          ",
+      "surtitre": "Le verrou",
+      "titre": "Des additifs prisonniers de la matière…"
+    },
+    "phead": {
+      "chapo": "\n        Quatre ans de recherche à l'Institut de Recherche de Chimie Paris, une thèse,\n        un brevet et une publication scientifique.\n      ",
+      "titre": "La chimie derrière DeeeMines"
+    },
+    "schema": {
+      "bloc": "<p>Le gisement arrive en pièces de toutes tailles. Le broyage donne une\n        fraction homogène, condition d'un rendement stable.</p>",
+      "bloc2": "<p>Le premier solvant met le polymère en solution. Les additifs,\n        jusque-là prisonniers de la matière, deviennent accessibles.</p>",
+      "bloc3": "<p>Le deuxième capte sélectivement l'oxyde d'antimoine. Les\n        composés bromés sont extraits à leur tour.</p>",
+      "bloc4": "<p>Le troisième fait reprécipiter le polymère dépollué, récupéré\n        solide et séché. Les solvants régénérés repartent dans le cycle suivant.</p>",
+      "legende": "Plastiques ignifugés",
+      "legende2": "déchets électroniques, bâches, câbles, etc.",
+      "legende3": "Solvants régénérés, en boucle fermée",
+      "nom": "Composés bromés",
+      "nom2": "Antimoine",
+      "nom3": "Polymère purifié",
+      "soustitre": "<span class=\"pt\"></span>Broyage",
+      "soustitre2": "<span class=\"pt\"></span>Mise en solution",
+      "soustitre3": "<span class=\"pt\"></span>Extraction sélective",
+      "soustitre4": "<span class=\"pt\"></span>Insolubilisation",
+      "symbole": "Br",
+      "symbole2": "Sb",
+      "symbole3": "C<tspan dy=\"5\" font-size=\"0.66em\">n</tspan>"
+    },
+    "sorties": {
+      "bloc": "<p>L'oxyde d'antimoine extrait des plastiques est revendu tel quel ou\n            transformé selon l'usage visé. Une matière tracée, produite en Europe.</p>",
+      "bloc2": "<p>Isolés intacts et séparés du polymère. Une partie relève des polluants\n            organiques persistants et demande une transformation avant tout réemploi.</p>",
+      "bloc3": "<p>Débarrassés de leurs additifs, ils peuvent réintégrer la filière plastique\n            au lieu de partir en fumée.</p>",
+      "soustitre": "Antimoine <span class=\"pri\">Priorité</span>",
+      "soustitre2": "Composés bromés",
+      "soustitre3": "Polymères",
+      "symbole": "Sb",
+      "symbole2": "Br",
+      "symbole3": "C<sub>n</sub>"
+    },
+    "video": {
+      "lien": "https://app.storyfox.io/preview/public/653982244fb6a30007c9f2fd.65cf6a17fc0a2b00079617d5"
     }
   }
 }

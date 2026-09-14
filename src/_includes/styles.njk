@@ -119,6 +119,9 @@ footer .marque .symbole{height:32px}
 .hero .wrap{position:relative;z-index:2;width:100%}
 .hero h1{max-width:17ch;text-shadow:0 2px 30px rgba(4,4,64,.85),0 1px 3px rgba(4,4,64,.4)}
 .hero h1 span{color:var(--mint)}
+/* La première ligne du titre est enveloppée pour être modifiable depuis
+   l'administration : cette enveloppe ne doit rien changer à son apparence. */
+.hero h1 b{font:inherit;color:inherit}
 .hero .lead{max-width:58ch;color:#EAEFFB;font-size:clamp(16.5px,1.5vw,19.5px);margin-top:28px;
   text-shadow:0 1px 18px rgba(4,4,64,.9),0 1px 2px rgba(4,4,64,.5)}
 .acts{margin-top:38px;display:flex;flex-wrap:wrap;gap:12px}

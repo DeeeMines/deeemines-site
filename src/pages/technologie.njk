@@ -26,7 +26,7 @@ permalink: "{{ adresses['technologie'][langue] }}index.html"
   </div>
   <hr class="grad-rule">
 
-  {%- set video = contenu[langue].procede.video | default("") %}
+  {%- set video = t.procede.video.lien | default("") %}
   <section>
     <div class="wrap">
       <div class="eyebrow" data-champ="procede.en_quatre_minutes.surtitre">{{ t.procede.en_quatre_minutes.surtitre | safe }}</div>

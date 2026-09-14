@@ -23,210 +23,8 @@ i18n:
 
 collections:
   # ------------------------------------------------------------------ ACTUALITÉS
-- name: actualites
-  label: Actualités
-  i18n: true
-  files:
-  - name: liste
-    label: Liste des actualités
-    file: src/_data/actualites.json
-    format: json
-    i18n: true
-    fields:
-    - label: Actualités
-      label_singular: Actualité
-      name: articles
-      widget: list
-      i18n: true
-      summary: '{{fields.date}} — {{fields.titre}}'
-      fields:
-      - {label: Date affichée, name: date, widget: string, hint: "Par exemple : Juillet 2026", i18n: true}
-      - {label: Catégorie, name: categorie, widget: string, hint: "Financement, Société, Technologie, Partenariat…", i18n: true}
-      - {label: Titre, name: titre, widget: string, i18n: true}
-      - {label: Résumé, name: resume, widget: text, i18n: true, hint: "Deux ou trois lignes. C'est ce qui s'affiche dans la liste des actualités."}
-      - label: Article complet (facultatif)
-        name: corps
-        widget: markdown
-        required: false
-        default: ""
-        i18n: true
-        hint: "Si vous remplissez ce champ, l'actualité obtient sa propre page et un lien « Lire la suite ». Sinon, seul le résumé est affiché."
-      - {label: Adresse de la page, name: slug, widget: string, required: false, default: "", i18n: duplicate, hint: "Par exemple prix-i-phd. Ne la changez plus une fois l'article partagé : les liens existants cesseraient de fonctionner."}
-      - {label: Image principale (facultative), name: image, widget: image, required: false, default: "", i18n: duplicate, hint: "Affichée en haut de la page de l'article."}
-      - label: Cadrage de l'image
-        name: cadrage
-        widget: select
-        required: false
-        default: "50%"
-        i18n: duplicate
-        hint: "L'image est recadrée au format du bandeau. Choisissez la partie à conserver si le sujet n'est pas au centre."
-        options:
-        - {label: "Haut", value: "0%"}
-        - {label: "Plutôt vers le haut", value: "25%"}
-        - {label: "Centre", value: "50%"}
-        - {label: "Plutôt vers le bas", value: "78%"}
-        - {label: "Bas", value: "100%"}
-      - label: Photos supplémentaires
-        name: photos
-        widget: list
-        required: false
-        i18n: true
-        label_singular: Photo
-        summary: '{{fields.legende}}'
-        fields:
-        - {label: Image, name: image, widget: image}
-        - {label: Légende, name: legende, widget: string, required: false, default: ""}
-        - label: Cadrage
-          name: cadrage
-          widget: select
-          required: false
-          default: "50%"
-          options:
-          - {label: "Haut", value: "0%"}
-          - {label: "Plutôt vers le haut", value: "25%"}
-          - {label: "Centre", value: "50%"}
-          - {label: "Plutôt vers le bas", value: "78%"}
-          - {label: "Bas", value: "100%"}
-      - {label: Lien externe (facultatif), name: lien, widget: string, required: false, default: "", hint: "Adresse complète, par exemple https://…", i18n: duplicate}
-      - {label: Texte du lien (facultatif), name: lien_texte, widget: string, required: false, default: "", hint: "Par défaut : « En savoir plus »", i18n: true}
-
-  # ------------------------------------------------------------------ ACCUEIL
 - name: accueil
   label: Page d'accueil
-  i18n: true
-  files:
-  - name: contenu
-    label: Textes de la page d'accueil
-    file: src/_data/contenu.json
-    format: json
-    i18n: true
-    fields:
-    - label: Bandeau d'accueil
-      name: hero
-      widget: object
-      i18n: true
-      fields:
-      - {label: Titre, première ligne: null, name: titre1, widget: string, i18n: true}
-      - {label: Titre, seconde ligne (en vert): null, name: titre2, widget: string, i18n: true}
-      - {label: Premier paragraphe, name: para1, widget: text, i18n: true}
-      - {label: Second paragraphe, name: para2, widget: text, i18n: true}
-
-    - label: Les trois matières valorisées
-      label_singular: Matière
-      name: produits
-      widget: list
-      i18n: true
-      max: 3
-      min: 3
-      summary: '{{fields.titre}}'
-      hint: "L'ordre et les illustrations (Sb, Br, polymère) sont fixes : seuls les textes se modifient."
-      fields:
-      - {label: Sur-titre, name: etiquette, widget: string, i18n: true}
-      - {label: Titre, name: titre, widget: string, i18n: true}
-      - {label: Texte, name: texte, widget: text, i18n: true}
-      - {label: Destinataires (après « Pour »), name: pour, widget: string, i18n: true}
-
-    - label: Page « Le procédé »
-      name: procede
-      widget: object
-      i18n: true
-      fields:
-      - label: Lien de la vidéo de présentation
-        name: video
-        widget: string
-        required: false
-        default: ""
-        i18n: duplicate
-        hint: "Collez l'adresse de la vidéo telle qu'elle apparaît dans la barre du navigateur (YouTube, Vimeo ou Dailymotion). Laissez vide tant que vous ne l'avez pas : un visuel d'attente occupe la place."
-
-    - label: Coordonnées
-      name: contact
-      widget: object
-      i18n: true
-      fields:
-      - {label: Adresse électronique, name: email, widget: string, i18n: duplicate}
-      - {label: Adresse postale, name: adresse, widget: string, i18n: duplicate}
-      - {label: Lien LinkedIn, name: linkedin, widget: string, i18n: duplicate}
-
-  # ------------------------------------------------------------------ ÉQUIPE
-- name: equipe
-  label: Équipe
-  i18n: true
-  files:
-  - name: membres
-    label: Membres de l'équipe
-    file: src/_data/equipe.json
-    format: json
-    i18n: true
-    fields:
-    - label: Cofondateurs
-      label_singular: Cofondateur
-      name: cofondateurs
-      widget: list
-      i18n: true
-      summary: '{{fields.nom}}'
-      fields:
-      - {label: Photo, name: photo, widget: image, i18n: duplicate}
-      - {label: Nom, name: nom, widget: string, i18n: duplicate}
-      - {label: Fonction, name: role, widget: string, i18n: true}
-      - {label: Texte, name: texte, widget: text, i18n: true}
-      - label: Logos d'affiliation
-        label_singular: Logo
-        name: logos
-        widget: list
-        i18n: duplicate
-        summary: '{{fields.nom}}'
-        fields:
-        - {label: Image, name: image, widget: image}
-        - {label: Texte de remplacement, name: nom, widget: string}
-
-    - label: Équipe scientifique
-      label_singular: Chercheur
-      name: scientifiques
-      widget: list
-      i18n: true
-      summary: '{{fields.nom}}'
-      fields:
-      - {label: Photo, name: photo, widget: image, i18n: duplicate}
-      - {label: Nom, name: nom, widget: string, i18n: duplicate}
-      - {label: Texte, name: texte, widget: text, i18n: true}
-      - label: Logos d'affiliation
-        label_singular: Logo
-        name: logos
-        widget: list
-        i18n: duplicate
-        summary: '{{fields.nom}}'
-        fields:
-        - {label: Image, name: image, widget: image}
-        - {label: Texte de remplacement, name: nom, widget: string}
-
-  # ------------------------------------------------------------------ PARTENAIRES
-- name: partenaires
-  label: Partenaires
-  files:
-  - name: logos
-    label: Bandeau des logos
-    file: src/_data/partenaires.json
-    format: json
-    fields:
-    - label: Logos
-      label_singular: Logo
-      name: logos
-      widget: list
-      summary: '{{fields.nom}}'
-      hint: "Format PNG à fond transparent, hauteur d'environ 100 pixels."
-      fields:
-      - {label: Image, name: image, widget: image}
-      - {label: Nom affiché aux lecteurs d'écran, name: nom, widget: string}
-
-  # ═══════════ Les textes du site ═══════════
-  # Chaque page du site a son entrée. À l'intérieur, les textes sont rangés
-  # par section, dans l'ordre où ils apparaissent à l'écran. Le volet de
-  # droite montre le site réel : il se met à jour à la frappe.
-- name: textes
-  label: Textes du site
-  label_singular: page
-  icon: article
   i18n: true
   files:
   - name: accueil
@@ -235,6 +33,16 @@ collections:
     i18n: true
     preview_path: "/"
     fields:
+    - label: Bandeau d'accueil
+      name: hero
+      widget: object
+      i18n: true
+      fields:
+      - {label: 'Titre, première ligne', name: titre1, widget: string, i18n: true}
+      - {label: 'Titre, seconde ligne (en vert)', name: titre2, widget: string, i18n: true}
+      - {label: Premier paragraphe, name: para1, widget: text, i18n: true}
+      - {label: Second paragraphe, name: para2, widget: text, i18n: true}
+
     - label: Le problème
       name: le_probleme
       widget: object
@@ -287,6 +95,21 @@ collections:
       - {label: "Numéro de l'élément 3", name: exposant3, widget: string, i18n: true, hint: "Longueur actuelle : 10 caractères."}
       - {label: "Légende", name: legende, widget: string, i18n: true, hint: "Longueur actuelle : 1 caractères."}
       - {label: "Nom 3", name: nom3, widget: string, i18n: true, hint: "Longueur actuelle : 8 caractères."}
+    - label: Les trois matières valorisées
+      label_singular: Matière
+      name: produits
+      widget: list
+      i18n: true
+      max: 3
+      min: 3
+      summary: '{{fields.titre}}'
+      hint: "L'ordre et les illustrations (Sb, Br, polymère) sont fixes : seuls les textes se modifient."
+      fields:
+      - {label: Sur-titre, name: etiquette, widget: string, i18n: true}
+      - {label: Titre, name: titre, widget: string, i18n: true}
+      - {label: Texte, name: texte, widget: text, i18n: true}
+      - {label: Destinataires (après « Pour »), name: pour, widget: string, i18n: true}
+
     - label: Notre technologie
       name: notre_technologie
       widget: object
@@ -380,8 +203,12 @@ collections:
       - {label: "Sous-titre", name: soustitre, widget: string, i18n: true, hint: "Longueur actuelle : 15 caractères."}
       - {label: "Paragraphe 2", name: texte2, widget: string, i18n: true, hint: "Longueur actuelle : 51 caractères."}
       - {label: "Lien", name: lien, widget: string, i18n: true, hint: "Longueur actuelle : 27 caractères."}
+- name: technologie
+  label: Notre technologie
+  i18n: true
+  files:
   - name: procede
-    label: Page Notre technologie
+    label: Notre technologie
     file: src/_data/textes/procede.json
     i18n: true
     preview_path: "/notre-technologie/"
@@ -510,8 +337,25 @@ collections:
       fields:
       - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 38 caractères."}
       - {label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 20 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+    - label: Vidéo de présentation
+      name: video
+      widget: object
+      i18n: true
+      fields:
+      - label: Lien de la vidéo de présentation
+        name: lien
+        widget: string
+        required: false
+        default: ""
+        i18n: duplicate
+        hint: "Collez l'adresse de la vidéo telle qu'elle apparaît dans la barre du navigateur (YouTube, Vimeo ou Dailymotion). Laissez vide tant que vous ne l'avez pas : un visuel d'attente occupe la place."
+
+- name: antimoine
+  label: L'antimoine
+  i18n: true
+  files:
   - name: antimoine
-    label: Page L'antimoine
+    label: L'antimoine
     file: src/_data/textes/antimoine.json
     i18n: true
     preview_path: "/l-antimoine/"
@@ -611,8 +455,12 @@ collections:
       - {label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 127 caractères."}
       - {label: "Paragraphe 3", name: texte3, widget: text, i18n: true, hint: "Longueur actuelle : 111 caractères."}
       - {label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 19 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+- name: equipe
+  label: Équipe
+  i18n: true
+  files:
   - name: equipe
-    label: Page Équipe
+    label: Les textes de la page
     file: src/_data/textes/equipe.json
     i18n: true
     preview_path: "/equipe/"
@@ -650,8 +498,124 @@ collections:
       fields:
       - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 28 caractères."}
       - {label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 14 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+  - name: membres
+    label: Les membres de l'équipe
+    file: src/_data/equipe.json
+    format: json
+    i18n: true
+    fields:
+    - label: Cofondateurs
+      label_singular: Cofondateur
+      name: cofondateurs
+      widget: list
+      i18n: true
+      summary: '{{fields.nom}}'
+      fields:
+      - {label: Photo, name: photo, widget: image, i18n: duplicate}
+      - {label: Nom, name: nom, widget: string, i18n: duplicate}
+      - {label: Fonction, name: role, widget: string, i18n: true}
+      - {label: Texte, name: texte, widget: text, i18n: true}
+      - label: Logos d'affiliation
+        label_singular: Logo
+        name: logos
+        widget: list
+        i18n: duplicate
+        summary: '{{fields.nom}}'
+        fields:
+        - {label: Image, name: image, widget: image}
+        - {label: Texte de remplacement, name: nom, widget: string}
+
+    - label: Équipe scientifique
+      label_singular: Chercheur
+      name: scientifiques
+      widget: list
+      i18n: true
+      summary: '{{fields.nom}}'
+      fields:
+      - {label: Photo, name: photo, widget: image, i18n: duplicate}
+      - {label: Nom, name: nom, widget: string, i18n: duplicate}
+      - {label: Texte, name: texte, widget: text, i18n: true}
+      - label: Logos d'affiliation
+        label_singular: Logo
+        name: logos
+        widget: list
+        i18n: duplicate
+        summary: '{{fields.nom}}'
+        fields:
+        - {label: Image, name: image, widget: image}
+        - {label: Texte de remplacement, name: nom, widget: string}
+
+  # ------------------------------------------------------------------ PARTENAIRES
+- name: actualites
+  label: Actualités
+  i18n: true
+  files:
+  - name: liste
+    label: Les articles
+    file: src/_data/actualites.json
+    format: json
+    i18n: true
+    fields:
+    - label: Actualités
+      label_singular: Actualité
+      name: articles
+      widget: list
+      i18n: true
+      summary: '{{fields.date}} — {{fields.titre}}'
+      fields:
+      - {label: Date affichée, name: date, widget: string, hint: "Par exemple : Juillet 2026", i18n: true}
+      - {label: Catégorie, name: categorie, widget: string, hint: "Financement, Société, Technologie, Partenariat…", i18n: true}
+      - {label: Titre, name: titre, widget: string, i18n: true}
+      - {label: Résumé, name: resume, widget: text, i18n: true, hint: "Deux ou trois lignes. C'est ce qui s'affiche dans la liste des actualités."}
+      - label: Article complet (facultatif)
+        name: corps
+        widget: markdown
+        required: false
+        default: ""
+        i18n: true
+        hint: "Si vous remplissez ce champ, l'actualité obtient sa propre page et un lien « Lire la suite ». Sinon, seul le résumé est affiché."
+      - {label: Adresse de la page, name: slug, widget: string, required: false, default: "", i18n: duplicate, hint: "Par exemple prix-i-phd. Ne la changez plus une fois l'article partagé : les liens existants cesseraient de fonctionner."}
+      - {label: Image principale (facultative), name: image, widget: image, required: false, default: "", i18n: duplicate, hint: "Affichée en haut de la page de l'article."}
+      - label: Cadrage de l'image
+        name: cadrage
+        widget: select
+        required: false
+        default: "50%"
+        i18n: duplicate
+        hint: "L'image est recadrée au format du bandeau. Choisissez la partie à conserver si le sujet n'est pas au centre."
+        options:
+        - {label: "Haut", value: "0%"}
+        - {label: "Plutôt vers le haut", value: "25%"}
+        - {label: "Centre", value: "50%"}
+        - {label: "Plutôt vers le bas", value: "78%"}
+        - {label: "Bas", value: "100%"}
+      - label: Photos supplémentaires
+        name: photos
+        widget: list
+        required: false
+        i18n: true
+        label_singular: Photo
+        summary: '{{fields.legende}}'
+        fields:
+        - {label: Image, name: image, widget: image}
+        - {label: Légende, name: legende, widget: string, required: false, default: ""}
+        - label: Cadrage
+          name: cadrage
+          widget: select
+          required: false
+          default: "50%"
+          options:
+          - {label: "Haut", value: "0%"}
+          - {label: "Plutôt vers le haut", value: "25%"}
+          - {label: "Centre", value: "50%"}
+          - {label: "Plutôt vers le bas", value: "78%"}
+          - {label: "Bas", value: "100%"}
+      - {label: Lien externe (facultatif), name: lien, widget: string, required: false, default: "", hint: "Adresse complète, par exemple https://…", i18n: duplicate}
+      - {label: Texte du lien (facultatif), name: lien_texte, widget: string, required: false, default: "", hint: "Par défaut : « En savoir plus »", i18n: true}
+
+  # ------------------------------------------------------------------ ACCUEIL
   - name: actualites
-    label: Page Actualités
+    label: Les textes de la page
     file: src/_data/textes/actualites.json
     i18n: true
     preview_path: "/actualites/"
@@ -677,6 +641,112 @@ collections:
       i18n: true
       fields:
       - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 29 caractères."}
+  - name: article
+    label: Les pages d'article
+    file: src/_data/textes/article.json
+    i18n: true
+    preview_path: "/actualites/prix-i-phd-morvan-gaudin/"
+    fields:
+    - label: En-tête de la page
+      name: phead
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 29 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+    - label: Bloc de fin
+      name: divers
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 38 caractères."}
+      - {label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 20 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
+- name: partenaires
+  label: Logos des partenaires
+  i18n: true
+  files:
+  - name: logos
+    label: Logos des partenaires
+    file: src/_data/partenaires.json
+    format: json
+    fields:
+    - label: Logos
+      label_singular: Logo
+      name: logos
+      widget: list
+      summary: '{{fields.nom}}'
+      hint: "Format PNG à fond transparent, hauteur d'environ 100 pixels."
+      fields:
+      - {label: Image, name: image, widget: image}
+      - {label: Nom affiché aux lecteurs d'écran, name: nom, widget: string}
+
+  # ═══════════ Les textes du site ═══════════
+  # Chaque page du site a son entrée. À l'intérieur, les textes sont rangés
+  # par section, dans l'ordre où ils apparaissent à l'écran. Le volet de
+  # droite montre le site réel : il se met à jour à la frappe.
+- name: communs
+  label: En-tête et pied de page
+  i18n: true
+  files:
+  - name: communs
+    label: En-tête et pied de page
+    file: src/_data/textes/communs.json
+    i18n: true
+    preview_path: "/"
+    fields:
+    - label: Navigation
+      name: nav
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Contact", name: contact, widget: string, i18n: true, hint: "Longueur actuelle : 14 caractères."}
+      - {label: "Accueil", name: accueil, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères."}
+      - {label: "Droits", name: droits, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères."}
+      - {label: "Mentions", name: mentions, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères."}
+      - {label: "Confidentialite", name: confidentialite, widget: string, i18n: true, hint: "Longueur actuelle : 28 caractères."}
+      - {label: "Actualites", name: actualites, widget: string, i18n: true, hint: "Longueur actuelle : 10 caractères."}
+      - {label: "Antimoine", name: antimoine, widget: string, i18n: true, hint: "Longueur actuelle : 11 caractères."}
+      - {label: "Equipe", name: equipe, widget: string, i18n: true, hint: "Longueur actuelle : 6 caractères."}
+      - {label: "Technologie", name: technologie, widget: string, i18n: true, hint: "Longueur actuelle : 17 caractères."}
+    - label: Coordonnées
+      name: contact
+      widget: object
+      i18n: true
+      fields:
+      - {label: Adresse électronique, name: email, widget: string, i18n: duplicate}
+      - {label: Adresse postale, name: adresse, widget: string, i18n: duplicate}
+      - {label: Lien LinkedIn, name: linkedin, widget: string, i18n: duplicate}
+
+  # ------------------------------------------------------------------ ÉQUIPE
+    - label: Descriptions des images
+      name: alt
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Iphd", name: iphd, widget: string, i18n: true, hint: "Longueur actuelle : 28 caractères."}
+      - {label: "Jouer", name: jouer, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères."}
+      - {label: "Schema", name: schema, widget: text, i18n: true, hint: "Longueur actuelle : 316 caractères."}
+      - {label: "Video", name: video, widget: string, i18n: true, hint: "Longueur actuelle : 34 caractères."}
+      - {label: "Video titre", name: video_titre, widget: string, i18n: true, hint: "Longueur actuelle : 41 caractères."}
+    - label: Libellés divers
+      name: divers
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Ecrivez", name: ecrivez, widget: string, i18n: true, hint: "Longueur actuelle : 12 caractères."}
+      - {label: "En savoir plus", name: en_savoir_plus, widget: string, i18n: true, hint: "Longueur actuelle : 14 caractères."}
+      - {label: "Piege", name: piege, widget: string, i18n: true, hint: "Longueur actuelle : 21 caractères."}
+      - {label: "Pour", name: pour, widget: string, i18n: true, hint: "Longueur actuelle : 4 caractères."}
+      - {label: "Suivre linkedin", name: suivre_linkedin, widget: string, i18n: true, hint: "Longueur actuelle : 24 caractères."}
+      - {label: "Voir video", name: voir_video, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères."}
+- name: legal
+  label: Pages légales
+  i18n: true
+  files:
   - name: mentions
     label: Mentions légales
     file: src/_data/textes/mentions.json
@@ -750,68 +820,3 @@ collections:
       - {label: "Paragraphe 9", name: texte9, widget: text, i18n: true, hint: "Longueur actuelle : 191 caractères."}
       - {label: "Sous-titre 8", name: soustitre8, widget: string, i18n: true, hint: "Longueur actuelle : 8 caractères."}
       - {label: "Paragraphe 10", name: texte10, widget: text, i18n: true, hint: "Longueur actuelle : 163 caractères."}
-  - name: article
-    label: Pages d'article
-    file: src/_data/textes/article.json
-    i18n: true
-    preview_path: "/actualites/prix-i-phd-morvan-gaudin/"
-    fields:
-    - label: En-tête de la page
-      name: phead
-      widget: object
-      collapsed: true
-      i18n: true
-      fields:
-      - {label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 29 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
-    - label: Bloc de fin
-      name: divers
-      widget: object
-      collapsed: true
-      i18n: true
-      fields:
-      - {label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 38 caractères."}
-      - {label: "Lien", name: lien, widget: text, i18n: true, hint: "Longueur actuelle : 20 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."}
-  - name: communs
-    label: Textes communs à tout le site
-    file: src/_data/textes/communs.json
-    i18n: true
-    preview_path: "/"
-    fields:
-    - label: Navigation
-      name: nav
-      widget: object
-      collapsed: true
-      i18n: true
-      fields:
-      - {label: "Contact", name: contact, widget: string, i18n: true, hint: "Longueur actuelle : 14 caractères."}
-      - {label: "Accueil", name: accueil, widget: string, i18n: true, hint: "Longueur actuelle : 7 caractères."}
-      - {label: "Droits", name: droits, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères."}
-      - {label: "Mentions", name: mentions, widget: string, i18n: true, hint: "Longueur actuelle : 16 caractères."}
-      - {label: "Confidentialite", name: confidentialite, widget: string, i18n: true, hint: "Longueur actuelle : 28 caractères."}
-      - {label: "Actualites", name: actualites, widget: string, i18n: true, hint: "Longueur actuelle : 10 caractères."}
-      - {label: "Antimoine", name: antimoine, widget: string, i18n: true, hint: "Longueur actuelle : 11 caractères."}
-      - {label: "Equipe", name: equipe, widget: string, i18n: true, hint: "Longueur actuelle : 6 caractères."}
-      - {label: "Technologie", name: technologie, widget: string, i18n: true, hint: "Longueur actuelle : 17 caractères."}
-    - label: Descriptions des images
-      name: alt
-      widget: object
-      collapsed: true
-      i18n: true
-      fields:
-      - {label: "Iphd", name: iphd, widget: string, i18n: true, hint: "Longueur actuelle : 28 caractères."}
-      - {label: "Jouer", name: jouer, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères."}
-      - {label: "Schema", name: schema, widget: text, i18n: true, hint: "Longueur actuelle : 316 caractères."}
-      - {label: "Video", name: video, widget: string, i18n: true, hint: "Longueur actuelle : 34 caractères."}
-      - {label: "Video titre", name: video_titre, widget: string, i18n: true, hint: "Longueur actuelle : 41 caractères."}
-    - label: Libellés divers
-      name: divers
-      widget: object
-      collapsed: true
-      i18n: true
-      fields:
-      - {label: "Ecrivez", name: ecrivez, widget: string, i18n: true, hint: "Longueur actuelle : 12 caractères."}
-      - {label: "En savoir plus", name: en_savoir_plus, widget: string, i18n: true, hint: "Longueur actuelle : 14 caractères."}
-      - {label: "Piege", name: piege, widget: string, i18n: true, hint: "Longueur actuelle : 21 caractères."}
-      - {label: "Pour", name: pour, widget: string, i18n: true, hint: "Longueur actuelle : 4 caractères."}
-      - {label: "Suivre linkedin", name: suivre_linkedin, widget: string, i18n: true, hint: "Longueur actuelle : 24 caractères."}
-      - {label: "Voir video", name: voir_video, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères."}

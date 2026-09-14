@@ -18,10 +18,10 @@ permalink: "{{ adresses['accueil'][langue] }}index.html"
   </video>
   <div class="veil"></div>
   <div class="wrap">
-    <h1>{{ contenu[langue].hero.titre1 }}<br><span>{{ contenu[langue].hero.titre2 }}</span></h1>
+    <h1><b data-champ="accueil.hero.titre1">{{ t.accueil.hero.titre1 }}</b><br><span data-champ="accueil.hero.titre2">{{ t.accueil.hero.titre2 }}</span></h1>
     <div class="lead">
-      <p>{{ contenu[langue].hero.para1 }}</p>
-      <p>{{ contenu[langue].hero.para2 }}</p>
+      <p data-champ="accueil.hero.para1">{{ t.accueil.hero.para1 }}</p>
+      <p data-champ="accueil.hero.para2">{{ t.accueil.hero.para2 }}</p>
     </div>
   </div>
 </div>
@@ -82,10 +82,10 @@ permalink: "{{ adresses['accueil'][langue] }}index.html"
         </div>
       </div>
       <div class="rowtxt">
-        <div class="tag">{{ contenu[langue].produits[0].etiquette }}</div>
-        <h3>{{ contenu[langue].produits[0].titre }}</h3>
-        <p>{{ contenu[langue].produits[0].texte }}</p>
-        <div class="who">{{ t.communs.divers.pour }} <b>{{ contenu[langue].produits[0].pour }}</b></div>
+        <div class="tag" data-champ="accueil.produits.0.etiquette">{{ t.accueil.produits[0].etiquette }}</div>
+        <h3 data-champ="accueil.produits.0.titre">{{ t.accueil.produits[0].titre }}</h3>
+        <p data-champ="accueil.produits.0.texte">{{ t.accueil.produits[0].texte }}</p>
+        <div class="who">{{ t.communs.divers.pour }} <b data-champ="accueil.produits.0.pour">{{ t.accueil.produits[0].pour }}</b></div>
       </div>
     </div>
 
@@ -98,10 +98,10 @@ permalink: "{{ adresses['accueil'][langue] }}index.html"
         </div>
       </div>
       <div class="rowtxt">
-        <div class="tag">{{ contenu[langue].produits[1].etiquette }}</div>
-        <h3>{{ contenu[langue].produits[1].titre }}</h3>
-        <p>{{ contenu[langue].produits[1].texte }}</p>
-        <div class="who">{{ t.communs.divers.pour }} <b>{{ contenu[langue].produits[1].pour }}</b></div>
+        <div class="tag" data-champ="accueil.produits.1.etiquette">{{ t.accueil.produits[1].etiquette }}</div>
+        <h3 data-champ="accueil.produits.1.titre">{{ t.accueil.produits[1].titre }}</h3>
+        <p data-champ="accueil.produits.1.texte">{{ t.accueil.produits[1].texte }}</p>
+        <div class="who">{{ t.communs.divers.pour }} <b data-champ="accueil.produits.1.pour">{{ t.accueil.produits[1].pour }}</b></div>
       </div>
     </div>
 
@@ -133,10 +133,10 @@ permalink: "{{ adresses['accueil'][langue] }}index.html"
         </div>
       </div>
       <div class="rowtxt">
-        <div class="tag">{{ contenu[langue].produits[2].etiquette }}</div>
-        <h3>{{ contenu[langue].produits[2].titre }}</h3>
-        <p>{{ contenu[langue].produits[2].texte }}</p>
-        <div class="who">{{ t.communs.divers.pour }} <b>{{ contenu[langue].produits[2].pour }}</b></div>
+        <div class="tag" data-champ="accueil.produits.2.etiquette">{{ t.accueil.produits[2].etiquette }}</div>
+        <h3 data-champ="accueil.produits.2.titre">{{ t.accueil.produits[2].titre }}</h3>
+        <p data-champ="accueil.produits.2.texte">{{ t.accueil.produits[2].texte }}</p>
+        <div class="who">{{ t.communs.divers.pour }} <b data-champ="accueil.produits.2.pour">{{ t.accueil.produits[2].pour }}</b></div>
       </div>
     </div>
   </div>
@@ -261,9 +261,9 @@ permalink: "{{ adresses['accueil'][langue] }}index.html"
       <h2 style="color:#fff" data-champ="accueil.cgrid.titre">{{ t.accueil.cgrid.titre | safe }}</h2>
       <p class="lead" style="margin-top:24px" data-champ="accueil.cgrid.chapo">{{ t.accueil.cgrid.chapo | safe }}</p>
       <ul class="co">
-        <li><div class="k" data-champ="accueil.cgrid.libelle">{{ t.accueil.cgrid.libelle | safe }}</div><div class="v">{{ contenu[langue].contact.email }}</div></li>
-        <li><div class="k" data-champ="accueil.cgrid.libelle2">{{ t.accueil.cgrid.libelle2 | safe }}</div><div class="v">{{ contenu[langue].contact.adresse }}</div></li>
-        <li><div class="k" data-champ="accueil.cgrid.libelle3">{{ t.accueil.cgrid.libelle3 | safe }}</div><div class="v"><a href="{{ contenu[langue].contact.linkedin }}" target="_blank" rel="noopener" style="border-bottom:1px solid rgba(255,255,255,.3)">LinkedIn</a></div></li>
+        <li><div class="k" data-champ="accueil.cgrid.libelle">{{ t.accueil.cgrid.libelle | safe }}</div><div class="v" data-champ="communs.contact.email">{{ t.communs.contact.email }}</div></li>
+        <li><div class="k" data-champ="accueil.cgrid.libelle2">{{ t.accueil.cgrid.libelle2 | safe }}</div><div class="v" data-champ="communs.contact.adresse">{{ t.communs.contact.adresse }}</div></li>
+        <li><div class="k" data-champ="accueil.cgrid.libelle3">{{ t.accueil.cgrid.libelle3 | safe }}</div><div class="v"><a href="{{ t.communs.contact.linkedin }}" target="_blank" rel="noopener" style="border-bottom:1px solid rgba(255,255,255,.3)">LinkedIn</a></div></li>
       </ul>
     </div>
     <div>
