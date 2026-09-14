@@ -10,8 +10,8 @@
         "corps": "",
         "image": "",
         "photos": [],
-        "lien": "",
-        "lien_texte": "",
+        "lien": "https://www.linkedin.com/feed/update/urn:li:activity:7502969334462570496/",
+        "lien_texte": "Voir la publication",
         "cadrage": "50%"
       },
       {
@@ -113,6 +113,19 @@
         "lien": "",
         "lien_texte": "",
         "cadrage": "50%"
+      },
+      {
+        "date": "Décembre 2024",
+        "categorie": "Recherche",
+        "slug": "soutenance-these-morvan-gaudin",
+        "titre": "Soutenance de la thèse à l'origine du procédé",
+        "resume": "Morvan Gaudin soutient le 3 décembre 2024, à l'université Paris Sciences et Lettres, sa thèse sur la dépollution des plastiques bromés issus des déchets d'équipements électriques et électroniques.",
+        "corps": "",
+        "image": "",
+        "photos": [],
+        "lien": "https://theses.fr/2024UPSLC028",
+        "lien_texte": "Consulter la thèse",
+        "cadrage": "50%"
       }
     ]
   },
@@ -127,8 +140,8 @@
         "corps": "",
         "image": "",
         "photos": [],
-        "lien": "",
-        "lien_texte": "",
+        "lien": "https://www.linkedin.com/feed/update/urn:li:activity:7502969334462570496/",
+        "lien_texte": "See the post",
         "cadrage": "50%"
       },
       {
@@ -229,6 +242,19 @@
         "photos": [],
         "lien": "",
         "lien_texte": "",
+        "cadrage": "50%"
+      },
+      {
+        "date": "December 2024",
+        "categorie": "Research",
+        "slug": "soutenance-these-morvan-gaudin",
+        "titre": "The thesis behind the process is defended",
+        "resume": "On 3 December 2024, at Université Paris Sciences et Lettres, Morvan Gaudin defended his thesis on decontaminating brominated plastics from waste electrical and electronic equipment.",
+        "corps": "",
+        "image": "",
+        "photos": [],
+        "lien": "https://theses.fr/2024UPSLC028",
+        "lien_texte": "Read the thesis",
         "cadrage": "50%"
       }
     ]
