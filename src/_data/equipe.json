@@ -34,7 +34,7 @@
       {
         "photo": "/assets/gregory-lefevre.jpg",
         "nom": "Grégory Lefèvre",
-        "texte": "Chercheur au Centre national de la recherche scientifique, Institut de Recherche de Chimie Paris. Hydrométallurgie et optimisation du procédé d'extraction.",
+        "texte": "Chercheur au Centre national de la recherche scientifique, Institut de Recherche de Chimie Paris. Il est expert en hydrométallurgie et accompagne l'optimisation du procédé d'extraction.",
         "logos": [
           {
             "image": "/assets/cnrs.png",
@@ -49,7 +49,7 @@
       {
         "photo": "/assets/frederic-rousseau.jpg",
         "nom": "Frédéric Rousseau",
-        "texte": "Enseignant-chercheur à Chimie ParisTech - PSL, Institut de Recherche de Chimie Paris. Génie des procédés et passage à l'échelle industrielle.",
+        "texte": "Enseignant-chercheur à Chimie ParisTech - PSL, Institut de Recherche de Chimie Paris. Expert en génie des procédés, il accompagne le passage à l'échelle industrielle.",
         "logos": [
           {
             "image": "/assets/chimie-paristech-psl.png",
@@ -60,7 +60,7 @@
       {
         "photo": "/assets/vincent-semetey.jpg",
         "nom": "Vincent Semetey",
-        "texte": "Chercheur au Centre national de la recherche scientifique, Institut de Recherche de Chimie Paris. Chimie des polymères, directeur de la Chaire Mines Urbaines.",
+        "texte": "Chercheur au Centre national de la recherche scientifique, Institut de Recherche de Chimie Paris. Expert en chimie des polymères et directeur de la Chaire Mines Urbaines.",
         "logos": [
           {
             "image": "/assets/cnrs.png",
