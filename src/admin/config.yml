@@ -8,7 +8,7 @@ backend:
   # Adresse du petit service qui gère la connexion GitHub depuis /admin.
   # Elle est fournie par Cloudflare au moment où l'on installe ce service.
   # Tant qu'elle est vide, le bouton « se connecter » ne fonctionne pas.
-  base_url: 
+  base_url: https://sveltia-cms-auth.david-merino.workers.dev 
 
 # Où sont rangées les images, et sous quel chemin la page les appelle
 media_folder: src/assets
