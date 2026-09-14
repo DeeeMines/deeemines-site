@@ -97,6 +97,29 @@ permalink: "{{ adresses['antimoine'][langue] }}index.html"
     </div>
   </section>
 
+  <!-- DÉPENDANCE · chiffres de la Cour des comptes européenne, dessin maison -->
+  <section>
+    <div class="wrap">
+      <div class="eyebrow" data-champ="antimoine.dependance.surtitre">{{ t.antimoine.dependance.surtitre | safe }}</div>
+      <div class="stmt">
+        <h2 data-champ="antimoine.dependance.titre">{{ t.antimoine.dependance.titre | safe }}</h2>
+        <p class="lead" data-champ="antimoine.dependance.chapo">{{ t.antimoine.dependance.chapo | safe }}</p>
+      </div>
+      <p class="dep-leg" data-champ="antimoine.dependance.legende">{{ t.antimoine.dependance.legende | safe }}</p>
+      <div class="depend">
+        {%- for m in dependance.matieres %}
+        <div class="dep{% if m.vedette %} on{% endif %}">
+          <span class="m">{{ m[langue] }}</span>
+          <span class="j"><i style="width:{{ m.part }}%"></i></span>
+          <span class="v">{{ m.part }}&#8239;%</span>
+        </div>
+        {%- endfor %}
+      </div>
+      <p class="dep-src" data-champ="antimoine.dependance.note">{{ t.antimoine.dependance.note | safe }}</p>
+      <p class="dep-src src">{{ dependance.source[langue] }}.</p>
+    </div>
+  </section>
+
   <section class="tint">
     <div class="wrap">
       <div class="eyebrow" data-champ="antimoine.en_synthese.surtitre">{{ t.antimoine.en_synthese.surtitre | safe }}</div>

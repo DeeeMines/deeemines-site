@@ -9,6 +9,10 @@
       "nom": "CNRS"
     },
     {
+      "image": "/assets/universite-psl.png",
+      "nom": "Université Paris Sciences et Lettres"
+    },
+    {
       "image": "/assets/chimie-paristech-psl.png",
       "nom": "Chimie ParisTech - PSL"
     },

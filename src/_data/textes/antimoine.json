@@ -7,6 +7,13 @@
       "texte2": "Its production is concentrated in a handful of countries, and its price rose sixfold between 2021 and 2025.",
       "titre": "Thirty-four critical raw materials<br>Antimony is one of them"
     },
+    "dependance": {
+      "chapo": "Of the twenty-six critical raw materials needed for the energy transition, ten are entirely imported. Antimony is one of them.",
+      "legende": "Share of imports from non-EU countries in the European Union&#8217;s supply.",
+      "note": "Strontium is the exception: 99.7&#8239;% of European supply comes from Spain.",
+      "surtitre": "Dependence",
+      "titre": "All of Europe&#8217;s antimony comes from abroad"
+    },
     "divers": {
       "lien": "Our technology <span class=\"a\">→</span>",
       "texte": "We take these plastics (electronic waste, technical covers, cables) before they reach the incinerator.",
@@ -70,6 +77,13 @@
       "texte": "L'Union européenne a identifié trente-quatre matières premières indispensables à son économie et exposées à un risque élevé de rupture d'approvisionnement, dont l'antimoine.",
       "texte2": "Sa production est concentrée dans quelques pays, et son prix a été multiplié par six entre 2021 et 2025.",
       "titre": "Trente-quatre matières critiques<br>L'antimoine en fait partie"
+    },
+    "dependance": {
+      "chapo": "Sur les vingt-six matières premières critiques nécessaires à la transition énergétique, dix sont importées en totalité. L'antimoine est de celles-là.",
+      "legende": "Part des importations en provenance de pays tiers dans l'approvisionnement de l'Union européenne.",
+      "note": "Le strontium fait exception : 99,7&#8239;% de l'approvisionnement européen vient d'Espagne.",
+      "surtitre": "Dépendance",
+      "titre": "Tout l'antimoine européen vient d'ailleurs"
     },
     "divers": {
       "lien": "Notre technologie <span class=\"a\">→</span>",

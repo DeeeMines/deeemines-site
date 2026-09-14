@@ -41,9 +41,9 @@
       "titre": "From the laboratory to the pilot"
     },
     "le_principe": {
-      "bloc": "<p>Everything happens at room temperature and atmospheric pressure, with no heating\n               and no pressure.</p>\n            <p>The shredded material is first dissolved: the polymer goes into solution and\n               frees the additives trapped in the material. The antimony is then selectively\n               captured, and the brominated compounds extracted in turn. The polymer, stripped\n               of its additives, is finally precipitated back out and recovered as a solid.</p>",
+      "bloc": "<p>Everything happens at room temperature and atmospheric pressure, with no heating\n               and no pressure.</p>\n            <p>The shredded material goes through three successive solvents. The first dissolves\n               the polymer and frees the additives trapped in the material. The second, a\n               complexing agent, selectively captures the antimony, and the brominated compounds\n               are extracted in turn. The third precipitates the polymer back out, stripped of\n               its additives.</p>",
       "surtitre": "The principle",
-      "titre": "… released by a patented process using solvents and complexing agents"
+      "titre": "… released by a patented process"
     },
     "le_verrou": {
       "bloc": "\n            <p>The plastics in electrical and electronic equipment contain\n               brominated flame retardants, combined with antimony trioxide,\n               which makes them far more effective. Both are spread through the polymer\n               matrix, not laid on the surface.</p>\n            <p>No industry today can separate them out. These plastics therefore go\n               to incineration, along with the antimony and the bromine they hold.</p>\n          ",
@@ -56,9 +56,9 @@
     },
     "schema": {
       "bloc": "<p>The waste arrives in pieces of every size. Shredding gives an\n        even fraction, the condition for a stable yield.</p>",
-      "bloc2": "<p>The polymer goes into solution. The additives, until\n        then trapped in the material, become reachable.</p>",
-      "bloc3": "<p>The antimony oxide is selectively captured. The brominated\n        compounds are extracted in turn.</p>",
-      "bloc4": "<p>The cleaned polymer is precipitated out, recovered solid and\n        dried. The regenerated solvents go into the next cycle.</p>",
+      "bloc2": "<p>The first solvent dissolves the polymer. The additives, until\n        then trapped in the material, become reachable.</p>",
+      "bloc3": "<p>The second selectively captures the antimony oxide. The\n        brominated compounds are extracted in turn.</p>",
+      "bloc4": "<p>The third precipitates the cleaned polymer back out, recovered\n        solid and dried. The regenerated solvents go into the next cycle.</p>",
       "legende": "Flame-retarded plastics",
       "legende2": "electronic waste, technical covers, cables, and more",
       "legende3": "Solvents regenerated, in a closed loop",
@@ -76,7 +76,7 @@
     "sorties": {
       "bloc": "<p>The antimony oxide extracted from the plastics is sold as it is\n            or converted to suit the intended use. A traceable material, produced in Europe.</p>",
       "bloc2": "<p>Isolated intact and separated from the polymer. Some of them are\n            persistent organic pollutants and need to be transformed before any reuse.</p>",
-      "bloc3": "<p>Stripped of their additives and below the regulatory limit for\n            pollutants, they can go back into the plastics industry instead of up in smoke.</p>",
+      "bloc3": "<p>Stripped of their additives, they can go back into the plastics industry\n            instead of up in smoke.</p>",
       "soustitre": "Antimony <span class=\"pri\">Priority</span>",
       "soustitre2": "Brominated compounds",
       "soustitre3": "Polymers",
@@ -127,9 +127,9 @@
       "titre": "Du laboratoire au pilote"
     },
     "le_principe": {
-      "bloc": "<p>Tout se passe à température ambiante et à pression atmosphérique, sans chauffage\n               ni mise sous pression.</p>\n            <p>Le broyat est d'abord mis en solution : le polymère se dissout et libère les\n               additifs jusque-là prisonniers de la matière. L'antimoine est ensuite capté\n               sélectivement, et les composés bromés extraits à leur tour. Le polymère,\n               débarrassé de ses additifs, est enfin reprécipité et récupéré solide.</p>",
+      "bloc": "<p>Tout se passe à température ambiante et à pression atmosphérique, sans chauffage\n               ni mise sous pression.</p>\n            <p>Le broyat traverse trois solvants successifs. Le premier met le polymère en\n               solution et libère les additifs jusque-là prisonniers de la matière. Le deuxième,\n               complexant, capte sélectivement l'antimoine, puis les composés bromés sont\n               extraits à leur tour. Le troisième fait reprécipiter le polymère, débarrassé de\n               ses additifs.</p>",
       "surtitre": "Le principe",
-      "titre": "… libérés grâce à un procédé breveté utilisant des solvants et des complexants"
+      "titre": "… libérés grâce à un procédé breveté"
     },
     "le_verrou": {
       "bloc": "\n            <p>Les plastiques des équipements électriques et électroniques contiennent des\n               retardateurs de flamme bromés, associés à du trioxyde d'antimoine\n               qui en démultiplie l'effet. Les deux sont dispersés dans la matrice polymère,\n               et non déposés en surface.</p>\n            <p>Aucune filière ne sait aujourd'hui les en séparer. Ces plastiques partent donc\n               en incinération, avec l'antimoine et le brome qu'ils contiennent.</p>\n          ",
@@ -142,9 +142,9 @@
     },
     "schema": {
       "bloc": "<p>Le gisement arrive en pièces de toutes tailles. Le broyage donne une\n        fraction homogène, condition d'un rendement stable.</p>",
-      "bloc2": "<p>Le polymère est mis en solution. Les additifs,\n        jusque-là prisonniers de la matière, deviennent accessibles.</p>",
-      "bloc3": "<p>L'oxyde d'antimoine est capté sélectivement. Les composés\n        bromés sont extraits à leur tour.</p>",
-      "bloc4": "<p>Le polymère dépollué est reprécipité, récupéré solide et séché.\n        Les solvants régénérés repartent dans le cycle suivant.</p>",
+      "bloc2": "<p>Le premier solvant met le polymère en solution. Les additifs,\n        jusque-là prisonniers de la matière, deviennent accessibles.</p>",
+      "bloc3": "<p>Le deuxième capte sélectivement l'oxyde d'antimoine. Les\n        composés bromés sont extraits à leur tour.</p>",
+      "bloc4": "<p>Le troisième fait reprécipiter le polymère dépollué, récupéré\n        solide et séché. Les solvants régénérés repartent dans le cycle suivant.</p>",
       "legende": "Plastiques ignifugés",
       "legende2": "déchets électroniques, bâches, câbles, etc.",
       "legende3": "Solvants régénérés, en boucle fermée",
@@ -162,7 +162,7 @@
     "sorties": {
       "bloc": "<p>L'oxyde d'antimoine extrait des plastiques est revendu tel quel ou\n            transformé selon l'usage visé. Une matière tracée, produite en Europe.</p>",
       "bloc2": "<p>Isolés intacts et séparés du polymère. Une partie relève des polluants\n            organiques persistants et demande une transformation avant tout réemploi.</p>",
-      "bloc3": "<p>Débarrassés de leurs additifs, sous le seuil réglementaire de polluants,\n            ils peuvent réintégrer la filière plastique au lieu de partir en fumée.</p>",
+      "bloc3": "<p>Débarrassés de leurs additifs, ils peuvent réintégrer la filière plastique\n            au lieu de partir en fumée.</p>",
       "soustitre": "Antimoine <span class=\"pri\">Priorité</span>",
       "soustitre2": "Composés bromés",
       "soustitre3": "Polymères",

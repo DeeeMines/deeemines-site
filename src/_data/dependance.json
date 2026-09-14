@@ -1,0 +1,33 @@
+{
+  "source": {
+    "fr": "Cour des comptes européenne, rapport spécial 04/2026, d'après des données de la Commission européenne portant sur 2016-2020",
+    "en": "European Court of Auditors, special report 04/2026, based on European Commission data covering 2016-2020"
+  },
+  "matieres": [
+    { "fr": "Arsenic",              "en": "Arsenic",                    "part": 41 },
+    { "fr": "Germanium",            "en": "Germanium",                  "part": 49 },
+    { "fr": "Cuivre",               "en": "Copper",                     "part": 57 },
+    { "fr": "Fluorine",             "en": "Fluorspar",                  "part": 64 },
+    { "fr": "Silicium métal",       "en": "Silicon metal",              "part": 66 },
+    { "fr": "Nickel",               "en": "Nickel",                     "part": 77 },
+    { "fr": "Baryte",               "en": "Baryte",                     "part": 79 },
+    { "fr": "Tungstène",            "en": "Tungsten",                   "part": 81 },
+    { "fr": "Cobalt",               "en": "Cobalt",                     "part": 84 },
+    { "fr": "Aluminium, bauxite",   "en": "Aluminium, bauxite",         "part": 89 },
+    { "fr": "Gallium",              "en": "Gallium",                    "part": 98 },
+    { "fr": "Platinoïdes",          "en": "Platinum group metals",      "part": 98 },
+    { "fr": "Manganèse",            "en": "Manganese",                  "part": 99 },
+    { "fr": "Tantale",              "en": "Tantalum",                   "part": 99 },
+    { "fr": "Graphite naturel",     "en": "Natural graphite",           "part": 99 },
+    { "fr": "Phosphore",            "en": "Phosphorus",                 "part": 100 },
+    { "fr": "Magnésium",            "en": "Magnesium",                  "part": 100 },
+    { "fr": "Antimoine",            "en": "Antimony",                   "part": 100, "vedette": true },
+    { "fr": "Bore, borates",        "en": "Boron, borates",             "part": 100 },
+    { "fr": "Terres rares lourdes", "en": "Heavy rare earth elements",  "part": 100 },
+    { "fr": "Terres rares légères", "en": "Light rare earth elements",  "part": 100 },
+    { "fr": "Lithium",              "en": "Lithium",                    "part": 100 },
+    { "fr": "Niobium",              "en": "Niobium",                    "part": 100 },
+    { "fr": "Scandium",             "en": "Scandium",                   "part": 100 },
+    { "fr": "Vanadium",             "en": "Vanadium",                   "part": 100 }
+  ]
+}

@@ -5,8 +5,8 @@
         "date": "Septembre 2026",
         "categorie": "Distinction",
         "slug": "prix-poster-hydrometallurgie",
-        "titre": "Premier prix du poster à un colloque européen d'hydrométallurgie",
-        "resume": "Rachida Benmammar a reçu le premier prix du poster pour la présentation de ses travaux sur l'optimisation du procédé breveté, lors d'un colloque d'hydrométallurgie en Belgique.",
+        "titre": "Prix du meilleur poster scientifique au symposium international d'hydrométallurgie circulaire",
+        "resume": "Rachida Benmammar a reçu le prix du meilleur poster scientifique pour la présentation de ses travaux sur l'optimisation du procédé breveté, à l'International Circular Hydrometallurgy Symposium 2026, en Belgique.",
         "corps": "",
         "image": "",
         "photos": [],
@@ -25,6 +25,19 @@
         "photos": [],
         "lien": "https://www.cnrsinnovation.com/actualite/programme-rise-12-projets-innovants-integrent-la-promotion-dete-2026/",
         "lien_texte": "Lire l'annonce de CNRS Innovation",
+        "cadrage": "50%"
+      },
+      {
+        "date": "Avril 2026",
+        "categorie": "Entretien",
+        "slug": "entretien-nextwaste",
+        "titre": "Entretien avec NextWaste sur les plastiques bromés",
+        "resume": "Kristell Riou-Nivert explique à NextWaste pourquoi les procédés de débromation existants laissent l'antimoine de côté, et ce que change un procédé qui extrait l'un et l'autre en préservant la matrice plastique.",
+        "corps": "",
+        "image": "",
+        "photos": [],
+        "lien": "https://www.linkedin.com/posts/ghhurel-dechets-ia-recyclage_chaque-ann%C3%A9e-en-europe-jusqu%C3%A0-300-000-tonnes-share-7447193169559011328-c6VE/",
+        "lien_texte": "Voir la publication",
         "cadrage": "50%"
       },
       {
@@ -135,8 +148,8 @@
         "date": "September 2026",
         "categorie": "Award",
         "slug": "prix-poster-hydrometallurgie",
-        "titre": "First poster prize at a European hydrometallurgy conference",
-        "resume": "Rachida Benmammar received the first poster prize for presenting her work on optimising the patented process, at a hydrometallurgy conference in Belgium.",
+        "titre": "Best Scientific Poster Award at the International Circular Hydrometallurgy Symposium",
+        "resume": "Rachida Benmammar received the Best Scientific Poster Award for presenting her work on optimising the patented process, at the International Circular Hydrometallurgy Symposium 2026, in Belgium.",
         "corps": "",
         "image": "",
         "photos": [],
@@ -155,6 +168,19 @@
         "photos": [],
         "lien": "https://www.cnrsinnovation.com/actualite/programme-rise-12-projets-innovants-integrent-la-promotion-dete-2026/",
         "lien_texte": "Read the CNRS Innovation announcement",
+        "cadrage": "50%"
+      },
+      {
+        "date": "April 2026",
+        "categorie": "Interview",
+        "slug": "entretien-nextwaste",
+        "titre": "An interview with NextWaste on brominated plastics",
+        "resume": "Kristell Riou-Nivert explains to NextWaste why existing debromination processes leave the antimony behind, and what changes with a process that extracts both while preserving the plastic matrix.",
+        "corps": "",
+        "image": "",
+        "photos": [],
+        "lien": "https://www.linkedin.com/posts/ghhurel-dechets-ia-recyclage_chaque-ann%C3%A9e-en-europe-jusqu%C3%A0-300-000-tonnes-share-7447193169559011328-c6VE/",
+        "lien_texte": "See the post",
         "cadrage": "50%"
       },
       {
