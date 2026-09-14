@@ -74,6 +74,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'src/_headers': '_headers' });
   eleventyConfig.addPassthroughCopy({ 'src/_redirects': '_redirects' });
   eleventyConfig.addPassthroughCopy({ 'src/old': 'old' });
+  // Les pages de l'archive sont recopiées telles quelles : Eleventy ne doit
+  // pas les traiter comme des gabarits, sans quoi elles sortiraient en double.
+  eleventyConfig.ignores.add('src/old/**');
   eleventyConfig.addPassthroughCopy({ 'src/hero.mp4': 'hero.mp4' });
   eleventyConfig.addPassthroughCopy({ 'src/hero-poster.jpg': 'hero-poster.jpg' });
 
