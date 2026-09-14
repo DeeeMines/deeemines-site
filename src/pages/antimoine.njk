@@ -10,7 +10,6 @@ permalink: "{{ adresses['antimoine'][langue] }}index.html"
 <main>
   <div class="phead">
     <div class="wrap">
-      <div class="eyebrow" style="color:var(--mint);text-transform:none;letter-spacing:.13em" data-champ="antimoine.phead.surtitre">{{ t.antimoine.phead.surtitre | safe }}</div>
       <h1 data-champ="antimoine.phead.titre">{{ t.antimoine.phead.titre | safe }}</h1>
       <p class="lead" data-champ="antimoine.phead.chapo">{{ t.antimoine.phead.chapo | safe }}</p>
     </div>
@@ -115,8 +114,8 @@ permalink: "{{ adresses['antimoine'][langue] }}index.html"
         </div>
         {%- endfor %}
       </div>
-      <p class="dep-src" data-champ="antimoine.dependance.note">{{ t.antimoine.dependance.note | safe }}</p>
-      <p class="dep-src src">{{ dependance.source[langue] }}.</p>
+      <p class="dep-src"><span data-champ="antimoine.dependance.note">{{ t.antimoine.dependance.note | safe }}</span>
+        {{ dependance.source[langue] }}.</p>
     </div>
   </section>
 
@@ -146,15 +145,17 @@ permalink: "{{ adresses['antimoine'][langue] }}index.html"
 
   <section class="dark" style="padding:clamp(42px,4.4vw,64px) 0">
     <div class="wrap concl">
-      <div>
-        <h2 style="color:#fff;font-size:clamp(25px,3vw,38px);max-width:26ch" data-champ="antimoine.divers.titre">{{ t.antimoine.divers.titre | safe }}</h2>
-        <div class="lead" style="margin-top:20px;max-width:66ch">
-          <p data-champ="antimoine.divers.texte">{{ t.antimoine.divers.texte | safe }}</p>
-          <p data-champ="antimoine.divers.texte2">{{ t.antimoine.divers.texte2 | safe }}</p>
-          <p data-champ="antimoine.divers.texte3">{{ t.antimoine.divers.texte3 | safe }}</p>
-        </div>
+      <h2 style="color:#fff;font-size:clamp(25px,3vw,38px);max-width:26ch" data-champ="antimoine.divers.titre">{{ t.antimoine.divers.titre | safe }}</h2>
+      <div class="lead" style="margin-top:20px;max-width:none">
+        <p data-champ="antimoine.divers.texte">{{ t.antimoine.divers.texte | safe }}</p>
+        <p data-champ="antimoine.divers.texte2">{{ t.antimoine.divers.texte2 | safe }}</p>
+        <p data-champ="antimoine.divers.texte3">{{ t.antimoine.divers.texte3 | safe }}</p>
       </div>
-      <a href="#technologie" data-go="home" class="btn btn-mint" data-champ="antimoine.divers.lien">{{ t.antimoine.divers.lien | safe }}</a>
+      <div class="vers-procede gauche">
+        <a href="{{ adresses['technologie'][langue] }}" class="btn btn-mint btn-fiole">
+          {% include "fiole.njk" %}
+          <span data-champ="antimoine.divers.lien">{{ t.antimoine.divers.lien | safe }}</span></a>
+      </div>
     </div>
   </section>
 </main>

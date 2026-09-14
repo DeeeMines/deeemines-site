@@ -202,7 +202,12 @@ permalink: "{{ adresses['accueil'][langue] }}index.html"
       <div class="chip" data-champ="accueil.notre_technologie.texte6">{{ t.accueil.notre_technologie.texte6 | safe }}</div>
     </div>
 
-    <div class="vers-procede" data-champ="accueil.notre_technologie.texte7">{{ t.accueil.notre_technologie.texte7 | safe }}</div>
+    <div class="vers-procede">
+      <a href="{{ adresses['technologie'][langue] }}" class="btn btn-mint btn-fiole">
+        {% include "fiole.njk" %}
+        <span data-champ="accueil.notre_technologie.texte7">{{ t.accueil.notre_technologie.texte7 | safe }}</span>
+        <span class="a">&#8594;</span></a>
+    </div>
   </div>
 </section>
 

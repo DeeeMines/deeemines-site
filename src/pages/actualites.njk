@@ -46,7 +46,7 @@ permalink: "{{ adresses['actualites'][langue] }}index.html"
       <h2 style="font-size:clamp(26px,3.4vw,40px)" data-champ="actualites.divers.titre">{{ t.actualites.divers.titre | safe }}</h2>
       <div style="margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
         <a href="{{ contenu[langue].contact.linkedin }}" target="_blank" rel="noopener" class="btn btn-mint">{{ t.communs.divers.suivre_linkedin }} <span class="a">&#8594;</span></a>
-        <a href="#contact" data-go="home" class="btn btn-line">{{ t.communs.divers.ecrivez }} <span class="a">&#8594;</span></a>
+        <a href="{{ adresses['accueil'][langue] }}#contact" class="btn btn-line">{{ t.communs.divers.ecrivez }} <span class="a">&#8594;</span></a>
       </div>
     </div>
   </section>

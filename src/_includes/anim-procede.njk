@@ -34,6 +34,9 @@
       <!-- ── ce qui entre ── -->
       <text class="lbl fort" x="286" y="40" data-champ="procede.schema.legende">{{ t.procede.schema.legende | safe }}</text>
       <text class="sous" x="286" y="62" data-champ="procede.schema.legende2">{{ t.procede.schema.legende2 | safe }}</text>
+      <!-- Le broyeur surplombe le centre de la cuve : ce décalage de 46 unités
+           met sa sortie dans l'axe du réacteur. -->
+      <g transform="translate(46,0)">
       <g class="gros">
         <rect class="gr g1" width="46" height="30" rx="5"/>
         <rect class="gr g2" width="34" height="38" rx="5"/>
@@ -55,8 +58,9 @@
         </g>
       </g>
 
+      </g>
+
       <!-- ── le réacteur ── -->
-      <rect class="moteur" x="192" y="196" width="36" height="22" rx="5"/>
       <g clip-path="url(#sgCuve)">
         <rect x="100" y="220" width="220" height="325" fill="#080848"/>
         <path class="phase org" d="M -230 304 C -211.667 293.95, -193.333 293.95, -175 304 C -156.667 314.05, -138.333 314.05, -120 304 C -101.667 293.95, -83.3333 293.95, -65 304 C -46.6667 314.05, -28.3333 314.05, -10 304 C 8.33333 293.95, 26.6667 293.95, 45 304 C 63.3333 314.05, 81.6667 314.05, 100 304 C 118.333 293.95, 136.667 293.95, 155 304 C 173.333 314.05, 191.667 314.05, 210 304 C 228.333 293.95, 246.667 293.95, 265 304 C 283.333 314.05, 301.667 314.05, 320 304 C 338.333 293.95, 356.667 293.95, 375 304 C 393.333 314.05, 411.667 314.05, 430 304 C 448.333 293.95, 466.667 293.95, 485 304 C 503.333 314.05, 521.667 314.05, 540 304 L 540 600 L -230 600 Z"/>
@@ -88,12 +92,13 @@
           <circle class="bul b4" cx="284" cy="478" r="3.2"/>
 
         </g>
-        <!-- l'agitateur -->
-        <line class="arbre" x1="210" y1="218" x2="210" y2="492"/>
+        <!-- L'agitateur est entraîné par le dessous : rien ne traverse plus le
+             bain, et les copeaux tombent au milieu du réacteur. -->
+        <line class="arbre" x1="210" y1="512" x2="210" y2="556"/>
         <g class="pale">
-          <rect x="160" y="482" width="100" height="10" rx="5"/>
-          <rect x="163" y="488" width="10" height="24" rx="5"/>
-          <rect x="247" y="488" width="10" height="24" rx="5"/>
+          <rect x="160" y="500" width="100" height="10" rx="5"/>
+          <rect x="163" y="506" width="10" height="22" rx="5"/>
+          <rect x="247" y="506" width="10" height="22" rx="5"/>
         </g>
       </g>
 

@@ -574,7 +574,6 @@ collections:
             i18n: true
             fields:
               - { label: "Chapô", name: chapo, widget: text, i18n: true, hint: "Longueur actuelle : 154 caractères." }
-              - { label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 25 caractères." }
               - { label: "Titre", name: titre, widget: string, i18n: true, hint: "Longueur actuelle : 29 caractères." }
           - label: Ses usages
             name: ses_usages

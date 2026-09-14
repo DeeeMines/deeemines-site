@@ -2,13 +2,13 @@
   "en": {
     "criticite": {
       "chapo": "\n        This framework is the Critical Raw Materials Act, the European regulation on critical raw materials adopted in 2024. No industry recovers the antimony from that residual fraction today. It is the fraction DeeeMines treats.\n      ",
-      "surtitre": "Criticality",
+      "surtitre": "A European sovereignty issue",
       "texte": "The European Union has identified thirty-four raw materials that are essential to its economy and exposed to a high risk of supply disruption, antimony among them.",
       "texte2": "Its production is concentrated in a handful of countries, and its price rose sixfold between 2021 and 2025.",
       "titre": "Thirty-four critical raw materials<br>Antimony is one of them"
     },
     "dependance": {
-      "chapo": "Of the twenty-six critical raw materials needed for the energy transition, ten are entirely imported. Antimony is one of them.",
+      "chapo": "Of the critical raw materials, fifteen are imported at 98&#8239;% or more. Antimony is imported in full.",
       "legende": "Share of imports from non-EU countries in the European Union&#8217;s supply.",
       "note": "Strontium is the exception: 99.7&#8239;% of European supply comes from Spain.",
       "surtitre": "Dependence",
@@ -37,7 +37,6 @@
     },
     "phead": {
       "chapo": "\n        A quiet metalloid, present in almost every electrical object we use, mined on the other side of the world, that Europe uses and then burns.\n      ",
-      "surtitre": "Critical raw material",
       "titre": "The metal nobody sees"
     },
     "ses_usages": {
@@ -73,13 +72,13 @@
   "fr": {
     "criticite": {
       "chapo": "\n        Ce cadre est celui du Critical Raw Materials Act, le règlement européen sur les matières\n        premières critiques adopté en 2024. Aucune filière ne récupère aujourd'hui l'antimoine\n        de cette fraction résiduelle. C'est celle que DeeeMines traite.\n      ",
-      "surtitre": "Criticité",
+      "surtitre": "Enjeu de souveraineté européenne",
       "texte": "L'Union européenne a identifié trente-quatre matières premières indispensables à son économie et exposées à un risque élevé de rupture d'approvisionnement, dont l'antimoine.",
       "texte2": "Sa production est concentrée dans quelques pays, et son prix a été multiplié par six entre 2021 et 2025.",
       "titre": "Trente-quatre matières critiques<br>L'antimoine en fait partie"
     },
     "dependance": {
-      "chapo": "Sur les vingt-six matières premières critiques nécessaires à la transition énergétique, dix sont importées en totalité. L'antimoine est de celles-là.",
+      "chapo": "Parmi les matières premières critiques, quinze sont importées à 98&#8239;% ou plus. L'antimoine l'est dans sa totalité.",
       "legende": "Part des importations en provenance de pays tiers dans l'approvisionnement de l'Union européenne.",
       "note": "Le strontium fait exception : 99,7&#8239;% de l'approvisionnement européen vient d'Espagne.",
       "surtitre": "Dépendance",
@@ -108,7 +107,6 @@
     },
     "phead": {
       "chapo": "\n        Un métalloïde discret, présent dans presque tous les objets électriques du quotidien,\n        extrait à l'autre bout du monde, que l'Europe utilise puis incinère.\n      ",
-      "surtitre": "Matière première critique",
       "titre": "Le métal que personne ne voit"
     },
     "ses_usages": {

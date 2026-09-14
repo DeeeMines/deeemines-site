@@ -69,7 +69,7 @@ permalink: "{{ adresses['equipe'][langue] }}index.html"
   <section style="padding:clamp(42px,4.4vw,64px) 0;text-align:center">
     <div class="wrap">
       <h2 style="font-size:clamp(26px,3.2vw,38px);margin-bottom:24px" data-champ="equipe.divers.titre">{{ t.equipe.divers.titre | safe }}</h2>
-      <a href="#contact" data-go="home" class="btn btn-ink" data-champ="equipe.divers.lien">{{ t.equipe.divers.lien | safe }}</a>
+      <a href="{{ adresses['accueil'][langue] }}#contact" class="btn btn-ink" data-champ="equipe.divers.lien">{{ t.equipe.divers.lien | safe }}</a>
     </div>
   </section>
 </main>
