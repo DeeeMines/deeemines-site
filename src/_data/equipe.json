@@ -1,98 +1,19 @@
 {
-  "fr": {
-    "cofondateurs": [
-      {
-        "photo": "/assets/kristell-riou-nivert.jpg",
-        "nom": "Kristell Riou-Nivert",
-        "role": "Cofondatrice & CEO",
-        "texte": "Ingénieure formée à Mines Paris - PSL, spécialisée en environnement et en innovation. Elle conduit la structuration industrielle de DeeeMines, les partenariats de collecte avec les recycleurs et les éco-organismes, et le financement du projet.",
-        "logos": [
-          {
-            "image": "/assets/mines-paris-psl.png",
-            "nom": "Mines Paris - PSL"
-          }
-        ]
-      },
-      {
-        "photo": "/assets/morvan-gaudin.jpg",
-        "nom": "Morvan Gaudin",
-        "role": "Cofondateur",
-        "texte": "Docteur et ingénieur, formé à Chimie ParisTech - PSL et à AgroParisTech. Auteur de la thèse dont est issu le procédé, menée au sein de la Chaire Mines Urbaines. Il pilote le développement technologique et le passage à l'échelle industrielle.",
-        "logos": [
-          {
-            "image": "/assets/chimie-paristech-psl.png",
-            "nom": "Chimie ParisTech - PSL"
-          },
-          {
-            "image": "/assets/agroparistech.png",
-            "nom": "AgroParisTech"
-          }
-        ]
-      }
-    ],
-    "scientifiques": [
-      {
-        "photo": "/assets/gregory-lefevre.jpg",
-        "nom": "Grégory Lefèvre",
-        "texte": "Chercheur au Centre national de la recherche scientifique, Institut de Recherche de Chimie Paris. Il est expert en hydrométallurgie et accompagne l'optimisation du procédé d'extraction.",
-        "logos": [
-          {
-            "image": "/assets/cnrs.png",
-            "nom": "CNRS"
-          },
-          {
-            "image": "/assets/chimie-paristech-psl.png",
-            "nom": "Chimie ParisTech - PSL"
-          }
-        ]
-      },
-      {
-        "photo": "/assets/frederic-rousseau.jpg",
-        "nom": "Frédéric Rousseau",
-        "texte": "Enseignant-chercheur à Chimie ParisTech - PSL, Institut de Recherche de Chimie Paris. Expert en génie des procédés, il accompagne le passage à l'échelle industrielle.",
-        "logos": [
-          {
-            "image": "/assets/chimie-paristech-psl.png",
-            "nom": "Chimie ParisTech - PSL"
-          }
-        ]
-      },
-      {
-        "photo": "/assets/vincent-semetey.jpg",
-        "nom": "Vincent Semetey",
-        "texte": "Chercheur au Centre national de la recherche scientifique, Institut de Recherche de Chimie Paris. Expert en chimie des polymères et directeur de la Chaire Mines Urbaines.",
-        "logos": [
-          {
-            "image": "/assets/cnrs.png",
-            "nom": "CNRS"
-          },
-          {
-            "image": "/assets/chimie-paristech-psl.png",
-            "nom": "Chimie ParisTech - PSL"
-          }
-        ]
-      }
-    ]
-  },
   "en": {
     "cofondateurs": [
       {
-        "photo": "/assets/kristell-riou-nivert.jpg",
-        "nom": "Kristell Riou-Nivert",
-        "role": "Co-founder & CEO",
-        "texte": "An engineer from Mines Paris - PSL, specialising in environment and innovation. She leads DeeeMines' industrial structuring, its collection partnerships with recyclers and producer responsibility organisations, and its financing.",
         "logos": [
           {
             "image": "/assets/mines-paris-psl.png",
             "nom": "Mines Paris - PSL"
           }
-        ]
+        ],
+        "nom": "Kristell Riou-Nivert",
+        "photo": "/assets/kristell-riou-nivert.jpg",
+        "role": "Co-founder & CEO",
+        "texte": "An engineer from Mines Paris - PSL, specialising in environment and innovation. She leads DeeeMines' industrial structuring, its collection partnerships with recyclers and producer responsibility organisations, and its financing."
       },
       {
-        "photo": "/assets/morvan-gaudin.jpg",
-        "nom": "Morvan Gaudin",
-        "role": "Co-founder",
-        "texte": "An engineer with a doctorate, trained at Chimie ParisTech - PSL and AgroParisTech. Author of the thesis behind the process, carried out within the Urban Mining Chair. He leads technology development and industrial scale-up.",
         "logos": [
           {
             "image": "/assets/chimie-paristech-psl.png",
@@ -102,40 +23,41 @@
             "image": "/assets/agroparistech.png",
             "nom": "AgroParisTech"
           }
-        ]
+        ],
+        "nom": "Morvan Gaudin",
+        "photo": "/assets/morvan-gaudin.jpg",
+        "role": "Co-founder",
+        "texte": "An engineer with a doctorate, trained at Chimie ParisTech - PSL and AgroParisTech. Author of the thesis behind the process, carried out within the Urban Mining Chair. He leads technology development and industrial scale-up."
       }
     ],
     "scientifiques": [
       {
-        "photo": "/assets/gregory-lefevre.jpg",
+        "logos": [
+          {
+            "image": "/assets/cnrs.png",
+            "nom": "CNRS"
+          },
+          {
+            "image": "/assets/chimie-paristech-psl.png",
+            "nom": "Chimie ParisTech - PSL"
+          }
+        ],
         "nom": "Grégory Lefèvre",
-        "texte": "Researcher at the French National Centre for Scientific Research, Institut de Recherche de Chimie Paris. Hydrometallurgy and optimisation of the extraction process.",
+        "photo": "/assets/gregory-lefevre.jpg",
+        "texte": "Researcher at the French National Centre for Scientific Research, Institut de Recherche de Chimie Paris. He is an expert in hydrometallurgy and supports the optimisation of the extraction process."
+      },
+      {
         "logos": [
-          {
-            "image": "/assets/cnrs.png",
-            "nom": "CNRS"
-          },
           {
             "image": "/assets/chimie-paristech-psl.png",
             "nom": "Chimie ParisTech - PSL"
           }
-        ]
-      },
-      {
-        "photo": "/assets/frederic-rousseau.jpg",
+        ],
         "nom": "Frédéric Rousseau",
-        "texte": "Lecturer and researcher at Chimie ParisTech - PSL, Institut de Recherche de Chimie Paris. Process engineering and industrial scale-up.",
-        "logos": [
-          {
-            "image": "/assets/chimie-paristech-psl.png",
-            "nom": "Chimie ParisTech - PSL"
-          }
-        ]
+        "photo": "/assets/frederic-rousseau.jpg",
+        "texte": "Lecturer and researcher at Chimie ParisTech - PSL, Institut de Recherche de Chimie Paris. An expert in process engineering, he supports the industrial scale-up."
       },
       {
-        "photo": "/assets/vincent-semetey.jpg",
-        "nom": "Vincent Semetey",
-        "texte": "Researcher at the French National Centre for Scientific Research, Institut de Recherche de Chimie Paris. Polymer chemistry, head of the Urban Mining Chair.",
         "logos": [
           {
             "image": "/assets/cnrs.png",
@@ -145,7 +67,85 @@
             "image": "/assets/chimie-paristech-psl.png",
             "nom": "Chimie ParisTech - PSL"
           }
-        ]
+        ],
+        "nom": "Vincent Semetey",
+        "photo": "/assets/vincent-semetey.jpg",
+        "texte": "Researcher at the French National Centre for Scientific Research, Institut de Recherche de Chimie Paris. An expert in polymer chemistry and head of the Urban Mining Chair."
+      }
+    ]
+  },
+  "fr": {
+    "cofondateurs": [
+      {
+        "logos": [
+          {
+            "image": "/assets/mines-paris-psl.png",
+            "nom": "Mines Paris - PSL"
+          }
+        ],
+        "nom": "Kristell Riou-Nivert",
+        "photo": "/assets/kristell-riou-nivert.jpg",
+        "role": "Cofondatrice & CEO",
+        "texte": "Ingénieure formée à Mines Paris - PSL, spécialisée en environnement et en innovation. Elle conduit la structuration industrielle de DeeeMines, les partenariats de collecte avec les recycleurs et les éco-organismes, et le financement du projet."
+      },
+      {
+        "logos": [
+          {
+            "image": "/assets/chimie-paristech-psl.png",
+            "nom": "Chimie ParisTech - PSL"
+          },
+          {
+            "image": "/assets/agroparistech.png",
+            "nom": "AgroParisTech"
+          }
+        ],
+        "nom": "Morvan Gaudin",
+        "photo": "/assets/morvan-gaudin.jpg",
+        "role": "Cofondateur",
+        "texte": "Docteur et ingénieur, formé à Chimie ParisTech - PSL et à AgroParisTech. Auteur de la thèse dont est issu le procédé, menée au sein de la Chaire Mines Urbaines. Il pilote le développement technologique et le passage à l'échelle industrielle."
+      }
+    ],
+    "scientifiques": [
+      {
+        "logos": [
+          {
+            "image": "/assets/cnrs.png",
+            "nom": "CNRS"
+          },
+          {
+            "image": "/assets/chimie-paristech-psl.png",
+            "nom": "Chimie ParisTech - PSL"
+          }
+        ],
+        "nom": "Grégory Lefèvre",
+        "photo": "/assets/gregory-lefevre.jpg",
+        "texte": "Chercheur au Centre national de la recherche scientifique, Institut de Recherche de Chimie Paris. Il est expert en hydrométallurgie et accompagne l'optimisation du procédé d'extraction."
+      },
+      {
+        "logos": [
+          {
+            "image": "/assets/chimie-paristech-psl.png",
+            "nom": "Chimie ParisTech - PSL"
+          }
+        ],
+        "nom": "Frédéric Rousseau",
+        "photo": "/assets/frederic-rousseau.jpg",
+        "texte": "Enseignant-chercheur à Chimie ParisTech - PSL, Institut de Recherche de Chimie Paris. Expert en génie des procédés, il accompagne le passage à l'échelle industrielle."
+      },
+      {
+        "logos": [
+          {
+            "image": "/assets/cnrs.png",
+            "nom": "CNRS"
+          },
+          {
+            "image": "/assets/chimie-paristech-psl.png",
+            "nom": "Chimie ParisTech - PSL"
+          }
+        ],
+        "nom": "Vincent Semetey",
+        "photo": "/assets/vincent-semetey.jpg",
+        "texte": "Chercheur au Centre national de la recherche scientifique, Institut de Recherche de Chimie Paris. Expert en chimie des polymères et directeur de la Chaire Mines Urbaines."
       }
     ]
   }
