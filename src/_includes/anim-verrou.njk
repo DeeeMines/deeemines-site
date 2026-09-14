@@ -1,68 +1,80 @@
 <!-- ═══════════ Schéma du verrou ═══════════
      Le propos de la section est qu'un additif n'est pas posé sur le plastique
      mais pris dedans. Une photo ne peut pas le montrer ; un dessin, si.
-     À gauche, un morceau de broyat. À droite, la même matière vue de près :
+     En haut, un morceau de broyat. En dessous, la même matière vue de près :
      les chaînes du polymère s'entrelacent et retiennent l'antimoine et les
-     composés bromés. Les grains tremblent sur place, et l'un d'eux tente
+     composés bromés. Les grains tremblent sur place, et celui du centre tente
      régulièrement de sortir avant d'être ramené : c'est tout le verrou.
+     Format vertical, pour tenir dans la colonne à côté du texte.
      SVG et CSS seuls, aucune bibliothèque. Les mouvements s'arrêtent pour qui
      a demandé à son système de les réduire. -->
 <div class="schema verrou">
-
-  <div class="vr-tetes">
-    <span data-champ="procede.verrou.legende">{{ t.procede.verrou.legende | safe }}</span>
-    <span data-champ="procede.verrou.legende2">{{ t.procede.verrou.legende2 | safe }}</span>
-  </div>
-
   <div class="scene" role="img" aria-label="{{ t.communs.alt.verrou }}">
-    <svg viewBox="20 52 528 268" preserveAspectRatio="xMidYMid meet">
+    <svg viewBox="40 6 260 444" preserveAspectRatio="xMidYMid meet">
       <defs>
-        <clipPath id="vrLoupe"><circle cx="404" cy="186" r="124"/></clipPath>
+        <clipPath id="vrLoupe"><circle cx="170" cy="300" r="104"/></clipPath>
         <radialGradient id="vrHalo" cx="50%" cy="50%" r="50%">
-          <stop offset="0" stop-color="#52FCC3" stop-opacity=".16"/>
+          <stop offset="0" stop-color="#52FCC3" stop-opacity=".15"/>
           <stop offset="1" stop-color="#52FCC3" stop-opacity="0"/>
         </radialGradient>
       </defs>
 
       <!-- ── le morceau de plastique ── -->
+      <text class="vlbl" x="170" y="20" text-anchor="middle"
+            data-champ="procede.verrou.legende">{{ t.procede.verrou.legende | safe }}</text>
 
       <g class="eclat">
-        <path d="M58 118 L142 96 L196 132 L188 212 L136 264 L64 246 L40 182 z"/>
-        <path class="strie" d="M74 150 L150 132"/>
-        <path class="strie" d="M70 186 L172 164"/>
-        <path class="strie" d="M84 222 L164 202"/>
+        <path d="M122 76 L150 36 L206 32 L228 72 L214 118 L164 130 L128 112 z"/>
+        <path class="strie" d="M136 72 L196 58"/>
+        <path class="strie" d="M134 96 L210 82"/>
       </g>
 
       <!-- la zone que l'on regarde de près, et le cône qui y mène -->
-      <circle class="viseur" cx="134" cy="178" r="30"/>
-      <path class="cone" d="M158 160 L310 106"/>
-      <path class="cone" d="M156 200 L310 266"/>
+      <circle class="viseur" cx="172" cy="82" r="24"/>
+      <!-- Les pointillés relient vraiment les deux cercles : ils partent du
+           bord du viseur et s'arrêtent sur le bord de la vue rapprochée, aux
+           points calculés pour que le cône épouse les deux courbures. -->
+      <path class="cone" d="M154 98 L94 229"/>
+      <path class="cone" d="M190 98 L248 231"/>
+
+      <!-- une loupe posée sur le cône, décalée sur la gauche : sans elle, rien
+           ne dit que le cercle du bas est un agrandissement et non un second
+           objet -->
+      <g class="loupette">
+        <circle cx="126" cy="157" r="11"/>
+        <path class="manche" d="M118 165 L110 173"/>
+        <path class="plus" d="M121 157 h10 M126 152 v10"/>
+      </g>
 
       <!-- ── la même matière, de près ── -->
-      <circle class="loupe" cx="404" cy="186" r="124"/>
+      <circle class="loupe" cx="170" cy="300" r="104"/>
       <g clip-path="url(#vrLoupe)">
-        <circle cx="404" cy="186" r="124" fill="url(#vrHalo)"/>
+        <circle cx="170" cy="300" r="104" fill="url(#vrHalo)"/>
         <!-- les chaînes du polymère, enchevêtrées -->
         <g class="chaines">
-          <path d="M272 116 C 318 92, 356 136, 404 116 S 486 138, 540 112"/>
-          <path d="M268 158 C 322 182, 352 136, 406 160 S 484 132, 542 156"/>
-          <path d="M268 210 C 320 186, 358 232, 408 208 S 486 230, 542 204"/>
-          <path d="M272 254 C 324 280, 354 234, 406 258 S 484 232, 538 254"/>
-          <path d="M318 88 C 300 148, 348 188, 326 246 S 352 300, 336 316"/>
-          <path d="M472 84 C 492 146, 446 190, 470 248 S 444 302, 460 318"/>
+          <path d="M58 242 C 90 226, 122 258, 170 242 S 240 258, 284 240"/>
+          <path d="M56 276 C 92 294, 120 262, 170 278 S 238 260, 286 274"/>
+          <path d="M58 312 C 94 296, 124 330, 172 310 S 240 328, 284 310"/>
+          <path d="M58 348 C 96 366, 122 330, 172 348 S 238 330, 284 346"/>
+          <path d="M124 192 C 110 244, 140 278, 126 324 S 146 380, 134 412"/>
+          <path d="M216 192 C 230 244, 200 278, 224 324 S 204 380, 216 412"/>
         </g>
         <!-- les additifs, pris entre les chaînes -->
         <g class="grains">
-          <circle class="gr sb g1" cx="352" cy="138" r="11"/>
-          <circle class="gr br g2" cx="438" cy="136" r="9"/>
-          <circle class="gr br g3" cx="318" cy="186" r="9"/>
-          <circle class="gr sb g4" cx="404" cy="186" r="11"/>
-          <circle class="gr br g5" cx="486" cy="184" r="9"/>
-          <circle class="gr sb g6" cx="360" cy="232" r="11"/>
-          <circle class="gr br g7" cx="452" cy="234" r="9"/>
+          <circle class="gr sb g1" cx="142" cy="259" r="9"/>
+          <circle class="gr br g2" cx="204" cy="257" r="7.5"/>
+          <circle class="gr br g3" cx="106" cy="295" r="7.5"/>
+          <circle class="gr sb g4" cx="170" cy="295" r="9"/>
+          <circle class="gr br g5" cx="234" cy="294" r="7.5"/>
+          <circle class="gr sb g6" cx="144" cy="330" r="9"/>
+          <circle class="gr br g7" cx="204" cy="332" r="7.5"/>
         </g>
       </g>
 
+      <!-- l'intitulé de la vue rapprochée passe sous le cercle : au-dessus, il
+           croisait les traits du cône -->
+      <text class="vlbl" x="170" y="434" text-anchor="middle"
+            data-champ="procede.verrou.legende2">{{ t.procede.verrou.legende2 | safe }}</text>
     </svg>
   </div>
 

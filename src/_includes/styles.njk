@@ -685,49 +685,47 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 .schema .cuve{fill:none;stroke:#6E7DB6;stroke-width:2.4}
 
 /* ── Le verrou : un additif pris dans la matière ──
-   Même carte sombre et même trait que le schéma du procédé, pour que les deux
-   dessins se lisent comme une seule famille. Le tremblement des grains est
-   minuscule, deux pixels : il suffit à dire qu'ils sont retenus, sans agiter
-   la page. */
-/* Ce schéma n'a qu'une scène, là où celui du procédé en a deux : il prend
-   donc toute la largeur, avec une limite pour ne pas devenir démesuré sur
-   les grands écrans. */
-.verrou{grid-template-columns:1fr}
-/* Les deux intitulés se calent chacun au-dessus de sa moitié du dessin :
-   42 % pour le morceau, le reste pour la vue rapprochée. Sur un téléphone
-   ils passent l'un sous l'autre. */
-.vr-tetes{display:flex;gap:14px;margin-bottom:4px}
-.vr-tetes span{text-align:center;font-size:12.5px;font-weight:500;letter-spacing:.14em;
-  text-transform:uppercase;color:#8FA0CE;line-height:1.4}
-.vr-tetes span:first-child{flex:0 0 42%}
-.vr-tetes span:last-child{flex:1}
-.vr-cle{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin-top:6px}
-.vr-cle span{display:inline-flex;align-items:center;gap:9px}
-.vr-cle i{width:13px;height:13px;border-radius:50%;flex:0 0 auto}
-.vr-cle i.sb{background:#52FCC3}
-.vr-cle i.br{background:#3EBDD2}
-.vr-cle b{font-weight:400;font-size:14px;color:#8FA0CE}
-@media(max-width:620px){
-  /* Sur un téléphone les deux intitulés ne surplombent plus chacun sa moitié :
-     une flèche rétablit le lien entre le morceau et sa vue rapprochée. */
-  .vr-tetes{flex-wrap:wrap;gap:0 9px}
-  .vr-tetes span{flex:none;text-align:left}
-  .vr-tetes span:first-child::after{content:"\2192";margin-left:9px;opacity:.55}
-  .vr-cle{gap:18px;justify-content:flex-start}
+   Le texte tient la colonne de gauche, le dessin celle de droite, en format
+   vertical. Même carte sombre et même trait que le schéma du procédé, pour que
+   les deux dessins se lisent comme une seule famille. Le tremblement des
+   grains est minuscule, deux pixels : il suffit à dire qu'ils sont retenus,
+   sans agiter la page. */
+.duo{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(26px,3.6vw,58px);
+  align-items:center}
+.duo-txt h2{font-size:clamp(28px,3.5vw,44px);max-width:21ch;text-wrap:balance}
+.duo-txt .lead{margin-top:20px;max-width:46ch}
+@media(max-width:860px){
+  .duo{grid-template-columns:1fr;gap:28px}
+  .duo-txt h2{max-width:22ch}
+  .duo-txt .lead{max-width:62ch}
 }
-.verrou .scene svg{max-width:720px;margin:0 auto}
+.verrou{grid-template-columns:1fr;margin-top:0;align-content:center}
+.verrou .scene svg{width:100%;height:auto;max-width:286px;margin:0 auto}
 .verrou .eclat path:first-child{fill:#5F6CA0;fill-opacity:.28;stroke:#5A6BA8;
   stroke-width:2;stroke-linejoin:round}
 .verrou .strie{stroke:#5A6BA8;stroke-width:1.6;opacity:.65;fill:none;stroke-linecap:round}
 .verrou .viseur{fill:none;stroke:#8FA0CE;stroke-width:1.8;stroke-dasharray:5 6}
 .verrou .cone{stroke:#5A6BA8;stroke-width:1.4;stroke-dasharray:4 7;fill:none}
 .verrou .loupe{fill:none;stroke:#6E7DB6;stroke-width:2.4}
+/* La petite loupe du cône : un cran plus clair que le reste du trait, pour
+   se détacher sans devenir un élément du schéma. */
+.verrou .loupette circle{fill:var(--ink-deep);stroke:#9AA6D2;stroke-width:2}
+.verrou .loupette .manche{stroke:#9AA6D2;stroke-width:2.6;stroke-linecap:round}
+.verrou .loupette .plus{stroke:#9AA6D2;stroke-width:1.8;stroke-linecap:round}
 .verrou .chaines path{fill:none;stroke:#7C88B8;stroke-width:2.6;stroke-linecap:round}
+/* Le dessin étant étroit, ses intitulés peuvent revenir dedans : à cette
+   échelle ils s'affichent autour de treize pixels, comme le reste du site. */
+.verrou .vlbl{font-family:var(--sans);font-size:9px;letter-spacing:.14em;
+  text-transform:uppercase;fill:#8FA0CE;font-weight:500}
 .verrou .gr{stroke:rgba(4,4,64,.55);stroke-width:1.4}
 .verrou .gr.sb{fill:#52FCC3}
 .verrou .gr.br{fill:#3EBDD2}
-.verrou .pastille.sb{fill:#52FCC3}
-.verrou .pastille.br{fill:#3EBDD2}
+.vr-cle{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:8px}
+.vr-cle span{display:inline-flex;align-items:center;gap:9px}
+.vr-cle i{width:12px;height:12px;border-radius:50%;flex:0 0 auto}
+.vr-cle i.sb{background:#52FCC3}
+.vr-cle i.br{background:#3EBDD2}
+.vr-cle b{font-weight:400;font-size:13.6px;color:#8FA0CE}
 /* Six grains frissonnent sur place. Le septième tente de sortir, bute et
    revient : c'est lui qui raconte le verrou, les autres l'accompagnent. */
 .verrou .gr{animation:vr-frisson 3.4s ease-in-out infinite}
@@ -745,8 +743,8 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 }
 @keyframes vr-evasion{
   0%,58%{transform:translate(0,0)}
-  70%{transform:translate(13px,-9px)}
-  76%{transform:translate(11px,-7px)}
+  70%{transform:translate(12px,-9px)}
+  76%{transform:translate(10px,-7px)}
   88%,100%{transform:translate(0,0)}
 }
 @media(prefers-reduced-motion:reduce){

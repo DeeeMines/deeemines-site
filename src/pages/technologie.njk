@@ -64,15 +64,16 @@ permalink: "{{ adresses['technologie'][langue] }}index.html"
 
   <section class="tint">
     <div class="wrap">
-      <div class="eyebrow" data-champ="procede.le_verrou.surtitre">{{ t.procede.le_verrou.surtitre | safe }}</div>
-      <div class="stmt">
-        <h2 data-champ="procede.le_verrou.titre">{{ t.procede.le_verrou.titre | safe }}</h2>
-        <div class="lead">
-          <div data-l="fr" data-champ="procede.le_verrou.bloc">{{ t.procede.le_verrou.bloc | safe }}</div>
+      <div class="duo">
+        <div class="duo-txt">
+          <div class="eyebrow" data-champ="procede.le_verrou.surtitre">{{ t.procede.le_verrou.surtitre | safe }}</div>
+          <h2 data-champ="procede.le_verrou.titre">{{ t.procede.le_verrou.titre | safe }}</h2>
+          <div class="lead">
+            <div data-l="fr" data-champ="procede.le_verrou.bloc">{{ t.procede.le_verrou.bloc | safe }}</div>
+          </div>
         </div>
-      </div>
-
 {% include "anim-verrou.njk" %}
+      </div>
 
     </div>
   </section>
