@@ -5,6 +5,11 @@
   --blue:#2B2BE8; --azure:#297EE1; --cyan:#3EBDD2; --mint:#52FCC3;
   /* variantes lisibles sur fond clair */
   --cyan-d:#1793AB; --mint-d:#0E9A72;
+  /* Accent des fonds clairs : le cyan du logo assombri jusqu'à 5,07 pour 1
+     de contraste sur blanc, la norme en demandant 4,5 pour ce corps de texte. */
+  --accent-d:#12798C;
+  /* L'azur du logo, assombri de même, pour le petit texte : 5,98 pour 1. */
+  --azure-d:#1F63B5;
   /* Le fond est un blanc franc. Le second ton, qui sépare une section de
      la suivante, est un gris très clair légèrement tiré vers le bleu de la
      charte, et non plus un crème rosé. */
@@ -358,7 +363,7 @@ main{display:block}
   margin:34px 0 14px;letter-spacing:-.02em}
 .art-corps ul{margin:0 0 20px 20px;list-style:disc}
 .art-corps li{margin-bottom:8px}
-.art-corps a{color:var(--azure);border-bottom:1px solid rgba(41,126,225,.35)}
+.art-corps a{color:var(--azure-d);border-bottom:1px solid rgba(31,99,181,.35)}
 .art-photos{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:clamp(30px,3.6vw,46px)}
 .art-photos figure{margin:0}
 .art-photos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;display:block;
@@ -374,7 +379,7 @@ main{display:block}
 .mem .av{width:104px;height:104px;border-radius:50%;flex:none;object-fit:cover;
   box-shadow:0 0 0 1px var(--line)}
 .mem h3{font-size:22px;margin-bottom:4px}
-.mem .r{font-size:14.5px;color:var(--azure);font-weight:500;margin-bottom:9px}
+.mem .r{font-size:14.5px;color:var(--azure-d);font-weight:500;margin-bottom:9px}
 .mem p{font-size:15px;color:var(--soft);line-height:1.55;text-wrap:pretty}
 .mem .aff{margin-top:16px;display:flex;align-items:center;gap:10px}
 .mem .aff{gap:16px;flex-wrap:wrap}
@@ -407,7 +412,7 @@ main{display:block}
   padding:clamp(24px,2.6vw,34px) 0;border-top:1px solid var(--line);align-items:start}
 .na:first-child{border-top:0;padding-top:0}
 .na .when{color:var(--soft);margin-bottom:12px}
-.na .cat{color:var(--ct,var(--azure));margin-bottom:9px}
+.na .cat{color:var(--ct,var(--azure-d));margin-bottom:9px}
 /* Le titre occupe toute la largeur du texte, comme le résumé en dessous :
    une limite plus courte le faisait passer à la ligne alors que la place
    était libre à droite. */
@@ -418,7 +423,7 @@ main{display:block}
 .nimg{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;display:block;
   box-shadow:0 0 0 1px var(--line)}
 @media(max-width:880px){.nc.illustree{grid-template-columns:1fr}}
-.na .nlien{display:inline-block;margin-top:15px;font-size:14.6px;color:var(--azure);
+.na .nlien{display:inline-block;margin-top:15px;font-size:14.6px;color:var(--azure-d);
   border-bottom:1px solid rgba(41,126,225,.35);padding-bottom:2px}
 .na .nlien .a{transition:transform .2s}
 .na .nlien:hover .a{display:inline-block;transform:translateX(3px)}
@@ -503,6 +508,10 @@ main{display:block}
 footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0 28px}
 .fg{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start}
 .fg img{height:23px;width:auto}
+/* La signature se range sous le logo, d'un gris discret : elle accompagne la
+   marque, elle ne lui dispute pas la vedette. */
+.fm{display:flex;flex-direction:column;gap:11px}
+.bl{margin:0;font-size:14.5px;color:var(--soft);letter-spacing:.005em}
 .fl{display:flex;gap:30px;flex-wrap:wrap}
 .fl a{font-size:14.5px;color:var(--soft)}
 .fl a:hover{color:var(--text)}
@@ -608,7 +617,7 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
   gap:clamp(22px,3vw,44px)}
 @media(max-width:840px){.sorties{grid-template-columns:1fr;gap:28px}}
 .sorties .sym{font-family:var(--disp);font-size:34px;font-weight:500;letter-spacing:-.03em;
-  color:var(--mint-d);line-height:1;margin-bottom:12px;height:1em}
+  color:var(--accent-d);line-height:1;margin-bottom:12px;height:1em}
 /* L'indice de « Cn » ne doit pas rallonger la ligne, sinon le titre de la
    troisième colonne descend et les trois ne s'alignent plus. */
 .sorties .sym sub{font-size:.6em;line-height:0;vertical-align:baseline;position:relative;top:.18em}
@@ -812,24 +821,24 @@ footer{background:var(--paper-2);border-top:1px solid var(--line);padding:50px 0
 .sorties .phare{position:relative}
 /* Le vert clair de la charte est illisible sur fond crème : la carte se
    distingue par sa pastille, pas par la couleur de son symbole. */
-.sorties .phare .sym{border-color:var(--mint-d)}
+.sorties .phare .sym{border-color:var(--accent-d)}
 .sorties .phare h3{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .sorties .pri{font-size:11px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;
-  color:var(--ink-deep);background:#D6F6EA;border:1px solid var(--mint-d);
+  color:var(--ink-deep);background:#DCF0F5;border:1px solid var(--accent-d);
   border-radius:100px;padding:3px 10px;line-height:1.2}
 
 .mesures{margin-top:clamp(30px,3.6vw,48px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
   gap:clamp(22px,3vw,44px);border-top:1px solid var(--line);padding-top:clamp(24px,2.6vw,34px)}
 @media(max-width:840px){.mesures{grid-template-columns:1fr;gap:26px}}
 .mesures .q{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--mint-d);margin-bottom:11px}
+  color:var(--accent-d);margin-bottom:11px}
 .mesures p{font-size:15.4px;line-height:1.6;color:var(--soft)}
 /* Les trois résultats mesurés, présentés en encadrés sous les produits :
    même famille visuelle que les points clés de l'accueil. */
 .mesures.cartes{border-top:0;padding-top:0;margin-top:clamp(26px,3vw,40px);gap:14px}
 .mesures.cartes > div{border:1px solid var(--line);border-radius:14px;
   padding:20px 22px;background:rgba(255,255,255,.5)}
-.mesures.cartes .q{color:var(--mint-d)}
+.mesures.cartes .q{color:var(--accent-d)}
 
 .preuves{margin-top:clamp(28px,3.4vw,44px);display:grid;gap:0;
   border-top:1px solid var(--line-d)}

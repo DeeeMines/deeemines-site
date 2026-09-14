@@ -18,7 +18,7 @@ permalink: "{{ adresses['actualites'][langue] }}index.html"
   <section>
     <div class="wrap">
       <div class="news">
-        {%- set ct = ["var(--mint-d)","var(--cyan-d)","var(--azure)"] %}
+        {%- set ct = ["var(--accent-d)","var(--azure-d)","var(--blue)"] %}
         {%- for a in actualites[langue].articles %}
         <article class="na" style="--ct:{{ ct[loop.index0 % 3] }}">
           <div class="nc">

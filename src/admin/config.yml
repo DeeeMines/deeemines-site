@@ -743,6 +743,11 @@ collections:
       - {label: "Pour", name: pour, widget: string, i18n: true, hint: "Longueur actuelle : 4 caractères."}
       - {label: "Suivre linkedin", name: suivre_linkedin, widget: string, i18n: true, hint: "Longueur actuelle : 24 caractères."}
       - {label: "Voir video", name: voir_video, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères."}
+      - label: Signature du pied de page
+        name: signature
+        widget: string
+        i18n: duplicate
+        hint: Sous le logo, en bas de chaque page. Identique dans les deux langues.
 - name: legal
   label: Pages légales
   i18n: true

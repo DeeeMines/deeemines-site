@@ -1,8 +1,9 @@
 {
   "fr": {
     "accueil": {
-      "titre": "DeeeMines · L'Europe consomme l'antimoine, elle ne le produit pas",
-      "description": "L'Europe importe la totalité de son antimoine. DeeeMines le produit à partir des plastiques des équipements électroniques, grâce à un procédé breveté."
+      "titre": "DeeeMines · L'antimoine européen, produit à partir de déchets",
+      "description": "L'Europe importe la totalité de son antimoine. DeeeMines le produit à partir des plastiques des équipements électroniques, grâce à un procédé breveté.",
+      "ogTitre": "DeeeMines · Let's mine it back"
     },
     "technologie": {
       "titre": "Notre technologie · DeeeMines",
@@ -31,8 +32,10 @@
   },
   "en": {
     "accueil": {
-      "titre": "DeeeMines · Europe imports all of its antimony. We produce it here",
-      "description": "Europe imports all of its antimony. DeeeMines produces it from the plastics of electronic equipment, through a patented process."
+      "titre": "DeeeMines · European antimony, produced from waste",
+      "description": "Europe imports all of its antimony. DeeeMines produces it from the plastics of electronic equipment, through a patented process.",
+      "ogTitre": "DeeeMines · Let's mine it back",
+      "ogImage": "/og-en.jpg"
     },
     "technologie": {
       "titre": "Our technology · DeeeMines",

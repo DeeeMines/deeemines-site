@@ -79,6 +79,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' });
   eleventyConfig.addPassthroughCopy({ 'src/admin': 'admin' });
   eleventyConfig.addPassthroughCopy({ 'src/og.jpg': 'og.jpg' });
+  eleventyConfig.addPassthroughCopy({ 'src/og-en.jpg': 'og-en.jpg' });
   eleventyConfig.addPassthroughCopy({ 'src/_headers': '_headers' });
   eleventyConfig.addPassthroughCopy({ 'src/_redirects': '_redirects' });
   eleventyConfig.addPassthroughCopy({ 'src/old': 'old' });
