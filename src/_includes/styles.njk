@@ -110,6 +110,12 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,250,246,.92);
 .stmt .lead,.stmt p.lead{max-width:none}
 @media(max-width:880px){.stmt{grid-template-columns:1fr}}
 .stmt h2{max-width:22ch}
+/* Un titre long mérite sa colonne : elle s'élargit, le titre tient sur deux
+   lignes, et le paragraphe qui l'accompagne se cale sur sa première ligne. */
+.stmt.large{grid-template-columns:1.5fr .9fr;align-items:start}
+.stmt.large h2{max-width:none;font-size:clamp(28px,3.8vw,46px)}
+.stmt.large .lead{margin-top:7px}
+@media(max-width:880px){.stmt.large{grid-template-columns:1fr}}
 .figs{margin-top:clamp(28px,3.2vw,44px);border-top:1px solid var(--line);
   display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
 .fig{padding:38px 44px 4px;border-right:1px solid var(--line);display:flex;flex-direction:column}
@@ -150,10 +156,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,250,246,.92);
 }
 
 /* ===== 3. NOTRE SOLUTION · lignes alternées ===== */
-.row{display:grid;grid-template-columns:.62fr 1.38fr;gap:clamp(30px,5vw,74px);align-items:center;
+.row{display:grid;grid-template-columns:.52fr 1.48fr;gap:clamp(30px,5vw,74px);align-items:center;
   padding:clamp(32px,3.4vw,46px) 0;border-top:1px solid var(--line)}
 .row:first-of-type,.stmt+.row{border-top:0;padding-top:clamp(30px,3.4vw,46px)}
-.row.flip{grid-template-columns:1.38fr .62fr}
+.row.flip{grid-template-columns:1.48fr .52fr}
 .row.flip .panel{order:2}
 .panel{aspect-ratio:5/4;border-radius:10px;position:relative;overflow:hidden;
   background:linear-gradient(150deg,#06065B,#040440 62%);
@@ -162,9 +168,9 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,250,246,.92);
   background:radial-gradient(70% 70% at 30% 22%,color-mix(in srgb,var(--c) 26%,transparent),transparent 68%)}
 .el{position:relative;z-index:2;text-align:center;color:#fff;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  height:clamp(104px,12vw,140px)}
+  height:clamp(92px,10.4vw,124px)}
 .el .z{font-size:11px;letter-spacing:.16em;color:var(--c);height:18px;line-height:18px}
-.el .s{font-family:var(--disp);font-weight:400;font-size:clamp(50px,6.2vw,84px);
+.el .s{font-family:var(--disp);font-weight:400;font-size:clamp(44px,5.4vw,72px);
   line-height:1;letter-spacing:-.05em;flex:1;display:flex;align-items:center;justify-content:center}
 .el .m{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--soft-dark);
   height:18px;line-height:18px}
@@ -352,9 +358,15 @@ main{display:block}
 .mem .aff img{height:44px;width:auto;opacity:.85}
 .mem .aff img[src*="chimie-paristech"]{height:54px}
 .pc .aff img[src*="chimie-paristech"]{height:46px}
+/* Le logo AgroParisTech porte aussi celui de Paris-Saclay : très large, il
+   chassait le premier logo à la ligne suivante. Sa hauteur descend pour que
+   les deux tiennent côte à côte et pèsent le même poids à l'œil. */
+.mem .aff img[src*="agroparistech"]{height:24px}
+.pc .aff img[src*="agroparistech"]{height:21px}
 @media(max-width:520px){
   .mem .aff img{height:36px}
   .mem .aff img[src*="chimie-paristech"]{height:44px}
+  .mem .aff img[src*="agroparistech"]{height:20px}
   .pc .aff img{height:32px}
   .pc .aff img[src*="chimie-paristech"]{height:38px}
 }
@@ -373,7 +385,7 @@ main{display:block}
 .na:first-child{border-top:0;padding-top:0}
 .na .when{color:var(--soft);margin-bottom:12px}
 .na .cat{color:var(--ct,var(--azure));margin-bottom:9px}
-.na h3{font-size:clamp(21px,2.2vw,27px);margin-bottom:12px;max-width:52ch}
+.na h3{font-size:clamp(21px,2.2vw,27px);margin-bottom:12px;max-width:52ch;text-wrap:balance}
 .na p{font-size:15.6px;line-height:1.62;color:var(--soft);max-width:none}
 .nc.illustree{display:grid;grid-template-columns:1fr 290px;gap:clamp(24px,3vw,44px);align-items:start}
 .nimg{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;display:block;

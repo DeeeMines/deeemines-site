@@ -100,7 +100,7 @@ permalink: "{{ adresses['antimoine'][langue] }}index.html"
   <section>
     <div class="wrap">
       <div class="eyebrow" data-champ="antimoine.dependance.surtitre">{{ t.antimoine.dependance.surtitre | safe }}</div>
-      <div class="stmt">
+      <div class="stmt large">
         <h2 data-champ="antimoine.dependance.titre">{{ t.antimoine.dependance.titre | safe }}</h2>
         <p class="lead" data-champ="antimoine.dependance.chapo">{{ t.antimoine.dependance.chapo | safe }}</p>
       </div>
@@ -144,7 +144,7 @@ permalink: "{{ adresses['antimoine'][langue] }}index.html"
 
   <section class="dark" style="padding:clamp(42px,4.4vw,64px) 0">
     <div class="wrap concl">
-      <h2 style="color:#fff;font-size:clamp(25px,3vw,38px);max-width:26ch" data-champ="antimoine.divers.titre">{{ t.antimoine.divers.titre | safe }}</h2>
+      <h2 style="color:#fff;max-width:none" data-champ="antimoine.divers.titre">{{ t.antimoine.divers.titre | safe }}</h2>
       <div class="lead" style="margin-top:20px;max-width:none">
         <p data-champ="antimoine.divers.texte">{{ t.antimoine.divers.texte | safe }}</p>
         <p data-champ="antimoine.divers.texte2">{{ t.antimoine.divers.texte2 | safe }}</p>

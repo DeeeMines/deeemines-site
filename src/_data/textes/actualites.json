@@ -7,7 +7,6 @@
       "lien": "Read the full story <span class=\"a\">&#8594;</span>"
     },
     "phead": {
-      "surtitre": "News",
       "titre": "Our news"
     }
   },
@@ -19,7 +18,6 @@
       "lien": "Lire la suite <span class=\"a\">&#8594;</span>"
     },
     "phead": {
-      "surtitre": "Actualités",
       "titre": "Nos actualités"
     }
   }
