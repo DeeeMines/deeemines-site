@@ -295,7 +295,7 @@ permalink: "{{ adresses['accueil'][langue] }}index.html"
         <div class="tick" data-champ="accueil.sent.texte">{{ t.accueil.sent.texte | safe }}</div>
         <h3 data-champ="accueil.sent.soustitre">{{ t.accueil.sent.soustitre | safe }}</h3>
         <p data-champ="accueil.sent.texte2">{{ t.accueil.sent.texte2 | safe }}</p>
-        <a class="alt" id="mailto" href="mailto:kristell.riounivert@deeemines.com" data-champ="accueil.sent.lien">{{ t.accueil.sent.lien | safe }}</a>
+        <a class="alt" id="mailto" href="mailto:{{ t.communs.contact.email }}" data-champ="accueil.sent.lien">{{ t.accueil.sent.lien | safe }}</a>
       </div>
     </div>
   </div>

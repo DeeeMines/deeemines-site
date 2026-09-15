@@ -25,7 +25,7 @@
     var corps=(en?'Name: ':'Nom : ')+v('a1')
              +(en?'\nEmail: ':'\nE-mail : ')+v('a2')
              +(en?'\nProfile: ':'\nProfil : ')+v('a3')+'\n\n'+v('a4');
-    document.getElementById('mailto').href='mailto:kristell.riounivert@deeemines.com'
+    document.getElementById('mailto').href='mailto:{{ t.communs.contact.email }}'
       +'?subject='+encodeURIComponent(en?'Enquiry from the DeeeMines website':'Contact site DeeeMines')
       +'&body='+encodeURIComponent(corps);
     cerr.hidden=true; envoi.disabled=true;

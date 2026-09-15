@@ -1,6 +1,6 @@
 {
   "_lisez_moi": "Deux réglages techniques. Ne les modifiez qu'en connaissance de cause.",
-  "formulaire_cle": "22eab810-9102-4a91-b4bd-1ed6c45c087e",
+  "formulaire_cle": "fa4dbc6d-a0b3-4344-9d9d-dd9f45ea7dd9",
   "_formulaire_cle": "Clé d'accès du service qui achemine les messages du formulaire de contact. Tant qu'elle est vide, le formulaire propose d'écrire directement par courriel.",
   "domaine": "https://deeemines.com"
 }
