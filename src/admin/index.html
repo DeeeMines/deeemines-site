@@ -7,6 +7,18 @@
     <title>DeeeMines · administration du site</title>
   </head>
   <body>
+    <!-- Un retour vers l'éditeur visuel, qui est l'entrée normale pour corriger
+         un texte. Cette administration-ci reste nécessaire pour les articles,
+         les photos, les membres de l'équipe et les logos partenaires. -->
+    <a href="/admin/textes/" id="vers-textes">&#9664;&nbsp; Corriger les textes en voyant la page</a>
+    <style>
+      #vers-textes{position:fixed;left:14px;bottom:14px;z-index:99999;
+        background:#52FCC3;color:#040440;border-radius:9px;padding:10px 15px;
+        font:500 13.5px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+        text-decoration:none;box-shadow:0 6px 22px rgba(4,4,64,.35)}
+      #vers-textes:hover{background:#fff}
+      @media(max-width:700px){#vers-textes{display:none}}
+    </style>
     <!-- La version est fixée : une mise à jour du logiciel d'administration ne peut
          donc pas casser cette page du jour au lendemain. Pour en changer, remplacer
          le numéro ci-dessous après avoir vérifié que tout fonctionne encore. -->

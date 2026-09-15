@@ -1,16 +1,28 @@
 {#- Ce script ne sert qu'à l'aperçu de l'administration. Il ne s'active que si
     la page est appelée avec ?apercu=1, et n'accepte que les messages venant du
-    même site : un autre site ne peut donc rien lui faire afficher. -#}
+    même site : un autre site ne peut donc rien lui faire afficher.
+
+    Avec ?edition=1 en plus, l'aperçu devient cliquable : survoler un texte le
+    souligne, cliquer dessus prévient l'éditeur, qui ouvre le champ
+    correspondant. C'est ce qui permet de corriger le site en le regardant. -#}
 <script>
 (function(){
-  if (new URLSearchParams(location.search).get('apercu') !== '1') return;
+  var p = new URLSearchParams(location.search);
+  if (p.get('apercu') !== '1') return;
+  var edition = p.get('edition') === '1';
 
   var precedent = {};
   var style = document.createElement('style');
   style.textContent =
     '.apercu-vise{outline:2px solid #52FCC3;outline-offset:4px;border-radius:3px;' +
     'transition:outline-color .8s ease}' +
-    '.apercu-eteint{outline-color:transparent}';
+    '.apercu-eteint{outline-color:transparent}' +
+    /* En mode édition, tout texte modifiable s'annonce au survol, et celui
+       qu'on est en train de corriger reste marqué. */
+    '.ed-survol{outline:2px dashed rgba(41,126,225,.85);outline-offset:3px;' +
+    'border-radius:3px;cursor:pointer}' +
+    '.ed-choisi{outline:2px solid #2B2BE8;outline-offset:3px;border-radius:3px;' +
+    'background:rgba(43,43,232,.07)}';
   document.head.appendChild(style);
 
   function vise(el){
@@ -22,13 +34,10 @@
     setTimeout(function(){ el.classList.add('apercu-eteint'); }, 1400);
   }
 
-  window.addEventListener('message', function(e){
-    if (e.origin !== location.origin) return;
-    var m = e.data;
-    if (!m || m.type !== 'deeemines-apercu' || !m.textes) return;
+  function applique(textes){
     var change = null;
-    Object.keys(m.textes).forEach(function(cle){
-      var valeur = m.textes[cle];
+    Object.keys(textes).forEach(function(cle){
+      var valeur = textes[cle];
       if (precedent[cle] === valeur) return;
       var neuf = (precedent[cle] !== undefined);
       precedent[cle] = valeur;
@@ -37,8 +46,65 @@
         if (neuf && !change) change = el;
       });
     });
-    if (change) vise(change);
+    return change;
+  }
+
+  function choisit(cle){
+    document.querySelectorAll('.ed-choisi').forEach(function(e){
+      e.classList.remove('ed-choisi');
+    });
+    var el = document.querySelector('[data-champ="' + cle + '"]');
+    if (!el) return;
+    el.classList.add('ed-choisi');
+    var r = el.getBoundingClientRect();
+    if (r.top < 60 || r.bottom > innerHeight - 40) {
+      el.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+  }
+
+  window.addEventListener('message', function(e){
+    if (e.origin !== location.origin) return;
+    var m = e.data;
+    if (!m) return;
+    if (m.type === 'deeemines-apercu' && m.textes) {
+      var change = applique(m.textes);
+      if (change && !edition) vise(change);
+      return;
+    }
+    if (m.type === 'deeemines-choisit' && m.champ) choisit(m.champ);
   });
+
+  if (edition) {
+    /* Le survol désigne, le clic transmet. On remonte au plus proche parent
+       porteur d'une étiquette : cliquer sur un mot en gras à l'intérieur d'un
+       paragraphe doit ouvrir le paragraphe. */
+    var courant = null;
+    document.addEventListener('mouseover', function(e){
+      var el = e.target.closest ? e.target.closest('[data-champ]') : null;
+      if (el === courant) return;
+      if (courant) courant.classList.remove('ed-survol');
+      courant = el;
+      if (courant) courant.classList.add('ed-survol');
+    });
+    document.addEventListener('mouseleave', function(){
+      if (courant) { courant.classList.remove('ed-survol'); courant = null; }
+    });
+    /* En capture, et avant tout le reste : sans cela un clic sur un lien
+       quitterait la page au lieu d'ouvrir le champ. */
+    document.addEventListener('click', function(e){
+      var el = e.target.closest ? e.target.closest('[data-champ]') : null;
+      if (!el) {
+        var lien = e.target.closest ? e.target.closest('a[href]') : null;
+        if (lien) { e.preventDefault(); }
+        return;
+      }
+      e.preventDefault();
+      e.stopPropagation();
+      choisit(el.getAttribute('data-champ'));
+      parent.postMessage({type:'deeemines-clic', champ: el.getAttribute('data-champ')},
+                         location.origin);
+    }, true);
+  }
 
   /* On signale à l'administration que le cadre est prêt à recevoir. */
   if (window.parent !== window) {

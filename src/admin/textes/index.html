@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Corriger les textes · DeeeMines</title>
+<link rel="icon" href="/assets/icone-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#06065B; --ink-deep:#040440; --blue:#2B2BE8; --azure-d:#1F63B5;
+  --mint:#52FCC3; --accent-d:#12798C;
+  --paper:#FFFFFF; --paper-2:#F4F5F8; --soft:#5A5E8C; --line:rgba(6,6,91,.14);
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --disp:"Inter Tight",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper-2);
+  font-size:15px;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column}
+
+/* ───────── barre du haut ───────── */
+.barre{flex:0 0 auto;background:var(--ink-deep);color:#fff;display:flex;align-items:center;
+  gap:18px;padding:0 18px;height:60px}
+.barre .marque{display:flex;align-items:center;gap:10px;font-family:var(--disp);
+  font-size:16px;font-weight:500;letter-spacing:-.01em;white-space:nowrap}
+.barre .marque img{height:26px;width:auto}
+select,.bouton{font-family:var(--sans);font-size:14px}
+select{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.22);
+  border-radius:8px;padding:8px 12px;cursor:pointer}
+select option{color:#111}
+.langues{display:flex;border:1px solid rgba(255,255,255,.22);border-radius:8px;overflow:hidden}
+.langues button{background:none;border:0;color:#A9B4DE;padding:8px 14px;cursor:pointer;
+  font-size:13.5px;font-family:var(--sans)}
+.langues button.on{background:#fff;color:var(--ink-deep);font-weight:500}
+.pousse{margin-left:auto;display:flex;align-items:center;gap:12px}
+.bouton{border:0;border-radius:9px;padding:10px 18px;cursor:pointer;font-weight:500}
+.bouton.fort{background:var(--mint);color:var(--ink-deep)}
+.bouton.fort:disabled{background:rgba(255,255,255,.14);color:#8C97C8;cursor:default}
+.bouton.pale{background:rgba(255,255,255,.12);color:#fff}
+.bouton.pale:hover{background:rgba(255,255,255,.2)}
+.etat{font-size:13px;color:#A9B4DE;white-space:nowrap}
+
+/* ───────── corps ───────── */
+.corps{flex:1 1 auto;display:grid;grid-template-columns:1fr 420px;min-height:0}
+.cadre{position:relative;background:#fff;border-right:1px solid var(--line)}
+.cadre iframe{width:100%;height:100%;border:0;display:block}
+.voile{position:absolute;inset:0;display:grid;place-items:center;background:rgba(244,245,248,.92);
+  font-size:14px;color:var(--soft)}
+.voile[hidden]{display:none}
+
+.panneau{background:#fff;overflow-y:auto;padding:22px 22px 40px}
+.consigne{color:var(--soft);line-height:1.6;font-size:14.5px}
+.consigne b{color:var(--ink);font-weight:500}
+.chemin{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-d);
+  font-weight:500;margin-bottom:6px}
+.panneau h2{font-family:var(--disp);font-size:22px;font-weight:500;letter-spacing:-.02em;
+  margin:0 0 4px;line-height:1.2}
+.cle{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;color:#8C93BE;
+  margin-bottom:16px;word-break:break-all}
+textarea,input[type=text]{width:100%;font-family:var(--sans);font-size:14.5px;line-height:1.6;
+  color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:12px 13px;
+  background:#fff;resize:vertical}
+textarea:focus,input[type=text]:focus{outline:2px solid var(--blue);outline-offset:-1px;
+  border-color:transparent}
+.aide{font-size:12.8px;color:var(--soft);line-height:1.5;margin-top:8px}
+.autre{margin-top:18px;padding:12px 14px;background:var(--paper-2);border-radius:10px}
+.autre .t{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);
+  margin-bottom:5px}
+.autre .v{font-size:13.6px;line-height:1.55;color:var(--ink);white-space:pre-wrap}
+.autre .v.vide{color:#9AA0C4;font-style:italic}
+.autre button{margin-top:9px;background:none;border:0;padding:0;color:var(--azure-d);
+  font-size:13.2px;cursor:pointer;font-family:var(--sans);text-decoration:underline}
+.modifie{display:inline-block;margin-left:8px;font-size:11.5px;color:var(--accent-d);
+  background:#DCF0F5;border-radius:20px;padding:2px 9px;vertical-align:2px}
+
+details.liste{margin-top:26px;border-top:1px solid var(--line);padding-top:16px}
+details.liste summary{cursor:pointer;font-size:13.5px;color:var(--soft);list-style:none}
+details.liste summary::-webkit-details-marker{display:none}
+details.liste summary::before{content:"▸ ";color:var(--accent-d)}
+details.liste[open] summary::before{content:"▾ "}
+.sec{margin-top:14px}
+.sec .nom{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-d);
+  margin-bottom:5px}
+.sec a{display:block;padding:5px 8px;border-radius:7px;color:var(--ink);font-size:13.6px;
+  cursor:pointer;text-decoration:none}
+.sec a:hover{background:var(--paper-2)}
+.sec a.on{background:#EAEFFB;font-weight:500}
+.sec a em{font-style:normal;color:#9AA0C4;font-size:12px}
+
+.alerte{background:#FFF1EE;border:1px solid #FFB4A8;color:#8A2B18;border-radius:10px;
+  padding:12px 14px;font-size:13.6px;line-height:1.5;margin-bottom:16px}
+
+/* ───────── porte d'entrée ───────── */
+.porte{position:fixed;inset:0;z-index:100;background:var(--ink-deep);
+  display:grid;place-items:center;padding:24px}
+.porte[hidden]{display:none}
+.carte-porte{background:#fff;border-radius:18px;padding:40px 38px 34px;max-width:430px;
+  width:100%;text-align:center;box-shadow:0 30px 80px rgba(4,4,64,.45)}
+.carte-porte img{height:52px;width:auto;margin:0 auto 18px}
+.carte-porte h1{font-family:var(--disp);font-size:26px;font-weight:500;letter-spacing:-.025em;
+  margin:0 0 10px;line-height:1.15}
+.carte-porte p{color:var(--soft);font-size:14.5px;line-height:1.6;margin:0 0 24px}
+.carte-porte .bouton{width:100%;background:var(--ink);color:#fff;padding:14px 20px;
+  font-size:15px}
+.carte-porte .bouton:hover{background:var(--blue)}
+.carte-porte .bouton:disabled{background:#8C93BE;cursor:default}
+.carte-porte .lien{display:inline-block;margin-top:18px;color:var(--azure-d);font-size:13.4px}
+.carte-porte .souci{margin-top:18px;background:#FFF1EE;border:1px solid #FFB4A8;color:#8A2B18;
+  border-radius:10px;padding:11px 13px;font-size:13.2px;line-height:1.5;text-align:left}
+.carte-porte .souci[hidden]{display:none}
+@media(max-width:900px){
+  .corps{grid-template-columns:1fr}
+  .cadre{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="porte" id="porte">
+  <div class="carte-porte">
+    <img src="/assets/logo.png" alt="DeeeMines">
+    <h1>Corriger les textes du site</h1>
+    <p>Cet espace modifie le site en direct. Il faut donc un compte GitHub
+       autorisé sur le dépôt DeeeMines.</p>
+    <button class="bouton" id="entrer">Se connecter avec GitHub</button>
+    <div class="souci" id="souci" hidden></div>
+    <a class="lien" href="/admin/">Aller à l&rsquo;administration complète</a>
+  </div>
+</div>
+
+<div class="barre">
+  <span class="marque"><img src="/assets/symbole.png" alt="">Corriger les textes</span>
+  <select id="page" aria-label="Page du site"></select>
+  <div class="langues" role="group" aria-label="Langue">
+    <button id="bfr" class="on">Français</button><button id="ben">Anglais</button>
+  </div>
+  <div class="pousse">
+    <span class="etat" id="etat"></span>
+    <button class="bouton pale" id="classique">Administration complète</button>
+    <button class="bouton pale" id="sortir" title="Se déconnecter">Quitter</button>
+    <button class="bouton fort" id="enregistrer" disabled>Enregistrer</button>
+  </div>
+</div>
+
+<div class="corps">
+  <div class="cadre">
+    <iframe id="vue" title="Aperçu du site"></iframe>
+    <div class="voile" id="voile">Chargement de la page…</div>
+  </div>
+  <div class="panneau" id="panneau"></div>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+/* ═══════════════════════════════════════════════════════════════════
+   Éditeur visuel des textes du site.
+
+   Le site s'affiche à gauche ; cliquer sur un texte ouvre le champ
+   correspondant à droite. La lecture se fait sans compte, en allant chercher
+   les fichiers publics du dépôt. L'identification GitHub n'est demandée qu'au
+   moment d'enregistrer, et son jeton ne survit pas à la fermeture de l'onglet.
+
+   Les écritures ne se font jamais à l'aveugle : au moment d'enregistrer, on
+   relit la version du dépôt et on y applique les seules valeurs modifiées.
+   Deux personnes qui corrigent des textes différents en même temps ne peuvent
+   donc pas s'effacer l'une l'autre.
+   ═══════════════════════════════════════════════════════════════════ */
+
+var DEPOT  = 'DeeeMines/deeemines-site';
+var BRANCHE = 'main';
+var AUTH   = 'https://sveltia-cms-auth.david-merino.workers.dev';
+
+var libelles = {};      /* page -> {label, adresse, sections{...}} */
+var donnees  = {};      /* page -> objet JSON complet, tel qu'affiché */
+var modifs   = {};      /* "page|langue|section.champ" -> valeur */
+var page = 'accueil', langue = 'fr', choisi = null;
+var jeton = sessionStorage.getItem('dm_jeton') || '';
+
+var $ = function(id){ return document.getElementById(id); };
+var vue = $('vue'), panneau = $('panneau'), etat = $('etat'), bEnr = $('enregistrer');
+
+/* ───────── petits outils ───────── */
+function b64versTexte(b){
+  return new TextDecoder().decode(
+    Uint8Array.from(atob(String(b).replace(/\s/g, '')), function(c){ return c.charCodeAt(0); }));
+}
+function texteVersB64(t){
+  var o = new TextEncoder().encode(t), s = '';
+  for (var i = 0; i < o.length; i++) s += String.fromCharCode(o[i]);
+  return btoa(s);
+}
+/* Les fichiers de textes sont rangés par ordre alphabétique : on écrit dans la
+   même forme, pour que les différences restent lisibles dans l'historique. */
+function trie(v){
+  if (Array.isArray(v)) return v.map(trie);
+  if (v && typeof v === 'object') {
+    var o = {};
+    Object.keys(v).sort().forEach(function(k){ o[k] = trie(v[k]); });
+    return o;
+  }
+  return v;
+}
+function echappe(s){
+  return String(s).replace(/[&<>]/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];
+  });
+}
+function chemin(page){ return 'src/_data/textes/' + page + '.json'; }
+
+/* Retrouve, et éventuellement pose, une valeur à partir d'une clé
+   « section.champ » ou « section.3.champ ». */
+function valeur(obj, route){
+  var p = route.split('.'), v = obj;
+  for (var i = 0; i < p.length; i++) { if (v == null) return undefined; v = v[p[i]]; }
+  return v;
+}
+function pose(obj, route, val){
+  var p = route.split('.'), v = obj;
+  for (var i = 0; i < p.length - 1; i++) {
+    if (v[p[i]] == null) v[p[i]] = {};
+    v = v[p[i]];
+  }
+  v[p[p.length - 1]] = val;
+}
+
+/* ───────── chargement ───────── */
+function charge(nom){
+  if (donnees[nom]) return Promise.resolve(donnees[nom]);
+  return fetch('https://api.github.com/repos/' + DEPOT + '/contents/' + chemin(nom) + '?ref=' + BRANCHE,
+    { cache: 'no-store',
+      headers: { Authorization: 'token ' + jeton, Accept: 'application/vnd.github+json' } })
+  .then(function(r){
+    if (!r.ok) throw new Error('lecture de ' + nom + ' : ' + r.status);
+    return r.json();
+  })
+  .then(function(j){ donnees[nom] = JSON.parse(b64versTexte(j.content)); return donnees[nom]; });
+}
+
+/* ───────── aperçu ───────── */
+function aplatit(nom, branche, out){
+  Object.keys(branche || {}).forEach(function(sec){
+    var v = branche[sec];
+    if (Array.isArray(v)) {
+      v.forEach(function(o, i){
+        Object.keys(o || {}).forEach(function(c){
+          if (typeof o[c] === 'string') out[nom + '.' + sec + '.' + i + '.' + c] = o[c];
+        });
+      });
+    } else if (v && typeof v === 'object') {
+      Object.keys(v).forEach(function(c){
+        if (typeof v[c] === 'string') out[nom + '.' + sec + '.' + c] = v[c];
+      });
+    }
+  });
+}
+function envoieApercu(){
+  if (!vue.contentWindow) return;
+  var out = {};
+  ['communs', page].forEach(function(nom){
+    if (donnees[nom]) aplatit(nom, donnees[nom][langue], out);
+  });
+  vue.contentWindow.postMessage({ type: 'deeemines-apercu', textes: out }, location.origin);
+}
+
+function chargePage(){
+  $('voile').hidden = false;
+  var p = libelles[page];
+  vue.src = p.adresse[langue] + '?apercu=1&edition=1';
+  Promise.all([charge('communs'), charge(page)])
+    .then(function(){ envoieApercu(); dessine(); })
+    .catch(erreur);
+}
+
+/* ───────── panneau ───────── */
+function etiquette(cle){
+  var m = cle.split('.');
+  var p = libelles[m[0]];
+  if (!p) return null;
+  var sec = p.sections[m[1]];
+  if (!sec) return null;
+  var nomChamp = m[m.length - 1];
+  var ch = sec.champs[nomChamp];
+  if (!ch) return null;
+  var rang = (m.length === 4) ? ' · n° ' + (parseInt(m[2], 10) + 1) : '';
+  return { fichier: m[0], pageLabel: p.label, section: sec.label + rang,
+           champ: ch.label, multi: ch.multi, aide: ch.aide,
+           route: m.slice(1).join('.') };
+}
+
+function dessine(){
+  var h = '';
+  var e = choisi ? etiquette(choisi) : null;
+  if (!e) {
+    h += '<p class="consigne">Cliquez sur un texte dans la page, à gauche, '
+       + 'pour l\'ouvrir ici. Les textes modifiables se soulignent au survol.<br><br>'
+       + 'L\'en-tête et le pied de page se corrigent depuis n\'importe quelle page.<br><br>'
+       + '<b>Rien n\'est publié tant que vous n\'avez pas enregistré.</b></p>';
+  } else {
+    var val = valeur(donnees[e.fichier][langue], e.route);
+    if (val === undefined) val = '';
+    var autre = langue === 'fr' ? 'en' : 'fr';
+    var vAutre = valeur(donnees[e.fichier][autre], e.route);
+    var marque = modifs[e.fichier + '|' + langue + '|' + e.route] !== undefined
+               ? '<span class="modifie">modifié</span>' : '';
+    h += '<div class="chemin">' + echappe(e.pageLabel) + ' · ' + echappe(e.section) + '</div>'
+       + '<h2>' + echappe(e.champ) + marque + '</h2>'
+       + '<div class="cle">' + echappe(choisi) + '</div>'
+       + (e.multi
+          ? '<textarea id="saisie" rows="7">' + echappe(val) + '</textarea>'
+          : '<input type="text" id="saisie" value="' + echappe(val).replace(/"/g, '&quot;') + '">')
+       + (e.aide ? '<div class="aide">' + echappe(e.aide) + '</div>' : '')
+       + '<div class="autre"><div class="t">' + (autre === 'en' ? 'Version anglaise' : 'Version française') + '</div>'
+       + '<div class="v' + (vAutre ? '' : ' vide') + '">'
+       + echappe(vAutre || 'Ce texte n\'existe pas dans l\'autre langue.') + '</div>'
+       + '<button id="bascule">Corriger la version ' + (autre === 'en' ? 'anglaise' : 'française') + '</button></div>';
+  }
+
+  /* la liste complète, pour les textes qu'on ne voit pas à l'écran */
+  var p = libelles[page];
+  h += '<details class="liste"><summary>Tous les textes de cette page</summary>';
+  [page, 'communs'].forEach(function(nom){
+    var pg = libelles[nom];
+    if (!pg || !donnees[nom]) return;
+    if (nom === 'communs') h += '<div class="sec"><div class="nom">En-tête et pied de page</div></div>';
+    Object.keys(pg.sections).forEach(function(sec){
+      var s = pg.sections[sec];
+      h += '<div class="sec"><div class="nom">' + echappe(s.label) + '</div>';
+      Object.keys(s.champs).forEach(function(c){
+        var routes = [];
+        var brut = donnees[nom][langue] ? donnees[nom][langue][sec] : null;
+        if (Array.isArray(brut)) brut.forEach(function(_, i){ routes.push(sec + '.' + i + '.' + c); });
+        else routes.push(sec + '.' + c);
+        routes.forEach(function(r){
+          var cle = nom + '.' + r;
+          var v = valeur(donnees[nom][langue], r);
+          if (typeof v !== 'string') return;
+          h += '<a data-cle="' + echappe(cle) + '"' + (cle === choisi ? ' class="on"' : '') + '>'
+             + echappe(s.champs[c].label) + ' <em>' + echappe(v.replace(/<[^>]*>/g, '').trim().slice(0, 38)) + '</em></a>';
+        });
+      });
+      h += '</div>';
+    });
+  });
+  h += '</details>';
+
+  panneau.innerHTML = h;
+
+  var saisie = $('saisie');
+  if (saisie) {
+    saisie.addEventListener('input', function(){
+      var e2 = etiquette(choisi);
+      pose(donnees[e2.fichier][langue], e2.route, saisie.value);
+      modifs[e2.fichier + '|' + langue + '|' + e2.route] = saisie.value;
+      compte();
+      envoieApercu();
+    });
+    saisie.focus();
+  }
+  var bas = $('bascule');
+  if (bas) bas.addEventListener('click', function(){ bascule(langue === 'fr' ? 'en' : 'fr'); });
+
+  panneau.querySelectorAll('.sec a').forEach(function(a){
+    a.addEventListener('click', function(){
+      choisi = a.getAttribute('data-cle');
+      dessine();
+      if (vue.contentWindow) {
+        vue.contentWindow.postMessage({ type: 'deeemines-choisit', champ: choisi }, location.origin);
+      }
+    });
+  });
+}
+
+function compte(){
+  var n = Object.keys(modifs).length;
+  bEnr.disabled = !n;
+  bEnr.textContent = n ? 'Enregistrer (' + n + ')' : 'Enregistrer';
+  etat.textContent = n ? (n === 1 ? '1 texte modifié' : n + ' textes modifiés') : '';
+}
+
+/* ───────── identification ───────── */
+function identifie(){
+  if (jeton) return Promise.resolve(jeton);
+  return new Promise(function(ok, non){
+    var w = window.open(AUTH + '/auth?provider=github&scope=repo&site_id=' + location.hostname,
+                        'dm_auth', 'width=680,height=760');
+    if (!w) { non(new Error('La fenêtre d\'identification a été bloquée par le navigateur.')); return; }
+    function ecoute(e){
+      /* On n'accepte que ce qui vient de la fenêtre d'identification : sans
+         cette vérification, une autre page ouverte pourrait glisser un jeton. */
+      if (e.source !== w || typeof e.data !== 'string') return;
+      if (e.data.indexOf('authorizing:github') === 0) { w.postMessage(e.data, '*'); return; }
+      var m = e.data.match(/^authorization:github:(success|error):(.+)$/);
+      if (!m) return;
+      window.removeEventListener('message', ecoute);
+      try { w.close(); } catch (x) {}
+      var d = JSON.parse(m[2]);
+      if (m[1] !== 'success' || !d.token) { non(new Error(d.message || 'Identification refusée.')); return; }
+      jeton = d.token;
+      sessionStorage.setItem('dm_jeton', jeton);
+      ok(jeton);
+    }
+    window.addEventListener('message', ecoute);
+  });
+}
+
+/* ───────── enregistrement ───────── */
+function enregistre(){
+  var n = Object.keys(modifs).length;
+  if (!n) return;
+  bEnr.disabled = true; etat.textContent = 'Enregistrement…';
+  Promise.resolve().then(function(){
+    /* On regroupe les modifications par fichier. */
+    var parFichier = {};
+    Object.keys(modifs).forEach(function(k){
+      var m = k.split('|');
+      (parFichier[m[0]] = parFichier[m[0]] || []).push({ langue: m[1], route: m[2], valeur: modifs[k] });
+    });
+    var noms = Object.keys(parFichier), fait = 0;
+    function suivant(){
+      if (!noms.length) {
+        modifs = {}; compte();
+        etat.textContent = fait + (fait === 1 ? ' fichier enregistré' : ' fichiers enregistrés')
+                         + ' · mise en ligne dans une minute';
+        Object.keys(donnees).forEach(function(k){ delete donnees[k]; });
+        chargePage();
+        return;
+      }
+      var nom = noms.shift();
+      etat.textContent = 'Enregistrement de ' + nom + '…';
+      var url = 'https://api.github.com/repos/' + DEPOT + '/contents/' + chemin(nom);
+      /* On relit la version du dépôt juste avant d'écrire : les corrections
+         faites entre-temps par quelqu'un d'autre sont ainsi conservées. */
+      fetch(url + '?ref=' + BRANCHE, { cache: 'no-store',
+        headers: { Authorization: 'token ' + jeton, Accept: 'application/vnd.github+json' } })
+      .then(function(r){ if (!r.ok) throw new Error('lecture ' + nom + ' : ' + r.status); return r.json(); })
+      .then(function(j){
+        var frais = JSON.parse(b64versTexte(j.content));
+        parFichier[nom].forEach(function(m){ pose(frais[m.langue], m.route, m.valeur); });
+        var texte = JSON.stringify(trie(frais), null, 2) + '\n';
+        var quoi = parFichier[nom].length;
+        return fetch(url, {
+          method: 'PUT',
+          headers: { Authorization: 'token ' + jeton, Accept: 'application/vnd.github+json',
+                     'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            message: 'Textes : ' + quoi + (quoi === 1 ? ' correction' : ' corrections') + ' sur ' + nom,
+            content: texteVersB64(texte), sha: j.sha, branch: BRANCHE })
+        });
+      })
+      .then(function(r){
+        if (!r.ok) return r.json().then(function(e){ throw new Error(e.message || r.status); });
+        fait++; suivant();
+      })
+      .catch(erreur);
+    }
+    suivant();
+  }).catch(erreur);
+}
+
+function erreur(e){
+  console.error(e);
+  etat.textContent = '';
+  compte();
+  panneau.insertAdjacentHTML('afterbegin',
+    '<div class="alerte">' + echappe(e.message || String(e)) + '</div>');
+  if (/401|403|Bad credentials/i.test(String(e.message))) {
+    jeton = ''; sessionStorage.removeItem('dm_jeton');
+  }
+}
+
+/* ───────── langue et page ───────── */
+function bascule(l){
+  langue = l;
+  $('bfr').classList.toggle('on', l === 'fr');
+  $('ben').classList.toggle('on', l === 'en');
+  chargePage();
+}
+
+/* ───────── la porte, puis la mise en route ───────── */
+function souci(m){
+  var s = $('souci');
+  s.textContent = m; s.hidden = !m;
+}
+function oublie(){
+  jeton = ''; sessionStorage.removeItem('dm_jeton');
+}
+/* Un jeton gardé d'un onglet précédent peut avoir été révoqué entre-temps :
+   on le met à l'épreuve avant d'ouvrir l'éditeur. */
+function verifie(){
+  if (!jeton) return Promise.resolve(false);
+  return fetch('https://api.github.com/repos/' + DEPOT, { cache: 'no-store',
+    headers: { Authorization: 'token ' + jeton, Accept: 'application/vnd.github+json' } })
+  .then(function(r){
+    if (r.ok) return true;
+    oublie();
+    if (r.status === 403 || r.status === 404) {
+      souci("Ce compte GitHub n’a pas accès au dépôt DeeeMines. "
+          + "Demandez à en être rendu collaborateur, puis réessayez.");
+    }
+    return false;
+  }).catch(function(){ oublie(); return false; });
+}
+
+function demarre(){
+  $('porte').hidden = true;
+  fetch('libelles.json', { cache: 'no-store' }).then(function(r){ return r.json(); })
+  .then(function(j){
+    libelles = j;
+    var sel = $('page'), h = '';
+    Object.keys(libelles).forEach(function(k){
+      if (libelles[k].partout) return;
+      h += '<option value="' + k + '">' + echappe(libelles[k].label) + '</option>';
+    });
+    sel.innerHTML = h;
+    sel.addEventListener('change', function(){ page = sel.value; choisi = null; chargePage(); });
+    chargePage();
+  }).catch(erreur);
+}
+
+$('entrer').addEventListener('click', function(){
+  var b = $('entrer');
+  b.disabled = true; b.textContent = 'Connexion en cours…'; souci('');
+  identifie()
+    .then(verifie)
+    .then(function(ok){
+      b.disabled = false; b.textContent = 'Se connecter avec GitHub';
+      if (ok) demarre();
+      else if (!$('souci').textContent) souci("La connexion n’a pas abouti. Réessayez.");
+    })
+    .catch(function(e){
+      b.disabled = false; b.textContent = 'Se connecter avec GitHub';
+      souci(e.message || String(e));
+    });
+});
+
+$('sortir').addEventListener('click', function(){
+  if (Object.keys(modifs).length &&
+      !confirm('Des corrections ne sont pas enregistrées. Quitter quand même ?')) return;
+  modifs = {}; oublie(); location.reload();
+});
+
+verifie().then(function(ok){ if (ok) demarre(); });
+
+$('bfr').addEventListener('click', function(){ bascule('fr'); });
+$('ben').addEventListener('click', function(){ bascule('en'); });
+$('classique').addEventListener('click', function(){ location.href = '/admin/'; });
+bEnr.addEventListener('click', enregistre);
+
+vue.addEventListener('load', function(){ $('voile').hidden = true; envoieApercu(); });
+
+window.addEventListener('message', function(e){
+  if (e.origin !== location.origin) return;
+  var m = e.data;
+  if (!m || typeof m !== 'object') return;
+  if (m.type === 'deeemines-apercu-pret') { envoieApercu(); return; }
+  if (m.type === 'deeemines-clic' && m.champ) {
+    var f = m.champ.split('.')[0];
+    (donnees[f] ? Promise.resolve() : charge(f)).then(function(){
+      choisi = m.champ; dessine();
+    }).catch(erreur);
+  }
+});
+
+window.addEventListener('beforeunload', function(e){
+  if (Object.keys(modifs).length) { e.preventDefault(); e.returnValue = ''; }
+});
+})();
+</script>
+</body>
+</html>
