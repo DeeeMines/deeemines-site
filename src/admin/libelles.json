@@ -1,0 +1,1811 @@
+{
+ "accueil": {
+  "label": "Page d'accueil",
+  "adresse": {
+   "fr": "/",
+   "en": "/en/"
+  },
+  "partout": false,
+  "sections": {
+   "hero": {
+    "label": "Bandeau d'accueil",
+    "liste": false,
+    "champs": {
+     "titre1": {
+      "label": "Titre, première ligne",
+      "multi": false,
+      "aide": ""
+     },
+     "titre2": {
+      "label": "Titre, seconde ligne (en vert)",
+      "multi": false,
+      "aide": ""
+     },
+     "para1": {
+      "label": "Premier paragraphe",
+      "multi": true,
+      "aide": ""
+     },
+     "para2": {
+      "label": "Second paragraphe",
+      "multi": true,
+      "aide": ""
+     }
+    }
+   },
+   "le_probleme": {
+    "label": "Le problème",
+    "liste": false,
+    "champs": {
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 11 caractères."
+     },
+     "titre": {
+      "label": "Titre",
+      "multi": true,
+      "aide": "Longueur actuelle : 84 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "texte": {
+      "label": "Paragraphe",
+      "multi": true,
+      "aide": "Longueur actuelle : 131 caractères."
+     },
+     "texte2": {
+      "label": "Paragraphe 2",
+      "multi": true,
+      "aide": "Longueur actuelle : 121 caractères."
+     }
+    }
+   },
+   "figs": {
+    "label": "Les quatre chiffres",
+    "liste": false,
+    "champs": {
+     "chiffre": {
+      "label": "Chiffre",
+      "multi": false,
+      "aide": "Longueur actuelle : 11 caractères."
+     },
+     "libelle": {
+      "label": "Libellé",
+      "multi": false,
+      "aide": "Longueur actuelle : 7 caractères."
+     },
+     "texte": {
+      "label": "Paragraphe",
+      "multi": true,
+      "aide": "Longueur actuelle : 81 caractères."
+     },
+     "chiffre2": {
+      "label": "Chiffre 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 1 caractères."
+     },
+     "libelle2": {
+      "label": "Libellé 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 16 caractères."
+     },
+     "texte2": {
+      "label": "Paragraphe 2",
+      "multi": true,
+      "aide": "Longueur actuelle : 88 caractères."
+     },
+     "chiffre3": {
+      "label": "Chiffre 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 7 caractères."
+     },
+     "libelle3": {
+      "label": "Libellé 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 26 caractères."
+     },
+     "texte3": {
+      "label": "Paragraphe 3",
+      "multi": true,
+      "aide": "Longueur actuelle : 78 caractères."
+     },
+     "chiffre4": {
+      "label": "Chiffre 4",
+      "multi": false,
+      "aide": "Longueur actuelle : 1 caractères."
+     },
+     "libelle4": {
+      "label": "Libellé 4",
+      "multi": false,
+      "aide": "Longueur actuelle : 47 caractères."
+     },
+     "texte4": {
+      "label": "Paragraphe 4",
+      "multi": true,
+      "aide": "Longueur actuelle : 79 caractères."
+     }
+    }
+   },
+   "notre_solution": {
+    "label": "Notre solution",
+    "liste": false,
+    "champs": {
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 14 caractères."
+     },
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 65 caractères."
+     },
+     "chapo": {
+      "label": "Chapô",
+      "multi": true,
+      "aide": "Longueur actuelle : 160 caractères."
+     }
+    }
+   },
+   "row": {
+    "label": "Les trois produits",
+    "liste": false,
+    "champs": {
+     "exposant": {
+      "label": "Numéro de l'élément",
+      "multi": false,
+      "aide": "Longueur actuelle : 2 caractères."
+     },
+     "symbole": {
+      "label": "Symbole chimique",
+      "multi": false,
+      "aide": "Longueur actuelle : 2 caractères."
+     },
+     "nom": {
+      "label": "Nom",
+      "multi": false,
+      "aide": "Longueur actuelle : 9 caractères."
+     },
+     "exposant2": {
+      "label": "Numéro de l'élément 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 2 caractères."
+     },
+     "symbole2": {
+      "label": "Symbole chimique 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 2 caractères."
+     },
+     "nom2": {
+      "label": "Nom 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 5 caractères."
+     },
+     "exposant3": {
+      "label": "Numéro de l'élément 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 10 caractères."
+     },
+     "legende": {
+      "label": "Légende",
+      "multi": false,
+      "aide": "Longueur actuelle : 1 caractères."
+     },
+     "nom3": {
+      "label": "Nom 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 8 caractères."
+     }
+    }
+   },
+   "produits": {
+    "label": "Les trois matières valorisées",
+    "liste": true,
+    "champs": {
+     "etiquette": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": ""
+     },
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": ""
+     },
+     "texte": {
+      "label": "Texte",
+      "multi": true,
+      "aide": ""
+     },
+     "pour": {
+      "label": "Destinataires (après « Pour »)",
+      "multi": false,
+      "aide": ""
+     }
+    }
+   },
+   "notre_technologie": {
+    "label": "Notre technologie",
+    "liste": false,
+    "champs": {
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 17 caractères."
+     },
+     "titre": {
+      "label": "Titre",
+      "multi": true,
+      "aide": "Longueur actuelle : 21 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "texte": {
+      "label": "Paragraphe",
+      "multi": true,
+      "aide": "Longueur actuelle : 129 caractères."
+     },
+     "texte2": {
+      "label": "Paragraphe 2",
+      "multi": true,
+      "aide": "Longueur actuelle : 95 caractères."
+     },
+     "texte3": {
+      "label": "Paragraphe 3",
+      "multi": true,
+      "aide": "Longueur actuelle : 65 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "texte4": {
+      "label": "Paragraphe 4",
+      "multi": true,
+      "aide": "Longueur actuelle : 63 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "texte5": {
+      "label": "Paragraphe 5",
+      "multi": true,
+      "aide": "Longueur actuelle : 54 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "texte6": {
+      "label": "Paragraphe 6",
+      "multi": true,
+      "aide": "Longueur actuelle : 58 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "texte7": {
+      "label": "Paragraphe 7",
+      "multi": true,
+      "aide": "Longueur actuelle : 35 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     }
+    }
+   },
+   "flow": {
+    "label": "La chaîne du procédé",
+    "liste": false,
+    "champs": {
+     "texte": {
+      "label": "Paragraphe",
+      "multi": false,
+      "aide": "Longueur actuelle : 2 caractères."
+     },
+     "soustitre": {
+      "label": "Sous-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 7 caractères."
+     },
+     "texte2": {
+      "label": "Paragraphe 2",
+      "multi": true,
+      "aide": "Longueur actuelle : 110 caractères."
+     },
+     "texte3": {
+      "label": "Paragraphe 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 2 caractères."
+     },
+     "soustitre2": {
+      "label": "Sous-titre 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 16 caractères."
+     },
+     "texte4": {
+      "label": "Paragraphe 4",
+      "multi": true,
+      "aide": "Longueur actuelle : 94 caractères."
+     },
+     "texte5": {
+      "label": "Paragraphe 5",
+      "multi": false,
+      "aide": "Longueur actuelle : 2 caractères."
+     },
+     "soustitre3": {
+      "label": "Sous-titre 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 20 caractères."
+     },
+     "texte6": {
+      "label": "Paragraphe 6",
+      "multi": true,
+      "aide": "Longueur actuelle : 100 caractères."
+     },
+     "texte7": {
+      "label": "Paragraphe 7",
+      "multi": false,
+      "aide": "Longueur actuelle : 2 caractères."
+     },
+     "soustitre4": {
+      "label": "Sous-titre 4",
+      "multi": false,
+      "aide": "Longueur actuelle : 16 caractères."
+     },
+     "texte8": {
+      "label": "Paragraphe 8",
+      "multi": true,
+      "aide": "Longueur actuelle : 90 caractères."
+     }
+    }
+   },
+   "band": {
+    "label": "Bandeau des partenaires",
+    "liste": false,
+    "champs": {
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 45 caractères."
+     }
+    }
+   },
+   "concours_et_distinctions": {
+    "label": "Concours et distinctions · le sur-titre",
+    "liste": false,
+    "champs": {
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 24 caractères."
+     }
+    }
+   },
+   "dist": {
+    "label": "Les trois distinctions",
+    "liste": false,
+    "champs": {
+     "soustitre": {
+      "label": "Sous-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 21 caractères."
+     },
+     "texte": {
+      "label": "Paragraphe",
+      "multi": true,
+      "aide": "Longueur actuelle : 76 caractères."
+     },
+     "soustitre2": {
+      "label": "Sous-titre 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 36 caractères."
+     },
+     "texte2": {
+      "label": "Paragraphe 2",
+      "multi": true,
+      "aide": "Longueur actuelle : 73 caractères."
+     }
+    }
+   },
+   "cgrid": {
+    "label": "Le formulaire",
+    "liste": false,
+    "champs": {
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 7 caractères."
+     },
+     "titre": {
+      "label": "Titre",
+      "multi": true,
+      "aide": "Longueur actuelle : 34 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "chapo": {
+      "label": "Chapô",
+      "multi": true,
+      "aide": "Longueur actuelle : 138 caractères."
+     },
+     "libelle": {
+      "label": "Libellé",
+      "multi": false,
+      "aide": "Longueur actuelle : 6 caractères."
+     },
+     "libelle2": {
+      "label": "Libellé 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 7 caractères."
+     },
+     "libelle3": {
+      "label": "Libellé 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 6 caractères."
+     },
+     "intitule": {
+      "label": "Intitulé de champ",
+      "multi": false,
+      "aide": "Longueur actuelle : 3 caractères."
+     },
+     "intitule2": {
+      "label": "Intitulé de champ 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 6 caractères."
+     },
+     "intitule3": {
+      "label": "Intitulé de champ 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 9 caractères."
+     },
+     "choix": {
+      "label": "Choix du menu",
+      "multi": false,
+      "aide": "Longueur actuelle : 41 caractères."
+     },
+     "choix2": {
+      "label": "Choix du menu 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 34 caractères."
+     },
+     "choix3": {
+      "label": "Choix du menu 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 38 caractères."
+     },
+     "choix4": {
+      "label": "Choix du menu 4",
+      "multi": false,
+      "aide": "Longueur actuelle : 31 caractères."
+     },
+     "choix5": {
+      "label": "Choix du menu 5",
+      "multi": false,
+      "aide": "Longueur actuelle : 12 caractères."
+     },
+     "choix6": {
+      "label": "Choix du menu 6",
+      "multi": false,
+      "aide": "Longueur actuelle : 6 caractères."
+     },
+     "choix7": {
+      "label": "Choix du menu 7",
+      "multi": false,
+      "aide": "Longueur actuelle : 11 caractères."
+     },
+     "choix8": {
+      "label": "Choix du menu 8",
+      "multi": false,
+      "aide": "Longueur actuelle : 5 caractères."
+     },
+     "intitule4": {
+      "label": "Intitulé de champ 4",
+      "multi": false,
+      "aide": "Longueur actuelle : 7 caractères."
+     },
+     "bouton": {
+      "label": "Bouton",
+      "multi": true,
+      "aide": "Longueur actuelle : 9 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "texte": {
+      "label": "Paragraphe",
+      "multi": true,
+      "aide": "Longueur actuelle : 84 caractères."
+     }
+    }
+   },
+   "sent": {
+    "label": "Message de confirmation",
+    "liste": false,
+    "champs": {
+     "texte": {
+      "label": "Paragraphe",
+      "multi": false,
+      "aide": "Longueur actuelle : 1 caractères."
+     },
+     "soustitre": {
+      "label": "Sous-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 15 caractères."
+     },
+     "texte2": {
+      "label": "Paragraphe 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 51 caractères."
+     },
+     "lien": {
+      "label": "Lien",
+      "multi": false,
+      "aide": "Longueur actuelle : 27 caractères."
+     }
+    }
+   }
+  }
+ },
+ "procede": {
+  "label": "Notre technologie",
+  "adresse": {
+   "fr": "/notre-technologie/",
+   "en": "/en/our-technology/"
+  },
+  "partout": false,
+  "sections": {
+   "phead": {
+    "label": "En-tête de la page",
+    "liste": false,
+    "champs": {
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 28 caractères."
+     },
+     "chapo": {
+      "label": "Chapô",
+      "multi": true,
+      "aide": "Longueur actuelle : 185 caractères."
+     },
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 10 caractères."
+     }
+    }
+   },
+   "en_quatre_minutes": {
+    "label": "En quatre minutes",
+    "liste": false,
+    "champs": {
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 17 caractères."
+     },
+     "texte": {
+      "label": "Paragraphe",
+      "multi": false,
+      "aide": "Longueur actuelle : 65 caractères."
+     },
+     "bloc": {
+      "label": "Bloc de texte",
+      "multi": true,
+      "aide": "Longueur actuelle : 197 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     }
+    }
+   },
+   "le_verrou": {
+    "label": "Le verrou",
+    "liste": false,
+    "champs": {
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 9 caractères."
+     },
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 38 caractères."
+     },
+     "bloc": {
+      "label": "Bloc de texte",
+      "multi": true,
+      "aide": "Longueur actuelle : 391 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     }
+    }
+   },
+   "verrou": {
+    "label": "Schéma du verrou",
+    "liste": false,
+    "champs": {
+     "legende": {
+      "label": "Intitulé de gauche",
+      "multi": false,
+      "aide": ""
+     },
+     "legende2": {
+      "label": "Intitulé de droite",
+      "multi": false,
+      "aide": ""
+     },
+     "nom": {
+      "label": "Légende du point vert",
+      "multi": false,
+      "aide": ""
+     },
+     "nom2": {
+      "label": "Légende du point bleu",
+      "multi": false,
+      "aide": ""
+     }
+    }
+   },
+   "le_principe": {
+    "label": "Le principe",
+    "liste": false,
+    "champs": {
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 11 caractères."
+     },
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 32 caractères."
+     },
+     "bloc": {
+      "label": "Bloc de texte",
+      "multi": true,
+      "aide": "Longueur actuelle : 426 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     }
+    }
+   },
+   "schema": {
+    "label": "Le schéma animé",
+    "liste": false,
+    "champs": {
+     "legende": {
+      "label": "Légende",
+      "multi": false,
+      "aide": "Longueur actuelle : 20 caractères."
+     },
+     "legende2": {
+      "label": "Légende 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 43 caractères."
+     },
+     "legende3": {
+      "label": "Légende 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 36 caractères."
+     },
+     "symbole": {
+      "label": "Symbole chimique",
+      "multi": false,
+      "aide": "Longueur actuelle : 2 caractères."
+     },
+     "nom": {
+      "label": "Nom",
+      "multi": false,
+      "aide": "Longueur actuelle : 9 caractères."
+     },
+     "symbole2": {
+      "label": "Symbole chimique 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 2 caractères."
+     },
+     "nom2": {
+      "label": "Nom 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 15 caractères."
+     },
+     "symbole3": {
+      "label": "Symbole chimique 3",
+      "multi": true,
+      "aide": "Longueur actuelle : 2 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "nom3": {
+      "label": "Nom 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 16 caractères."
+     },
+     "soustitre": {
+      "label": "Sous-titre",
+      "multi": true,
+      "aide": "Longueur actuelle : 7 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "bloc": {
+      "label": "Bloc de texte",
+      "multi": true,
+      "aide": "Longueur actuelle : 120 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "soustitre2": {
+      "label": "Sous-titre 2",
+      "multi": true,
+      "aide": "Longueur actuelle : 16 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "bloc2": {
+      "label": "Bloc de texte 2",
+      "multi": true,
+      "aide": "Longueur actuelle : 122 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "soustitre3": {
+      "label": "Sous-titre 3",
+      "multi": true,
+      "aide": "Longueur actuelle : 20 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "bloc3": {
+      "label": "Bloc de texte 3",
+      "multi": true,
+      "aide": "Longueur actuelle : 107 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "soustitre4": {
+      "label": "Sous-titre 4",
+      "multi": true,
+      "aide": "Longueur actuelle : 16 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "bloc4": {
+      "label": "Bloc de texte 4",
+      "multi": true,
+      "aide": "Longueur actuelle : 119 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     }
+    }
+   },
+   "ce_qui_en_sort": {
+    "label": "Ce qui en sort",
+    "liste": false,
+    "champs": {
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 14 caractères."
+     },
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 45 caractères."
+     },
+     "bloc": {
+      "label": "Bloc de texte",
+      "multi": true,
+      "aide": "Longueur actuelle : 115 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "libelle": {
+      "label": "Libellé",
+      "multi": false,
+      "aide": "Longueur actuelle : 24 caractères."
+     },
+     "bloc2": {
+      "label": "Bloc de texte 2",
+      "multi": true,
+      "aide": "Longueur actuelle : 126 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "libelle2": {
+      "label": "Libellé 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 30 caractères."
+     },
+     "bloc3": {
+      "label": "Bloc de texte 3",
+      "multi": true,
+      "aide": "Longueur actuelle : 99 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "libelle3": {
+      "label": "Libellé 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 27 caractères."
+     },
+     "bloc4": {
+      "label": "Bloc de texte 4",
+      "multi": true,
+      "aide": "Longueur actuelle : 122 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     }
+    }
+   },
+   "sorties": {
+    "label": "Les trois produits",
+    "liste": false,
+    "champs": {
+     "symbole": {
+      "label": "Symbole chimique",
+      "multi": false,
+      "aide": "Longueur actuelle : 2 caractères."
+     },
+     "soustitre": {
+      "label": "Sous-titre",
+      "multi": true,
+      "aide": "Longueur actuelle : 18 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "bloc": {
+      "label": "Bloc de texte",
+      "multi": true,
+      "aide": "Longueur actuelle : 137 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "symbole2": {
+      "label": "Symbole chimique 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 2 caractères."
+     },
+     "soustitre2": {
+      "label": "Sous-titre 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 15 caractères."
+     },
+     "bloc2": {
+      "label": "Bloc de texte 2",
+      "multi": true,
+      "aide": "Longueur actuelle : 144 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "symbole3": {
+      "label": "Symbole chimique 3",
+      "multi": true,
+      "aide": "Longueur actuelle : 2 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "soustitre3": {
+      "label": "Sous-titre 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 9 caractères."
+     },
+     "bloc3": {
+      "label": "Bloc de texte 3",
+      "multi": true,
+      "aide": "Longueur actuelle : 144 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     }
+    }
+   },
+   "ce_qui_l_atteste": {
+    "label": "Ce qui l'atteste",
+    "liste": false,
+    "champs": {
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 16 caractères."
+     },
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 29 caractères."
+     },
+     "bloc": {
+      "label": "Bloc de texte",
+      "multi": true,
+      "aide": "Longueur actuelle : 120 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "libelle": {
+      "label": "Libellé",
+      "multi": false,
+      "aide": "Longueur actuelle : 5 caractères."
+     },
+     "soustitre": {
+      "label": "Sous-titre",
+      "multi": true,
+      "aide": "Longueur actuelle : 74 caractères."
+     },
+     "bloc2": {
+      "label": "Bloc de texte 2",
+      "multi": true,
+      "aide": "Longueur actuelle : 162 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "lien": {
+      "label": "Lien",
+      "multi": true,
+      "aide": "Longueur actuelle : 26 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "libelle2": {
+      "label": "Libellé 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 11 caractères."
+     },
+     "soustitre2": {
+      "label": "Sous-titre 2",
+      "multi": true,
+      "aide": "Longueur actuelle : 83 caractères."
+     },
+     "bloc3": {
+      "label": "Bloc de texte 3",
+      "multi": true,
+      "aide": "Longueur actuelle : 117 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "lien2": {
+      "label": "Lien 2",
+      "multi": true,
+      "aide": "Longueur actuelle : 27 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "libelle3": {
+      "label": "Libellé 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 6 caractères."
+     },
+     "soustitre3": {
+      "label": "Sous-titre 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 31 caractères."
+     }
+    }
+   },
+   "la_suite": {
+    "label": "La suite",
+    "liste": false,
+    "champs": {
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 8 caractères."
+     },
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 24 caractères."
+     }
+    }
+   },
+   "divers": {
+    "label": "Bloc de fin · nous écrire",
+    "liste": false,
+    "champs": {
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 38 caractères."
+     },
+     "lien": {
+      "label": "Lien",
+      "multi": true,
+      "aide": "Longueur actuelle : 20 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     }
+    }
+   },
+   "video": {
+    "label": "Vidéo de présentation",
+    "liste": false,
+    "champs": {
+     "lien": {
+      "label": "Lien de la vidéo de présentation",
+      "multi": false,
+      "aide": "Collez l'adresse de la vidéo telle qu'elle apparaît dans la barre du navigateur (YouTube, Vimeo ou Dailymotion). Laissez vide tant que vous ne l'avez pas : un visuel d'attente occupe la place."
+     }
+    }
+   }
+  }
+ },
+ "antimoine": {
+  "label": "L'antimoine",
+  "adresse": {
+   "fr": "/l-antimoine/",
+   "en": "/en/antimony/"
+  },
+  "partout": false,
+  "sections": {
+   "phead": {
+    "label": "En-tête de la page",
+    "liste": false,
+    "champs": {
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 29 caractères."
+     },
+     "chapo": {
+      "label": "Chapô",
+      "multi": true,
+      "aide": "Longueur actuelle : 154 caractères."
+     }
+    }
+   },
+   "ses_usages": {
+    "label": "Ses usages",
+    "liste": false,
+    "champs": {
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 10 caractères."
+     },
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 23 caractères."
+     },
+     "chapo": {
+      "label": "Chapô",
+      "multi": true,
+      "aide": "Longueur actuelle : 123 caractères."
+     },
+     "nom": {
+      "label": "Nom",
+      "multi": false,
+      "aide": "Longueur actuelle : 24 caractères."
+     },
+     "detail": {
+      "label": "Précision",
+      "multi": false,
+      "aide": "Longueur actuelle : 66 caractères."
+     },
+     "nom2": {
+      "label": "Nom 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 18 caractères."
+     },
+     "detail2": {
+      "label": "Précision 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 63 caractères."
+     },
+     "nom3": {
+      "label": "Nom 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 6 caractères."
+     },
+     "detail3": {
+      "label": "Précision 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 47 caractères."
+     },
+     "nom4": {
+      "label": "Nom 4",
+      "multi": false,
+      "aide": "Longueur actuelle : 17 caractères."
+     },
+     "detail4": {
+      "label": "Précision 4",
+      "multi": false,
+      "aide": "Longueur actuelle : 58 caractères."
+     },
+     "nom5": {
+      "label": "Nom 5",
+      "multi": false,
+      "aide": "Longueur actuelle : 29 caractères."
+     },
+     "detail5": {
+      "label": "Précision 5",
+      "multi": false,
+      "aide": "Longueur actuelle : 68 caractères."
+     },
+     "nom6": {
+      "label": "Nom 6",
+      "multi": false,
+      "aide": "Longueur actuelle : 7 caractères."
+     },
+     "detail6": {
+      "label": "Précision 6",
+      "multi": false,
+      "aide": "Longueur actuelle : 68 caractères."
+     },
+     "nom7": {
+      "label": "Nom 7",
+      "multi": false,
+      "aide": "Longueur actuelle : 17 caractères."
+     },
+     "detail7": {
+      "label": "Précision 7",
+      "multi": false,
+      "aide": "Longueur actuelle : 39 caractères."
+     },
+     "nom8": {
+      "label": "Nom 8",
+      "multi": false,
+      "aide": "Longueur actuelle : 16 caractères."
+     },
+     "detail8": {
+      "label": "Précision 8",
+      "multi": false,
+      "aide": "Longueur actuelle : 46 caractères."
+     }
+    }
+   },
+   "criticite": {
+    "label": "Enjeu de souveraineté européenne",
+    "liste": false,
+    "champs": {
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 9 caractères."
+     },
+     "titre": {
+      "label": "Titre",
+      "multi": true,
+      "aide": "Longueur actuelle : 58 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "texte": {
+      "label": "Paragraphe",
+      "multi": true,
+      "aide": "Longueur actuelle : 173 caractères."
+     },
+     "texte2": {
+      "label": "Paragraphe 2",
+      "multi": true,
+      "aide": "Longueur actuelle : 104 caractères."
+     },
+     "chapo": {
+      "label": "Chapô",
+      "multi": true,
+      "aide": "Longueur actuelle : 239 caractères."
+     }
+    }
+   },
+   "uses": {
+    "label": "Les trois repères",
+    "liste": false,
+    "champs": {
+     "soustitre": {
+      "label": "Sous-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 15 caractères."
+     },
+     "texte": {
+      "label": "Paragraphe",
+      "multi": true,
+      "aide": "Longueur actuelle : 104 caractères."
+     },
+     "soustitre2": {
+      "label": "Sous-titre 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 23 caractères."
+     },
+     "texte2": {
+      "label": "Paragraphe 2",
+      "multi": true,
+      "aide": "Longueur actuelle : 111 caractères."
+     },
+     "soustitre3": {
+      "label": "Sous-titre 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 16 caractères."
+     },
+     "texte3": {
+      "label": "Paragraphe 3",
+      "multi": true,
+      "aide": "Longueur actuelle : 128 caractères."
+     }
+    }
+   },
+   "dependance": {
+    "label": "Dépendance aux importations",
+    "liste": false,
+    "champs": {
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 10 caractères."
+     },
+     "titre": {
+      "label": "Titre",
+      "multi": true,
+      "aide": "Longueur actuelle : 42 caractères."
+     },
+     "chapo": {
+      "label": "Chapô",
+      "multi": true,
+      "aide": "Longueur actuelle : 148 caractères."
+     },
+     "legende": {
+      "label": "Légende du graphique",
+      "multi": true,
+      "aide": "Longueur actuelle : 95 caractères."
+     }
+    }
+   },
+   "en_synthese": {
+    "label": "En synthèse",
+    "liste": false,
+    "champs": {
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 11 caractères."
+     },
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 20 caractères."
+     },
+     "chapo": {
+      "label": "Chapô",
+      "multi": true,
+      "aide": "Longueur actuelle : 88 caractères."
+     },
+     "texte": {
+      "label": "Paragraphe",
+      "multi": false,
+      "aide": "Longueur actuelle : 2 caractères."
+     },
+     "soustitre": {
+      "label": "Sous-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 51 caractères."
+     },
+     "texte2": {
+      "label": "Paragraphe 2",
+      "multi": true,
+      "aide": "Longueur actuelle : 117 caractères."
+     },
+     "texte3": {
+      "label": "Paragraphe 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 2 caractères."
+     },
+     "soustitre2": {
+      "label": "Sous-titre 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 34 caractères."
+     },
+     "texte4": {
+      "label": "Paragraphe 4",
+      "multi": true,
+      "aide": "Longueur actuelle : 196 caractères."
+     },
+     "texte5": {
+      "label": "Paragraphe 5",
+      "multi": false,
+      "aide": "Longueur actuelle : 2 caractères."
+     },
+     "soustitre3": {
+      "label": "Sous-titre 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 36 caractères."
+     },
+     "texte6": {
+      "label": "Paragraphe 6",
+      "multi": true,
+      "aide": "Longueur actuelle : 119 caractères."
+     }
+    }
+   },
+   "divers": {
+    "label": "Bloc de fin · DeeeMines répond",
+    "liste": false,
+    "champs": {
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 33 caractères."
+     },
+     "texte": {
+      "label": "Paragraphe",
+      "multi": true,
+      "aide": "Longueur actuelle : 92 caractères."
+     },
+     "texte2": {
+      "label": "Paragraphe 2",
+      "multi": true,
+      "aide": "Longueur actuelle : 127 caractères."
+     },
+     "texte3": {
+      "label": "Paragraphe 3",
+      "multi": true,
+      "aide": "Longueur actuelle : 111 caractères."
+     },
+     "lien": {
+      "label": "Lien",
+      "multi": true,
+      "aide": "Longueur actuelle : 19 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     }
+    }
+   }
+  }
+ },
+ "equipe": {
+  "label": "Équipe",
+  "adresse": {
+   "fr": "/equipe/",
+   "en": "/en/team/"
+  },
+  "partout": false,
+  "sections": {
+   "phead": {
+    "label": "En-tête de la page",
+    "liste": false,
+    "champs": {
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 8 caractères."
+     },
+     "chapo": {
+      "label": "Chapô",
+      "multi": true,
+      "aide": "Longueur actuelle : 190 caractères."
+     },
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 15 caractères."
+     }
+    }
+   },
+   "cofondateurs": {
+    "label": "Cofondateurs",
+    "liste": false,
+    "champs": {
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 12 caractères."
+     }
+    }
+   },
+   "equipe_scientifique": {
+    "label": "Équipe scientifique",
+    "liste": false,
+    "champs": {
+     "surtitre": {
+      "label": "Sur-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 19 caractères."
+     },
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 27 caractères."
+     },
+     "texte": {
+      "label": "Paragraphe",
+      "multi": true,
+      "aide": "Longueur actuelle : 75 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     }
+    }
+   },
+   "divers": {
+    "label": "Bloc de fin · nous rejoindre",
+    "liste": false,
+    "champs": {
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 28 caractères."
+     },
+     "lien": {
+      "label": "Lien",
+      "multi": true,
+      "aide": "Longueur actuelle : 14 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     }
+    }
+   }
+  }
+ },
+ "actualites": {
+  "label": "Actualités",
+  "adresse": {
+   "fr": "/actualites/",
+   "en": "/en/news/"
+  },
+  "partout": false,
+  "sections": {
+   "phead": {
+    "label": "En-tête de la page",
+    "liste": false,
+    "champs": {
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 14 caractères."
+     }
+    }
+   },
+   "news": {
+    "label": "La liste",
+    "liste": false,
+    "champs": {
+     "lien": {
+      "label": "Lien",
+      "multi": true,
+      "aide": "Longueur actuelle : 21 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     }
+    }
+   },
+   "divers": {
+    "label": "Bloc de fin · suivre la progression",
+    "liste": false,
+    "champs": {
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 29 caractères."
+     }
+    }
+   }
+  }
+ },
+ "article": {
+  "label": "Pages d'article",
+  "adresse": {
+   "fr": "/actualites/prix-i-phd-morvan-gaudin/",
+   "en": "/en/news/prix-i-phd-morvan-gaudin/"
+  },
+  "partout": false,
+  "sections": {
+   "phead": {
+    "label": "En-tête de la page",
+    "liste": false,
+    "champs": {
+     "lien": {
+      "label": "Lien",
+      "multi": true,
+      "aide": "Longueur actuelle : 29 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     }
+    }
+   },
+   "divers": {
+    "label": "Bloc de fin",
+    "liste": false,
+    "champs": {
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 38 caractères."
+     },
+     "lien": {
+      "label": "Lien",
+      "multi": true,
+      "aide": "Longueur actuelle : 20 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     }
+    }
+   }
+  }
+ },
+ "communs": {
+  "label": "En-tête et pied de page",
+  "adresse": {
+   "fr": "/",
+   "en": "/en/"
+  },
+  "partout": true,
+  "sections": {
+   "nav": {
+    "label": "Navigation",
+    "liste": false,
+    "champs": {
+     "contact": {
+      "label": "Contact",
+      "multi": false,
+      "aide": "Longueur actuelle : 14 caractères."
+     },
+     "accueil": {
+      "label": "Accueil",
+      "multi": false,
+      "aide": "Longueur actuelle : 7 caractères."
+     },
+     "droits": {
+      "label": "Droits",
+      "multi": false,
+      "aide": "Longueur actuelle : 16 caractères."
+     },
+     "mentions": {
+      "label": "Mentions",
+      "multi": false,
+      "aide": "Longueur actuelle : 16 caractères."
+     },
+     "confidentialite": {
+      "label": "Confidentialite",
+      "multi": false,
+      "aide": "Longueur actuelle : 28 caractères."
+     },
+     "actualites": {
+      "label": "Actualites",
+      "multi": false,
+      "aide": "Longueur actuelle : 10 caractères."
+     },
+     "antimoine": {
+      "label": "Antimoine",
+      "multi": false,
+      "aide": "Longueur actuelle : 11 caractères."
+     },
+     "equipe": {
+      "label": "Equipe",
+      "multi": false,
+      "aide": "Longueur actuelle : 6 caractères."
+     },
+     "technologie": {
+      "label": "Technologie",
+      "multi": false,
+      "aide": "Longueur actuelle : 17 caractères."
+     }
+    }
+   },
+   "contact": {
+    "label": "Coordonnées",
+    "liste": false,
+    "champs": {
+     "email": {
+      "label": "Adresse électronique",
+      "multi": false,
+      "aide": ""
+     },
+     "adresse": {
+      "label": "Adresse postale",
+      "multi": false,
+      "aide": ""
+     },
+     "linkedin": {
+      "label": "Lien LinkedIn",
+      "multi": false,
+      "aide": ""
+     }
+    }
+   },
+   "alt": {
+    "label": "Descriptions des images",
+    "liste": false,
+    "champs": {
+     "iphd": {
+      "label": "Iphd",
+      "multi": false,
+      "aide": "Longueur actuelle : 28 caractères."
+     },
+     "jouer": {
+      "label": "Jouer",
+      "multi": false,
+      "aide": "Longueur actuelle : 20 caractères."
+     },
+     "schema": {
+      "label": "Schema",
+      "multi": true,
+      "aide": "Longueur actuelle : 316 caractères."
+     },
+     "video": {
+      "label": "Video",
+      "multi": false,
+      "aide": "Longueur actuelle : 34 caractères."
+     },
+     "video_titre": {
+      "label": "Video titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 41 caractères."
+     }
+    }
+   },
+   "divers": {
+    "label": "Libellés divers",
+    "liste": false,
+    "champs": {
+     "ecrivez": {
+      "label": "Ecrivez",
+      "multi": false,
+      "aide": "Longueur actuelle : 12 caractères."
+     },
+     "en_savoir_plus": {
+      "label": "En savoir plus",
+      "multi": false,
+      "aide": "Longueur actuelle : 14 caractères."
+     },
+     "piege": {
+      "label": "Piege",
+      "multi": false,
+      "aide": "Longueur actuelle : 21 caractères."
+     },
+     "pour": {
+      "label": "Pour",
+      "multi": false,
+      "aide": "Longueur actuelle : 4 caractères."
+     },
+     "suivre_linkedin": {
+      "label": "Suivre linkedin",
+      "multi": false,
+      "aide": "Longueur actuelle : 24 caractères."
+     },
+     "voir_video": {
+      "label": "Voir video",
+      "multi": false,
+      "aide": "Longueur actuelle : 20 caractères."
+     },
+     "signature": {
+      "label": "Signature du pied de page",
+      "multi": false,
+      "aide": "Sous le logo, en bas de chaque page. Identique dans les deux langues."
+     }
+    }
+   }
+  }
+ },
+ "mentions": {
+  "label": "Mentions légales",
+  "adresse": {
+   "fr": "/mentions-legales/",
+   "en": "/en/legal-notice/"
+  },
+  "partout": false,
+  "sections": {
+   "phead": {
+    "label": "En-tête de la page",
+    "liste": false,
+    "champs": {
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 16 caractères."
+     }
+    }
+   },
+   "legal": {
+    "label": "Le texte légal",
+    "liste": false,
+    "champs": {
+     "soustitre": {
+      "label": "Sous-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 15 caractères."
+     },
+     "texte": {
+      "label": "Paragraphe",
+      "multi": true,
+      "aide": "Longueur actuelle : 409 caractères. Ce texte contient de la mise en forme entre chevrons : gardez-la telle quelle."
+     },
+     "soustitre2": {
+      "label": "Sous-titre 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 27 caractères."
+     },
+     "texte2": {
+      "label": "Paragraphe 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 61 caractères."
+     },
+     "soustitre3": {
+      "label": "Sous-titre 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 9 caractères."
+     },
+     "texte3": {
+      "label": "Paragraphe 3",
+      "multi": true,
+      "aide": "Longueur actuelle : 101 caractères."
+     },
+     "soustitre4": {
+      "label": "Sous-titre 4",
+      "multi": false,
+      "aide": "Longueur actuelle : 24 caractères."
+     },
+     "texte4": {
+      "label": "Paragraphe 4",
+      "multi": true,
+      "aide": "Longueur actuelle : 272 caractères."
+     },
+     "texte5": {
+      "label": "Paragraphe 5",
+      "multi": true,
+      "aide": "Longueur actuelle : 150 caractères."
+     },
+     "soustitre5": {
+      "label": "Sous-titre 5",
+      "multi": false,
+      "aide": "Longueur actuelle : 15 caractères."
+     },
+     "texte6": {
+      "label": "Paragraphe 6",
+      "multi": true,
+      "aide": "Longueur actuelle : 120 caractères."
+     },
+     "soustitre6": {
+      "label": "Sous-titre 6",
+      "multi": false,
+      "aide": "Longueur actuelle : 14 caractères."
+     },
+     "texte7": {
+      "label": "Paragraphe 7",
+      "multi": true,
+      "aide": "Longueur actuelle : 305 caractères."
+     },
+     "soustitre7": {
+      "label": "Sous-titre 7",
+      "multi": false,
+      "aide": "Longueur actuelle : 16 caractères."
+     },
+     "texte8": {
+      "label": "Paragraphe 8",
+      "multi": true,
+      "aide": "Longueur actuelle : 131 caractères."
+     }
+    }
+   }
+  }
+ },
+ "confidentialite": {
+  "label": "Politique de confidentialité",
+  "adresse": {
+   "fr": "/confidentialite/",
+   "en": "/en/privacy/"
+  },
+  "partout": false,
+  "sections": {
+   "phead": {
+    "label": "En-tête de la page",
+    "liste": false,
+    "champs": {
+     "titre": {
+      "label": "Titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 28 caractères."
+     }
+    }
+   },
+   "legal": {
+    "label": "Le texte légal",
+    "liste": false,
+    "champs": {
+     "soustitre": {
+      "label": "Sous-titre",
+      "multi": false,
+      "aide": "Longueur actuelle : 25 caractères."
+     },
+     "texte": {
+      "label": "Paragraphe",
+      "multi": true,
+      "aide": "Longueur actuelle : 132 caractères."
+     },
+     "soustitre2": {
+      "label": "Sous-titre 2",
+      "multi": false,
+      "aide": "Longueur actuelle : 18 caractères."
+     },
+     "texte2": {
+      "label": "Paragraphe 2",
+      "multi": true,
+      "aide": "Longueur actuelle : 179 caractères."
+     },
+     "soustitre3": {
+      "label": "Sous-titre 3",
+      "multi": false,
+      "aide": "Longueur actuelle : 23 caractères."
+     },
+     "texte3": {
+      "label": "Paragraphe 3",
+      "multi": true,
+      "aide": "Longueur actuelle : 250 caractères."
+     },
+     "soustitre4": {
+      "label": "Sous-titre 4",
+      "multi": false,
+      "aide": "Longueur actuelle : 13 caractères."
+     },
+     "texte4": {
+      "label": "Paragraphe 4",
+      "multi": true,
+      "aide": "Longueur actuelle : 171 caractères."
+     },
+     "texte5": {
+      "label": "Paragraphe 5",
+      "multi": true,
+      "aide": "Longueur actuelle : 284 caractères."
+     },
+     "soustitre5": {
+      "label": "Sous-titre 5",
+      "multi": false,
+      "aide": "Longueur actuelle : 21 caractères."
+     },
+     "texte6": {
+      "label": "Paragraphe 6",
+      "multi": true,
+      "aide": "Longueur actuelle : 89 caractères."
+     },
+     "soustitre6": {
+      "label": "Sous-titre 6",
+      "multi": false,
+      "aide": "Longueur actuelle : 10 caractères."
+     },
+     "texte7": {
+      "label": "Paragraphe 7",
+      "multi": true,
+      "aide": "Longueur actuelle : 252 caractères."
+     },
+     "point": {
+      "label": "Point de liste",
+      "multi": false,
+      "aide": "Longueur actuelle : 61 caractères."
+     },
+     "point2": {
+      "label": "Point de liste 2",
+      "multi": true,
+      "aide": "Longueur actuelle : 116 caractères."
+     },
+     "soustitre7": {
+      "label": "Sous-titre 7",
+      "multi": false,
+      "aide": "Longueur actuelle : 7 caractères."
+     },
+     "texte8": {
+      "label": "Paragraphe 8",
+      "multi": true,
+      "aide": "Longueur actuelle : 196 caractères."
+     },
+     "texte9": {
+      "label": "Paragraphe 9",
+      "multi": true,
+      "aide": "Longueur actuelle : 191 caractères."
+     },
+     "soustitre8": {
+      "label": "Sous-titre 8",
+      "multi": false,
+      "aide": "Longueur actuelle : 8 caractères."
+     },
+     "texte10": {
+      "label": "Paragraphe 10",
+      "multi": true,
+      "aide": "Longueur actuelle : 163 caractères."
+     }
+    }
+   }
+  }
+ }
+}
