@@ -128,7 +128,7 @@ details.liste[open] summary::before{content:"▾ "}
        autorisé sur le dépôt DeeeMines.</p>
     <button class="bouton" id="entrer">Se connecter avec GitHub</button>
     <div class="souci" id="souci" hidden></div>
-    <a class="lien" href="/admin/actualites/">Ajouter une actualité, une photo, un membre</a>
+    <a class="lien" href="/admin/contenus/">Ajouter une actualité, une photo, un membre</a>
   </div>
 </div>
 
@@ -140,7 +140,7 @@ details.liste[open] summary::before{content:"▾ "}
   </div>
   <div class="pousse">
     <span class="etat" id="etat"></span>
-    <button class="bouton pale" id="classique">Actualités, équipe, logos</button>
+    <button class="bouton pale" id="classique">Actualités et contenus</button>
     <button class="bouton pale" id="sortir" title="Se déconnecter">Quitter</button>
     <button class="bouton fort" id="enregistrer" disabled>Enregistrer</button>
   </div>
@@ -549,7 +549,7 @@ verifie().then(function(ok){ if (ok) demarre(); });
 
 $('bfr').addEventListener('click', function(){ bascule('fr'); });
 $('ben').addEventListener('click', function(){ bascule('en'); });
-$('classique').addEventListener('click', function(){ location.href = '/admin/actualites/'; });
+$('classique').addEventListener('click', function(){ location.href = '/admin/contenus/'; });
 bEnr.addEventListener('click', enregistre);
 
 vue.addEventListener('load', function(){ $('voile').hidden = true; envoieApercu(); });
