@@ -379,6 +379,9 @@ main{display:block}
 .art-corps li{margin-bottom:8px}
 .art-corps a{color:var(--azure-d);border-bottom:1px solid rgba(31,99,181,.35)}
 .art-photos{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:clamp(30px,3.6vw,46px)}
+/* Une photo seule ne se colle pas à gauche : elle se pose au milieu de
+   l'article, à une largeur qui la tient sans l'étirer. */
+.art-photos-une{grid-template-columns:minmax(0,620px);justify-content:center}
 .art-photos figure{margin:0}
 .art-photos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;display:block;
   box-shadow:0 0 0 1px var(--line)}

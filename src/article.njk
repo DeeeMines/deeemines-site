@@ -44,7 +44,7 @@ eleventyComputed:
         {#- Les photos sortent de la colonne de lecture : elles occupent toute
             la largeur de l'article, où elles ont de quoi se voir. -#}
         {%- if paire.art.photos and paire.art.photos.length %}
-        <div class="art-photos">
+        <div class="art-photos{% if paire.art.photos.length == 1 %} art-photos-une{% endif %}">
           {%- for ph in paire.art.photos %}
           <figure><img src="{{ ph.image }}" alt="{{ ph.legende or '' }}"
                       style="object-position:center {{ ph.cadrage or '50%' }}">
