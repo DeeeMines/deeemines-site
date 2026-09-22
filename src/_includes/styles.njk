@@ -245,13 +245,16 @@ footer .marque .symbole{height:32px}
   min-height:1.14em;display:flex;align-items:center;justify-content:center;text-align:center}
 .chip span{display:block;font-size:13.6px;line-height:1.45;color:var(--soft-dark)}
 
-.dist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:clamp(22px,2.6vw,40px);margin-top:22px}
+/* Quatre distinctions : deux rangées de deux plutôt qu'une rangée de trois
+   suivie d'un orphelin. Chaque entrée garde ainsi de quoi respirer. */
+.dist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(22px,2.6vw,40px) clamp(28px,4vw,72px);margin-top:26px}
 .di{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center}
-.di img{max-height:40px;max-width:104px;width:auto;height:auto;object-fit:contain}
+/* Deux colonnes au lieu de trois laissent de la place : les logos en
+   profitent, ce qui rend lisibles ceux qui portent une mention sous le nom. */
+.di img{max-height:44px;max-width:124px;width:auto;height:auto;object-fit:contain}
 .di h3{font-size:18px;margin-bottom:5px}
 .di p{font-size:14.6px;color:var(--soft);line-height:1.5}
-@media(max-width:1080px){.dist{grid-template-columns:1fr 1fr}}
 @media(max-width:820px){.dist{grid-template-columns:1fr;gap:22px}}
 
 /* ===== 5. Bandeau partenaires ===== */
@@ -353,14 +356,25 @@ main{display:block}
 .retour{display:inline-block;font-size:13px;letter-spacing:.06em;color:var(--soft-dark);
   margin-bottom:26px}
 .retour:hover span{border-bottom:1px solid rgba(255,255,255,.35)}
-.art{max-width:74ch}
+/* L'article se lit dans une colonne, comme un journal : le titre, l'image et
+   le texte partagent la même largeur, et la ligne de texte reste sous les
+   soixante-quinze caractères au-delà desquels l'œil perd le début de la
+   ligne suivante. La place à droite n'est donc pas perdue : elle est la marge
+   qui rend la lecture tenable. */
+.phead-art .wrap{max-width:calc(1000px + var(--pad) * 2)}
+.art{max-width:1000px;margin-inline:auto}
+.art-corps{max-width:74ch;margin-inline:auto}
 .art-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;display:block;
   margin-bottom:clamp(28px,3.4vw,44px);box-shadow:0 0 0 1px var(--line)}
 .art-corps{font-size:17px;line-height:1.72;color:var(--soft)}
 .art-corps .chapo{font-size:19.5px;line-height:1.6;color:var(--text);margin-bottom:26px}
 .art-corps p{margin-bottom:20px}
-.art-corps h3{font-family:var(--disp);font-size:clamp(20px,2.2vw,25px);color:var(--text);
-  margin:34px 0 14px;letter-spacing:-.02em}
+/* Les intertitres saisis dans l'administration deviennent des h2. Sans cette
+   règle ils prenaient la taille des titres de section, deux fois trop grande
+   pour un sous-titre au fil du texte. */
+.art-corps h2,.art-corps h3{font-family:var(--disp);font-size:clamp(21px,2.3vw,27px);
+  color:var(--text);margin:36px 0 14px;letter-spacing:-.02em;line-height:1.2;
+  max-width:none}
 .art-corps ul{margin:0 0 20px 20px;list-style:disc}
 .art-corps li{margin-bottom:8px}
 .art-corps a{color:var(--azure-d);border-bottom:1px solid rgba(31,99,181,.35)}

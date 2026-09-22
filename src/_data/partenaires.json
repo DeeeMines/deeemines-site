@@ -29,6 +29,10 @@
       "nom": "PC'up, ESPCI Paris"
     },
     {
+      "image": "/assets/team2.png",
+      "nom": "TEAM2"
+    },
+    {
       "image": "/assets/ecosystem.png",
       "nom": "ecosystem"
     },
@@ -39,6 +43,10 @@
     {
       "image": "/assets/amg-antimony.png",
       "nom": "AMG Antimony SICA"
+    },
+    {
+      "image": "/assets/campine.png",
+      "nom": "Campine"
     }
   ]
 }

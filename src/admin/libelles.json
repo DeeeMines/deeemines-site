@@ -363,28 +363,48 @@
     }
    },
    "dist": {
-    "label": "Les trois distinctions",
+    "label": "Les quatre distinctions",
     "liste": false,
     "champs": {
      "soustitre": {
-      "label": "Sous-titre",
+      "label": "Distinction 1 · sous-titre",
       "multi": false,
-      "aide": "Longueur actuelle : 21 caractères."
+      "aide": "La première de la rangée, en haut à gauche : le Concours d'innovation i-Lab."
      },
      "texte": {
-      "label": "Paragraphe",
+      "label": "Distinction 1 · paragraphe",
       "multi": true,
-      "aide": "Longueur actuelle : 76 caractères."
+      "aide": ""
      },
      "soustitre2": {
-      "label": "Sous-titre 2",
+      "label": "Distinction 2 · sous-titre",
       "multi": false,
-      "aide": "Longueur actuelle : 36 caractères."
+      "aide": "Le prix i-PhD."
      },
      "texte2": {
-      "label": "Paragraphe 2",
+      "label": "Distinction 2 · paragraphe",
       "multi": true,
-      "aide": "Longueur actuelle : 73 caractères."
+      "aide": ""
+     },
+     "soustitre3": {
+      "label": "Distinction 3 · sous-titre",
+      "multi": false,
+      "aide": "Le programme RISE de CNRS Innovation."
+     },
+     "texte3": {
+      "label": "Distinction 3 · paragraphe",
+      "multi": true,
+      "aide": ""
+     },
+     "soustitre4": {
+      "label": "Distinction 4 · sous-titre",
+      "multi": false,
+      "aide": "Le prix du meilleur poster scientifique."
+     },
+     "texte4": {
+      "label": "Distinction 4 · paragraphe",
+      "multi": true,
+      "aide": ""
      }
     }
    },
@@ -1391,8 +1411,8 @@
  "article": {
   "label": "Pages d'article",
   "adresse": {
-   "fr": "/actualites/prix-i-phd-morvan-gaudin/",
-   "en": "/en/news/prix-i-phd-morvan-gaudin/"
+   "fr": "/actualites/concours-innovation-i-lab/",
+   "en": "/en/news/concours-innovation-i-lab/"
   },
   "partout": false,
   "sections": {
@@ -1509,8 +1529,13 @@
     "label": "Descriptions des images",
     "liste": false,
     "champs": {
+     "ilab": {
+      "label": "Logo i-Lab",
+      "multi": false,
+      "aide": ""
+     },
      "iphd": {
-      "label": "Iphd",
+      "label": "Logo i-PhD",
       "multi": false,
       "aide": "Longueur actuelle : 28 caractères."
      },
@@ -1519,10 +1544,20 @@
       "multi": false,
       "aide": "Longueur actuelle : 20 caractères."
      },
+     "poster": {
+      "label": "Affiche du symposium",
+      "multi": false,
+      "aide": ""
+     },
      "schema": {
       "label": "Schema",
       "multi": true,
       "aide": "Longueur actuelle : 316 caractères."
+     },
+     "verrou": {
+      "label": "Schéma du verrou",
+      "multi": true,
+      "aide": ""
      },
      "video": {
       "label": "Video",
@@ -1560,6 +1595,11 @@
       "multi": false,
       "aide": "Longueur actuelle : 4 caractères."
      },
+     "signature": {
+      "label": "Signature du pied de page",
+      "multi": false,
+      "aide": "Sous le logo, en bas de chaque page. Identique dans les deux langues."
+     },
      "suivre_linkedin": {
       "label": "Suivre linkedin",
       "multi": false,
@@ -1569,11 +1609,6 @@
       "label": "Voir video",
       "multi": false,
       "aide": "Longueur actuelle : 20 caractères."
-     },
-     "signature": {
-      "label": "Signature du pied de page",
-      "multi": false,
-      "aide": "Sous le logo, en bas de chaque page. Identique dans les deux langues."
      }
     }
    }

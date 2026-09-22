@@ -1,6 +1,7 @@
 {
   "en": {
     "alt": {
+      "ilab": "i-Lab innovation competition",
       "iphd": "i-PhD innovation competition",
       "jouer": "Play the presentation",
       "poster": "International Circular Hydrometallurgy Symposium",
@@ -12,7 +13,7 @@
     "contact": {
       "adresse": "11 rue Pierre et Marie Curie, 75005 Paris",
       "email": "contact@deeemines.com",
-      "linkedin": "https://www.linkedin.com/in/kristell-r-4ab4b9bb/"
+      "linkedin": "https://www.linkedin.com/company/deeemines/"
     },
     "divers": {
       "ecrivez": "Write to us",
@@ -37,6 +38,7 @@
   },
   "fr": {
     "alt": {
+      "ilab": "i-Lab, Concours d'innovation",
       "iphd": "i-PhD, concours d'innovation",
       "jouer": "Lire la présentation",
       "poster": "International Circular Hydrometallurgy Symposium",
@@ -48,7 +50,7 @@
     "contact": {
       "adresse": "11 rue Pierre et Marie Curie, 75005 Paris",
       "email": "contact@deeemines.com",
-      "linkedin": "https://www.linkedin.com/in/kristell-r-4ab4b9bb/"
+      "linkedin": "https://www.linkedin.com/company/deeemines/"
     },
     "divers": {
       "ecrivez": "Écrivez-nous",

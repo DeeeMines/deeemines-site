@@ -4,6 +4,25 @@
       {
         "date": "Septembre 2026",
         "categorie": "Distinction",
+        "slug": "concours-innovation-i-lab",
+        "titre": "DeeeMines, lauréat du Concours d'innovation i-Lab",
+        "resume": "DeeeMines figure parmi les lauréats du Concours d'innovation i-Lab. Une reconnaissance de l'État pour le procédé qui récupère l'antimoine des plastiques ignifugés, et un appui direct au passage du laboratoire au pilote industriel.",
+        "corps": "Le Concours d'innovation i-Lab est organisé chaque année par le ministère chargé de l'Enseignement supérieur et de la Recherche, avec Bpifrance pour opérateur, dans le cadre du plan France 2030. Il distingue les projets de création d'entreprise issus de la recherche publique dont la technologie est à la fois originale et susceptible d'être industrialisée.\n\n## Ce que la distinction reconnaît\n\nLe procédé breveté de DeeeMines récupère l'antimoine et les composés bromés contenus dans les plastiques ignifugés des déchets d'équipements électriques et électroniques. Faute de solution pour ramener ces plastiques sous les seuils réglementaires, la filière les envoie aujourd'hui à l'incinération et paie pour les détruire.\n\nLe traitement DeeeMines libère ces additifs de la matière. L'antimoine et les composés bromés repartent vers l'industrie européenne, qui importe la totalité de son antimoine. Le polymère, lui, repasse sous les seuils et redevient une matière première au lieu d'un déchet.\n\n## Dans la continuité du prix i-PhD\n\nLa thèse à l'origine du procédé, menée au sein de la Chaire Mines Urbaines à Chimie ParisTech - PSL avec le soutien de l'éco-organisme ecosystem, avait déjà valu à Morvan Gaudin le prix i-PhD de Bpifrance en 2025. Le Concours d'innovation i-Lab distingue cette fois l'entreprise et son projet industriel.\n\n## Ce que cela change pour la suite\n\nL'accompagnement et le financement attachés au concours sont dirigés vers le changement d'échelle : le passage du laboratoire au pilote, la validation du procédé sur des broyats réels issus de la filière, et la construction d'une chaîne européenne de recyclage de l'antimoine et des plastiques bromés.\n\nNous remercions le ministère chargé de la Recherche, Bpifrance et l'ensemble des partenaires qui accompagnent le projet depuis les travaux de thèse.",
+        "image": "/assets/ilab-equipe.jpg",
+        "photos": [
+          {
+            "image": "/assets/ilab-annonce.jpg",
+            "legende": "Le visuel officiel du Concours d'innovation, France 2030.",
+            "cadrage": "50%"
+          }
+        ],
+        "lien": "https://www.linkedin.com/posts/deeemines_iphd-ilab-france2030-activity-7506260512947675136-6WXI",
+        "lien_texte": "Voir la publication LinkedIn",
+        "cadrage": "50%"
+      },
+      {
+        "date": "Septembre 2026",
+        "categorie": "Distinction",
         "slug": "prix-poster-hydrometallurgie",
         "titre": "Prix du meilleur poster scientifique au symposium international d'hydrométallurgie circulaire",
         "resume": "Rachida Benmammar a reçu le prix du meilleur poster scientifique pour la présentation de ses travaux sur l'optimisation du procédé breveté par Chimie ParisTech - PSL, à l'International Circular Hydrometallurgy Symposium 2026, en Belgique.\nUne belle reconnaissance pour son travail, en voie de valorisation par DeeeMines !",
@@ -144,6 +163,25 @@
   },
   "en": {
     "articles": [
+      {
+        "date": "September 2026",
+        "categorie": "Award",
+        "slug": "concours-innovation-i-lab",
+        "titre": "DeeeMines wins the i-Lab innovation competition",
+        "resume": "DeeeMines is among the winners of the i-Lab innovation competition. State recognition for the process that recovers antimony from flame-retarded plastics, and direct support for the move from the laboratory to the industrial pilot.",
+        "corps": "The i-Lab innovation competition is run each year by the French ministry for higher education and research, with Bpifrance as its operator, under the France 2030 plan. It selects company creation projects born out of public research whose technology is both original and capable of being industrialised.\n\n## What the award recognises\n\nThe patented DeeeMines process recovers the antimony and the brominated compounds held in the flame-retarded plastics of waste electrical and electronic equipment. With no way of bringing those plastics back below the regulatory thresholds, the industry currently sends them to incineration and pays to destroy them.\n\nThe DeeeMines treatment releases these additives from the material. The antimony and the brominated compounds go back to European industry, which imports all of its antimony. The polymer falls back below the thresholds and becomes a raw material again rather than a waste.\n\n## Following on from the i-PhD award\n\nThe thesis behind the process, carried out within the Urban Mining Chair at Chimie ParisTech - PSL with the support of the producer responsibility organisation ecosystem, had already earned Morvan Gaudin the Bpifrance i-PhD award in 2025. The i-Lab competition this time recognises the company and its industrial project.\n\n## What happens next\n\nThe funding and support attached to the competition are directed at scale-up: moving from the laboratory to the pilot, validating the process on real shredded material from the industry, and building a European chain for recycling antimony and brominated plastics.\n\nOur thanks go to the ministry for research, to Bpifrance and to all the partners who have supported the project since the thesis work.",
+        "image": "/assets/ilab-equipe.jpg",
+        "photos": [
+          {
+            "image": "/assets/ilab-annonce.jpg",
+            "legende": "The official visual of the France 2030 innovation competition.",
+            "cadrage": "50%"
+          }
+        ],
+        "lien": "https://www.linkedin.com/posts/deeemines_iphd-ilab-france2030-activity-7506260512947675136-6WXI",
+        "lien_texte": "See the LinkedIn post",
+        "cadrage": "50%"
+      },
       {
         "date": "September 2026",
         "categorie": "Award",

@@ -39,17 +39,20 @@ eleventyComputed:
           {%- if paire.art.lien %}
           <p><a class="nlien" href="{{ paire.art.lien }}" target="_blank" rel="noopener">{{ paire.art.lien_texte or t.communs.divers.en_savoir_plus }} <span class="a">&#8594;</span></a></p>
           {%- endif %}
-          {%- if paire.art.photos and paire.art.photos.length %}
-          <div class="art-photos">
-            {%- for ph in paire.art.photos %}
-            <figure><img src="{{ ph.image }}" alt="{{ ph.legende or '' }}"
-                        style="object-position:center {{ ph.cadrage or '50%' }}">
-              {%- if ph.legende %}<figcaption>{{ ph.legende }}</figcaption>{% endif %}
-            </figure>
-            {%- endfor %}
-          </div>
-          {%- endif %}
         </div>
+
+        {#- Les photos sortent de la colonne de lecture : elles occupent toute
+            la largeur de l'article, où elles ont de quoi se voir. -#}
+        {%- if paire.art.photos and paire.art.photos.length %}
+        <div class="art-photos">
+          {%- for ph in paire.art.photos %}
+          <figure><img src="{{ ph.image }}" alt="{{ ph.legende or '' }}"
+                      style="object-position:center {{ ph.cadrage or '50%' }}">
+            {%- if ph.legende %}<figcaption>{{ ph.legende }}</figcaption>{% endif %}
+          </figure>
+          {%- endfor %}
+        </div>
+        {%- endif %}
 
       </div>
     </div>

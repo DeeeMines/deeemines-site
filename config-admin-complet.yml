@@ -157,16 +157,20 @@ collections:
       i18n: true
       fields:
       - {label: "Sur-titre", name: surtitre, widget: string, i18n: true, hint: "Longueur actuelle : 24 caractères."}
-    - label: Les trois distinctions
+    - label: Les quatre distinctions
       name: dist
       widget: object
       collapsed: true
       i18n: true
       fields:
-      - {label: "Sous-titre", name: soustitre, widget: string, i18n: true, hint: "Longueur actuelle : 21 caractères."}
-      - {label: "Paragraphe", name: texte, widget: text, i18n: true, hint: "Longueur actuelle : 76 caractères."}
-      - {label: "Sous-titre 2", name: soustitre2, widget: string, i18n: true, hint: "Longueur actuelle : 36 caractères."}
-      - {label: "Paragraphe 2", name: texte2, widget: text, i18n: true, hint: "Longueur actuelle : 73 caractères."}
+      - {label: "Distinction 1 · sous-titre", name: soustitre, widget: string, i18n: true, hint: "La première de la rangée, en haut à gauche : le Concours d'innovation i-Lab."}
+      - {label: "Distinction 1 · paragraphe", name: texte, widget: text, i18n: true}
+      - {label: "Distinction 2 · sous-titre", name: soustitre2, widget: string, i18n: true, hint: "Le prix i-PhD."}
+      - {label: "Distinction 2 · paragraphe", name: texte2, widget: text, i18n: true}
+      - {label: "Distinction 3 · sous-titre", name: soustitre3, widget: string, i18n: true, hint: "Le programme RISE de CNRS Innovation."}
+      - {label: "Distinction 3 · paragraphe", name: texte3, widget: text, i18n: true}
+      - {label: "Distinction 4 · sous-titre", name: soustitre4, widget: string, i18n: true, hint: "Le prix du meilleur poster scientifique."}
+      - {label: "Distinction 4 · paragraphe", name: texte4, widget: text, i18n: true}
     - label: Le formulaire
       name: cgrid
       widget: object
@@ -747,9 +751,12 @@ collections:
       collapsed: true
       i18n: true
       fields:
-      - {label: "Iphd", name: iphd, widget: string, i18n: true, hint: "Longueur actuelle : 28 caractères."}
+      - {label: "Logo i-Lab", name: ilab, widget: string, i18n: true}
+      - {label: "Logo i-PhD", name: iphd, widget: string, i18n: true, hint: "Longueur actuelle : 28 caractères."}
       - {label: "Jouer", name: jouer, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères."}
+      - {label: "Affiche du symposium", name: poster, widget: string, i18n: true}
       - {label: "Schema", name: schema, widget: text, i18n: true, hint: "Longueur actuelle : 316 caractères."}
+      - {label: "Schéma du verrou", name: verrou, widget: text, i18n: true}
       - {label: "Video", name: video, widget: string, i18n: true, hint: "Longueur actuelle : 34 caractères."}
       - {label: "Video titre", name: video_titre, widget: string, i18n: true, hint: "Longueur actuelle : 41 caractères."}
     - label: Libellés divers
@@ -762,6 +769,7 @@ collections:
       - {label: "En savoir plus", name: en_savoir_plus, widget: string, i18n: true, hint: "Longueur actuelle : 14 caractères."}
       - {label: "Piege", name: piege, widget: string, i18n: true, hint: "Longueur actuelle : 21 caractères."}
       - {label: "Pour", name: pour, widget: string, i18n: true, hint: "Longueur actuelle : 4 caractères."}
+      - {label: "Signature", name: signature, widget: string, i18n: true, hint: "La formule qui clôt le pied de page."}
       - {label: "Suivre linkedin", name: suivre_linkedin, widget: string, i18n: true, hint: "Longueur actuelle : 24 caractères."}
       - {label: "Voir video", name: voir_video, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères."}
       - label: Signature du pied de page

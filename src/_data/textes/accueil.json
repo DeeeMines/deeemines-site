@@ -29,12 +29,14 @@
       "surtitre": "Awards and distinctions"
     },
     "dist": {
-      "soustitre": "Winner of the i-PhD award",
-      "soustitre2": "RISE programme, 2026 summer cohort",
-      "soustitre3": "Best scientific poster award",
-      "texte": "Morvan Gaudin, co-founder of DeeeMines, recognised by Bpifrance for the thesis behind the process.",
-      "texte2": "Twelve projects from CNRS laboratories selected by CNRS Innovation.",
-      "texte3": "Rachida Benmammar, postdoctoral researcher at DeeeMines, recognised at the International Circular Hydrometallurgy Symposium."
+      "soustitre": "Winner of the i-Lab innovation competition",
+      "texte": "DeeeMines selected by the French ministry for research and Bpifrance, under the France 2030 plan.",
+      "soustitre2": "Winner of the i-PhD award",
+      "texte2": "Morvan Gaudin, co-founder of DeeeMines, recognised by Bpifrance for the thesis behind the process.",
+      "soustitre3": "RISE programme, 2026 summer cohort",
+      "texte3": "Twelve projects from CNRS laboratories selected by CNRS Innovation.",
+      "soustitre4": "Best scientific poster award",
+      "texte4": "Rachida Benmammar, postdoctoral researcher at DeeeMines, recognised at the International Circular Hydrometallurgy Symposium."
     },
     "figs": {
       "chiffre": "100&#8239;%",
@@ -160,12 +162,14 @@
       "surtitre": "Concours et distinctions"
     },
     "dist": {
-      "soustitre": "Lauréat du prix i-PhD",
-      "soustitre2": "Programme RISE, promotion d'été 2026",
-      "soustitre3": "Prix du meilleur poster scientifique",
-      "texte": "Morvan Gaudin, cofondateur de DeeeMines, distingué par Bpifrance pour la thèse à l'origine du procédé.",
-      "texte2": "Douze projets issus des laboratoires du CNRS retenus par CNRS Innovation.",
-      "texte3": "Rachida Benmammar, post-doctorante au sein de DeeeMines, primée au symposium international d'hydrométallurgie circulaire."
+      "soustitre": "Lauréat du Concours d'innovation i-Lab",
+      "texte": "DeeeMines distingué par le ministère chargé de la Recherche et Bpifrance, dans le cadre de France 2030.",
+      "soustitre2": "Lauréat du prix i-PhD",
+      "texte2": "Morvan Gaudin, cofondateur de DeeeMines, distingué par Bpifrance pour la thèse à l'origine du procédé.",
+      "soustitre3": "Programme RISE, promotion d'été 2026",
+      "texte3": "Douze projets issus des laboratoires du CNRS retenus par CNRS Innovation.",
+      "soustitre4": "Prix du meilleur poster scientifique",
+      "texte4": "Rachida Benmammar, post-doctorante au sein de DeeeMines, primée au symposium international d'hydrométallurgie circulaire."
     },
     "figs": {
       "chiffre": "100&#8239;%",
