@@ -117,6 +117,24 @@ input:focus,textarea:focus,select.plein:focus{outline:2px solid var(--blue);outl
   margin-bottom:8px}
 .apercu p{margin:0;font-size:14.4px;line-height:1.6;color:var(--soft)}
 
+/* Le bandeau des partenaires, reproduit à l'identique du site : mêmes
+   gouttières, même hauteur de case, même calcul de hauteur. C'est le seul
+   moyen de juger si un logo pèse le bon poids à côté de ses voisins. */
+.bandeau{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
+  gap:16px 12px;padding:8px 0}
+.bandeau .lg{display:flex;align-items:center;justify-content:center;height:56px;
+  flex:0 0 124px;border-radius:7px}
+.bandeau .lg.on{outline:2px solid var(--blue);outline-offset:1px;background:#F4F5FF}
+.bandeau img{max-width:126px;width:auto;opacity:.82}
+.bandeau .lg.on img{opacity:1}
+
+.regle{display:flex;align-items:center;gap:14px}
+.regle input[type=range]{flex:1;accent-color:var(--blue);height:22px}
+.regle .val{font-variant-numeric:tabular-nums;font-size:14px;color:var(--soft);
+  min-width:52px;text-align:right}
+.regle button{padding:7px 12px;font-size:13px;background:#EEF0F8;border-radius:8px}
+.regle button:hover{background:#E3E6F5}
+
 .alerte{background:#FFF1EE;border:1px solid #FFB4A8;color:#8A2B18;border-radius:10px;
   padding:12px 14px;font-size:13.6px;line-height:1.5;margin-bottom:16px;max-width:760px}
 .secours{margin-top:26px;font-size:12.6px;color:#9AA0C4}
@@ -283,7 +301,7 @@ function dessineColonne(){
     var sous = d.sous.map(function(c){ return e[c]; }).filter(Boolean).join(' · ');
     var img = e.image || e.photo || '';
     h += '<div class="fiche' + (i === index ? ' on' : '') + '" data-i="' + i + '">'
-       + (img ? '<img class="vignette" src="' + echappe(img) + '" alt="">'
+       + (img ? '<img class="vignette" src="' + echappe(srcImage(img)) + '" alt="">'
               : '<div class="vignette"></div>')
        + '<div class="txt"><div class="t">' + echappe(titre) + '</div>'
        + (sous ? '<div class="s">' + echappe(sous) + '</div>' : '') + '</div>'
@@ -369,6 +387,52 @@ function deposeImage(fichier, base){
   });
 }
 
+/* Une image tout juste déposée n'est pas encore en ligne : son chemin ne
+   mène nulle part tant qu'on n'a pas publié. On montre donc le fichier
+   retenu en mémoire, pour que l'aperçu soit juste dès le dépôt. */
+function srcImage(chemin){
+  if (!chemin) return '';
+  var cle = 'src' + chemin;
+  if (depots[cle]) {
+    return 'data:image/' + (/\.png$/i.test(chemin) ? 'png' : 'jpeg')
+         + ';base64,' + depots[cle];
+  }
+  return chemin;
+}
+
+/* Le même calcul que le site, refait ici pour l'aperçu : plus un logo est
+   large, plus on le raccourcit, afin qu'aucun ne paraisse plus important
+   qu'un autre. « taille » est la correction manuelle, en pourcentage. */
+var TAILLE_MIN = 40, TAILLE_MAX = 250;
+function hauteurLogo(largeur, hauteur, taille){
+  var f = Math.min(TAILLE_MAX, Math.max(TAILLE_MIN, Number(taille) || 100)) / 100;
+  if (!largeur || !hauteur) return Math.round(30 * f * 10) / 10;
+  return Math.round(46 / Math.pow(largeur / hauteur, 0.42) * f * 10) / 10;
+}
+
+function dessineBandeau(){
+  var b = $('bandeau');
+  if (!b) return;
+  var liste = tableau();
+  b.innerHTML = '';
+  liste.forEach(function(l, i){
+    var case_ = document.createElement('div');
+    case_.className = 'lg' + (i === index ? ' on' : '');
+    if (l.image) {
+      var im = document.createElement('img');
+      im.alt = '';
+      im.addEventListener('load', function(){
+        im.style.height = hauteurLogo(im.naturalWidth, im.naturalHeight, l.taille) + 'px';
+      });
+      im.src = srcImage(l.image);
+      case_.appendChild(im);
+    }
+    case_.addEventListener('click', function(){ index = i; dessine(); });
+    case_.style.cursor = 'pointer';
+    b.appendChild(case_);
+  });
+}
+
 /* ───────── le formulaire ───────── */
 function bloc(champ, valeur, surChange, cle){
   var h = '<div class="champ"><label for="' + cle + '">' + echappe(champ.label)
@@ -383,9 +447,17 @@ function bloc(champ, valeur, surChange, cle){
          + '>' + echappe(o[1]) + '</option>';
     });
     h += '</select>';
+  } else if (champ.type === 'taille') {
+    var v = Math.min(TAILLE_MAX, Math.max(TAILLE_MIN, Number(valeur) || 100));
+    h += '<div class="regle">'
+       + '<input type="range" id="' + cle + '" min="' + TAILLE_MIN + '" max="' + TAILLE_MAX
+       + '" step="5" value="' + v + '">'
+       + '<span class="val" id="' + cle + '_v">' + v + ' %</span>'
+       + '<button type="button" data-remet="' + cle + '">Automatique</button>'
+       + '</div>';
   } else if (champ.type === 'image') {
     h += '<div class="media">'
-       + (valeur ? '<img src="' + echappe(valeur) + '" alt="">' : '<div class="vignette"></div>')
+       + (valeur ? '<img src="' + echappe(srcImage(valeur)) + '" alt="">' : '<div class="vignette"></div>')
        + '<div class="actions">'
        + '<label class="fx">Choisir une image<input type="file" accept="image/*" id="' + cle + '"></label>'
        + (valeur ? '<button type="button" data-vide="' + cle + '">Retirer</button>' : '')
@@ -393,7 +465,7 @@ function bloc(champ, valeur, surChange, cle){
   } else if (champ.type === 'images') {
     h += '<div class="media">';
     (valeur || []).forEach(function(v, i){
-      h += '<div class="actions"><img src="' + echappe(v) + '" alt="">'
+      h += '<div class="actions"><img src="' + echappe(srcImage(v)) + '" alt="">'
          + '<button type="button" data-oter="' + cle + '|' + i + '">Retirer</button></div>';
     });
     h += '<div class="actions"><label class="fx">Ajouter un logo'
@@ -423,6 +495,10 @@ function dessine(){
        + '<div class="q">' + echappe(e.date || 'Date') + '</div>'
        + '<p>' + echappe(e.resume || '') + '</p></div>';
   }
+  if (nomListe === 'partenaires') {
+    h += '<div class="apercu"><div class="t">Le bandeau tel qu’il s’affichera</div>'
+       + '<div class="bandeau" id="bandeau"></div></div>';
+  }
   h += '<div class="boite"><h2>' + echappe(d.singulier.charAt(0).toUpperCase() + d.singulier.slice(1))
      + '<span class="sup"><button id="supprimer">Supprimer</button></span></h2>';
   d.champs.forEach(function(c, k){
@@ -448,6 +524,7 @@ function dessine(){
   h += '</div><div class="secours">En cas de souci, l’ancien outil reste disponible : '
      + '<a href="/admin/avance/">administration de secours</a>.</div>';
   form.innerHTML = h;
+  dessineBandeau();
 
   /* ── les réactions ── */
   $('supprimer').addEventListener('click', supprime);
@@ -488,6 +565,22 @@ function dessine(){
 function branche(c, cle){
   var el = $(cle);
   if (!el) return;
+  if (c.type === 'taille') {
+    var val = $(cle + '_v');
+    el.addEventListener('input', function(){
+      ecrit(c, el.value);
+      if (val) val.textContent = el.value + ' %';
+      dessineBandeau();
+    });
+    var remet = form.querySelector('[data-remet="' + cle + '"]');
+    if (remet) remet.addEventListener('click', function(){
+      el.value = 100;
+      if (val) val.textContent = '100 %';
+      ecrit(c, '');           // vide : le site reprend son calcul automatique
+      dessineBandeau();
+    });
+    return;
+  }
   if (c.type === 'image') {
     el.addEventListener('change', function(){
       if (!el.files[0]) return;

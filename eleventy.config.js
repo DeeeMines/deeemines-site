@@ -8,21 +8,44 @@ const MarkdownIt = require('markdown-it');
    raccourcit. L'exposant 0,42 est un compromis entre l'égalité des hauteurs,
    qui avantage les logos larges, et l'égalité des surfaces, qui écrase trop
    les logos en bandeau. */
-function mesurePng(chemin) {
+function mesureImage(chemin) {
   const fs = require('fs');
-  const tampon = fs.readFileSync(chemin);
-  if (tampon.length < 24) return null;
-  if (tampon.toString('ascii', 1, 4) !== 'PNG') return null;
-  return { l: tampon.readUInt32BE(16), h: tampon.readUInt32BE(20) };
+  const t = fs.readFileSync(chemin);
+  if (t.length < 24) return null;
+  if (t.toString('ascii', 1, 4) === 'PNG') {
+    return { l: t.readUInt32BE(16), h: t.readUInt32BE(20) };
+  }
+  // Un logo déposé en JPEG se mesurait autrefois comme nul, et le gabarit
+  // repliait alors sur une hauteur fixe qui le faisait paraître deux fois
+  // trop grand. On lit donc aussi l'en-tête JPEG, segment par segment.
+  if (t[0] === 0xFF && t[1] === 0xD8) {
+    let i = 2;
+    while (i + 9 < t.length) {
+      if (t[i] !== 0xFF) { i++; continue; }
+      const marque = t[i + 1];
+      const cadre = marque >= 0xC0 && marque <= 0xCF &&
+                    marque !== 0xC4 && marque !== 0xC8 && marque !== 0xCC;
+      if (cadre) return { h: t.readUInt16BE(i + 5), l: t.readUInt16BE(i + 7) };
+      if (marque === 0xD8 || (marque >= 0xD0 && marque <= 0xD9)) { i += 2; continue; }
+      i += 2 + t.readUInt16BE(i + 2);
+    }
+  }
+  return null;
 }
-function hauteurLogo(image) {
+/* « taille » est le réglage manuel, en pourcentage, que propose
+   l'administration : 100 laisse le calcul automatique tel quel, 80 rend le
+   logo plus discret, 130 le remonte. Il sert aux cas que les proportions
+   seules n'attrapent pas, par exemple un mot-symbole noir et gras qui pèse
+   plus lourd à l'œil qu'un logo pâle de mêmes dimensions. */
+function hauteurLogo(image, taille) {
   const path = require('path');
+  const facteur = Math.min(250, Math.max(40, Number(taille) || 100)) / 100;
   try {
-    const m = mesurePng(path.join(__dirname, 'src', String(image).replace(/^\//, '')));
-    if (!m || !m.h) return 40;
+    const m = mesureImage(path.join(__dirname, 'src', String(image).replace(/^\//, '')));
+    if (!m || !m.h) return Math.round(30 * facteur * 10) / 10;
     const proportion = m.l / m.h;
-    return Math.round(46 / Math.pow(proportion, 0.42) * 10) / 10;
-  } catch (e) { return 40; }
+    return Math.round(46 / Math.pow(proportion, 0.42) * facteur * 10) / 10;
+  } catch (e) { return Math.round(30 * facteur * 10) / 10; }
 }
 
 const md = new MarkdownIt({ html: false, linkify: true, typographer: false });

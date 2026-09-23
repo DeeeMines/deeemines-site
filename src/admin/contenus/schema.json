@@ -93,7 +93,9 @@
    {"nom": "nom", "label": "Nom", "type": "texte",
     "aide": "Sert de description de l'image pour les lecteurs d'écran."},
    {"nom": "image", "label": "Logo", "type": "image",
-    "aide": "De préférence un fichier PNG à fond transparent."}
+    "aide": "De préférence un fichier PNG à fond transparent."},
+   {"nom": "taille", "label": "Taille à l'écran", "type": "taille",
+    "aide": "À 100 %, le site calcule la taille d'après les proportions du fichier, pour que tous les logos pèsent le même poids. Montez ou descendez si celui-ci paraît trop discret ou trop imposant à côté de ses voisins. L'aperçu ci-dessus se met à jour aussitôt."}
   ]
  }
 }

@@ -60,7 +60,7 @@ permalink: "{{ adresses['equipe'][langue] }}index.html"
       <div class="eyebrow" style="margin-bottom:4px" data-champ="accueil.band.surtitre">{{ t.accueil.band.surtitre | safe }}</div>
       <div class="logos">
         {%- for p in partenaires.logos %}
-        <div><img src="{{ p.image }}" alt="{{ p.nom }}" style="height:{{ p.image | hauteurLogo }}px"></div>
+        <div><img src="{{ p.image }}" alt="{{ p.nom }}" style="height:{{ p.image | hauteurLogo(p.taille) }}px"></div>
         {%- endfor %}
       </div>
     </div>
