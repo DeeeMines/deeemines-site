@@ -259,8 +259,17 @@ footer .marque .symbole{height:32px}
 
 /* ===== 5. Bandeau partenaires ===== */
 .band{padding:clamp(42px,4.6vw,66px) 0;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+/* Les partenaires sont rangés par nature de relation. Chaque groupe garde sa
+   propre ligne, ce qui règle du même coup la ligne orpheline : le nombre de
+   logos d'un groupe n'a plus à tomber juste sur la largeur de la page. */
+.groupe{margin-top:clamp(28px,3vw,42px)}
+.groupe:first-of-type{margin-top:26px}
+.gtitre{font-size:11.5px;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--soft);text-align:center;font-weight:500}
+.gtitre::after{content:"";display:block;width:34px;height:1px;margin:9px auto 0;
+  background:linear-gradient(90deg,var(--cyan),var(--blue))}
 .logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
-  gap:clamp(18px,2vw,30px) clamp(14px,1.6vw,26px);margin-top:34px}
+  gap:clamp(18px,2vw,30px) clamp(14px,1.6vw,26px);margin-top:18px}
 .logos div{display:flex;align-items:center;justify-content:center;height:56px;flex:0 0 148px}
 .logos img{max-width:150px;width:auto;opacity:.82;transition:.2s}
 /* La hauteur de chaque logo est calculée à la construction, d'après les

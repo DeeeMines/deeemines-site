@@ -3,6 +3,19 @@
     "articles": [
       {
         "date": "Septembre 2026",
+        "categorie": "Réseau",
+        "slug": "adhesion-polymeris",
+        "titre": "DeeeMines adhère à Polymeris, le pôle de compétitivité des plastiques",
+        "resume": "DeeeMines rejoint Polymeris, pôle de compétitivité des caoutchoucs, plastiques et composites. Après TEAM2, pôle de l'économie circulaire, c'est la deuxième adhésion de l'entreprise à un réseau industriel de sa chaîne de valeur.",
+        "corps": "Polymeris réunit les industriels, les laboratoires et les centres techniques de la filière française des caoutchoucs, des plastiques et des composites. DeeeMines en est adhérent depuis septembre 2026.\n\n## Des matières critiques piégées dans une matrice plastique\n\nDeeeMines récupère les matières premières critiques contenues dans les plastiques techniques en fin de vie. L'antimoine, associé aux composés bromés dans les plastiques ignifugés des équipements électriques et électroniques, en constitue la première application industrielle.\n\nLa matière que nous traitons est donc du plastique, à l'entrée comme à la sortie. En amont, le gisement est un broyat détenu par les recycleurs et les transformateurs de la filière. En aval, le polymère débarrassé de ses additifs repasse sous les seuils réglementaires et redevient une matière première, au lieu d'un déchet que la filière paie aujourd'hui pour détruire.\n\nLes matières critiques sont ce que nous récupérons ; le plastique est ce que nous traitons, et ce que nous rendons.\n\n## Un ancrage dans les deux filières concernées\n\nDeeeMines est déjà adhérent de TEAM2, pôle de compétitivité de l'économie circulaire, qui rassemble les acteurs de la collecte, du tri et de la valorisation des déchets. Polymeris apporte l'autre versant : la matière elle-même, sa formulation, ses exigences techniques et ses débouchés.\n\nLes deux adhésions couvrent ainsi le parcours complet d'un plastique technique, de sa collecte à sa remise sur le marché.\n\n## Ce que nous attendons de cette adhésion\n\n- L'accès au réseau industriel de la plasturgie et des composites.\n- L'ingénierie de projets collaboratifs de recherche et de développement.\n- La rencontre des détenteurs de gisements comme des utilisateurs de matière recyclée.",
+        "image": "/assets/polymeris-adhesion.jpg",
+        "photos": [],
+        "lien": "https://www.polymeris.fr",
+        "lien_texte": "Découvrir Polymeris",
+        "cadrage": "50%"
+      },
+      {
+        "date": "Septembre 2026",
         "categorie": "Distinction",
         "slug": "concours-innovation-i-lab",
         "titre": "DeeeMines, lauréat du Concours d'innovation i-Lab",
@@ -163,6 +176,19 @@
   },
   "en": {
     "articles": [
+      {
+        "date": "September 2026",
+        "categorie": "Network",
+        "slug": "adhesion-polymeris",
+        "titre": "DeeeMines joins Polymeris, the French plastics competitiveness cluster",
+        "resume": "DeeeMines joins Polymeris, the competitiveness cluster for rubber, plastics and composites. After TEAM2, the circular economy cluster, this is the company's second membership of an industrial network along its value chain.",
+        "corps": "Polymeris brings together the manufacturers, laboratories and technical centres of the French rubber, plastics and composites industry. DeeeMines has been a member since September 2026.\n\n## Critical raw materials trapped in a plastic matrix\n\nDeeeMines recovers the critical raw materials held in end-of-life technical plastics. Antimony, combined with brominated compounds in the flame-retarded plastics of electrical and electronic equipment, is the first industrial application of the process.\n\nThe material we handle is therefore plastic, at both ends. Upstream, the feedstock is shredded material held by the recyclers and processors of the industry. Downstream, the polymer, once stripped of its additives, falls back below the regulatory thresholds and becomes a raw material again, instead of a waste the industry currently pays to destroy.\n\nCritical raw materials are what we recover; plastic is what we treat, and what we give back.\n\n## A foothold in both industries\n\nDeeeMines is already a member of TEAM2, the circular economy competitiveness cluster, which brings together the collection, sorting and waste recovery industries. Polymeris covers the other side: the material itself, how it is formulated, what it must withstand and where it goes.\n\nTogether, the two memberships span the full path of a technical plastic, from collection to its return to the market.\n\n## What we expect from this membership\n\n- Access to the industrial network of the plastics and composites sector.\n- Engineering support for collaborative research and development projects.\n- Contact with both the holders of feedstock and the users of recycled material.",
+        "image": "/assets/polymeris-adhesion.jpg",
+        "photos": [],
+        "lien": "https://www.polymeris.fr",
+        "lien_texte": "Discover Polymeris",
+        "cadrage": "50%"
+      },
       {
         "date": "September 2026",
         "categorie": "Award",

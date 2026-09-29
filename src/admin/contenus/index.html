@@ -120,8 +120,12 @@ input:focus,textarea:focus,select.plein:focus{outline:2px solid var(--blue);outl
 /* Le bandeau des partenaires, reproduit à l'identique du site : mêmes
    gouttières, même hauteur de case, même calcul de hauteur. C'est le seul
    moyen de juger si un logo pèse le bon poids à côté de ses voisins. */
-.bandeau{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
-  gap:16px 12px;padding:8px 0}
+.bandeau{padding:4px 0}
+.bandeau .gt{font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--soft);text-align:center;margin:14px 0 6px}
+.bandeau .gt:first-child{margin-top:4px}
+.bandeau .rangee{display:flex;flex-wrap:wrap;justify-content:center;
+  align-items:center;gap:12px 10px}
 .bandeau .lg{display:flex;align-items:center;justify-content:center;height:56px;
   flex:0 0 124px;border-radius:7px}
 .bandeau .lg.on{outline:2px solid var(--blue);outline-offset:1px;background:#F4F5FF}
@@ -410,26 +414,48 @@ function hauteurLogo(largeur, hauteur, taille){
   return Math.round(46 / Math.pow(largeur / hauteur, 0.42) * f * 10) / 10;
 }
 
+var GROUPES = [['recherche', 'Recherche et enseignement'],
+               ['reseaux', 'Financement, incubation et réseaux'],
+               ['industrie', 'Industriels de la filière'],
+               ['autres', 'Pas encore rangés']];
+
 function dessineBandeau(){
   var b = $('bandeau');
   if (!b) return;
   var liste = tableau();
   b.innerHTML = '';
-  liste.forEach(function(l, i){
-    var case_ = document.createElement('div');
-    case_.className = 'lg' + (i === index ? ' on' : '');
-    if (l.image) {
-      var im = document.createElement('img');
-      im.alt = '';
-      im.addEventListener('load', function(){
-        im.style.height = hauteurLogo(im.naturalWidth, im.naturalHeight, l.taille) + 'px';
-      });
-      im.src = srcImage(l.image);
-      case_.appendChild(im);
-    }
-    case_.addEventListener('click', function(){ index = i; dessine(); });
-    case_.style.cursor = 'pointer';
-    b.appendChild(case_);
+  GROUPES.forEach(function(g){
+    var dedans = [];
+    liste.forEach(function(l, i){
+      var cle = l.groupe;
+      var connu = GROUPES.some(function(x){ return x[0] === cle && x[0] !== 'autres'; });
+      if (cle === g[0] || (g[0] === 'autres' && !connu)) dedans.push([l, i]);
+    });
+    if (!dedans.length) return;
+    var titre = document.createElement('div');
+    titre.className = 'gt';
+    titre.textContent = g[1];
+    b.appendChild(titre);
+    var rangee = document.createElement('div');
+    rangee.className = 'rangee';
+    dedans.forEach(function(paire){
+      var l = paire[0], i = paire[1];
+      var boite = document.createElement('div');
+      boite.className = 'lg' + (i === index ? ' on' : '');
+      if (l.image) {
+        var im = document.createElement('img');
+        im.alt = '';
+        im.addEventListener('load', function(){
+          im.style.height = hauteurLogo(im.naturalWidth, im.naturalHeight, l.taille) + 'px';
+        });
+        im.src = srcImage(l.image);
+        boite.appendChild(im);
+      }
+      boite.addEventListener('click', function(){ index = i; dessine(); });
+      boite.style.cursor = 'pointer';
+      rangee.appendChild(boite);
+    });
+    b.appendChild(rangee);
   });
 }
 

@@ -770,6 +770,15 @@ collections:
       - {label: "Piege", name: piege, widget: string, i18n: true, hint: "Longueur actuelle : 21 caractères."}
       - {label: "Pour", name: pour, widget: string, i18n: true, hint: "Longueur actuelle : 4 caractères."}
       - {label: "Signature", name: signature, widget: string, i18n: true, hint: "La formule qui clôt le pied de page."}
+    - label: Les groupes du bandeau des partenaires
+      name: groupes
+      widget: object
+      collapsed: true
+      i18n: true
+      fields:
+      - {label: "Recherche", name: recherche, widget: string, i18n: true, hint: "L'intertitre au-dessus des laboratoires et des écoles."}
+      - {label: "Réseaux", name: reseaux, widget: string, i18n: true, hint: "L'intertitre au-dessus des financeurs, incubateurs et pôles de compétitivité."}
+      - {label: "Industriels", name: industrie, widget: string, i18n: true, hint: "L'intertitre au-dessus des industriels de la filière."}
       - {label: "Suivre linkedin", name: suivre_linkedin, widget: string, i18n: true, hint: "Longueur actuelle : 24 caractères."}
       - {label: "Voir video", name: voir_video, widget: string, i18n: true, hint: "Longueur actuelle : 20 caractères."}
       - label: Signature du pied de page

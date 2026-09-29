@@ -94,6 +94,11 @@
     "aide": "Sert de description de l'image pour les lecteurs d'écran."},
    {"nom": "image", "label": "Logo", "type": "image",
     "aide": "De préférence un fichier PNG à fond transparent."},
+   {"nom": "groupe", "label": "Rangé dans", "type": "choix",
+    "options": [["recherche", "Recherche et enseignement"],
+                ["reseaux", "Financement, incubation et réseaux"],
+                ["industrie", "Industriels de la filière"]],
+    "aide": "Le bandeau range les logos par nature de relation, pour qu'un visiteur sache si une organisation est un laboratoire, un soutien ou un industriel."},
    {"nom": "taille", "label": "Taille à l'écran", "type": "taille",
     "aide": "À 100 %, le site calcule la taille d'après les proportions du fichier, pour que tous les logos pèsent le même poids. Montez ou descendez si celui-ci paraît trop discret ou trop imposant à côté de ses voisins. L'aperçu ci-dessus se met à jour aussitôt."}
   ]

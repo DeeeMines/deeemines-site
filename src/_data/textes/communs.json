@@ -24,6 +24,11 @@
       "suivre_linkedin": "Follow us on LinkedIn",
       "voir_video": "Watch the presentation"
     },
+    "groupes": {
+      "recherche": "Research and higher education",
+      "reseaux": "Funding, incubation and networks",
+      "industrie": "Industry partners"
+    },
     "nav": {
       "accueil": "Home",
       "actualites": "News",
@@ -60,6 +65,11 @@
       "signature": "Lost antimony? Let's mine it back!",
       "suivre_linkedin": "Suivez-nous sur LinkedIn",
       "voir_video": "Voir la présentation"
+    },
+    "groupes": {
+      "recherche": "Recherche et enseignement",
+      "reseaux": "Financement, incubation et réseaux",
+      "industrie": "Industriels de la filière"
     },
     "nav": {
       "accueil": "Accueil",

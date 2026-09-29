@@ -55,16 +55,7 @@ permalink: "{{ adresses['equipe'][langue] }}index.html"
   </section>
 
   <!-- PARTENAIRES · même bandeau que la page d'accueil, même texte -->
-  <div class="band">
-    <div class="wrap">
-      <div class="eyebrow" style="margin-bottom:4px" data-champ="accueil.band.surtitre">{{ t.accueil.band.surtitre | safe }}</div>
-      <div class="logos">
-        {%- for p in partenaires.logos %}
-        <div><img src="{{ p.image }}" alt="{{ p.nom }}" style="height:{{ p.image | hauteurLogo(p.taille) }}px"></div>
-        {%- endfor %}
-      </div>
-    </div>
-  </div>
+    {% include "bandeau.njk" %}
 
   <section style="padding:clamp(42px,4.4vw,64px) 0;text-align:center">
     <div class="wrap">

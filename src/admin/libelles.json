@@ -1411,8 +1411,8 @@
  "article": {
   "label": "Pages d'article",
   "adresse": {
-   "fr": "/actualites/concours-innovation-i-lab/",
-   "en": "/en/news/concours-innovation-i-lab/"
+   "fr": "/actualites/adhesion-polymeris/",
+   "en": "/en/news/adhesion-polymeris/"
   },
   "partout": false,
   "sections": {
@@ -1596,9 +1596,30 @@
       "aide": "Longueur actuelle : 4 caractères."
      },
      "signature": {
-      "label": "Signature du pied de page",
+      "label": "Signature",
       "multi": false,
-      "aide": "Sous le logo, en bas de chaque page. Identique dans les deux langues."
+      "aide": "La formule qui clôt le pied de page."
+     }
+    }
+   },
+   "groupes": {
+    "label": "Les groupes du bandeau des partenaires",
+    "liste": false,
+    "champs": {
+     "recherche": {
+      "label": "Recherche",
+      "multi": false,
+      "aide": "L'intertitre au-dessus des laboratoires et des écoles."
+     },
+     "reseaux": {
+      "label": "Réseaux",
+      "multi": false,
+      "aide": "L'intertitre au-dessus des financeurs, incubateurs et pôles de compétitivité."
+     },
+     "industrie": {
+      "label": "Industriels",
+      "multi": false,
+      "aide": "L'intertitre au-dessus des industriels de la filière."
      },
      "suivre_linkedin": {
       "label": "Suivre linkedin",
@@ -1609,6 +1630,11 @@
       "label": "Voir video",
       "multi": false,
       "aide": "Longueur actuelle : 20 caractères."
+     },
+     "signature": {
+      "label": "Signature du pied de page",
+      "multi": false,
+      "aide": "Sous le logo, en bas de chaque page. Identique dans les deux langues."
      }
     }
    }

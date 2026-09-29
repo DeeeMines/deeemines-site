@@ -1,0 +1,22 @@
+{#- Le bandeau des partenaires, partagé par la page d'accueil et la page
+    équipe. Les logos sont rangés par nature de relation : dans une liste
+    unique, un visiteur ne peut pas deviner si AMG Antimony est un client, un
+    fournisseur ou un financeur. Le rangement lui-même se fait dans
+    _data/groupesLogos.js. -#}
+<div class="band">
+  <div class="wrap">
+    <div class="eyebrow" style="margin-bottom:4px" data-champ="accueil.band.surtitre">{{ t.accueil.band.surtitre | safe }}</div>
+    {%- for g in groupesLogos %}
+    <div class="groupe">
+      {%- if g.cle != 'autres' %}
+      <div class="gtitre" data-champ="communs.groupes.{{ g.cle }}">{{ t.communs.groupes[g.cle] | safe }}</div>
+      {%- endif %}
+      <div class="logos">
+        {%- for p in g.logos %}
+        <div><img src="{{ p.image }}" alt="{{ p.nom }}" style="height:{{ p.image | hauteurLogo(p.taille) }}px"></div>
+        {%- endfor %}
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+</div>

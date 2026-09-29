@@ -1,52 +1,69 @@
 {
   "logos": [
     {
-      "image": "/assets/bpifrance.png",
-      "nom": "Bpifrance"
-    },
-    {
       "image": "/assets/cnrs.png",
-      "nom": "CNRS"
+      "nom": "CNRS",
+      "groupe": "recherche"
     },
     {
       "image": "/assets/universite-psl.png",
-      "nom": "Université Paris Sciences et Lettres"
+      "nom": "Université Paris Sciences et Lettres",
+      "groupe": "recherche"
     },
     {
       "image": "/assets/chimie-paristech-psl.png",
-      "nom": "Chimie ParisTech - PSL"
+      "nom": "Chimie ParisTech - PSL",
+      "groupe": "recherche"
     },
     {
       "image": "/assets/mines-paris-psl.png",
-      "nom": "Mines Paris - PSL"
+      "nom": "Mines Paris - PSL",
+      "groupe": "recherche"
     },
     {
       "image": "/assets/chaire-mines-urbaines.png",
-      "nom": "Chaire Mines Urbaines"
+      "nom": "Chaire Mines Urbaines",
+      "groupe": "recherche"
+    },
+    {
+      "image": "/assets/bpifrance.png",
+      "nom": "Bpifrance",
+      "groupe": "reseaux"
     },
     {
       "image": "/assets/pcup-espci.png",
-      "nom": "PC'up, ESPCI Paris"
+      "nom": "PC'up, ESPCI Paris",
+      "groupe": "reseaux"
     },
     {
       "image": "/assets/team2.png",
-      "nom": "TEAM2"
+      "nom": "TEAM2",
+      "groupe": "reseaux"
+    },
+    {
+      "image": "/assets/polymeris.png",
+      "nom": "Polymeris",
+      "groupe": "reseaux"
     },
     {
       "image": "/assets/ecosystem.png",
-      "nom": "ecosystem"
+      "nom": "ecosystem",
+      "groupe": "industrie"
     },
     {
       "image": "/assets/environnement-recycling.png",
-      "nom": "Environnement Recycling"
+      "nom": "Environnement Recycling",
+      "groupe": "industrie"
     },
     {
       "image": "/assets/amg-antimony.png",
-      "nom": "AMG Antimony SICA"
+      "nom": "AMG Antimony SICA",
+      "groupe": "industrie"
     },
     {
       "image": "/assets/campine.png",
-      "nom": "Campine"
+      "nom": "Campine",
+      "groupe": "industrie"
     }
   ]
 }
