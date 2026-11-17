@@ -2,6 +2,56 @@
   "fr": {
     "articles": [
       {
+        "date": "Novembre 2026",
+        "categorie": "Accompagnement",
+        "slug": "wilco-one-cleantech",
+        "titre": "DeeeMines rejoint WILCO Industry",
+        "resume": "DeeeMines intègre la promotion CleanTech & Energy du programme WILCO One, six mois d'accompagnement tournés vers le passage du laboratoire au pilote industriel.",
+        "corps": "DeeeMines rejoint la promotion CleanTech & Energy du programme WILCO One, porté par WILCO Industry avec le soutien de la Région Île-de-France.\n\n## Un accompagnement tourné vers le passage à l'échelle\n\nWILCO One est un programme de six mois structuré autour de cinq leviers : le financement, les ressources humaines, la vente et le marketing, la technique et la responsabilité sociétale. Il associe un coaching opéré par des spécialistes sectoriels, une méthode de pilotage par indicateurs et un financement non dilutif pouvant atteindre 150 000 euros.\n\n## Ce que nous venons y chercher\n\nNotre objectif est de dérisquer le changement d'échelle, avec nos partenaires industriels et financiers : du laboratoire au prototype, puis du prototype au pilote. C'est la séquence sur laquelle se joue l'industrialisation du procédé.\n\nL'Union européenne importe la totalité de son antimoine primaire, un métal critique pour son industrie. Notre procédé breveté le récupère dans les plastiques ignifugés des déchets électroniques, aujourd'hui incinérés.\n\nMerci à Guillaume Poultorak et à toute l'équipe WILCO. Morvan Gaudin et Kristell Riou-Nivert ont hâte d'avancer aux côtés des autres entreprises de la promotion.",
+        "image": "/assets/wilco-selection.jpg",
+        "photos": [],
+        "lien": "https://www.linkedin.com/feed/update/urn:li:activity:7528466193284866049",
+        "lien_texte": "Voir la publication LinkedIn",
+        "cadrage": "50%"
+      },
+      {
+        "date": "Novembre 2026",
+        "categorie": "Recrutement",
+        "slug": "technicien-de-laboratoire",
+        "titre": "DeeeMines recrute son premier technicien de laboratoire",
+        "resume": "Premier recrutement de l'entreprise : un technicien ou une technicienne de laboratoire en chimie, en contrat à durée indéterminée, à Paris 5e, pour une arrivée en janvier 2027.",
+        "corps": "Ce poste est le premier salariat de DeeeMines. Il vient renforcer le travail expérimental au moment où le procédé quitte la paillasse pour les premiers prototypes.\n\n## Le poste\n\nCent pour cent laboratoire, aux côtés du directeur technique et de l'ingénieur chimiste procédés : essais à la paillasse, essais de montée en échelle, méthodes de caractérisation. L'objectif est d'aider à faire passer le procédé DeeeMines de la paillasse à la première usine.\n\nLes missions couvrent la conduite des essais au laboratoire et sur les prototypes, la préparation des échantillons et le suivi des matières reçues des industriels, les analyses et le bon fonctionnement des équipements, la tenue du cahier de laboratoire et la traçabilité, ainsi que la sécurité, les stocks et la mise en place du nouveau laboratoire.\n\n## Le profil recherché\n\nUne formation en chimie de niveau brevet de technicien supérieur, bachelor universitaire de technologie ou licence professionnelle, ou équivalent. Une expérience en laboratoire de chimie est appréciée, en particulier sur des équipements d'analyse. Comptent surtout la rigueur dans l'exécution des protocoles, le sens de l'organisation, le respect strict des règles de sécurité chimique et l'envie de travailler dans une petite équipe où chacun prend part aux tâches pratiques.\n\n## Pour postuler\n\n[La fiche de poste complète est ici](/assets/fiche-de-poste-technicien-laboratoire.pdf). Envoyez votre curriculum vitae et votre lettre de motivation à contact@deeemines.com, avec pour objet « Technicien·ne de laboratoire en chimie ».",
+        "image": "",
+        "photos": [],
+        "lien": "https://www.linkedin.com/feed/update/urn:li:activity:7526255819278000128",
+        "lien_texte": "Voir l'annonce sur LinkedIn",
+        "cadrage": "50%"
+      },
+      {
+        "date": "Novembre 2026",
+        "categorie": "Distinction",
+        "slug": "prix-pepite-ile-de-france",
+        "titre": "Kristell Riou-Nivert, lauréate du Prix PEPITE start'up Île-de-France",
+        "resume": "La cofondatrice de DeeeMines a reçu le Prix PEPITE start'up Île-de-France 2026 au siège de la Région, le 2 novembre.",
+        "corps": "Lundi 2 novembre 2026, au siège de la Région Île-de-France, Kristell Riou-Nivert a reçu le Prix PEPITE start'up Île-de-France 2026 des mains de Nelly Garnier, vice-présidente chargée de la recherche et de l'enseignement supérieur. La cérémonie régionale, la treizième du nom, distinguait quatre lauréats.\n\n## Un prix qui récompense les entrepreneurs étudiants\n\nLe Prix PEPITE distingue les projets d'entreprise portés par des étudiants et de jeunes diplômés. Il est porté par Pépite France, le réseau des étudiants-entrepreneurs, avec la Région Île-de-France et Bpifrance.\n\n## Deux ans de reprise d'études\n\nKristell Riou-Nivert a repris ses études il y a deux ans pour fonder DeeeMines, au sein de l'écosystème deeptech de l'Université PSL : le mastère spécialisé Deeptech de Mines Paris - PSL, Chimie ParisTech - PSL, PC'up, l'incubateur de l'ESPCI Paris, CNRS Innovation et PSL Pépite. Deux ans plus tard, l'entreprise est créée, le procédé est breveté, les preuves de concept sont faites, deux prototypes sont en cours de construction et les premiers recrutements s'ouvrent.\n\nMerci à la Région Île-de-France, à Bpifrance et à Pépite France, en particulier à Soufiane Carcaillet, Christian Houze, Mélodie Bergame, Julie Couturier et Marie-Louise Ezzedine, ainsi qu'à la Chaire Mines Urbaines et à l'éco-organisme ecosystem, qui ont permis au projet d'éclore.",
+        "image": "/assets/pepite-remise.jpg",
+        "photos": [
+          {
+            "image": "/assets/pepite-trophee.jpg",
+            "legende": "",
+            "cadrage": "50%"
+          },
+          {
+            "image": "/assets/pepite-scene.jpg",
+            "legende": "",
+            "cadrage": "50%"
+          }
+        ],
+        "lien": "https://www.linkedin.com/feed/update/urn:li:activity:7523703728324022272",
+        "lien_texte": "Voir la publication LinkedIn",
+        "cadrage": "50%"
+      },
+      {
         "date": "Septembre 2026",
         "categorie": "Réseau",
         "slug": "adhesion-polymeris",
@@ -176,6 +226,56 @@
   },
   "en": {
     "articles": [
+      {
+        "date": "November 2026",
+        "categorie": "Support",
+        "slug": "wilco-one-cleantech",
+        "titre": "DeeeMines joins WILCO Industry",
+        "resume": "DeeeMines joins the CleanTech & Energy cohort of the WILCO One programme, six months of support aimed at moving from the laboratory to the industrial pilot.",
+        "corps": "DeeeMines joins the CleanTech & Energy cohort of the WILCO One programme, run by WILCO Industry with the support of the Île-de-France region.\n\n## Support aimed at scaling up\n\nWILCO One is a six-month programme built around five areas: funding, human resources, sales and marketing, technology and corporate responsibility. It combines coaching by sector specialists, a management method driven by key indicators and non-dilutive funding of up to 150,000 euros.\n\n## What we are looking for there\n\nOur aim is to de-risk the scale-up, together with our industrial and financial partners: from the laboratory to the prototype, then from the prototype to the pilot. That sequence is where the industrialisation of the process is decided.\n\nThe European Union imports all of its primary antimony, a metal critical to its industry. Our patented process recovers it from the flame-retarded plastics of electronic waste, which are incinerated today.\n\nOur thanks go to Guillaume Poultorak and to the whole WILCO team. Morvan Gaudin and Kristell Riou-Nivert are looking forward to moving ahead alongside the other companies in the cohort.",
+        "image": "/assets/wilco-selection.jpg",
+        "photos": [],
+        "lien": "https://www.linkedin.com/feed/update/urn:li:activity:7528466193284866049",
+        "lien_texte": "See the LinkedIn post",
+        "cadrage": "50%"
+      },
+      {
+        "date": "November 2026",
+        "categorie": "Recruitment",
+        "slug": "technicien-de-laboratoire",
+        "titre": "DeeeMines is hiring its first laboratory technician",
+        "resume": "The company's first hire: a laboratory technician in chemistry, on a permanent contract, in Paris, starting in January 2027.",
+        "corps": "This is the first salaried position at DeeeMines. It reinforces the experimental work at the moment when the process leaves the bench for the first prototypes.\n\n## The role\n\nEntirely laboratory-based, alongside the technical director and the process chemical engineer: bench experiments, scale-up trials and characterisation methods. The aim is to help carry the DeeeMines process from the bench to the first plant.\n\nThe role covers running the trials in the laboratory and on the prototypes, preparing samples and tracking the material received from industrial partners, carrying out analyses and keeping the equipment in working order, maintaining the laboratory notebook and sample traceability, and handling safety, stocks and the setting up of the new laboratory.\n\n## The profile\n\nA qualification in chemistry at two-year or three-year higher technical level, or equivalent. Experience in a chemistry laboratory is valued, in particular on analytical equipment. What matters most is rigour in following protocols, a sense of organisation, strict compliance with chemical safety rules and the wish to work in a small team where everyone takes part in the practical work.\n\n## How to apply\n\n[The full job description is here](/assets/fiche-de-poste-technicien-laboratoire.pdf) (in French). Send your curriculum vitae and a covering letter to contact@deeemines.com, with the subject « Technicien·ne de laboratoire en chimie ».",
+        "image": "",
+        "photos": [],
+        "lien": "https://www.linkedin.com/feed/update/urn:li:activity:7526255819278000128",
+        "lien_texte": "See the opening on LinkedIn",
+        "cadrage": "50%"
+      },
+      {
+        "date": "November 2026",
+        "categorie": "Award",
+        "slug": "prix-pepite-ile-de-france",
+        "titre": "Kristell Riou-Nivert wins the PEPITE start'up Île-de-France award",
+        "resume": "The co-founder of DeeeMines received the 2026 PEPITE start'up Île-de-France award at the region's headquarters on 2 November.",
+        "corps": "On Monday 2 November 2026, at the headquarters of the Île-de-France region, Kristell Riou-Nivert received the 2026 PEPITE start'up Île-de-France award from Nelly Garnier, vice-president for research and higher education. The regional ceremony, the thirteenth of its kind, honoured four winners.\n\n## An award for student entrepreneurs\n\nThe PEPITE award recognises company projects led by students and recent graduates. It is run by Pépite France, the French network for student entrepreneurs, with the Île-de-France region and Bpifrance.\n\n## Two years back in education\n\nKristell Riou-Nivert went back to studying two years ago in order to found DeeeMines, within the deeptech ecosystem of Université PSL: the Deeptech specialised master's of Mines Paris - PSL, Chimie ParisTech - PSL, PC'up, the ESPCI Paris incubator, CNRS Innovation and PSL Pépite. Two years on, the company exists, the process is patented, the proofs of concept are done, two prototypes are being built and the first hires are opening.\n\nOur thanks go to the Île-de-France region, to Bpifrance and to Pépite France, and in particular to Soufiane Carcaillet, Christian Houze, Mélodie Bergame, Julie Couturier and Marie-Louise Ezzedine, as well as to the Urban Mining Chair and the producer responsibility organisation ecosystem, which allowed the project to emerge.",
+        "image": "/assets/pepite-remise.jpg",
+        "photos": [
+          {
+            "image": "/assets/pepite-trophee.jpg",
+            "legende": "",
+            "cadrage": "50%"
+          },
+          {
+            "image": "/assets/pepite-scene.jpg",
+            "legende": "",
+            "cadrage": "50%"
+          }
+        ],
+        "lien": "https://www.linkedin.com/feed/update/urn:li:activity:7523703728324022272",
+        "lien_texte": "See the LinkedIn post",
+        "cadrage": "50%"
+      },
       {
         "date": "September 2026",
         "categorie": "Network",
