@@ -29,7 +29,7 @@ eleventyComputed:
     <div class="wrap">
       <div class="art">
         {%- if paire.art.image %}
-        <img class="art-img" src="{{ paire.art.image }}" alt=""
+        <img class="art-img{% if paire.art.genre == 'visuel' %} art-img-visuel{% endif %}" src="{{ paire.art.image }}" alt=""
              style="object-position:center {{ paire.art.cadrage or '50%' }}">
         {%- endif %}
 

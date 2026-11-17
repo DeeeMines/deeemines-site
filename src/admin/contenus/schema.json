@@ -1,6 +1,5 @@
 {
  "_lisez_moi": "Décrit les trois listes du site pour l'éditeur de contenus. « commun » signifie que la valeur est la même en français et en anglais : on l'écrit alors dans les deux langues à la fois.",
-
  "actualites": {
   "titre": "Actualités",
   "singulier": "actualité",
@@ -8,42 +7,165 @@
   "parLangue": true,
   "route": "articles",
   "ordonnable": true,
-  "resume": ["titre"],
-  "sous": ["date", "categorie"],
+  "resume": [
+   "titre"
+  ],
+  "sous": [
+   "date",
+   "categorie"
+  ],
   "champs": [
-   {"nom": "date", "label": "Date affichée", "type": "texte",
-    "aide": "Par exemple : Septembre 2026. C'est du texte libre, pas une date."},
-   {"nom": "categorie", "label": "Catégorie", "type": "texte",
-    "aide": "Distinction, Accompagnement, Entretien, Partenariat…"},
-   {"nom": "titre", "label": "Titre", "type": "texte"},
-   {"nom": "resume", "label": "Résumé", "type": "long",
-    "aide": "Deux ou trois lignes. C'est ce qui s'affiche dans la liste des actualités."},
-   {"nom": "corps", "label": "Article complet", "type": "long", "grand": true,
-    "aide": "Facultatif. S'il est rempli, l'actualité obtient sa propre page. Sinon elle reste une brève."},
-   {"nom": "slug", "label": "Adresse de la page", "type": "texte", "commun": true,
-    "aide": "Par exemple prix-i-phd. Ne la changez plus une fois l'article partagé : les liens existants cesseraient de fonctionner."},
-   {"nom": "image", "label": "Image principale", "type": "image", "commun": true,
-    "aide": "Facultative. Affichée en haut de la page de l'article."},
-   {"nom": "cadrage", "label": "Cadrage de l'image", "type": "choix", "commun": true,
-    "options": [["0%", "Haut"], ["25%", "Plutôt vers le haut"], ["50%", "Centre"],
-                ["78%", "Plutôt vers le bas"], ["100%", "Bas"]],
-    "aide": "Quelle partie de l'image reste visible quand elle est recadrée."},
-   {"nom": "photos", "label": "Photos supplémentaires", "type": "sousliste", "commun": true,
+   {
+    "nom": "date",
+    "label": "Date affichée",
+    "type": "texte",
+    "aide": "Par exemple : Septembre 2026. C'est du texte libre, pas une date."
+   },
+   {
+    "nom": "categorie",
+    "label": "Catégorie",
+    "type": "texte",
+    "aide": "Distinction, Accompagnement, Entretien, Partenariat…"
+   },
+   {
+    "nom": "titre",
+    "label": "Titre",
+    "type": "texte"
+   },
+   {
+    "nom": "resume",
+    "label": "Résumé",
+    "type": "long",
+    "aide": "Deux ou trois lignes. C'est ce qui s'affiche dans la liste des actualités."
+   },
+   {
+    "nom": "corps",
+    "label": "Article complet",
+    "type": "long",
+    "grand": true,
+    "aide": "Facultatif. S'il est rempli, l'actualité obtient sa propre page. Sinon elle reste une brève."
+   },
+   {
+    "nom": "slug",
+    "label": "Adresse de la page",
+    "type": "texte",
+    "commun": true,
+    "aide": "Par exemple prix-i-phd. Ne la changez plus une fois l'article partagé : les liens existants cesseraient de fonctionner."
+   },
+   {
+    "nom": "image",
+    "label": "Image principale",
+    "type": "image",
+    "commun": true,
+    "aide": "Facultative. Affichée en haut de la page de l'article."
+   },
+   {
+    "nom": "genre",
+    "label": "Nature de l'image",
+    "type": "choix",
+    "commun": true,
+    "options": [
+     [
+      "",
+      "Photographie"
+     ],
+     [
+      "visuel",
+      "Visuel de communication"
+     ]
+    ],
+    "aide": "Une photographie est recadrée en bandeau. Un visuel de communication, celui qu'un partenaire vous fournit par exemple, s'affiche entier et sans cadre, dans ses proportions d'origine."
+   },
+   {
+    "nom": "cadrage",
+    "label": "Cadrage de l'image",
+    "type": "choix",
+    "commun": true,
+    "options": [
+     [
+      "0%",
+      "Haut"
+     ],
+     [
+      "25%",
+      "Plutôt vers le haut"
+     ],
+     [
+      "50%",
+      "Centre"
+     ],
+     [
+      "78%",
+      "Plutôt vers le bas"
+     ],
+     [
+      "100%",
+      "Bas"
+     ]
+    ],
+    "aide": "Quelle partie de l'image reste visible quand elle est recadrée."
+   },
+   {
+    "nom": "photos",
+    "label": "Photos supplémentaires",
+    "type": "sousliste",
+    "commun": true,
     "singulier": "photo",
     "champs": [
-     {"nom": "image", "label": "Image", "type": "image"},
-     {"nom": "legende", "label": "Légende", "type": "texte"},
-     {"nom": "cadrage", "label": "Cadrage", "type": "choix",
-      "options": [["0%", "Haut"], ["25%", "Plutôt vers le haut"], ["50%", "Centre"],
-                  ["78%", "Plutôt vers le bas"], ["100%", "Bas"]]}
-    ]},
-   {"nom": "lien", "label": "Lien externe", "type": "texte", "commun": true,
-    "aide": "Facultatif. Adresse complète, par exemple https://…"},
-   {"nom": "lien_texte", "label": "Texte du lien", "type": "texte",
-    "aide": "Par défaut : « En savoir plus »."}
+     {
+      "nom": "image",
+      "label": "Image",
+      "type": "image"
+     },
+     {
+      "nom": "legende",
+      "label": "Légende",
+      "type": "texte"
+     },
+     {
+      "nom": "cadrage",
+      "label": "Cadrage",
+      "type": "choix",
+      "options": [
+       [
+        "0%",
+        "Haut"
+       ],
+       [
+        "25%",
+        "Plutôt vers le haut"
+       ],
+       [
+        "50%",
+        "Centre"
+       ],
+       [
+        "78%",
+        "Plutôt vers le bas"
+       ],
+       [
+        "100%",
+        "Bas"
+       ]
+      ]
+     }
+    ]
+   },
+   {
+    "nom": "lien",
+    "label": "Lien externe",
+    "type": "texte",
+    "commun": true,
+    "aide": "Facultatif. Adresse complète, par exemple https://…"
+   },
+   {
+    "nom": "lien_texte",
+    "label": "Texte du lien",
+    "type": "texte",
+    "aide": "Par défaut : « En savoir plus »."
+   }
   ]
  },
-
  "cofondateurs": {
   "titre": "Cofondateurs",
   "singulier": "cofondateur",
@@ -51,18 +173,44 @@
   "parLangue": true,
   "route": "cofondateurs",
   "ordonnable": true,
-  "resume": ["nom"],
-  "sous": ["role"],
+  "resume": [
+   "nom"
+  ],
+  "sous": [
+   "role"
+  ],
   "champs": [
-   {"nom": "nom", "label": "Nom", "type": "texte", "commun": true},
-   {"nom": "role", "label": "Rôle", "type": "texte"},
-   {"nom": "texte", "label": "Présentation", "type": "long"},
-   {"nom": "photo", "label": "Photographie", "type": "image", "commun": true},
-   {"nom": "logos", "label": "Logos des écoles", "type": "images", "commun": true,
-    "aide": "Affichés sous la présentation."}
+   {
+    "nom": "nom",
+    "label": "Nom",
+    "type": "texte",
+    "commun": true
+   },
+   {
+    "nom": "role",
+    "label": "Rôle",
+    "type": "texte"
+   },
+   {
+    "nom": "texte",
+    "label": "Présentation",
+    "type": "long"
+   },
+   {
+    "nom": "photo",
+    "label": "Photographie",
+    "type": "image",
+    "commun": true
+   },
+   {
+    "nom": "logos",
+    "label": "Logos des écoles",
+    "type": "images",
+    "commun": true,
+    "aide": "Affichés sous la présentation."
+   }
   ]
  },
-
  "scientifiques": {
   "titre": "Équipe scientifique",
   "singulier": "chercheur",
@@ -70,16 +218,36 @@
   "parLangue": true,
   "route": "scientifiques",
   "ordonnable": true,
-  "resume": ["nom"],
+  "resume": [
+   "nom"
+  ],
   "sous": [],
   "champs": [
-   {"nom": "nom", "label": "Nom", "type": "texte", "commun": true},
-   {"nom": "texte", "label": "Présentation", "type": "long"},
-   {"nom": "photo", "label": "Photographie", "type": "image", "commun": true},
-   {"nom": "logos", "label": "Logos des laboratoires", "type": "images", "commun": true}
+   {
+    "nom": "nom",
+    "label": "Nom",
+    "type": "texte",
+    "commun": true
+   },
+   {
+    "nom": "texte",
+    "label": "Présentation",
+    "type": "long"
+   },
+   {
+    "nom": "photo",
+    "label": "Photographie",
+    "type": "image",
+    "commun": true
+   },
+   {
+    "nom": "logos",
+    "label": "Logos des laboratoires",
+    "type": "images",
+    "commun": true
+   }
   ]
  },
-
  "partenaires": {
   "titre": "Logos des partenaires",
   "singulier": "partenaire",
@@ -87,20 +255,49 @@
   "parLangue": false,
   "route": "logos",
   "ordonnable": true,
-  "resume": ["nom"],
+  "resume": [
+   "nom"
+  ],
   "sous": [],
   "champs": [
-   {"nom": "nom", "label": "Nom", "type": "texte",
-    "aide": "Sert de description de l'image pour les lecteurs d'écran."},
-   {"nom": "image", "label": "Logo", "type": "image",
-    "aide": "De préférence un fichier PNG à fond transparent."},
-   {"nom": "groupe", "label": "Rangé dans", "type": "choix",
-    "options": [["recherche", "Recherche et enseignement"],
-                ["reseaux", "Financement, incubation et réseaux"],
-                ["industrie", "Industriels de la filière"]],
-    "aide": "Le bandeau range les logos par nature de relation, pour qu'un visiteur sache si une organisation est un laboratoire, un soutien ou un industriel."},
-   {"nom": "taille", "label": "Taille à l'écran", "type": "taille",
-    "aide": "À 100 %, le site calcule la taille d'après les proportions du fichier, pour que tous les logos pèsent le même poids. Montez ou descendez si celui-ci paraît trop discret ou trop imposant à côté de ses voisins. L'aperçu ci-dessus se met à jour aussitôt."}
+   {
+    "nom": "nom",
+    "label": "Nom",
+    "type": "texte",
+    "aide": "Sert de description de l'image pour les lecteurs d'écran."
+   },
+   {
+    "nom": "image",
+    "label": "Logo",
+    "type": "image",
+    "aide": "De préférence un fichier PNG à fond transparent."
+   },
+   {
+    "nom": "groupe",
+    "label": "Rangé dans",
+    "type": "choix",
+    "options": [
+     [
+      "recherche",
+      "Recherche et enseignement"
+     ],
+     [
+      "reseaux",
+      "Financement, incubation et réseaux"
+     ],
+     [
+      "industrie",
+      "Industriels de la filière"
+     ]
+    ],
+    "aide": "Le bandeau range les logos par nature de relation, pour qu'un visiteur sache si une organisation est un laboratoire, un soutien ou un industriel."
+   },
+   {
+    "nom": "taille",
+    "label": "Taille à l'écran",
+    "type": "taille",
+    "aide": "À 100 %, le site calcule la taille d'après les proportions du fichier, pour que tous les logos pèsent le même poids. Montez ou descendez si celui-ci paraît trop discret ou trop imposant à côté de ses voisins. L'aperçu ci-dessus se met à jour aussitôt."
+   }
   ]
  }
 }

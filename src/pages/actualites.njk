@@ -21,7 +21,7 @@ permalink: "{{ adresses['actualites'][langue] }}index.html"
         {%- set ct = ["var(--accent-d)","var(--azure-d)","var(--blue)"] %}
         {%- for a in actualites[langue].articles %}
         <article class="na" style="--ct:{{ ct[loop.index0 % 3] }}">
-          <div class="nc">
+          <div class="nc{% if a.image %} illustree{% endif %}">
             <div>
               <div class="cat">{{ a.categorie }}</div>
               <h2>{{ a.titre }}</h2>
@@ -33,6 +33,10 @@ permalink: "{{ adresses['actualites'][langue] }}index.html"
               <a class="nlien" href="{{ a.lien }}" target="_blank" rel="noopener">{{ a.lien_texte or "En savoir plus" }} <span class="a">&#8594;</span></a>
               {%- endif %}
             </div>
+            {%- if a.image %}
+            <img class="nimg{% if a.genre == 'visuel' %} nimg-visuel{% endif %}" src="{{ a.image }}" alt=""
+                 style="object-position:center {{ a.cadrage or '50%' }}">
+            {%- endif %}
           </div>
         </article>
         {%- endfor %}

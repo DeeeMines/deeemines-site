@@ -375,7 +375,21 @@ main{display:block}
 .art-corps{max-width:74ch;margin-inline:auto}
 .art-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;display:block;
   margin-bottom:clamp(28px,3.4vw,44px);box-shadow:0 0 0 1px var(--line)}
+/* Un visuel de communication n'est pas une photographie : il porte déjà ses
+   propres marges et son propre cadre. On le montre entier, sans recadrage et
+   sans bordure, sinon on voit un cadre dans un cadre. */
+.art-img-visuel{aspect-ratio:auto;object-fit:contain;box-shadow:none;border-radius:0;
+  width:auto;max-width:100%;max-height:640px;margin-inline:auto}
 .art-corps{font-size:17px;line-height:1.72;color:var(--soft)}
+/* Texte justifié, avec coupure des mots : sans elle, la justification
+   creuse des rivières de blanc entre les mots sur une colonne de cette
+   largeur. Les lignes trop courtes du téléphone restent au fer à gauche,
+   où la justification se verrait comme un défaut. */
+.art-corps p,.art-corps li{text-align:justify;hyphens:auto;-webkit-hyphens:auto;
+  /* Pas de coupure sur les mots courts : sans cette limite, « PEPITE »
+     devenait « PE-PITE » et « recherche » devenait « re-cherche ». */
+  hyphenate-limit-chars:7 3 3}
+@media(max-width:620px){.art-corps p,.art-corps li{text-align:left;hyphens:none}}
 .art-corps .chapo{font-size:19.5px;line-height:1.6;color:var(--text);margin-bottom:26px}
 .art-corps p{margin-bottom:20px}
 /* Les intertitres saisis dans l'administration deviennent des h2. Sans cette
@@ -448,6 +462,10 @@ main{display:block}
 .nc.illustree{display:grid;grid-template-columns:1fr 290px;gap:clamp(24px,3vw,44px);align-items:start}
 .nimg{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;display:block;
   box-shadow:0 0 0 1px var(--line)}
+/* Même règle que pour l'image d'article : un visuel de communication se
+   montre entier. La case garde ses proportions pour que les lignes de la
+   liste restent alignées, et le cadre disparaît avec le recadrage. */
+.nimg-visuel{object-fit:contain;box-shadow:none;border-radius:0}
 @media(max-width:880px){.nc.illustree{grid-template-columns:1fr}}
 .na .nlien{display:inline-block;margin-top:15px;font-size:14.6px;color:var(--azure-d);
   border-bottom:1px solid rgba(41,126,225,.35);padding-bottom:2px}
