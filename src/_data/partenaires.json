@@ -46,6 +46,11 @@
       "groupe": "reseaux"
     },
     {
+      "image": "/assets/wilco.png",
+      "nom": "WILCO",
+      "groupe": "reseaux"
+    },
+    {
       "image": "/assets/ecosystem.png",
       "nom": "ecosystem",
       "groupe": "industrie"
